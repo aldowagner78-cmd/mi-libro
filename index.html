@@ -728,12 +728,25 @@ function setupNotes() {
     
     // Ocultar la lista de notas al final del documento
     const notesLists = document.querySelectorAll('#content ol');
-    notesLists.forEach(ol => {
-        if (ol.querySelector('li[id^="footnote-"]')) {
+    console.log('Listas OL encontradas:', notesLists.length);
+    
+    notesLists.forEach((ol, idx) => {
+        const footnoteItems = ol.querySelectorAll('li[id^="footnote-"]');
+        console.log(`OL ${idx}: tiene ${footnoteItems.length} notas`);
+        
+        if (footnoteItems.length > 0) {
+            console.log('  └─ IDs encontrados:', Array.from(footnoteItems).map(li => li.id));
             ol.style.display = 'none';
             console.log('✓ Lista de notas ocultada');
         }
     });
+    
+    // DEBUG: Buscar TODOS los elementos con id que empiece con "footnote"
+    const allFootnotes = document.querySelectorAll('[id^="footnote"]');
+    console.log('TOTAL elementos con ID footnote*:', allFootnotes.length);
+    if (allFootnotes.length > 0) {
+        console.log('IDs completos:', Array.from(allFootnotes).map(el => el.id));
+    }
     
     console.log('✅ Setup de notas completado');
 }
