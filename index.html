@@ -608,34 +608,36 @@ function addNavButtons(n) {
 
 // ========== NOTAS AL PIE ==========
 function setupNotes() {
-    // Mammoth genera: <a href="#footnote-1" id="footnote-ref-1">[1]</a>
-    // Y al final: <li id="footnote-1">texto... <a href="#footnote-ref-1">↑</a></li>
-    
-    const links = document.querySelectorAll('#content a[href^="#footnote-"]');
+    // Mammoth genera <sup> dentro del contenido con enlaces
+    // Buscar TODOS los enlaces que apuntan a #footnote
+    const links = document.querySelectorAll('#content a[href^="#footnote"]');
     
     links.forEach(link => {
-        link.addEventListener('click', (e) => {
+        link.onclick = (e) => {
             e.preventDefault();
-            const id = link.getAttribute('href').substring(1); // quitar #
-            const note = document.getElementById(id);
+            e.stopPropagation();
             
-            if (note) {
-                let html = note.innerHTML;
-                // Quitar el enlace de retorno ↑
-                html = html.replace(/<a[^>]*>↑<\/a>/gi, '');
-                html = html.replace(/<p>\s*<a[^>]*>↑<\/a>\s*<\/p>/gi, '');
+            const targetId = link.getAttribute('href').substring(1);
+            const noteElement = document.getElementById(targetId);
+            
+            if (noteElement) {
+                let html = noteElement.innerHTML;
+                // Limpiar enlace de retorno
+                html = html.replace(/<a\s+href="#footnote-ref-[^"]*"[^>]*>.*?<\/a>/gi, '');
+                html = html.trim();
                 showNote(html);
             }
-        });
+        };
     });
     
-    // Ocultar lista de notas al final
-    const lists = document.querySelectorAll('#content ol');
-    lists.forEach(ol => {
-        if (ol.querySelector('li[id^="footnote-"]')) {
-            ol.style.display = 'none';
+    // Ocultar sección de notas al final
+    const footnotesList = document.querySelector('#content ol');
+    if (footnotesList) {
+        const hasFootnotes = footnotesList.querySelector('li[id^="footnote-"]');
+        if (hasFootnotes) {
+            footnotesList.style.display = 'none';
         }
-    });
+    }
 }
 
 function showNote(html) {
