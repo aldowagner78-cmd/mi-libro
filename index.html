@@ -271,9 +271,7 @@
         #content h2 { font-size: 1.3em; color: var(--text-soft); }
 
         /* Notas al pie */
-        #content sup { font-size: 0.65em; }
-        #content a[href^="#footnote"],
-        #content a[id^="footnote-ref"] {
+        #content sup {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -281,17 +279,25 @@
             color: #fff !important;
             text-decoration: none;
             font-family: var(--font-ui);
-            font-size: 0.6em;
+            font-size: 0.65em;
             font-weight: 700;
-            min-width: 18px;
-            height: 18px;
-            padding: 0 5px;
-            border-radius: 9px;
+            min-width: 20px;
+            height: 20px;
+            padding: 0 6px;
+            border-radius: 10px;
             cursor: pointer;
-            vertical-align: super;
-            transition: transform 0.2s;
+            vertical-align: baseline;
+            margin: 0 2px;
+            transition: transform 0.2s, background 0.2s;
         }
-        #content a[href^="#footnote"]:hover { transform: scale(1.15); }
+        #content sup:hover {
+            transform: scale(1.15);
+            background: var(--text);
+        }
+        #content sup a {
+            color: #fff !important;
+            text-decoration: none !important;
+        }
         
         /* Ocultar lista de notas al final */
         #content ol { display: none !important; }
@@ -608,10 +614,35 @@ function addNavButtons(n) {
 
 // ========== NOTAS AL PIE ==========
 function setupNotes() {
-    // Mammoth genera <sup> dentro del contenido con enlaces
-    // Buscar TODOS los enlaces que apuntan a #footnote
-    const links = document.querySelectorAll('#content a[href^="#footnote"]');
+    // Interceptar clicks en SUP (que contienen los enlaces a las notas)
+    const sups = document.querySelectorAll('#content sup');
     
+    sups.forEach(sup => {
+        // Buscar si tiene un enlace dentro
+        const link = sup.querySelector('a[href^="#footnote"]');
+        
+        if (link) {
+            const targetId = link.getAttribute('href').substring(1);
+            
+            // Agregar click al SUP completo
+            sup.style.cursor = 'pointer';
+            sup.onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const noteElement = document.getElementById(targetId);
+                if (noteElement) {
+                    let html = noteElement.innerHTML;
+                    html = html.replace(/<a\s+href="#footnote-ref-[^"]*"[^>]*>.*?<\/a>/gi, '');
+                    html = html.trim();
+                    showNote(html);
+                }
+            };
+        }
+    });
+    
+    // También interceptar links directos
+    const links = document.querySelectorAll('#content a[href^="#footnote"]');
     links.forEach(link => {
         link.onclick = (e) => {
             e.preventDefault();
@@ -622,7 +653,6 @@ function setupNotes() {
             
             if (noteElement) {
                 let html = noteElement.innerHTML;
-                // Limpiar enlace de retorno
                 html = html.replace(/<a\s+href="#footnote-ref-[^"]*"[^>]*>.*?<\/a>/gi, '');
                 html = html.trim();
                 showNote(html);
@@ -630,7 +660,7 @@ function setupNotes() {
         };
     });
     
-    // Ocultar sección de notas al final
+    // Ocultar lista de notas al final
     const footnotesList = document.querySelector('#content ol');
     if (footnotesList) {
         const hasFootnotes = footnotesList.querySelector('li[id^="footnote-"]');
