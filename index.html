@@ -620,61 +620,73 @@ function addNavButtons(n) {
 function setupNotes() {
     console.log('📝 Configurando notas al pie...');
     
-    // 1. Buscar todos los SUP que contienen enlaces a notas
-    const sups = document.querySelectorAll('#content sup');
-    console.log('✓ SUP encontrados:', sups.length);
+    // Buscar todos los elementos SUP en el contenido
+    const allSups = document.querySelectorAll('#content sup');
+    console.log('SUP totales encontrados:', allSups.length);
     
-    sups.forEach((sup, index) => {
+    // Recorrer cada SUP y agregar el evento
+    allSups.forEach((sup, idx) => {
         const link = sup.querySelector('a[href^="#footnote"]');
         
         if (link) {
-            const targetId = link.getAttribute('href').substring(1);
-            console.log(`✓ Nota ${index + 1}: ${targetId}`);
+            const href = link.getAttribute('href');
+            const noteId = href.substring(1); // Quitar el #
             
-            // Hacer todo el SUP clickeable
-            sup.style.cursor = 'pointer';
+            console.log(`Nota ${idx + 1}: ID="${noteId}"`);
             
-            // Remover eventos previos
-            const newSup = sup.cloneNode(true);
-            sup.parentNode.replaceChild(newSup, sup);
-            
-            // Agregar nuevo evento
-            newSup.addEventListener('click', function(e) {
+            // Prevenir el comportamiento del link
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                console.log('🖱️ Click en nota:', targetId);
+            });
+            
+            // Agregar click al SUP completo
+            sup.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
                 
-                const noteElement = document.getElementById(targetId);
-                if (noteElement) {
-                    let html = noteElement.innerHTML;
-                    html = html.replace(/<a\s+href="#footnote-ref-[^"]*"[^>]*>.*?<\/a>/gi, '');
-                    html = html.trim();
-                    console.log('✓ Mostrando nota');
-                    showNote(html);
+                console.log('🖱️ CLICK detectado en SUP, buscando:', noteId);
+                
+                const noteEl = document.getElementById(noteId);
+                
+                if (noteEl) {
+                    console.log('✅ Nota encontrada!');
+                    let noteHTML = noteEl.innerHTML;
+                    // Limpiar enlaces de retorno
+                    noteHTML = noteHTML.replace(/<a[^>]*>↑<\/a>/gi, '');
+                    noteHTML = noteHTML.replace(/<a\s+href="#footnote-ref[^>]*>.*?<\/a>/gi, '');
+                    noteHTML = noteHTML.trim();
+                    
+                    showNote(noteHTML);
                 } else {
-                    console.error('❌ No se encontró elemento:', targetId);
+                    console.error('❌ NO SE ENCONTRÓ LA NOTA:', noteId);
+                    alert('Nota no encontrada: ' + noteId);
                 }
             });
+            
+            // Hacer visible que es clickeable
+            sup.style.cursor = 'pointer';
         }
     });
     
-    // 2. Ocultar lista de notas al final
-    const footnotesList = document.querySelector('#content ol');
-    if (footnotesList) {
-        const hasFootnotes = footnotesList.querySelector('li[id^="footnote-"]');
-        if (hasFootnotes) {
-            footnotesList.style.display = 'none';
+    // Ocultar la lista de notas al final del documento
+    const notesLists = document.querySelectorAll('#content ol');
+    notesLists.forEach(ol => {
+        if (ol.querySelector('li[id^="footnote-"]')) {
+            ol.style.display = 'none';
             console.log('✓ Lista de notas ocultada');
         }
-    }
+    });
     
-    console.log('✅ Notas configuradas correctamente');
+    console.log('✅ Setup de notas completado');
 }
 
 function showNote(html) {
+    console.log('📢 showNote() llamada con:', html.substring(0, 100));
     document.getElementById('noteBody').innerHTML = html;
     document.getElementById('overlay').classList.add('show');
     document.getElementById('note-popup').classList.add('show');
+    console.log('✅ Popup abierto');
 }
 
 function closeNote() {
