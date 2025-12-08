@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector Inmersivo</title>
+    
+    <!-- Librería para leer archivos WORD (.docx) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+
+    <style>
+        /* --- ESTILOS VISUALES (MODERNOS Y LIMPIOS) --- */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --sidebar-width: 300px;
+            --font-main: 'Merriweather', serif; /* Fuente para lectura */
+            --font-ui: 'Segoe UI', sans-serif; /* Fuente para interfaz */
+        }
+
+        /* TEMA OSCURO */
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #bdc3c7;
+        }
+        /* TEMA SEPIA (PAPEL) */
+        [data-theme="sepia"] {
+            --bg-color: #f5e6d3;
+            --text-color: #5d4037;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            line-height: 1.8;
+            overflow: hidden; /* El scroll lo maneja el contenedor */
+            transition: background 0.4s, color 0.4s;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* --- SIDEBAR --- */
+        #sidebar {
+            width: var(--sidebar-width);
+            background: rgba(0,0,0,0.03);
+            border-right: 1px solid rgba(0,0,0,0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: var(--font-ui);
+            position: fixed;
+            left: calc(var(--sidebar-width) * -1);
+            transition: left 0.3s ease;
+            z-index: 100;
+            background-color: var(--bg-color);
+        }
+        #sidebar.active { left: 0; }
+        
+        .sidebar-header {
+            padding: 20px;
+            font-weight: bold;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+        .chapter-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow-y: auto;
+            flex: 1;
+        }
+        .chapter-list li {
+            padding: 15px 20px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .chapter-list li:hover { background: rgba(0,0,0,0.05); }
+        .chapter-list li.active {
+            border-left: 5px solid var(--accent-color);
+            background: rgba(0,0,0,0.03);
+            font-weight: bold;
+        }
+
+        /* --- MAIN AREA --- */
+        #main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            margin-left: 0;
+            transition: margin-left 0.3s;
+            position: relative;
+        }
+        @media (min-width: 768px) {
+            #sidebar { left: 0; }
+            #main-content { margin-left: var(--sidebar-width); }
+            .toggle-btn { display: none; }
+        }
+
+        /* TOOLBAR */
+        .toolbar {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-ui);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            background: var(--bg-color);
+            z-index: 50;
+        }
+        .btn-icon {
+            background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--text-color);
+        }
+
+        /* READER */
+        #reader-scroll {
+            flex: 1;
+            overflow-y: auto;
+            padding: 40px 20px;
+            scroll-behavior: smooth;
+        }
+        #book-container {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px; /* Tamaño base */
+            padding-bottom: 100px;
+        }
+        
+        /* Estilos para el contenido traido de Word */
+        #book-container h1, #book-container h2 { text-align: center; font-family: var(--font-ui); margin-top: 2em; }
+        #book-container p { margin-bottom: 1.5em; text-align: justify; }
+        
+        /* NOTAS AL PIE (Generadas por Mammoth) */
+        sup { vertical-align: super; font-size: smaller; }
+        a[href^="#footnote-"] {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0 3px;
+            background: rgba(0,0,0,0.05);
+            border-radius: 4px;
+        }
+
+        /* LOADING SPINNER */
+        #loading {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            font-family: var(--font-ui); font-style: italic; opacity: 0.5; display: none;
+        }
+
+        /* POPUP DE NOTAS */
+        #note-popup {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(200%);
+            width: 90%;
+            max-width: 600px;
+            background: var(--bg-color);
+            color: var(--text-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid var(--accent-color);
+            z-index: 1000;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.27);
+            font-family: var(--font-ui);
+            font-size: 0.95rem;
+        }
+        #note-popup.active { transform: translateX(-50%) translateY(0); }
+        .close-note { position: absolute; top: 10px; right: 15px; cursor: pointer; opacity: 0.5; }
+
+        /* NAV BUTTONS */
+        .nav-buttons {
+            display: flex; justify-content: space-between; margin-top: 60px; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 20px;
+        }
+        .btn-nav {
+            padding: 10px 20px; border: 1px solid var(--text-color); background: none; color: var(--text-color); cursor: pointer; font-family: var(--font-ui); border-radius: 5px; opacity: 0.7; transition: 0.3s;
+        }
+        .btn-nav:hover { opacity: 1; background: rgba(0,0,0,0.05); }
+
+    </style>
+</head>
+<body>
+
+    <!-- MENÚ LATERAL -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <span>Índice</span>
+            <span onclick="toggleSidebar()" style="cursor: pointer">✕</span>
+        </div>
+        <ul class="chapter-list" id="chapter-list-ui">
+            <!-- Se llena con JS -->
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div id="main-content">
+        
+        <div class="toolbar">
+            <button class="btn-icon toggle-btn" onclick="toggleSidebar()">☰</button>
+            <span id="current-chapter-title" style="font-weight: bold; opacity: 0.7;">Cargando...</span>
+            <div style="display:flex; gap:10px">
+                <button class="btn-icon" onclick="changeTheme()" title="Cambiar Tema">◐</button>
+                <button class="btn-icon" onclick="changeSize(1)" title="Aumentar Letra">A+</button>
+                <button class="btn-icon" onclick="changeSize(-1)" title="Disminuir Letra">A-</button>
+            </div>
+        </div>
+
+        <div id="reader-scroll">
+            <div id="loading">Leyendo archivo Word...</div>
+            <div id="book-container">
+                <!-- Aquí se inyecta el HTML convertido del DOCX -->
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- TARJETA FLOTANTE PARA NOTAS -->
+    <div id="note-popup">
+        <span class="close-note" onclick="closeNote()">✕</span>
+        <div id="note-content"></div>
+    </div>
+
+    <script>
+        // CONFIGURACIÓN: Nombres de tus archivos en la carpeta "capitulos"
+        // Asegúrate que los nombres coincidan EXACTAMENTE (respetando mayúsculas y espacios)
+        const totalCapitulos = 30; 
+        const folderName = "capitulos";
+        const filePrefix = "Capitulo "; // Ejemplo: "Capitulo 01.docx"
+        
+        let currentChapter = 1;
+        
+        // --- INICIALIZACIÓN ---
+        document.addEventListener('DOMContentLoaded', () => {
+            generateIndex();
+            
+            // Recuperar último leído
+            const last = localStorage.getItem('lastChapter');
+            if(last) currentChapter = parseInt(last);
+            
+            loadChapter(currentChapter);
+        });
+
+        // --- 1. GENERAR ÍNDICE ---
+        function generateIndex() {
+            const list = document.getElementById('chapter-list-ui');
+            list.innerHTML = "";
+            
+            for(let i=1; i<=totalCapitulos; i++) {
+                let num = i < 10 ? "0"+i : i; // Formato 01, 02...
+                let li = document.createElement('li');
+                li.innerText = `Capítulo ${num}`;
+                li.onclick = () => { loadChapter(i); if(window.innerWidth<768) toggleSidebar(); };
+                li.id = `idx-${i}`;
+                list.appendChild(li);
+            }
+        }
+
+        // --- 2. CARGAR Y CONVERTIR DOCX ---
+        async function loadChapter(index) {
+            currentChapter = index;
+            localStorage.setItem('lastChapter', index);
+            
+            // UI Update
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('book-container').style.opacity = '0.3';
+            updateActiveIndex(index);
+            
+            // Construir nombre de archivo: "capitulos/Capitulo 01.docx"
+            let num = index < 10 ? "0"+index : index;
+            
+            // CORRECCIÓN: Codificar la URL para manejar espacios (Capitulo%2001.docx)
+            let rawFileName = filePrefix + num + ".docx";
+            let encodedFileName = encodeURIComponent(rawFileName);
+            let fileName = `${folderName}/${encodedFileName}`;
+
+            // Titulo UI
+            document.getElementById('current-chapter-title').innerText = `Capítulo ${num}`;
+
+            try {
+                // Fetch del archivo binario
+                const response = await fetch(fileName);
+                
+                if(!response.ok) {
+                    throw new Error(`HTTP Error: ${response.status} - No se encontró: ${fileName}`);
+                }
+                
+                const arrayBuffer = await response.arrayBuffer();
+
+                // Mammoth: Convertir DOCX a HTML
+                const result = await mammoth.convertToHtml({arrayBuffer: arrayBuffer});
+                
+                let html = result.value; // El HTML crudo
+                
+                // Procesar HTML para interactividad
+                html = processFootnotes(html);
+
+                // Inyectar
+                const container = document.getElementById('book-container');
+                container.innerHTML = html;
+                
+                // Agregar navegación al final
+                addNavigationButtons(container, index);
+
+                // Restaurar UI
+                container.style.opacity = '1';
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('reader-scroll').scrollTop = 0;
+
+                // Activar eventos de notas
+                attachNoteEvents();
+
+            } catch (error) {
+                console.error("Error cargando capítulo:", error);
+                document.getElementById('book-container').innerHTML = `
+                    <div style="text-align:center; padding:50px; color: #e74c3c;">
+                        <h3>⚠️ No se pudo cargar el capítulo</h3>
+                        <p style="font-family: monospace; background: #eee; padding: 10px; display:inline-block;">${fileName}</p>
+                        <p><b>Posibles causas:</b></p>
+                        <ul style="text-align:left; display:inline-block;">
+                            <li>El archivo no existe en la carpeta <code>${folderName}</code>.</li>
+                            <li>No estás usando un servidor web (estás abriendo el HTML directo).</li>
+                        </ul>
+                    </div>
+                `;
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('book-container').style.opacity = '1';
+            }
+        }
+
+        // --- 3. PROCESAR NOTAS (HIJACKING) ---
+        // Mammoth pone las notas al final. Vamos a detectarlas y ocultarlas para usarlas en el popup.
+        function processFootnotes(html) {
+            // Mammoth crea enlaces tipo <a href="#footnote-1" id="footnote-ref-1">[1]</a>
+            // Y listas <li id="footnote-1">...</li>
+            // Dejamos el HTML tal cual, pero interceptaremos los clicks con JS después.
+            return html;
+        }
+
+        function attachNoteEvents() {
+            // Buscar todos los links que van a footnotes
+            const links = document.querySelectorAll('a[href^="#footnote-"]');
+            
+            links.forEach(link => {
+                link.onclick = (e) => {
+                    e.preventDefault(); // Evitar salto brusco
+                    const targetId = link.getAttribute('href').substring(1); // quitar #
+                    const noteContent = document.getElementById(targetId);
+                    
+                    if(noteContent) {
+                        // Extraer texto limpio (quitando el botón de regreso que pone Mammoth)
+                        let text = noteContent.innerHTML;
+                        text = text.replace(/<a href="#footnote-ref-.*">↑<\/a>/, ''); 
+                        showPopup(text);
+                    }
+                };
+            });
+
+            // Ocultar la sección de notas original al final del documento (estética)
+            const ol = document.querySelector('ol');
+            if(ol && ol.children.length > 0 && ol.children[0].id.includes('footnote')) {
+                ol.style.display = 'none'; // Las ocultamos visualmente
+            }
+        }
+
+        // --- FUNCIONES UI ---
+        function showPopup(htmlContent) {
+            const popup = document.getElementById('note-popup');
+            document.getElementById('note-content').innerHTML = htmlContent;
+            popup.classList.add('active');
+        }
+
+        function closeNote() {
+            document.getElementById('note-popup').classList.remove('active');
+        }
+
+        function addNavigationButtons(container, index) {
+            const div = document.createElement('div');
+            div.className = 'nav-buttons';
+            
+            let html = "";
+            if(index > 1) html += `<button class="btn-nav" onclick="loadChapter(${index-1})">← Anterior</button>`;
+            else html += `<div></div>`;
+
+            if(index < totalCapitulos) html += `<button class="btn-nav" onclick="loadChapter(${index+1})">Siguiente →</button>`;
+            
+            div.innerHTML = html;
+            container.appendChild(div);
+        }
+
+        function updateActiveIndex(index) {
+            document.querySelectorAll('.chapter-list li').forEach(li => li.classList.remove('active'));
+            const active = document.getElementById(`idx-${index}`);
+            if(active) active.classList.add('active');
+        }
+
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+
+        // --- TEMAS Y FUENTES ---
+        const themes = ['light', 'sepia', 'dark'];
+        let themeIdx = 0;
+        
+        function changeTheme() {
+            themeIdx = (themeIdx + 1) % themes.length;
+            document.body.setAttribute('data-theme', themes[themeIdx]);
+        }
+
+        let fontSize = 18;
+        function changeSize(delta) {
+            fontSize += delta;
+            document.getElementById('book-container').style.fontSize = fontSize + "px";
+        }
+
+    </script>
+</body>
+</html>
