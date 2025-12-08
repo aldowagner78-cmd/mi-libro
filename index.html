@@ -625,152 +625,85 @@ function addNavButtons(n) {
 
 // ========== NOTAS AL PIE ==========
 function setupNotes() {
+    const content = document.getElementById('content');
+    if (!content) return;
+    
     console.log('📝 Configurando notas al pie...');
     
-    // Buscar todos los elementos SUP en el contenido
-    const allSups = document.querySelectorAll('#content sup');
-    console.log('SUP totales encontrados:', allSups.length);
+    // 1. Buscar la sección de NOTAS
+    const allPs = content.querySelectorAll('p');
+    let notasStartIndex = -1;
     
-    // DEBUG: Ver TODO el HTML generado
-    console.log('=== BÚSQUEDA DE NOTAS ===');
-    console.log('HTML completo contiene "NOTAS DEL"?', content.innerHTML.includes('NOTAS DEL'));
-    console.log('HTML completo contiene "<ol>"?', content.innerHTML.includes('<ol>'));
-    console.log('HTML completo contiene "footnote"?', content.innerHTML.includes('footnote'));
+    allPs.forEach((p, index) => {
+      if (p.innerHTML.includes('NOTAS DEL CAPÍTULO')) {
+        notasStartIndex = index;
+        console.log('✅ Encontré NOTAS DEL CAPÍTULO en párrafo', index);
+      }
+    });
     
-    // EXTRAER LA SECCIÓN DE NOTAS
-    const htmlText = content.innerHTML;
-    const notasIndex = htmlText.indexOf('NOTAS DEL');
-    if (notasIndex !== -1) {
-      const notasSection = htmlText.substring(notasIndex, notasIndex + 2000);
-      console.log('🔍 SECCIÓN DE NOTAS (primeros 2000 chars):\n', notasSection);
+    // 2. Crear mapa de notas: número -> contenido HTML
+    const notesMap = new Map();
+    
+    if (notasStartIndex !== -1) {
+      // Revisar todos los párrafos DESPUÉS del título "NOTAS DEL CAPÍTULO"
+      for (let i = notasStartIndex + 1; i < allPs.length; i++) {
+        const p = allPs[i];
+        const html = p.innerHTML;
+        
+        // Buscar si empieza con <sup>(número)</sup>
+        const match = html.match(/^<sup>\((\d+)\)<\/sup>/);
+        if (match) {
+          const noteNum = match[1];
+          notesMap.set(noteNum, html);
+          console.log(`✅ Nota ${noteNum} mapeada`);
+        }
+      }
     }
     
-    // Buscar cualquier OL (ordered list)
-    const allOLs = document.querySelectorAll('#content ol');
-    console.log('Total <ol> encontrados:', allOLs.length);
-    allOLs.forEach((ol, i) => {
-        console.log(`OL ${i}:`, ol.innerHTML.substring(0, 100));
+    console.log(`📋 Total notas encontradas: ${notesMap.size}`);
+    
+    // 3. Buscar todos los SUP en el texto principal (antes de NOTAS)
+    const textSups = [];
+    for (let i = 0; i < (notasStartIndex === -1 ? allPs.length : notasStartIndex); i++) {
+      const sups = allPs[i].querySelectorAll('sup');
+      sups.forEach(sup => textSups.push(sup));
+    }
+    
+    console.log(`📌 SUPs en texto principal: ${textSups.length}`);
+    
+    // 4. Configurar clicks en los SUPs del texto
+    textSups.forEach((sup, index) => {
+      const text = sup.textContent.trim();
+      const numMatch = text.match(/\((\d+)\)/);
+      
+      if (numMatch) {
+        const noteNum = numMatch[1];
+        sup.style.cursor = 'pointer';
+        sup.style.color = 'var(--accent)';
+        
+        sup.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const noteHTML = notesMap.get(noteNum);
+          if (noteHTML) {
+            showNote(noteHTML);
+            console.log(`✅ Mostrando nota ${noteNum}`);
+          } else {
+            console.warn(`❌ Nota ${noteNum} no encontrada en mapa`);
+          }
+        });
+        
+        console.log(`✓ SUP (${noteNum}) configurado`);
+      }
     });
     
-    // Buscar cualquier LI
-    const allLIs = document.querySelectorAll('#content li');
-    console.log('Total <li> encontrados:', allLIs.length);
-    
-    console.log('========================');
-    
-    // Recorrer cada SUP y agregar el evento
-    allSups.forEach((sup, idx) => {
-        // Buscar enlaces dentro del SUP
-        const link = sup.querySelector('a');
-        
-        console.log(`SUP ${idx}: tiene link?`, link ? 'SÍ' : 'NO');
-        
-        if (link) {
-            const href = link.getAttribute('href');
-            console.log(`  └─ href="${href}"`);
-            
-            // Verificar si es un footnote
-            if (href && href.startsWith('#footnote')) {
-                const noteId = href.substring(1); // Quitar el #
-                
-                console.log(`✓ Nota ${idx + 1}: ID="${noteId}"`);
-                
-                // Prevenir el comportamiento del link
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                });
-                
-                // Agregar click al SUP completo
-                sup.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    console.log('🖱️ CLICK detectado en SUP, buscando:', noteId);
-                    
-                    const noteEl = document.getElementById(noteId);
-                    
-                    if (noteEl) {
-                        console.log('✅ Nota encontrada!');
-                        let noteHTML = noteEl.innerHTML;
-                        // Limpiar enlaces de retorno
-                        noteHTML = noteHTML.replace(/<a[^>]*>↑<\/a>/gi, '');
-                        noteHTML = noteHTML.replace(/<a\s+href="#footnote-ref[^>]*>.*?<\/a>/gi, '');
-                        noteHTML = noteHTML.trim();
-                        
-                        showNote(noteHTML);
-                    } else {
-                        console.error('❌ NO SE ENCONTRÓ LA NOTA:', noteId);
-                        alert('Nota no encontrada: ' + noteId);
-                    }
-                });
-                
-                // Hacer visible que es clickeable
-                sup.style.cursor = 'pointer';
-            }
-        } else {
-            // Si no hay link, hacer el SUP clickeable directamente usando el texto
-            const text = sup.textContent.trim();
-            const match = text.match(/\((\d+)\)/); // Buscar patrón (1), (2), etc.
-            
-            if (match) {
-                const noteNum = match[1];
-                const noteId = 'footnote-' + noteNum;
-                
-                console.log(`✓ SUP sin link pero con número (${noteNum}), asignando ID: ${noteId}`);
-                
-                sup.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    console.log('🖱️ CLICK en SUP sin link, buscando:', noteId);
-                    console.log('   Evento:', e);
-                    console.log('   Target:', e.target);
-                    
-                    const noteEl = document.getElementById(noteId);
-                    console.log('   Elemento nota encontrado:', noteEl ? 'SÍ' : 'NO');
-                    
-                    if (noteEl) {
-                        console.log('✅ Nota encontrada! Contenido:', noteEl.textContent.substring(0, 50));
-                        let noteHTML = noteEl.innerHTML;
-                        noteHTML = noteHTML.replace(/<a[^>]*>↑<\/a>/gi, '');
-                        noteHTML = noteHTML.replace(/<a\s+href="#footnote-ref[^>]*>.*?<\/a>/gi, '');
-                        noteHTML = noteHTML.trim();
-                        
-                        console.log('   HTML limpio:', noteHTML.substring(0, 100));
-                        showNote(noteHTML);
-                    } else {
-                        console.error('❌ NO SE ENCONTRÓ LA NOTA:', noteId);
-                        console.error('   IDs disponibles:', Array.from(document.querySelectorAll('[id^="footnote-"]')).map(el => el.id));
-                    }
-                }, true); // Usar capture phase
-                
-                sup.style.cursor = 'pointer';
-                sup.title = 'Click para ver nota ' + noteNum;
-            }
-        }
-    });
-    
-    // Ocultar la lista de notas al final del documento
-    const notesLists = document.querySelectorAll('#content ol');
-    console.log('Listas OL encontradas:', notesLists.length);
-    
-    notesLists.forEach((ol, idx) => {
-        const footnoteItems = ol.querySelectorAll('li[id^="footnote-"]');
-        console.log(`OL ${idx}: tiene ${footnoteItems.length} notas`);
-        
-        if (footnoteItems.length > 0) {
-            console.log('  └─ IDs encontrados:', Array.from(footnoteItems).map(li => li.id));
-            ol.style.display = 'none';
-            console.log('✓ Lista de notas ocultada');
-        }
-    });
-    
-    // DEBUG: Buscar TODOS los elementos con id que empiece con "footnote"
-    const allFootnotes = document.querySelectorAll('[id^="footnote"]');
-    console.log('TOTAL elementos con ID footnote*:', allFootnotes.length);
-    if (allFootnotes.length > 0) {
-        console.log('IDs completos:', Array.from(allFootnotes).map(el => el.id));
+    // 5. Ocultar la sección de notas al final
+    if (notasStartIndex !== -1) {
+      for (let i = notasStartIndex; i < allPs.length; i++) {
+        allPs[i].style.display = 'none';
+      }
+      console.log('✅ Sección de notas ocultada');
     }
     
     console.log('✅ Setup de notas completado');
