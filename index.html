@@ -564,8 +564,12 @@ async function loadChapter(n) {
         const result = await mammoth.convertToHtml({ arrayBuffer: buffer });
         
         content.innerHTML = result.value;
-        addNavButtons(n);
-        setupNotes();
+        
+        // Ejecutar después de que el DOM se actualice
+        setTimeout(() => {
+            addNavButtons(n);
+            setupNotes();
+        }, 50);
         
         loading.classList.remove('show');
         document.getElementById('reader').scrollTop = 0;
@@ -614,60 +618,57 @@ function addNavButtons(n) {
 
 // ========== NOTAS AL PIE ==========
 function setupNotes() {
-    // Interceptar clicks en SUP (que contienen los enlaces a las notas)
-    const sups = document.querySelectorAll('#content sup');
+    console.log('📝 Configurando notas al pie...');
     
-    sups.forEach(sup => {
-        // Buscar si tiene un enlace dentro
+    // 1. Buscar todos los SUP que contienen enlaces a notas
+    const sups = document.querySelectorAll('#content sup');
+    console.log('✓ SUP encontrados:', sups.length);
+    
+    sups.forEach((sup, index) => {
         const link = sup.querySelector('a[href^="#footnote"]');
         
         if (link) {
             const targetId = link.getAttribute('href').substring(1);
+            console.log(`✓ Nota ${index + 1}: ${targetId}`);
             
-            // Agregar click al SUP completo
+            // Hacer todo el SUP clickeable
             sup.style.cursor = 'pointer';
-            sup.onclick = (e) => {
+            
+            // Remover eventos previos
+            const newSup = sup.cloneNode(true);
+            sup.parentNode.replaceChild(newSup, sup);
+            
+            // Agregar nuevo evento
+            newSup.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
+                console.log('🖱️ Click en nota:', targetId);
                 
                 const noteElement = document.getElementById(targetId);
                 if (noteElement) {
                     let html = noteElement.innerHTML;
                     html = html.replace(/<a\s+href="#footnote-ref-[^"]*"[^>]*>.*?<\/a>/gi, '');
                     html = html.trim();
+                    console.log('✓ Mostrando nota');
                     showNote(html);
+                } else {
+                    console.error('❌ No se encontró elemento:', targetId);
                 }
-            };
+            });
         }
     });
     
-    // También interceptar links directos
-    const links = document.querySelectorAll('#content a[href^="#footnote"]');
-    links.forEach(link => {
-        link.onclick = (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const targetId = link.getAttribute('href').substring(1);
-            const noteElement = document.getElementById(targetId);
-            
-            if (noteElement) {
-                let html = noteElement.innerHTML;
-                html = html.replace(/<a\s+href="#footnote-ref-[^"]*"[^>]*>.*?<\/a>/gi, '');
-                html = html.trim();
-                showNote(html);
-            }
-        };
-    });
-    
-    // Ocultar lista de notas al final
+    // 2. Ocultar lista de notas al final
     const footnotesList = document.querySelector('#content ol');
     if (footnotesList) {
         const hasFootnotes = footnotesList.querySelector('li[id^="footnote-"]');
         if (hasFootnotes) {
             footnotesList.style.display = 'none';
+            console.log('✓ Lista de notas ocultada');
         }
     }
+    
+    console.log('✅ Notas configuradas correctamente');
 }
 
 function showNote(html) {
