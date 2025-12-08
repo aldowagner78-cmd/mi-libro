@@ -624,48 +624,96 @@ function setupNotes() {
     const allSups = document.querySelectorAll('#content sup');
     console.log('SUP totales encontrados:', allSups.length);
     
+    // DEBUG: Ver el HTML de los primeros SUP
+    if (allSups.length > 0) {
+        console.log('HTML del primer SUP:', allSups[0].outerHTML);
+        console.log('Contenido del primer SUP:', allSups[0].textContent);
+    }
+    
     // Recorrer cada SUP y agregar el evento
     allSups.forEach((sup, idx) => {
-        const link = sup.querySelector('a[href^="#footnote"]');
+        // Buscar enlaces dentro del SUP
+        const link = sup.querySelector('a');
+        
+        console.log(`SUP ${idx}: tiene link?`, link ? 'SÍ' : 'NO');
         
         if (link) {
             const href = link.getAttribute('href');
-            const noteId = href.substring(1); // Quitar el #
+            console.log(`  └─ href="${href}"`);
             
-            console.log(`Nota ${idx + 1}: ID="${noteId}"`);
-            
-            // Prevenir el comportamiento del link
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-            });
-            
-            // Agregar click al SUP completo
-            sup.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
+            // Verificar si es un footnote
+            if (href && href.startsWith('#footnote')) {
+                const noteId = href.substring(1); // Quitar el #
                 
-                console.log('🖱️ CLICK detectado en SUP, buscando:', noteId);
+                console.log(`✓ Nota ${idx + 1}: ID="${noteId}"`);
                 
-                const noteEl = document.getElementById(noteId);
+                // Prevenir el comportamiento del link
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
                 
-                if (noteEl) {
-                    console.log('✅ Nota encontrada!');
-                    let noteHTML = noteEl.innerHTML;
-                    // Limpiar enlaces de retorno
-                    noteHTML = noteHTML.replace(/<a[^>]*>↑<\/a>/gi, '');
-                    noteHTML = noteHTML.replace(/<a\s+href="#footnote-ref[^>]*>.*?<\/a>/gi, '');
-                    noteHTML = noteHTML.trim();
+                // Agregar click al SUP completo
+                sup.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     
-                    showNote(noteHTML);
-                } else {
-                    console.error('❌ NO SE ENCONTRÓ LA NOTA:', noteId);
-                    alert('Nota no encontrada: ' + noteId);
-                }
-            });
+                    console.log('🖱️ CLICK detectado en SUP, buscando:', noteId);
+                    
+                    const noteEl = document.getElementById(noteId);
+                    
+                    if (noteEl) {
+                        console.log('✅ Nota encontrada!');
+                        let noteHTML = noteEl.innerHTML;
+                        // Limpiar enlaces de retorno
+                        noteHTML = noteHTML.replace(/<a[^>]*>↑<\/a>/gi, '');
+                        noteHTML = noteHTML.replace(/<a\s+href="#footnote-ref[^>]*>.*?<\/a>/gi, '');
+                        noteHTML = noteHTML.trim();
+                        
+                        showNote(noteHTML);
+                    } else {
+                        console.error('❌ NO SE ENCONTRÓ LA NOTA:', noteId);
+                        alert('Nota no encontrada: ' + noteId);
+                    }
+                });
+                
+                // Hacer visible que es clickeable
+                sup.style.cursor = 'pointer';
+            }
+        } else {
+            // Si no hay link, hacer el SUP clickeable directamente usando el texto
+            const text = sup.textContent.trim();
+            const match = text.match(/\((\d+)\)/); // Buscar patrón (1), (2), etc.
             
-            // Hacer visible que es clickeable
-            sup.style.cursor = 'pointer';
+            if (match) {
+                const noteNum = match[1];
+                const noteId = 'footnote-' + noteNum;
+                
+                console.log(`✓ SUP sin link pero con número (${noteNum}), asignando ID: ${noteId}`);
+                
+                sup.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    console.log('🖱️ CLICK en SUP sin link, buscando:', noteId);
+                    
+                    const noteEl = document.getElementById(noteId);
+                    
+                    if (noteEl) {
+                        console.log('✅ Nota encontrada!');
+                        let noteHTML = noteEl.innerHTML;
+                        noteHTML = noteHTML.replace(/<a[^>]*>↑<\/a>/gi, '');
+                        noteHTML = noteHTML.replace(/<a\s+href="#footnote-ref[^>]*>.*?<\/a>/gi, '');
+                        noteHTML = noteHTML.trim();
+                        
+                        showNote(noteHTML);
+                    } else {
+                        console.error('❌ NO SE ENCONTRÓ LA NOTA:', noteId);
+                    }
+                });
+                
+                sup.style.cursor = 'pointer';
+            }
         }
     });
     
