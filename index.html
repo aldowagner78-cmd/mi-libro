@@ -626,8 +626,11 @@ function setupNotes() {
     
     // DEBUG: Ver el HTML de los primeros SUP
     if (allSups.length > 0) {
+        console.log('=== DEBUG HTML ===');
         console.log('HTML del primer SUP:', allSups[0].outerHTML);
         console.log('Contenido del primer SUP:', allSups[0].textContent);
+        console.log('Parent del primer SUP:', allSups[0].parentElement.tagName);
+        console.log('==================');
     }
     
     // Recorrer cada SUP y agregar el evento
@@ -696,23 +699,29 @@ function setupNotes() {
                     e.stopPropagation();
                     
                     console.log('🖱️ CLICK en SUP sin link, buscando:', noteId);
+                    console.log('   Evento:', e);
+                    console.log('   Target:', e.target);
                     
                     const noteEl = document.getElementById(noteId);
+                    console.log('   Elemento nota encontrado:', noteEl ? 'SÍ' : 'NO');
                     
                     if (noteEl) {
-                        console.log('✅ Nota encontrada!');
+                        console.log('✅ Nota encontrada! Contenido:', noteEl.textContent.substring(0, 50));
                         let noteHTML = noteEl.innerHTML;
                         noteHTML = noteHTML.replace(/<a[^>]*>↑<\/a>/gi, '');
                         noteHTML = noteHTML.replace(/<a\s+href="#footnote-ref[^>]*>.*?<\/a>/gi, '');
                         noteHTML = noteHTML.trim();
                         
+                        console.log('   HTML limpio:', noteHTML.substring(0, 100));
                         showNote(noteHTML);
                     } else {
                         console.error('❌ NO SE ENCONTRÓ LA NOTA:', noteId);
+                        console.error('   IDs disponibles:', Array.from(document.querySelectorAll('[id^="footnote-"]')).map(el => el.id));
                     }
-                });
+                }, true); // Usar capture phase
                 
                 sup.style.cursor = 'pointer';
+                sup.title = 'Click para ver nota ' + noteNum;
             }
         }
     });
