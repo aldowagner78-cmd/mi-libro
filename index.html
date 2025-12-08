@@ -637,6 +637,14 @@ function setupNotes() {
     console.log('HTML completo contiene "<ol>"?', content.innerHTML.includes('<ol>'));
     console.log('HTML completo contiene "footnote"?', content.innerHTML.includes('footnote'));
     
+    // EXTRAER LA SECCIÓN DE NOTAS
+    const htmlText = content.innerHTML;
+    const notasIndex = htmlText.indexOf('NOTAS DEL');
+    if (notasIndex !== -1) {
+      const notasSection = htmlText.substring(notasIndex, notasIndex + 2000);
+      console.log('🔍 SECCIÓN DE NOTAS (primeros 2000 chars):\n', notasSection);
+    }
+    
     // Buscar cualquier OL (ordered list)
     const allOLs = document.querySelectorAll('#content ol');
     console.log('Total <ol> encontrados:', allOLs.length);
