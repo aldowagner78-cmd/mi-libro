@@ -561,7 +561,14 @@ async function loadChapter(n) {
         if (!res.ok) throw new Error('No encontrado');
         
         const buffer = await res.arrayBuffer();
-        const result = await mammoth.convertToHtml({ arrayBuffer: buffer });
+        const result = await mammoth.convertToHtml({ 
+            arrayBuffer: buffer,
+            includeDefaultStyleMap: true,
+            includeEmbeddedStyleMap: true
+        });
+        
+        console.log('📄 Mammoth messages:', result.messages);
+        console.log('📄 HTML length:', result.value.length);
         
         content.innerHTML = result.value;
         
@@ -624,14 +631,24 @@ function setupNotes() {
     const allSups = document.querySelectorAll('#content sup');
     console.log('SUP totales encontrados:', allSups.length);
     
-    // DEBUG: Ver el HTML de los primeros SUP
-    if (allSups.length > 0) {
-        console.log('=== DEBUG HTML ===');
-        console.log('HTML del primer SUP:', allSups[0].outerHTML);
-        console.log('Contenido del primer SUP:', allSups[0].textContent);
-        console.log('Parent del primer SUP:', allSups[0].parentElement.tagName);
-        console.log('==================');
-    }
+    // DEBUG: Ver TODO el HTML generado
+    console.log('=== BÚSQUEDA DE NOTAS ===');
+    console.log('HTML completo contiene "NOTAS DEL"?', content.innerHTML.includes('NOTAS DEL'));
+    console.log('HTML completo contiene "<ol>"?', content.innerHTML.includes('<ol>'));
+    console.log('HTML completo contiene "footnote"?', content.innerHTML.includes('footnote'));
+    
+    // Buscar cualquier OL (ordered list)
+    const allOLs = document.querySelectorAll('#content ol');
+    console.log('Total <ol> encontrados:', allOLs.length);
+    allOLs.forEach((ol, i) => {
+        console.log(`OL ${i}:`, ol.innerHTML.substring(0, 100));
+    });
+    
+    // Buscar cualquier LI
+    const allLIs = document.querySelectorAll('#content li');
+    console.log('Total <li> encontrados:', allLIs.length);
+    
+    console.log('========================');
     
     // Recorrer cada SUP y agregar el evento
     allSups.forEach((sup, idx) => {
