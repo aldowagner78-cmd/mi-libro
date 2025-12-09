@@ -214,9 +214,28 @@
             color: var(--text-soft);
             transition: all 0.2s;
             margin-bottom: 4px;
+            position: relative;
         }
         .chapter-item:hover { background: var(--accent-soft); color: var(--accent); }
         .chapter-item.active { background: var(--accent); color: #fff; font-weight: 600; }
+        .chapter-item.read { opacity: 0.6; }
+        .chapter-item.read::after {
+            content: '✓';
+            position: absolute;
+            right: 12px;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .chapter-item.reading {
+            border-left: 3px solid var(--accent);
+            padding-left: 11px;
+        }
+        .chapter-item.bookmarked::before {
+            content: '🔖';
+            position: absolute;
+            right: 32px;
+            font-size: 12px;
+        }
         .chapter-item svg { width: 16px; height: 16px; }
         
         .chapter-thumbnail {
@@ -671,6 +690,46 @@
             border-color: #e11d48;
         }
         
+        /* ===================== BOOKMARKS & PROGRESS ===================== */
+        .bookmark-btn {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .bookmark-btn:hover {
+            background: var(--accent-soft);
+            border-color: var(--accent);
+        }
+        .bookmark-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        .bookmark-btn.active svg {
+            fill: white;
+        }
+        .progress-bar-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--border);
+            z-index: 9999;
+        }
+        .progress-bar {
+            height: 100%;
+            background: var(--accent);
+            transition: width 0.3s ease;
+            width: 0%;
+        }
+        
         @media(max-width: 768px) {
             .audio-player {
                 flex-wrap: wrap;
@@ -866,6 +925,11 @@
 </head>
 <body>
 
+<!-- BARRA DE PROGRESO GLOBAL -->
+<div class="progress-bar-container">
+    <div class="progress-bar" id="globalProgress"></div>
+</div>
+
 <!-- SIDEBAR -->
 <aside id="sidebar">
     <div class="sidebar-head">
@@ -906,6 +970,9 @@
             </button>
             <button class="btn icon" id="audioToggle" onclick="toggleAudioPlayer()" title="Reproducir audio">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </button>
+            <button class="btn icon bookmark-btn" id="bookmarkBtn" onclick="toggleBookmark()" title="Marcar esta página">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
             </button>
         </div>
     </header>
@@ -954,6 +1021,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const saved = localStorage.getItem('chapter');
     const savedTheme = localStorage.getItem('theme');
     const savedFont = localStorage.getItem('fontSize');
+    const firstVisit = localStorage.getItem('firstVisit');
+    const scrollPosition = localStorage.getItem('scrollPosition');
     
     if (saved) currentChapter = parseInt(saved);
     if (savedTheme) setTheme(savedTheme);
@@ -962,8 +1031,32 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('content').style.fontSize = fontSize + 'rem';
     }
     
-    // Mostrar portada principal al inicio
-    showMainCover();
+    // Detectar primera visita
+    if (!firstVisit) {
+        // Primera vez: mostrar portada principal
+        localStorage.setItem('firstVisit', 'true');
+        showMainCover();
+    } else {
+        // Visitas posteriores: ir directo al último capítulo
+        if (saved) {
+            loadChapterDirectly(parseInt(saved));
+            // Restaurar posición de scroll después de cargar
+            if (scrollPosition) {
+                setTimeout(() => {
+                    document.getElementById('reader').scrollTop = parseInt(scrollPosition);
+                }, 100);
+            }
+        } else {
+            showMainCover();
+        }
+    }
+    
+    // Actualizar estados de lectura
+    updateChapterStates();
+    updateProgressBar();
+    
+    // Guardar scroll cada 2 segundos
+    setInterval(saveScrollPosition, 2000);
 });
 
 // ========== CHAPTERS ==========
@@ -1173,9 +1266,55 @@ async function loadChapter(n) {
     currentChapter = n;
     localStorage.setItem('chapter', n);
     highlightChapter(n);
+    markChapterAsReading(n);
     
     // Mostrar pantalla de portada primero
     showCoverScreen(n);
+}
+
+async function loadChapterDirectly(n) {
+    // Cargar capítulo sin mostrar portada (para restaurar sesión)
+    currentChapter = n;
+    highlightChapter(n);
+    markChapterAsReading(n);
+    
+    const content = document.getElementById('content');
+    const loading = document.getElementById('loading');
+    
+    loading.classList.add('show');
+    content.innerHTML = '';
+    
+    const num = n.toString().padStart(2, '0');
+    document.getElementById('chapterTitle').textContent = 'Capítulo ' + num;
+    
+    const htmlFile = FOLDER + '/' + encodeURIComponent(PREFIX + num + HTML_EXT);
+    const jsonFile = FOLDER + '/' + encodeURIComponent(PREFIX + num + JSON_EXT);
+    
+    try {
+        const htmlRes = await fetch(htmlFile);
+        if (!htmlRes.ok) throw new Error('HTML no encontrado');
+        
+        const html = await htmlRes.text();
+        content.innerHTML = html;
+        
+        try {
+            const jsonRes = await fetch(jsonFile);
+            if (jsonRes.ok) {
+                const notesData = await jsonRes.json();
+                setupNotesWithJSON(notesData);
+            }
+        } catch (jsonErr) {
+            console.error('❌ Error cargando notas:', jsonErr);
+        }
+        
+        addNavButtons(n);
+        loading.classList.remove('show');
+        updateBookmarkButton();
+        
+    } catch (e) {
+        console.error('❌ Error cargando capítulo:', e);
+        loading.classList.remove('show');
+    }
 }
 
 function showCoverScreen(n) {
@@ -1246,6 +1385,7 @@ async function startReading() {
         addNavButtons(n);
         loading.classList.remove('show');
         document.getElementById('reader').scrollTop = 0;
+        updateBookmarkButton();
         
     } catch (e) {
         console.error('❌ Error cargando capítulo:', e);
@@ -1268,6 +1408,136 @@ function highlightChapter(n) {
         el.classList.add('active');
         el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+}
+
+// ========== BOOKMARKS & PROGRESS ==========
+function toggleBookmark() {
+    const bookmarks = getBookmarks();
+    const key = `ch-${currentChapter}`;
+    const scrollPos = document.getElementById('reader').scrollTop;
+    
+    if (bookmarks[key]) {
+        delete bookmarks[key];
+        showToast('Marcador eliminado');
+    } else {
+        bookmarks[key] = {
+            chapter: currentChapter,
+            scroll: scrollPos,
+            date: new Date().toISOString()
+        };
+        showToast('✓ Marcador guardado');
+    }
+    
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    updateBookmarkButton();
+    updateChapterStates();
+}
+
+function getBookmarks() {
+    const saved = localStorage.getItem('bookmarks');
+    return saved ? JSON.parse(saved) : {};
+}
+
+function updateBookmarkButton() {
+    const btn = document.getElementById('bookmarkBtn');
+    if (!btn) return;
+    
+    const bookmarks = getBookmarks();
+    const key = `ch-${currentChapter}`;
+    
+    if (bookmarks[key]) {
+        btn.classList.add('active');
+    } else {
+        btn.classList.remove('active');
+    }
+}
+
+function markChapterAsReading(n) {
+    const readChapters = getReadChapters();
+    readChapters[`ch-${n}`] = 'reading';
+    localStorage.setItem('readChapters', JSON.stringify(readChapters));
+    updateChapterStates();
+    updateProgressBar();
+}
+
+function markChapterAsRead(n) {
+    const readChapters = getReadChapters();
+    readChapters[`ch-${n}`] = 'read';
+    localStorage.setItem('readChapters', JSON.stringify(readChapters));
+    updateChapterStates();
+    updateProgressBar();
+}
+
+function getReadChapters() {
+    const saved = localStorage.getItem('readChapters');
+    return saved ? JSON.parse(saved) : {};
+}
+
+function updateChapterStates() {
+    const readChapters = getReadChapters();
+    const bookmarks = getBookmarks();
+    
+    for (let i = 1; i <= TOTAL_CHAPTERS; i++) {
+        const el = document.getElementById('ch-' + i);
+        if (!el) continue;
+        
+        el.classList.remove('read', 'reading', 'bookmarked');
+        
+        const key = `ch-${i}`;
+        if (readChapters[key] === 'read') el.classList.add('read');
+        if (readChapters[key] === 'reading') el.classList.add('reading');
+        if (bookmarks[key]) el.classList.add('bookmarked');
+    }
+}
+
+function updateProgressBar() {
+    const readChapters = getReadChapters();
+    const totalRead = Object.values(readChapters).filter(v => v === 'read').length;
+    const percentage = (totalRead / TOTAL_CHAPTERS) * 100;
+    
+    const progressBar = document.getElementById('globalProgress');
+    if (progressBar) {
+        progressBar.style.width = percentage + '%';
+    }
+}
+
+function saveScrollPosition() {
+    if (currentChapter) {
+        const scrollPos = document.getElementById('reader').scrollTop;
+        localStorage.setItem('scrollPosition', scrollPos);
+        
+        // Si llegó al final del capítulo, marcarlo como leído
+        const reader = document.getElementById('reader');
+        const scrollPercentage = (reader.scrollTop + reader.clientHeight) / reader.scrollHeight;
+        if (scrollPercentage > 0.95) {
+            markChapterAsRead(currentChapter);
+        }
+    }
+}
+
+function showToast(message) {
+    const toast = document.createElement('div');
+    toast.style.cssText = `
+        position: fixed;
+        bottom: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--text);
+        color: var(--bg);
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 500;
+        z-index: 10000;
+        animation: fadeIn 0.3s ease;
+    `;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+        toast.style.animation = 'fadeOut 0.3s ease';
+        setTimeout(() => toast.remove(), 300);
+    }, 2000);
 }
 
 function addNavButtons(n) {
