@@ -2,11 +2,13 @@
 
 **CAPÍTULO 13: LA PESADILLA DE LA ARQUITECTA**
 
-**INTERLUDIO XIII: LA TERMODINÁMICA DEL TRAUMA**
+***INTERLUDIO XIII: LA TERMODINÁMICA DEL TRAUMA***
 
-*"El cerebro no es una cámara que registra la realidad; es un generador de predicciones que alucina la realidad controlada por los sentidos. Según el principio de energía libre de Karl Friston, nuestra mente es una máquina biológica diseñada obsesivamente para minimizar la sorpresa, para reducir la entropía interna. Construimos un modelo del mundo y, cuando la realidad externa no encaja con ese modelo, sufrimos un 'error de predicción'. Eso es el estrés. Eso es el dolor. Pero, ¿qué sucede cuando la realidad externa desaparece? En un estado de consciencia pura, sin el lastre sensorial del cuerpo que corrija el modelo, el cerebro se convierte en un prisionero recursivo de sus propias predicciones fallidas. El trauma es un error de predicción que se ha calcificado, una ecuación no resuelta que se repite en bucle. En la red, una pesadilla no es un ensayo onírico. Es un arquitecto. Y si no tenemos cuidado, Aris no solo vivirá en su infierno privado; nos obligará a todos a mudarnos a él, convirtiendo el paraíso digital en un manicomio de alta resolución."*
+*"El cerebro no es una cámara que registra la realidad; es un generador de predicciones que alucina una realidad controlada por los sentidos. Nuestra mente es una máquina biológica diseñada obsesivamente para minimizar la sorpresa. Construimos un modelo del mundo y, cuando la realidad externa no encaja con ese modelo, sufrimos un 'error de predicción'. Eso es el estrés.*
 
-— **Dr. James Gordon.** *Notas manuscritas para la conferencia "La Patología de la Inmortalidad", Universidad de Cambridge, cancelada en 2025.*
+*Pero me aterra pensar qué sucedería si la realidad externa desapareciera. En un estado de consciencia pura, sin el lastre sensorial del cuerpo que corrija el modelo, el cerebro se convertiría en un prisionero recursivo de sus propias predicciones fallidas. El trauma dejaría de ser un evento para convertirse en un arquitecto. Si alguna vez logramos digitalizar una mente humana traumatizada, no crearemos la inmortalidad; crearemos un infierno de alta resolución que se compila a sí mismo eternamente."*
+
+— **Dra. Aris Thorne.** Extracto de "Teoría del Bucle Cognitivo en Sistemas Aislados", borrador personal encriptado, 2019.
 
 **Capa de Simulación: Nodo "Zúrich_Negro".** **Estado del Sistema: Crítico / Inestable.** **Tiempo Subjetivo: Irrelevante.**
 
