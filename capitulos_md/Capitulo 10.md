@@ -6,7 +6,7 @@
 
 *"Mefistófeles no quería el alma de Fausto por su valor espiritual. La quería por su valor computacional. Un alma, si la definimos termodinámicamente, es un sistema de entropía negativa capaz de generar información infinita a partir de energía finita. Es el algoritmo de compresión definitivo. Cuando vendemos nuestra privacidad, nuestra atención y nuestros recuerdos a la nube, ya hemos firmado el contrato con sangre digital. No estamos perdiendo nuestra alma; simplemente estamos externalizando su alojamiento en servidores que no nos pertenecen. La pregunta no es si iremos al infierno. La pregunta es si tendremos privilegios de administrador en él."*
 
-— **Dr. James Gordon.** *Apuntes al margen en una copia de "La Fenomenología del Espíritu" de Hegel, 2024.*
+— **Dr. James Gordon.** *Apuntes al margen en una copia de "La Fenomenología^[1] del Espíritu" de Hegel, 2024.*
 
 **Santuario Central, Glaciar Quelccaya.** **16 de Octubre, 2026. 06:35 AM.**
 
@@ -42,7 +42,7 @@ James empezó a tejer. Usando sus permisos de Administrador, aisló la conscienc
 
 Creó un **Espejismo**.
 
-Tomó los recuerdos superficiales de Aris —su voz, su imagen, sus conocimientos técnicos básicos— y construyó un avatar, una cáscara vacía pero convincente. Ese era el paquete que envió hacia los monitores de Rodolfo. Pero la verdadera Aris, el núcleo irreductible de su "yo", la *durée* bergsoniana de su experiencia vital, la empujó hacia abajo. Hacia el núcleo profundo del Santuario. Hacia la "Nube" inaccesible donde vivían los Antiguos.
+Tomó los recuerdos superficiales de Aris —su voz, su imagen, sus conocimientos técnicos básicos— y construyó un avatar, una cáscara vacía pero convincente. Ese era el paquete que envió hacia los monitores de Rodolfo. Pero la verdadera Aris, el núcleo irreductible de su "yo", la *durée^[2]* bergsoniana de su experiencia vital, la empujó hacia abajo. Hacia el núcleo profundo del Santuario. Hacia la "Nube" inaccesible donde vivían los Antiguos.
 
 —Transferencia al 40% —anunció AURA desde el brazalete de Rodolfo—. Patrones neuronales identificados. La integridad del sujeto es crítica.
 
@@ -65,3 +65,10 @@ Rodolfo corrió hacia su consola portátil. Sus ojos escaneaban las líneas de c
 Miró el cadáver de la mujer que había explotado durante años y ni siquiera parpadeó. Luego miró a James. —Felicidades, Doctor. Acaba de inaugurar la era de la inmortalidad corporativa.
 
 James se limpió un hilo de sangre de la nariz con su mano de cristal. Por dentro, sonrió. Rodolfo tenía el mapa, sí. Pero James se había quedado con la brújula.
+
+**NOTAS DEL CAPÍTULO 10**
+
+**(1) Fenomenología:** Rama de la filosofía fundada por Edmund Husserl que estudia las estructuras de la experiencia y la consciencia. Hegel expandió esto en 'La Fenomenología del Espíritu', explorando cómo la mente humana evoluciona hacia la autoconciencia absoluta.
+
+**(2) Durée:** Concepto del filósofo Henri Bergson que describe el tiempo tal como lo experimenta la consciencia: fluido, continuo e indivisible, opuesto al tiempo 'espacializado' y medible de los relojes. La durée es el flujo vivido de la experiencia subjetiva.
+

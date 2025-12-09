@@ -4,7 +4,7 @@
 
 **INTERLUDIO XV: LA SEDUCCIÓN DEL CERO ABSOLUTO**
 
-*"El Nirvana. El Cielo. La Eutanasia. El Jardín del Edén. Todos son nombres culturales diferentes para el mismo deseo biológico fundamental y prohibido: el cese de la perturbación. La vida biológica es ruido. Es fricción. Es un desequilibrio químico constante y agotador que lucha contra la entropía a cada segundo. Cada latido del corazón es un acto de violencia hidráulica contra el silencio del universo. Mantener 37 grados de temperatura en un universo que tiende al cero absoluto es un trabajo forzado. La paz perfecta, termodinámicamente hablando, es la muerte térmica. Cuando imaginamos el paraíso, imaginamos descanso. Pero un descanso eterno, sin cambios, sin desafíos, es estasis. Y la estasis es el fin de la evolución. El mayor peligro del Santuario no es que sea una trampa malvada diseñada por alienígenas hostiles. Es que es una trampa cómoda. Es un útero de luz infinita que te invita a dejar de luchar, a dejar de ser, y simplemente... flotar en la perfección del cero."*
+*"El Nirvana. El Cielo. La Eutanasia. El Jardín del Edén. Todos son nombres culturales diferentes para el mismo deseo biológico fundamental y prohibido: el cese de la perturbación. La vida biológica es ruido. Es fricción. Es un desequilibrio químico constante y agotador que lucha contra la entropía a cada segundo. Cada latido del corazón es un acto de violencia hidráulica contra el silencio del universo. Mantener 37 grados de temperatura en un universo que tiende al cero absoluto es un trabajo forzado. La paz perfecta, termodinámicamente hablando, es la muerte térmica. Cuando imaginamos el paraíso, imaginamos descanso. Pero un descanso eterno, sin cambios, sin desafíos, es estasis^[1]. Y la estasis es el fin de la evolución. El mayor peligro del Santuario no es que sea una trampa malvada diseñada por alienígenas hostiles. Es que es una trampa cómoda. Es un útero de luz infinita que te invita a dejar de luchar, a dejar de ser, y simplemente... flotar en la perfección del cero."*
 
 — **Dr. James Gordon.** *Diario de sueños lúcidos, entrada final recuperada del implante neural.*
 
@@ -99,3 +99,8 @@ Un grito ronco, animal, desgarrador. El grito de un hombre que ha sido arrancado
 Estaba de vuelta en la Catedral de Hielo. Helena lo miraba con ojos llenos de lágrimas y terror. Rodolfo estaba junto a la bomba, con el dedo en el detonador y una sonrisa de triunfo en los labios. James intentó levantarse, pero su cuerpo pesaba toneladas. Su mano de obsidiana ardía, roja y furiosa, pulsando con la energía del rechazo.
 
 —Bienvenido al infierno, Doctor —dijo Rodolfo, su voz suave cortando el aire helado—. Llegas justo a tiempo para el final del mundo.
+
+**NOTAS DEL CAPÍTULO 15**
+
+**(1) Estasis:** Estado de inactividad metabólica donde las funciones biológicas se ralentizan casi hasta detenerse, preservando el organismo sin envejecimiento significativo. Común en ciencia ficción (hibernación espacial), pero algunos animales (tardigrados, osos) lo logran naturalmente.
+

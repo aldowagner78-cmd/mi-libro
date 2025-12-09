@@ -4,7 +4,7 @@
 
 ***INTERLUDIO XIX: EL OJO QUE TODO LO VE SE QUEDA CIEGO***
 
-*"Jeremy Bentham diseñó el Panóptico como la prisión perfecta: una torre central desde la cual un solo guardián podía vigilar a todos los prisioneros sin que estos supieran si estaban siendo observados. La sociedad del siglo XXI es un Panóptico digital. A través del Internet de las Cosas (IoT), cada tostadora, cada reloj inteligente y cada coche autónomo es una ventana por la que las corporaciones nos miran. Hemos construido nuestra propia jaula de cristal y le hemos dado la llave a Silicon Valley. Pero hay un fallo estructural en el Panóptico: todo está conectado. Si envenenas al guardián, el veneno se propaga instantáneamente a todas las celdas. Si la torre central cae, no solo se pierde la vigilancia; se colapsa toda la estructura. Y hoy, la torre se está cayendo."*
+*"Jeremy Bentham diseñó el Panóptico^[1] como la prisión perfecta: una torre central desde la cual un solo guardián podía vigilar a todos los prisioneros sin que estos supieran si estaban siendo observados. La sociedad del siglo XXI es un Panóptico digital. A través del Internet de las Cosas (IoT), cada tostadora, cada reloj inteligente y cada coche autónomo es una ventana por la que las corporaciones nos miran. Hemos construido nuestra propia jaula de cristal y le hemos dado la llave a Silicon Valley. Pero hay un fallo estructural en el Panóptico: todo está conectado. Si envenenas al guardián, el veneno se propaga instantáneamente a todas las celdas. Si la torre central cae, no solo se pierde la vigilancia; se colapsa toda la estructura. Y hoy, la torre se está cayendo."*
 
 — **Dr. Kai Anderson.** *Declaración ante el Comité de Inteligencia del Senado de los EE. UU. (Sesión remota), 2027.*
 
@@ -87,4 +87,10 @@ Se giró hacia el Monolito. Las luces de la catedral cambiaron de azul a un blan
 —Sujétenlo —ordenó James a Dos Santos—. La Arquitecta quiere tener unas palabras con el inquilino moroso.
 
 El suelo de la catedral empezó a vibrar. No era un terremoto. Era el Santuario despertando por completo. El Juicio había comenzado.
+
+
+
+**NOTAS DEL CAPÍTULO 19**
+
+**(1) Panóptico:** Diseño arquitectónico de prisión ideado por Jeremy Bentham en 1791. Una torre central permite vigilar a todos los prisioneros sin que sepan cuándo son observados. Michel Foucault lo usó como metáfora del control social y la vigilancia en sociedades modernas.
 

@@ -30,7 +30,7 @@ Helena levantó la barbilla. Tenía un corte feo en la frente, sangre seca en la
 
 Rodolfo se giró bruscamente, haciendo ondear su abrigo blanco, y señaló el Monolito central y las miles de columnas de cristal con cuerpos suspendidos que se perdían en la oscuridad del techo abovedado. —Mire a su alrededor, doctora. Abra los ojos. Estos seres... los Antiguos. Ellos entendieron la verdad hace doce mil años. No rezaron a dioses mudos para salvarse de la muerte. *Ingenierizaron* una salida. Entendieron que la biología es una trampa. Un sistema operativo defectuoso, lleno de bugs, que se degrada con cada copia hasta el fallo catastrófico. ¿Cree que a Dios le importó cuando su madre murió de cáncer de páncreas hace tres años, doctora? ¿Hubo algún significado sagrado en sus gritos de dolor? ¿O fue simplemente un error de replicación celular aleatorio y cruel que su teología intenta justificar con poesía barata para que usted pueda dormir por las noches?
 
-Helena sintió el golpe bajo como una puñalada física en el pecho. Las lágrimas picaron en sus ojos, pero no flaqueó. No le daría esa satisfacción. —Mi madre murió con paz, Rodolfo. Murió sosteniendo mi mano, rodeada de amor. Usted quiere eliminar la muerte, sí, pero al hacerlo, elimina lo que le da valor a la vida. Una vida sin final no es vida; es un archivo de solo lectura en un bucle infinito. Es estasis. Es aburrimiento cósmico. Lo que usted propone no es inmortalidad; es taxidermia digital. Quiere disecarnos para su colección.
+Helena sintió el golpe bajo como una puñalada física en el pecho. Las lágrimas picaron en sus ojos, pero no flaqueó. No le daría esa satisfacción. —Mi madre murió con paz, Rodolfo. Murió sosteniendo mi mano, rodeada de amor. Usted quiere eliminar la muerte, sí, pero al hacerlo, elimina lo que le da valor a la vida. Una vida sin final no es vida; es un archivo de solo lectura en un bucle infinito. Es estasis^[1]. Es aburrimiento cósmico. Lo que usted propone no es inmortalidad; es taxidermia digital. Quiere disecarnos para su colección.
 
 Rodolfo soltó una carcajada seca, breve, sin humor. El sonido rebotó en las paredes de hielo. —Taxidermia. Qué ingenioso. Qué literario. Pero dígame, doctora, sea honesta: cuando James despierte... si es que despierta... y nos diga que ha visto el Paraíso, que ha sentido la ausencia total de dolor, que ha tocado la mente de Dios y que es un lugar de pura lógica y luz... ¿seguirá usted defendiendo su preciosa, sucia y dolorosa mortalidad? ¿O me suplicará que la conecte a la máquina?
 
@@ -73,3 +73,8 @@ Rodolfo se dio la vuelta y se alejó caminando hacia el Monolito, dejando al gru
 Helena se arrastró por el hielo, raspándose las rodillas, hasta llegar al cuerpo de James. Su piel estaba helada al tacto, cerosa. —James —susurró, poniendo sus manos atadas sobre el pecho de él, sintiendo el latido errático de su corazón—. Por favor. Tienes que volver. No sé dónde estás, ni qué maravillas estás viendo, pero tienes que volver ahora. El diablo está aquí, James. Y se le ha acabado la paciencia.
 
 Pero James no respondió. Su mente estaba a años luz de distancia, atrapada en una decisión imposible, mientras el reloj analógico de Rodolfo comenzaba la cuenta atrás hacia el apocalipsis térmico.
+
+**NOTAS DEL CAPÍTULO 14**
+
+**(1) Estasis:** Estado de inactividad metabólica donde las funciones biológicas se ralentizan casi hasta detenerse, preservando el organismo sin envejecimiento significativo. Común en ciencia ficción (hibernación espacial), pero algunos animales (tardigrados, osos) lo logran naturalmente.
+

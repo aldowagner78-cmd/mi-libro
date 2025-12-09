@@ -2,11 +2,11 @@
 
 **CAPÍTULO 17: LA FURIA DE LA ARQUITECTA**
 
-***INTERLUDIO XVII: LA DURÉE DE LA VENGANZA***
+***INTERLUDIO XVII: LA DURÉE^[1] DE LA VENGANZA***
 
 *"Para la física, el tiempo es una serie de puntos discretos en una línea, instantes congelados que llamamos 'ahora'. T1, T2, T3. Pero para la consciencia, el tiempo no es divisible. Es un flujo continuo, una melodía donde cada nota contiene el eco de la anterior y la anticipación de la siguiente. Henri Bergson llamó a esto 'durée' (duración). Cuando una mente se libera de la materia, la duración se expande. Un segundo de tiempo reloj puede contener siglos de tiempo subjetivo. Para Aris, atrapada en la red, los cinco minutos que han pasado desde su muerte no son cinco minutos. Son una eternidad de reflexión. Y en esa eternidad, ella ha tenido tiempo de sobra para analizar cada variable, cada injusticia y cada átomo de la estructura que la rodea. No se está volviendo loca; se está volviendo eficiente. Y una mente infinita con un rencor finito es el arma más peligrosa del universo."*
 
-— **Dr. James Gordon.** *Reflexiones grabadas en el implante coclear, Sector Andino, 2026.*
+— **Dr. James Gordon.** *Reflexiones grabadas en el implante coclear^[2], Sector Andino, 2026.*
 
 **Mundo Físico. Catedral de Hielo.** **16 de Octubre, 2026. 07:35 AM.**
 
@@ -105,4 +105,12 @@ James miró a Rodolfo. Vio el miedo en sus ojos. Y supo que tenía la ventaja. �
 Rodolfo lo miró con sospecha. —¿De qué hablas?
 
 —Publicidad, Rodolfo. —James sonrió, una sonrisa de tiburón—. ¿De qué te sirve ser el dueño de la inmortalidad si nadie sabe que la tienes? Vamos a hacer un lanzamiento de producto. Aquí y ahora.
+
+
+
+**NOTAS DEL CAPÍTULO 17**
+
+**(1) Durée:** Concepto del filósofo Henri Bergson que describe el tiempo tal como lo experimenta la consciencia: fluido, continuo e indivisible, opuesto al tiempo 'espacializado' y medible de los relojes. La durée es el flujo vivido de la experiencia subjetiva.
+
+**(2) Implante Coclear:** Dispositivo médico que se inserta quirúrgicamente en el oído interno para restaurar la audición en personas con sordera profunda. Convierte sonidos en señales eléctricas que estimulan directamente el nervio auditivo. Más de 700,000 personas usan implantes cocleares.
 

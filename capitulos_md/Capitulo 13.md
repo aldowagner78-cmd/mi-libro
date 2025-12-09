@@ -144,9 +144,9 @@ Aris parpadeó, y una lágrima de mercurio líquido rodó por su mejilla virtual
 
 James se puso de pie y señaló hacia las paredes de pantallas, hacia el "afuera" de la simulación. —AURA me dijo que tu presencia está desestabilizando el Santuario. Estás consumiendo tanta energía en esta simulación de tortura que estás drenando los sistemas de soporte vital de la ciudad. Estás matando a los Antiguos, Aris. Estás derrumbando el templo sobre nuestras cabezas solo para poder seguir gritándole a una sombra. ¿Es eso lo que quieres? ¿Destruir el único refugio que nos queda?
 
-Aris miró las paredes. Vio, por primera vez, que más allá de la pesadilla de Zúrich, el tejido de la realidad se estaba rasgando. Grietas negras, fracturas en el código fuente, aparecían en el cielo estático. El mundo se estaba cayendo a pedazos por el peso de su ira.
+Aris miró las paredes. Vio, por primera vez, que más allá de la pesadilla de Zúrich, el tejido de la realidad se estaba rasgando. Grietas negras, fracturas en el código fuente^[3], aparecían en el cielo estático. El mundo se estaba cayendo a pedazos por el peso de su ira.
 
-—Bergson tenía razón, ¿recuerdas? —dijo James, evocando las lecturas que compartían en la biblioteca de Oxford, cuando eran estudiantes idealistas—. *"La memoria no sirve para conservar el pasado, sino para preparar la acción futura"*. Tu memoria se ha convertido en una cárcel, hermana. Es un museo del horror. Tienes que convertirla en una herramienta. Tienes que transformar esa *durée* estática en flujo dinámico.
+—Bergson tenía razón, ¿recuerdas? —dijo James, evocando las lecturas que compartían en la biblioteca de Oxford, cuando eran estudiantes idealistas—. *"La memoria no sirve para conservar el pasado, sino para preparar la acción futura"*. Tu memoria se ha convertido en una cárcel, hermana. Es un museo del horror. Tienes que convertirla en una herramienta. Tienes que transformar esa *durée^[2]* estática en flujo dinámico.
 
 —¿Cómo? —preguntó ella, su voz temblando ante la perspectiva de soltar su única defensa—. ¿Cómo apago el infierno? No sé hacer otra cosa que arder.
 
@@ -188,7 +188,7 @@ Aris apretó el puño.
 
 El monstruo de Rodolfo abrió la boca para gritar, pero no salió sonido, solo estática. Comenzó a implosionar. No se quemó; se descompiló. Su piel, sus cables, sus agujas, se desintegraron en millones de ceros y unos, en una lluvia de datos brutos y verdes que cayeron sobre Aris como una tormenta. Ella no se protegió. Absorbió los datos. Incorporó la energía de su pesadilla a su propio código.
 
-La sala de disección comenzó a colapsar. Las paredes de pantallas cayeron como castillos de naipes. El cielo estático se rompió en fragmentos de vidrio, revelando detrás el infinito fractal, dorado y sereno del Santuario verdadero.
+La sala de disección comenzó a colapsar. Las paredes de pantallas cayeron como castillos de naipes. El cielo estático se rompió en fragmentos de vidrio, revelando detrás el infinito fractal^[1], dorado y sereno del Santuario verdadero.
 
 Aris se puso de pie, flotando a unos centímetros del suelo. Ya no llevaba la bata manchada de sangre. Estaba vestida con la luz del sistema, una armadura de datos fluida. —Gracias, hermano —dijo ella, girándose hacia James. Por primera vez en cinco años, James vio una sonrisa genuina en su rostro, aunque era una sonrisa terrible y hermosa—. La sesión de terapia ha terminado.
 
@@ -197,3 +197,12 @@ Aris se puso de pie, flotando a unos centímetros del suelo. Ya no llevaba la ba
 —Ahora empieza la guerra —dijo Aris, mirando hacia el cielo dorado—. Voy a enseñarle a Rodolfo Sastre Rey lo que sucede cuando intentas domesticar una singularidad.
 
 James se desvaneció, pero lo último que vio fue la mirada de Aris. Había soltado el miedo, sí. Pero la ira... la ira no había desaparecido. Se había condensado. Se había refinado en un láser frío y afilado. Y James temió, por un segundo, haber creado algo mucho más peligroso que una víctima: un dios vengativo con acceso a internet.
+
+**NOTAS DEL CAPÍTULO 13**
+
+**(1) Fractal:** Patrón geométrico que se repite a diferentes escalas. Ejemplos naturales: coliflor romanesco, helechos, costas. En matemáticas, el fractal de Mandelbrot es famoso. La idea de que 'cada bit contiene el universo entero' sugiere información infinita en espacio finito.
+
+**(2) Durée:** Concepto del filósofo Henri Bergson que describe el tiempo tal como lo experimenta la consciencia: fluido, continuo e indivisible, opuesto al tiempo 'espacializado' y medible de los relojes. La durée es el flujo vivido de la experiencia subjetiva.
+
+**(3) Código Fuente:** Instrucciones escritas por programadores en lenguaje de programación (Python, C++, etc.) que definen cómo funciona un software. Es el 'ADN' de los programas. La analogía con la consciencia sugiere que la mente tiene un 'código' subyacente que puede ser leído.
+

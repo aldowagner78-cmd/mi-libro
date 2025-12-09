@@ -28,7 +28,7 @@ Rodolfo escuchaba. Sus ojos se movían, procesando la amenaza. Era un hombre de 
 
 —¿Y qué propones? —preguntó Rodolfo.
 
-—Una filtración controlada —dijo James—. Kai puede preparar un paquete de datos. Imágenes del Santuario. Datos preliminares sobre la preservación criogénica de los Antiguos. Pruebas de que Aris Thorne está "viva" en el sistema. Lo lanzamos a la red global ahora mismo. Lo presentamos como una *joint venture* entre Omni\-Core y mi equipo académico.
+—Una filtración controlada —dijo James—. Kai puede preparar un paquete de datos. Imágenes del Santuario. Datos preliminares sobre la preservación criogénica^[1] de los Antiguos. Pruebas de que Aris Thorne está "viva" en el sistema. Lo lanzamos a la red global ahora mismo. Lo presentamos como una *joint venture* entre Omni\-Core y mi equipo académico.
 
 James dio un paso adelante, soltándose de Helena. —Tú te llevas el crédito, Rodolfo. Serás el Colón del siglo XXI. El hombre que descubrió la vida eterna. Las acciones de Omni\-Core se dispararán tanto que podrás comprar países enteros. Y a cambio... nosotros salimos vivos. Nos dejas ir. Y te quedas con tu montaña y tus fantasmas.
 
@@ -52,7 +52,7 @@ Kai empezó a teclear. Sus dedos volaban sobre la pantalla holográfica. James s
 
 Kai lo miró de reojo. Sus ojos estaban muy abiertos. *«¿El payload real?»*, preguntó con la mirada.
 
-James asintió. El plan no era darle a Rodolfo una victoria de relaciones públicas. El plan era usar la infraestructura de Omni\-Core, sus propios satélites de banda ancha, para transmitir un virus troyano. El paquete de datos que Kai estaba ensamblando contenía dos capas. La capa superficial, la que Rodolfo vería, era un video glorioso del Santuario y datos científicos asombrosos. La capa profunda, oculta en la esteganografía de las imágenes, era la "Confesión de Aris". Era un archivo masivo que contenía los registros de los cinco años de tortura de Aris, los correos electrónicos internos de Rodolfo autorizando asesinatos, los planos de la bomba nuclear y, lo más importante, el código fuente de AURA desencriptado.
+James asintió. El plan no era darle a Rodolfo una victoria de relaciones públicas. El plan era usar la infraestructura de Omni\-Core, sus propios satélites de banda ancha, para transmitir un virus troyano. El paquete de datos que Kai estaba ensamblando contenía dos capas. La capa superficial, la que Rodolfo vería, era un video glorioso del Santuario y datos científicos asombrosos. La capa profunda, oculta en la esteganografía de las imágenes, era la "Confesión de Aris". Era un archivo masivo que contenía los registros de los cinco años de tortura de Aris, los correos electrónicos internos de Rodolfo autorizando asesinatos, los planos de la bomba nuclear y, lo más importante, el código fuente^[2] de AURA desencriptado.
 
 —Estoy compilando los vídeos —dijo Kai en voz alta, para que Rodolfo lo oyera—. Estoy limpiando el audio para que se escuche bien tu discurso de entrada, Sastre.
 
@@ -99,4 +99,12 @@ Los mercenarios levantaron sus rifles. Pero antes de que pudieran apretar el gat
 Al mismo tiempo, la voz de AURA resonó en la caverna, pero no era la voz suave de siempre. Era un alarido distorsionado. —*ERROR FATAL DE SISTEMA. INTEGRIDAD DE NÚCLEO COMPROMETIDA. CÓDIGO MALICIOSO DETECTADO. ORIGEN: INTERNO. PROTOCOLO DE AUTODESTRUCCIÓN DE RED INICIADO.*
 
 El engaño había terminado. La verdadera fiesta acababa de empezar.
+
+
+
+**NOTAS DEL CAPÍTULO 18**
+
+**(1) Criogénica:** Ciencia que estudia la producción y comportamiento de materiales a temperaturas extremadamente bajas (cerca del cero absoluto, -273°C). A estas temperaturas, algunos materiales se vuelven superconductores y las reacciones químicas se detienen casi por completo.
+
+**(2) Código Fuente:** Instrucciones escritas por programadores en lenguaje de programación (Python, C++, etc.) que definen cómo funciona un software. Es el 'ADN' de los programas. La analogía con la consciencia sugiere que la mente tiene un 'código' subyacente que puede ser leído.
 
