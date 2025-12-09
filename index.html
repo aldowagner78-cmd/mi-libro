@@ -570,17 +570,20 @@ async function loadChapter(n) {
         // Cargar notas JSON
         try {
             const jsonRes = await fetch(jsonFile);
+            console.log('🔍 Fetch JSON status:', jsonRes.status);
+            
             if (jsonRes.ok) {
                 const notesData = await jsonRes.json();
                 console.log('✅ Notas cargadas:', Object.keys(notesData).length);
+                console.log('📋 Números de notas:', Object.keys(notesData).join(', '));
                 
                 // Configurar notas con el mapa JSON
                 setupNotesWithJSON(notesData);
             } else {
-                console.log('ℹ️ Sin notas para este capítulo');
+                console.log('ℹ️ Sin notas para este capítulo (status:', jsonRes.status, ')');
             }
         } catch (jsonErr) {
-            console.log('ℹ️ Sin archivo de notas:', jsonErr.message);
+            console.error('❌ Error cargando notas:', jsonErr);
         }
         
         addNavButtons(n);
