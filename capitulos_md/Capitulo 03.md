@@ -28,7 +28,7 @@ Detrás de James, el resto del equipo luchaba por mantener el ritmo. Ravi, el bi
 
 —¿Hay otra ruta?
 
-—El **igarapé (3)** seco. Es un túnel de vegetación. Techo bajo. Los drones no pueden volar ahí dentro.
+—El **igarapé**^[3] seco. Es un túnel de vegetación. Techo bajo. Los drones no pueden volar ahí dentro.
 
 —Llévanos —dijo James.
 
@@ -36,7 +36,7 @@ Intentó separarse del árbol para seguir corriendo, pero su mano derecha no se 
 
 James miró su mano. El guante táctico se había rasgado en la huida, dejando ver la piel. Gritó, ahogando el sonido en su garganta. Su mano no estaba pegada por savia o suciedad. Estaba fusionada.
 
-Desde las yemas de los dedos hasta la muñeca, su piel se había transformado en la misma sustancia que el Monolito: obsidiana negra, translúcida y dura. Pero no era piedra muerta. Era activa. Filamentos microscópicos de cristal negro habían salido de sus poros y se habían clavado en la madera del árbol, penetrando la corteza, buscando el **xilema (4)**, buscando la red de vida.
+Desde las yemas de los dedos hasta la muñeca, su piel se había transformado en la misma sustancia que el Monolito: obsidiana negra, translúcida y dura. Pero no era piedra muerta. Era activa. Filamentos microscópicos de cristal negro habían salido de sus poros y se habían clavado en la madera del árbol, penetrando la corteza, buscando el **xilema**^[4], buscando la red de vida.
 
 —Dios mío... —susurró Helena, que se había detenido a su lado. Vio la mano negra y la luz violeta que pulsaba bajo la piel de James, sincronizada con su ritmo cardíaco—. James, tu brazo...
 

@@ -80,7 +80,7 @@ Extendió su percepción. Fue doloroso, como abrir los ojos bajo el agua salada.
 
 Helena lo miró, entendiendo a dónde iba. —James... no estarás pensando en entrar en la "Zona Muerta".
 
-La "Zona Muerta" era una región de la selva alta, cerca de la frontera con Perú, que los locales evitaban. Decían que allí las brújulas no funcionaban y que la gente se olvidaba de su nombre. Geológicamente, era un laberinto de cañones de **karst (2)** y cuevas inexploradas.
+La "Zona Muerta" era una región de la selva alta, cerca de la frontera con Perú, que los locales evitaban. Decían que allí las brújulas no funcionaban y que la gente se olvidaba de su nombre. Geológicamente, era un laberinto de cañones de **karst**^[2] y cuevas inexploradas.
 
 —Es el único lugar donde sus satélites son ciegos —dijo James—. La **anomalía magnética ^[3]** es tan fuerte que bloqueará sus sensores. Y bloqueará mi señal también. Seremos invisibles.
 

@@ -12,7 +12,7 @@
 
 El silencio en el cañón no era paz; era presión.
 
-Hacía dos horas que habían dejado atrás el cauce principal del Río Negro, huyendo de los drones y de la culpa. Ahora, el "Caribdis" se arrastraba por un cañón de **karst (1)** que no aparecía en ningún mapa satelital. Las paredes del desfiladero se alzaban treinta metros a ambos lados, cubiertas de raíces aéreas que colgaban como cortinas de un teatro abandonado, bloqueando la señal GPS, la luz de la luna y cualquier esperanza de rescate.
+Hacía dos horas que habían dejado atrás el cauce principal del Río Negro, huyendo de los drones y de la culpa. Ahora, el "Caribdis" se arrastraba por un cañón de **karst**^[1] que no aparecía en ningún mapa satelital. Las paredes del desfiladero se alzaban treinta metros a ambos lados, cubiertas de raíces aéreas que colgaban como cortinas de un teatro abandonado, bloqueando la señal GPS, la luz de la luna y cualquier esperanza de rescate.
 
 James Gordon estaba de pie en la proa, inmóvil como una gárgola. No tenía frío, a pesar de que la temperatura había caído en picado al entrar en la garganta de piedra. Su cuerpo generaba su propio calor, un subproducto febril de la maquinaria biológica que trabajaba a marchas forzadas para reescribir su ADN.
 
