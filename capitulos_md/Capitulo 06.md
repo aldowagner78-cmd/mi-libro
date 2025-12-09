@@ -2,7 +2,7 @@
 
 **CAPÍTULO 6: LA VENA DE LA TIERRA**
 
-**INTERLUDIO VI: LA RELATIVIDAD DEL MOVIMIENTO**
+***INTERLUDIO VI: LA RELATIVIDAD DEL MOVIMIENTO***
 
 *"La velocidad es una ilusión biológica. Un guepardo nos parece rápido; un glaciar nos parece estático. Pero a nivel geológico, ambos son irrelevantes. La verdadera velocidad no es mover materia a través del espacio; eso requiere una energía absurda y genera una fricción inmanejable. La verdadera velocidad es mover información.
 

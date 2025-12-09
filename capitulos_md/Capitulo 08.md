@@ -1,6 +1,8 @@
+**EL SILENCIO DE LOS DIOSES**
+
 **CAPÍTULO 8: EL ARQUITECTO DORMIDO**
 
-**INTERLUDIO VIII: LA PARADOJA DE DIOS**
+***INTERLUDIO VIII: LA PARADOJA DE DIOS***
 
 *"Si Dios es omnisciente, no puede tener curiosidad. Si es omnipotente, no puede tener desafíos. Si es eterno, no puede tener urgencia. Un Dios perfecto es, por definición, un ser aburrido y estático.
 
