@@ -12,8 +12,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- Mammoth.js - Convierte DOCX a HTML en el navegador -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <!-- Se usan archivos HTML pregenerados -->
 
     <style>
         :root {
@@ -494,9 +493,10 @@
 <script>
 // ========== CONFIG ==========
 const TOTAL_CHAPTERS = 30;
-const FOLDER = 'capitulos';
+const FOLDER = 'capitulos_html';
 const PREFIX = 'Capitulo ';
-const EXT = '.docx';
+const HTML_EXT = '.html';
+const JSON_EXT = '_notas.json';
 
 let currentChapter = 1;
 let fontSize = 1.15;
@@ -554,34 +554,41 @@ async function loadChapter(n) {
     const num = n.toString().padStart(2, '0');
     document.getElementById('chapterTitle').textContent = 'Capítulo ' + num;
     
-    const file = FOLDER + '/' + encodeURIComponent(PREFIX + num + EXT);
+    const htmlFile = FOLDER + '/' + encodeURIComponent(PREFIX + num + HTML_EXT);
+    const jsonFile = FOLDER + '/' + encodeURIComponent(PREFIX + num + JSON_EXT);
     
     try {
-        const res = await fetch(file);
-        if (!res.ok) throw new Error('No encontrado');
+        // Cargar HTML del capítulo
+        const htmlRes = await fetch(htmlFile);
+        if (!htmlRes.ok) throw new Error('HTML no encontrado');
         
-        const buffer = await res.arrayBuffer();
-        const result = await mammoth.convertToHtml({ 
-            arrayBuffer: buffer,
-            includeDefaultStyleMap: true,
-            includeEmbeddedStyleMap: true
-        });
+        const html = await htmlRes.text();
+        content.innerHTML = html;
         
-        console.log('📄 Mammoth messages:', result.messages);
-        console.log('📄 HTML length:', result.value.length);
+        console.log('✅ HTML cargado:', html.length, 'chars');
         
-        content.innerHTML = result.value;
+        // Cargar notas JSON
+        try {
+            const jsonRes = await fetch(jsonFile);
+            if (jsonRes.ok) {
+                const notesData = await jsonRes.json();
+                console.log('✅ Notas cargadas:', Object.keys(notesData).length);
+                
+                // Configurar notas con el mapa JSON
+                setupNotesWithJSON(notesData);
+            } else {
+                console.log('ℹ️ Sin notas para este capítulo');
+            }
+        } catch (jsonErr) {
+            console.log('ℹ️ Sin archivo de notas:', jsonErr.message);
+        }
         
-        // Ejecutar después de que el DOM se actualice
-        setTimeout(() => {
-            addNavButtons(n);
-            setupNotes();
-        }, 50);
-        
+        addNavButtons(n);
         loading.classList.remove('show');
         document.getElementById('reader').scrollTop = 0;
         
     } catch (e) {
+        console.error('❌ Error cargando capítulo:', e);
         loading.classList.remove('show');
         content.innerHTML = `
             <div style="text-align:center; padding:60px 20px;">
@@ -624,87 +631,45 @@ function addNavButtons(n) {
 }
 
 // ========== NOTAS AL PIE ==========
-function setupNotes() {
+function setupNotesWithJSON(notesData) {
     const content = document.getElementById('content');
     if (!content) return;
     
-    console.log('📝 Configurando notas al pie...');
+    console.log('📝 Configurando notas al pie con JSON...');
+    console.log('📋 Total notas disponibles:', Object.keys(notesData).length);
     
-    // 1. Buscar la sección de NOTAS
-    const allPs = content.querySelectorAll('p');
-    let notasStartIndex = -1;
+    // Buscar todos los SUP en el contenido
+    const allSups = content.querySelectorAll('sup');
+    console.log(`📌 SUPs encontrados: ${allSups.length}`);
     
-    allPs.forEach((p, index) => {
-      if (p.innerHTML.includes('NOTAS DEL CAPÍTULO')) {
-        notasStartIndex = index;
-        console.log('✅ Encontré NOTAS DEL CAPÍTULO en párrafo', index);
-      }
-    });
-    
-    // 2. Crear mapa de notas: número -> contenido HTML
-    const notesMap = new Map();
-    
-    if (notasStartIndex !== -1) {
-      // Revisar todos los párrafos DESPUÉS del título "NOTAS DEL CAPÍTULO"
-      for (let i = notasStartIndex + 1; i < allPs.length; i++) {
-        const p = allPs[i];
-        const html = p.innerHTML;
+    allSups.forEach((sup) => {
+        const text = sup.textContent.trim();
+        const numMatch = text.match(/\((\d+)\)/);
         
-        // Buscar si empieza con <sup>(número)</sup>
-        const match = html.match(/^<sup>\((\d+)\)<\/sup>/);
-        if (match) {
-          const noteNum = match[1];
-          notesMap.set(noteNum, html);
-          console.log(`✅ Nota ${noteNum} mapeada`);
+        if (numMatch) {
+            const noteNum = numMatch[1];
+            
+            // Verificar si existe nota para este número
+            if (notesData[noteNum]) {
+                sup.style.cursor = 'pointer';
+                sup.style.color = 'var(--accent)';
+                sup.style.textDecoration = 'none';
+                sup.style.borderBottom = '1px dotted var(--accent)';
+                sup.title = `Ver nota ${noteNum}`;
+                
+                sup.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const noteHTML = notesData[noteNum];
+                    showNote(noteHTML);
+                    console.log(`✅ Mostrando nota ${noteNum}`);
+                });
+                
+                console.log(`✓ SUP (${noteNum}) configurado`);
+            }
         }
-      }
-    }
-    
-    console.log(`📋 Total notas encontradas: ${notesMap.size}`);
-    
-    // 3. Buscar todos los SUP en el texto principal (antes de NOTAS)
-    const textSups = [];
-    for (let i = 0; i < (notasStartIndex === -1 ? allPs.length : notasStartIndex); i++) {
-      const sups = allPs[i].querySelectorAll('sup');
-      sups.forEach(sup => textSups.push(sup));
-    }
-    
-    console.log(`📌 SUPs en texto principal: ${textSups.length}`);
-    
-    // 4. Configurar clicks en los SUPs del texto
-    textSups.forEach((sup, index) => {
-      const text = sup.textContent.trim();
-      const numMatch = text.match(/\((\d+)\)/);
-      
-      if (numMatch) {
-        const noteNum = numMatch[1];
-        sup.style.cursor = 'pointer';
-        sup.style.color = 'var(--accent)';
-        
-        sup.addEventListener('click', (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          
-          const noteHTML = notesMap.get(noteNum);
-          if (noteHTML) {
-            showNote(noteHTML);
-            console.log(`✅ Mostrando nota ${noteNum}`);
-          } else {
-            console.warn(`❌ Nota ${noteNum} no encontrada en mapa`);
-          }
-        });
-        
-        console.log(`✓ SUP (${noteNum}) configurado`);
-      }
     });
-    
-    // 5. Ocultar la sección de notas al final
-    if (notasStartIndex !== -1) {
-      for (let i = notasStartIndex; i < allPs.length; i++) {
-        allPs[i].style.display = 'none';
-      }
-      console.log('✅ Sección de notas ocultada');
-    }
     
     console.log('✅ Setup de notas completado');
 }
