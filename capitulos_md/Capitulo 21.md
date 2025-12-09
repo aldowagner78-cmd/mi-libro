@@ -2,11 +2,12 @@
 
 *CAPÍTULO 21: EL ALGORITMO DEL DESEO*
 
-***INTERLUDIO XXI: EL SÍNDROME DEL MIEMBRO FANTASMA DE LA ESPECIE***
+***INTERLUDIO XXI: EL DOLOR COMO INTERFAZ DE USUARIO***
 
-"Existe una condición neurológica conocida como 'miembro fantasma'. Un soldado pierde un brazo en la guerra, pero su cerebro sigue sintiendo los dedos, el picor, el dolor del miembro que ya no existe. La mente se niega a aceptar la amputación. El mapa cortical sigue intacto aunque el territorio haya desaparecido. La humanidad sufre de un dolor fantasma colectivo. Sentimos que nos falta algo. Lo llamamos Dios, Destino, Propósito, Magia. Buscamos en el cielo, en las drogas, en el amor romántico. Pero la picazón nunca desaparece. ¿Y si lo que nos falta no es algo espiritual, sino algo físico ¿Y si alguna vez, hace milenios, estuvimos conectados a una red más grande, a una colmena de empatía perfecta, y fuimos brutalmente amputados de ella La soledad humana no es una emoción poética. Es un daño neurológico. Somos neuronas desconectadas gritando en el vacío, buscando desesperadamente volver a hacer sinapsis con el cuerpo principal."
+"Imagina que intentas explicarle el color rojo a un algoritmo. Puedes darle la longitud de onda (650 nanómetros), puedes darle la frecuencia, puedes darle el código hexadecimal. El algoritmo entenderá el rojo como dato, pero nunca lo 'sentirá' como urgencia, como sangre o como advertencia.
+La empatía no es un cálculo; es una resonancia física. Para que el Santuario entienda a la humanidad, no basta con subir datos. Necesitamos un transductor. Alguien que convierta el sufrimiento biológico en un formato legible para la máquina. El dolor no es un error del sistema; es el único lenguaje universal que comparten todos los seres vivos. Si queremos que los dioses nos escuchen, no debemos rezarles; debemos sangrar en su micrófono."
 
-— *Dr. James Gordon.* Diario de campo, escrito en el reverso de una receta de oxicodona, 2023.
+— Dr. James Gordon. Apuntes sobre "Biosemiótica Cuántica", recuperados del servidor local, 2026.
 
 *Mundo Físico. Consola Central del Santuario.* *16 de Octubre, 2026. 08:30 AM.*
 
