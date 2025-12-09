@@ -1,0 +1,30 @@
+# Archivos Python innecesarios
+*.py
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Archivos originales DOCX (ya convertidos)
+capitulos/*.docx
+
+# Documentación de desarrollo
+GUIA_FORMATO_DOCX.md
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-*
+
+# Archivos temporales
+*.tmp
+*.bak
+*.log
