@@ -162,30 +162,30 @@ El equipo logró salir del cráter, dejando atrás el monolito vibrante en su c�
 
 **NOTAS DEL CAPÍTULO 1**
 
-**(1)** **Olor a ozono:**^[ ]El ozono (O3) es un gas incoloro de olor acre y metálico, similar al que se percibe cerca de chispas eléctricas o después de una tormenta fuerte. En el contexto geológico, su presencia a nivel del suelo sin tormenta visible sugiere la presencia de una fuente de energía de alta tensión.
+**(1) Olor a ozono:** El ozono (O3) es un gas incoloro de olor acre y metálico, similar al que se percibe cerca de chispas eléctricas o después de una tormenta fuerte. En el contexto geológico, su presencia a nivel del suelo sin tormenta visible sugiere la presencia de una fuente de energía de alta tensión.
 
-**(2)** **Hernia L4:** Se refiere a la cuarta vértebra lumbar. La zona lumbar baja soporta gran parte del peso del cuerpo y es propensa a lesiones por esfuerzo o mala postura, común en trabajos de campo extenuantes.
+**(2) Hernia L4:** Se refiere a la cuarta vértebra lumbar. La zona lumbar baja soporta gran parte del peso del cuerpo y es propensa a lesiones por esfuerzo o mala postura, común en trabajos de campo extenuantes.
 
-**(3)** **Espectrometría:** Técnica analítica para identificar materiales midiendo su interacción con la radiación electromagnética (luz). Permite saber la composición química de una sustancia sin tocarla.
+**(3) Espectrometría:** Técnica analítica para identificar materiales midiendo su interacción con la radiación electromagnética (luz). Permite saber la composición química de una sustancia sin tocarla.
 
-**(4)** **Porteadores:** Personas contratadas en expediciones para cargar el equipo pesado, provisiones y suministros a través de terrenos difíciles donde los vehículos no pueden acceder. Suelen ser habitantes de la zona con gran resistencia física y conocimiento del terreno.
+**(4) Porteadores:** Personas contratadas en expediciones para cargar el equipo pesado, provisiones y suministros a través de terrenos difíciles donde los vehículos no pueden acceder. Suelen ser habitantes de la zona con gran resistencia física y conocimiento del terreno.
 
-**(5)** **Etnia Baniwa:** Pueblo indígena que habita en la cuenca del Río Negro, en la frontera entre Brasil, Colombia y Venezuela. Son conocidos por su profundo conocimiento de los ecosistemas fluviales, su compleja cosmología y su destreza en la cestería (fabricación de recipientes y objetos entrelazando fibras vegetales flexibles) y la pesca.
+**(5) Etnia Baniwa:** Pueblo indígena que habita en la cuenca del Río Negro, en la frontera entre Brasil, Colombia y Venezuela. Son conocidos por su profundo conocimiento de los ecosistemas fluviales, su compleja cosmología y su destreza en la cestería (fabricación de recipientes y objetos entrelazando fibras vegetales flexibles) y la pesca.
 
-**(6)** **Sentinel-6:** Satélite real desarrollado por la ESA y la NASA para monitorear el nivel del mar y la topografía oceánica. Sus instrumentos de altimetría son extremadamente precisos.
+**(6) Sentinel-6:** Satélite real desarrollado por la ESA y la NASA para monitorear el nivel del mar y la topografía oceánica. Sus instrumentos de altimetría son extremadamente precisos.
 
-**(7)** **LIDAR (Light Detection and Ranging):** Tecnología que usa pulsos láser para medir distancias y crear mapas 3D de alta resolución. En arqueología, se usa para "ver" a través de la vegetación densa y descubrir estructuras ocultas.
+**(7) LIDAR (Light Detection and Ranging):** Tecnología que usa pulsos láser para medir distancias y crear mapas 3D de alta resolución. En arqueología, se usa para "ver" a través de la vegetación densa y descubrir estructuras ocultas.
 
-**(8)** **Monstera:** Plantas trepadoras comunes en las selvas tropicales de América. Son reconocibles por sus hojas enormes y brillantes que presentan fenestraciones (agujeros o cortes naturales), una adaptación evolutiva que les permite maximizar la captación de luz en la penumbra del sotobosque y dejar pasar el viento y la lluvia sin romperse.
+**(8) Monstera:** Plantas trepadoras comunes en las selvas tropicales de América. Son reconocibles por sus hojas enormes y brillantes que presentan fenestraciones (agujeros o cortes naturales), una adaptación evolutiva que les permite maximizar la captación de luz en la penumbra del sotobosque y dejar pasar el viento y la lluvia sin romperse.
 
-**(9)** **Tablet Rugerizada:** Dispositivo electrónico diseñado específicamente para operar de manera confiable en entornos hostiles y condiciones extremas. Son herramientas estándar en trabajos de campo como geología, construcción o uso militar.
+**(9) Tablet Rugerizada:** Dispositivo electrónico diseñado específicamente para operar de manera confiable en entornos hostiles y condiciones extremas. Son herramientas estándar en trabajos de campo como geología, construcción o uso militar.
 
-**(10)** **Terror Atávico:** Miedos ancestrales y compartidos por toda la humanidad, que no se aprenden, sino que parecen estar grabados en nuestra psique desde nuestros antepasados para protegernos de peligros de supervivencia.
+**(10) Terror Atávico:** Miedos ancestrales y compartidos por toda la humanidad, que no se aprenden, sino que parecen estar grabados en nuestra psique desde nuestros antepasados para protegernos de peligros de supervivencia.
 
-**(11)** **Terra Preta:** "Tierra Negra" en portugués. Un tipo de suelo muy fértil y oscuro encontrado en el Amazonas, creado artificialmente por civilizaciones precolombinas mediante la mezcla de carbón, cerámica y desechos. Su capacidad para retener carbono y nutrientes es inusualmente alta.
+**(11) Terra Preta:** "Tierra Negra" en portugués. Un tipo de suelo muy fértil y oscuro encontrado en el Amazonas, creado artificialmente por civilizaciones precolombinas mediante la mezcla de carbón, cerámica y desechos. Su capacidad para retener carbono y nutrientes es inusualmente alta.
 
-**(12)** **Mapinguari:** Criatura mítica del folklore amazónico brasileño. Se describe a menudo como un gigante peludo con un solo ojo, garras largas y una segunda boca en el abdomen. Algunos criptozoólogos lo asocian con recuerdos ancestrales de perezosos gigantes extintos.
+**(12) Mapinguari:** Criatura mítica del folklore amazónico brasileño. Se describe a menudo como un gigante peludo con un solo ojo, garras largas y una segunda boca en el abdomen. Algunos criptozoólogos lo asocian con recuerdos ancestrales de perezosos gigantes extintos.
 
-**(13)** **Basalto:** Roca ígnea volcánica de color oscuro, rica en hierro y magnesio, que se forma por el enfriamiento rápido de lava rica en sílice en la superficie terrestre. Es la roca más común de la corteza terrestre, especialmente en los fondos oceánicos. Su dureza y textura la diferencian claramente de materiales vítreos o cultivados artificialmente.
+**(13) Basalto:** Roca ígnea volcánica de color oscuro, rica en hierro y magnesio, que se forma por el enfriamiento rápido de lava rica en sílice en la superficie terrestre. Es la roca más común de la corteza terrestre, especialmente en los fondos oceánicos. Su dureza y textura la diferencian claramente de materiales vítreos o cultivados artificialmente.
 
-**(14)** **Cimática:** El estudio de la forma visible del sonido y la vibración. Se refiere a cómo las ondas sonoras pueden crear patrones geométricos complejos en medios físicos como arena, agua o polvo.
+**(14) Cimática:** El estudio de la forma visible del sonido y la vibración. Se refiere a cómo las ondas sonoras pueden crear patrones geométricos complejos en medios físicos como arena, agua o polvo.
