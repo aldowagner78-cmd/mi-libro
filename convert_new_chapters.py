@@ -1,7 +1,7 @@
 import mammoth
 import re
 
-capitulos = [16, 17, 18, 19]
+capitulos = [20, 21, 22, 23, 24]
 
 for num in capitulos:
     docx_path = f'capitulos/Capitulo {num:02d}.docx'

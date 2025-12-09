@@ -1,6 +1,6 @@
 import re
 
-capitulos = [16, 17, 18, 19]
+capitulos = [20, 21, 22, 23, 24]
 
 for num in capitulos:
     md_path = f'capitulos_md/Capitulo {num:02d}.md'
@@ -11,8 +11,8 @@ for num in capitulos:
     # Eliminar escapes
     content = re.sub(r'\\([.,!?;:()\[\]])', r'\1', content)
     
-    # Cambiar INTERLUDIO de ** a ***
-    content = re.sub(r'\*\*INTERLUDIO ([XVI]+): ([^\*]+)\*\*', r'***INTERLUDIO \1: \2***', content)
+    # Cambiar INTERLUDIO de * o ** a ***
+    content = re.sub(r'\*+INTERLUDIO ([XVI]+): ([^\*]+)\*+', r'***INTERLUDIO \1: \2***', content)
     
     # Buscar línea del autor (— **Nombre.**)
     # Cambiar la línea siguiente (cita) para que esté en cursiva si no lo está

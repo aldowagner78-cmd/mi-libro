@@ -100,7 +100,7 @@ def agregar_notas_capitulo(num_cap):
 print('🔍 Buscando términos técnicos y agregando notas...\n')
 total_modificados = 0
 
-for cap in range(8, 20):
+for cap in range(20, 25):
     if agregar_notas_capitulo(cap):
         total_modificados += 1
 
