@@ -71,6 +71,9 @@ def md_to_html_with_notes(md_path, html_path, json_path):
     # Extraer notas
     content_md, notes = extract_notes_from_md(md_text)
     
+    # IMPORTANTE: Convertir ^[(N)] a <sup>(N)</sup> ANTES de pasar a Markdown
+    content_md = re.sub(r'\^\[(\d+)\]', r'<sup>(\1)</sup>', content_md)
+    
     # Convertir Markdown a HTML
     md_converter = markdown.Markdown(extensions=['extra', 'nl2br'])
     html = md_converter.convert(content_md)
