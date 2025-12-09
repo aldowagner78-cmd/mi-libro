@@ -278,6 +278,300 @@
         #reader::-webkit-scrollbar { width: 8px; }
         #reader::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
 
+        /* ===================== COVER SCREEN ===================== */
+        .cover-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 1000;
+            animation: fadeIn 0.4s ease;
+        }
+        .cover-screen.show { display: flex; }
+        
+        .cover-image-container {
+            max-width: 600px;
+            max-height: 70vh;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .cover-image-full {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .cover-chapter-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .cover-book-title {
+            font-size: 20px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .start-reading-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 16px 48px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .start-reading-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        .start-reading-btn:active {
+            transform: translateY(0);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* ===================== AUDIO PLAYER ===================== */
+        .audio-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-alt);
+            border-top: 1px solid var(--border);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            z-index: 50;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .audio-player.show {
+            transform: translateY(0);
+        }
+        
+        .audio-player.minimized {
+            padding: 8px 20px;
+        }
+        
+        .audio-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+            flex: 1;
+        }
+        
+        .audio-cover {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        
+        .audio-player.minimized .audio-cover {
+            width: 36px;
+            height: 36px;
+        }
+        
+        .audio-details {
+            min-width: 0;
+            flex: 1;
+        }
+        
+        .audio-title {
+            font-family: var(--font-ui);
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text);
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .audio-subtitle {
+            font-family: var(--font-ui);
+            font-size: 0.75rem;
+            color: var(--text-soft);
+        }
+        
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .audio-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        
+        .audio-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+        
+        .audio-btn.secondary {
+            width: 32px;
+            height: 32px;
+            background: var(--bg);
+            color: var(--text-soft);
+            border: 1px solid var(--border);
+        }
+        
+        .audio-btn.secondary:hover {
+            background: var(--accent-soft);
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+        
+        .audio-progress-container {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .audio-times {
+            display: flex;
+            justify-content: space-between;
+            font-family: var(--font-ui);
+            font-size: 0.7rem;
+            color: var(--text-soft);
+            margin-bottom: 6px;
+        }
+        
+        .audio-progress {
+            width: 100%;
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .audio-progress-bar {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 3px;
+            transition: width 0.1s linear;
+            position: relative;
+        }
+        
+        .audio-progress-bar::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .audio-volume {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .volume-slider {
+            width: 80px;
+            height: 4px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: var(--border);
+            border-radius: 2px;
+            outline: none;
+        }
+        
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .volume-slider::-moz-range-thumb {
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .audio-close {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        
+        .audio-close:hover {
+            background: #fee;
+            color: #e11d48;
+            border-color: #e11d48;
+        }
+        
+        @media(max-width: 768px) {
+            .audio-player {
+                flex-wrap: wrap;
+                padding: 12px 16px;
+            }
+            .audio-volume {
+                display: none;
+            }
+            .audio-progress-container {
+                order: -1;
+                width: 100%;
+                margin-bottom: 8px;
+            }
+        }
+
         #content {
             max-width: 700px;
             margin: 0 auto;
@@ -496,6 +790,9 @@
             <button class="btn icon" onclick="changeFont(1)" title="Aumentar letra">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
             </button>
+            <button class="btn icon" id="audioToggle" onclick="toggleAudioPlayer()" title="Reproducir audio">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </button>
         </div>
     </header>
 
@@ -589,14 +886,42 @@ function buildChapterList() {
 async function loadChapter(n) {
     currentChapter = n;
     localStorage.setItem('chapter', n);
+    highlightChapter(n);
     
+    // Mostrar pantalla de portada primero
+    showCoverScreen(n);
+}
+
+function showCoverScreen(n) {
+    const num = n.toString().padStart(2, '0');
+    const coverScreen = document.getElementById('coverScreen');
+    const coverImg = document.getElementById('coverImageFull');
+    const chapterTitle = document.getElementById('coverChapterTitle');
+    
+    // Configurar portada
+    chapterTitle.textContent = `Capítulo ${num}`;
+    
+    if (n <= 10) {
+        coverImg.src = `imagenes/cap_${num}.png`;
+    } else {
+        coverImg.src = `imagenes/cover.png`;
+    }
+    
+    // Mostrar pantalla de portada
+    coverScreen.classList.add('show');
+}
+
+async function startReading() {
+    const coverScreen = document.getElementById('coverScreen');
+    coverScreen.classList.remove('show');
+    
+    const n = currentChapter;
     const content = document.getElementById('content');
     const loading = document.getElementById('loading');
     
     loading.classList.add('show');
     content.innerHTML = '';
     
-    highlightChapter(n);
     const num = n.toString().padStart(2, '0');
     document.getElementById('chapterTitle').textContent = 'Capítulo ' + num;
     
@@ -777,8 +1102,345 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft' && currentChapter > 1) loadChapter(currentChapter - 1);
     if (e.key === 'ArrowRight' && currentChapter < TOTAL_CHAPTERS) loadChapter(currentChapter + 1);
     if (e.key === 'Escape') closeNote();
+    if (e.key === ' ' && audioPlayer.classList.contains('show')) {
+        e.preventDefault();
+        togglePlayPause();
+    }
 });
+
+// ========== AUDIO PLAYER ==========
+let speechSynthesis = window.speechSynthesis;
+let currentUtterance = null;
+let isPaused = false;
+let isReading = false;
+let currentTextIndex = 0;
+let textChunks = [];
+
+function toggleAudioPlayer() {
+    const player = document.getElementById('audioPlayer');
+    const isVisible = player.classList.contains('show');
+    
+    if (isVisible) {
+        closeAudioPlayer();
+    } else {
+        openAudioPlayer();
+    }
+}
+
+function openAudioPlayer() {
+    const player = document.getElementById('audioPlayer');
+    
+    // Preparar texto del capítulo actual
+    prepareTextForReading();
+    
+    player.classList.add('show');
+    updateAudioInfo();
+}
+
+function closeAudioPlayer() {
+    const player = document.getElementById('audioPlayer');
+    stopReading();
+    player.classList.remove('show');
+}
+
+function prepareTextForReading() {
+    const content = document.getElementById('content');
+    if (!content) return;
+    
+    // Extraer todo el texto visible del capítulo
+    const paragraphs = content.querySelectorAll('p, h1, h2, h3');
+    textChunks = [];
+    
+    paragraphs.forEach(p => {
+        const text = p.textContent.trim();
+        if (text && !text.startsWith('NOTAS DE AUTOR')) {
+            // Dividir párrafos largos en chunks más pequeños
+            if (text.length > 500) {
+                const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+                textChunks.push(...sentences);
+            } else {
+                textChunks.push(text);
+            }
+        }
+    });
+    
+    currentTextIndex = 0;
+}
+
+function updateAudioInfo() {
+    const num = currentChapter.toString().padStart(2, '0');
+    document.getElementById('audioChapterTitle').textContent = `Capítulo ${num}`;
+    
+    // Actualizar portada
+    const coverImg = document.getElementById('audioCover');
+    if (currentChapter <= 10) {
+        coverImg.src = `imagenes/cap_${num}.png`;
+    } else {
+        coverImg.src = `imagenes/cover.png`;
+    }
+}
+
+function togglePlayPause() {
+    if (isReading && !isPaused) {
+        pauseReading();
+    } else {
+        startReading();
+    }
+}
+
+function startReading() {
+    if (textChunks.length === 0) {
+        prepareTextForReading();
+    }
+    
+    if (isPaused) {
+        // Reanudar
+        speechSynthesis.resume();
+        isPaused = false;
+    } else {
+        // Iniciar desde el índice actual
+        isReading = true;
+        readNextChunk();
+    }
+    
+    updatePlayButton(true);
+}
+
+function pauseReading() {
+    if (speechSynthesis.speaking) {
+        speechSynthesis.pause();
+        isPaused = true;
+        updatePlayButton(false);
+    }
+}
+
+function stopReading() {
+    speechSynthesis.cancel();
+    currentUtterance = null;
+    isReading = false;
+    isPaused = false;
+    currentTextIndex = 0;
+    updatePlayButton(false);
+    updateProgress(0);
+}
+
+function readNextChunk() {
+    if (currentTextIndex >= textChunks.length) {
+        // Terminó el capítulo
+        if (currentChapter < TOTAL_CHAPTERS) {
+            // Auto-avanzar al siguiente capítulo
+            loadChapter(currentChapter + 1);
+            setTimeout(() => {
+                prepareTextForReading();
+                currentTextIndex = 0;
+                readNextChunk();
+            }, 500);
+        } else {
+            stopReading();
+        }
+        return;
+    }
+    
+    const text = textChunks[currentTextIndex];
+    currentUtterance = new SpeechSynthesisUtterance(text);
+    
+    // Configurar voz en español si está disponible
+    const voices = speechSynthesis.getVoices();
+    const spanishVoice = voices.find(voice => 
+        voice.lang.startsWith('es') || voice.lang.startsWith('spa')
+    );
+    if (spanishVoice) {
+        currentUtterance.voice = spanishVoice;
+    }
+    
+    currentUtterance.lang = 'es-ES';
+    currentUtterance.rate = 0.9; // Velocidad de lectura
+    currentUtterance.pitch = 1.0;
+    currentUtterance.volume = 1.0;
+    
+    currentUtterance.onend = () => {
+        currentTextIndex++;
+        updateProgress((currentTextIndex / textChunks.length) * 100);
+        
+        if (isReading && !isPaused) {
+            readNextChunk();
+        }
+    };
+    
+    currentUtterance.onerror = (e) => {
+        console.error('Error en síntesis de voz:', e);
+        stopReading();
+    };
+    
+    speechSynthesis.speak(currentUtterance);
+    updateProgress((currentTextIndex / textChunks.length) * 100);
+}
+
+function skipBackward() {
+    if (currentTextIndex > 0) {
+        currentTextIndex = Math.max(0, currentTextIndex - 3);
+        speechSynthesis.cancel();
+        if (isReading) {
+            readNextChunk();
+        }
+    }
+}
+
+function skipForward() {
+    if (currentTextIndex < textChunks.length - 1) {
+        currentTextIndex = Math.min(textChunks.length - 1, currentTextIndex + 3);
+        speechSynthesis.cancel();
+        if (isReading) {
+            readNextChunk();
+        }
+    }
+}
+
+function setAudioProgress(e) {
+    const progressBar = document.getElementById('audioProgress');
+    const rect = progressBar.getBoundingClientRect();
+    const percent = (e.clientX - rect.left) / rect.width;
+    
+    currentTextIndex = Math.floor(percent * textChunks.length);
+    speechSynthesis.cancel();
+    
+    if (isReading) {
+        readNextChunk();
+    }
+    
+    updateProgress(percent * 100);
+}
+
+function updateProgress(percent) {
+    document.getElementById('audioProgressBar').style.width = percent + '%';
+    
+    // Calcular tiempo estimado basado en chunks
+    const totalChunks = textChunks.length;
+    const avgTimePerChunk = 5; // ~5 segundos por chunk (estimado)
+    const totalSeconds = totalChunks * avgTimePerChunk;
+    const currentSeconds = currentTextIndex * avgTimePerChunk;
+    
+    document.getElementById('audioCurrentTime').textContent = formatTime(currentSeconds);
+    document.getElementById('audioDuration').textContent = formatTime(totalSeconds);
+}
+
+function setVolume(e) {
+    // La Web Speech API no soporta cambio de volumen en tiempo real
+    // pero podemos guardarlo para la próxima utterance
+    const volume = e.target.value / 100;
+    if (currentUtterance) {
+        currentUtterance.volume = volume;
+    }
+}
+
+function updatePlayButton(playing) {
+    const icon = playing ? `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="4" height="16" x="6" y="4"/><rect width="4" height="16" x="14" y="4"/></svg>
+    ` : `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+    `;
+    document.getElementById('playIcon').innerHTML = icon;
+}
+
+function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Cargar voces cuando estén disponibles
+if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = () => {
+        // Voces cargadas
+    };
+}
+
+// Actualizar info cuando cambia el capítulo
+const originalLoadChapter = loadChapter;
+loadChapter = function(n) {
+    originalLoadChapter(n);
+    
+    // Detener lectura si está activa
+    if (isReading) {
+        stopReading();
+    }
+    
+    // Actualizar info del reproductor si está visible
+    const player = document.getElementById('audioPlayer');
+    if (player.classList.contains('show')) {
+        setTimeout(() => {
+            prepareTextForReading();
+            updateAudioInfo();
+        }, 100);
+    }
+};
 </script>
+
+<!-- PANTALLA DE PORTADA -->
+<div class="cover-screen" id="coverScreen">
+    <div class="cover-image-container">
+        <img id="coverImageFull" src="imagenes/cover.png" alt="Portada" class="cover-image-full">
+    </div>
+    <h1 class="cover-chapter-title" id="coverChapterTitle">Capítulo 01</h1>
+    <p class="cover-book-title">El Silencio de los Dioses</p>
+    <button class="start-reading-btn" onclick="startReading()">✨ Comenzar a Leer</button>
+</div>
+
+<!-- PANTALLA DE PORTADA -->
+<div class="cover-screen" id="coverScreen">
+    <div class="cover-image-container">
+        <img id="coverImageFull" src="imagenes/cover.png" alt="Portada" class="cover-image-full">
+    </div>
+    <h1 class="cover-chapter-title" id="coverChapterTitle">Capítulo 01</h1>
+    <p class="cover-book-title">El Silencio de los Dioses</p>
+    <button class="start-reading-btn" onclick="startReading()">✨ Comenzar a Leer</button>
+</div>
+
+<!-- REPRODUCTOR DE AUDIO -->
+<div class="audio-player" id="audioPlayer">
+    <div class="audio-info">
+        <img id="audioCover" src="imagenes/cover.png" alt="Portada" class="audio-cover">
+        <div class="audio-details">
+            <div class="audio-title" id="audioChapterTitle">Capítulo 01</div>
+            <div class="audio-subtitle">Narración por voz sintética</div>
+        </div>
+    </div>
+    
+    <div class="audio-controls">
+        <button class="audio-btn secondary" onclick="skipBackward()" title="Retroceder párrafos">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v6h6"/><path d="M21 12A9 9 0 0 0 6 5.3L3 8"/></svg>
+        </button>
+        
+        <button class="audio-btn" onclick="togglePlayPause()" title="Reproducir/Pausar">
+            <span id="playIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </span>
+        </button>
+        
+        <button class="audio-btn secondary" onclick="skipForward()" title="Avanzar párrafos">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/></svg>
+        </button>
+    </div>
+    
+    <div class="audio-progress-container">
+        <div class="audio-times">
+            <span id="audioCurrentTime">0:00</span>
+            <span id="audioDuration">0:00</span>
+        </div>
+        <div class="audio-progress" id="audioProgress" onclick="setAudioProgress(event)">
+            <div class="audio-progress-bar" id="audioProgressBar"></div>
+        </div>
+    </div>
+    
+    <div class="audio-volume">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+        <input type="range" class="volume-slider" min="0" max="100" value="100" oninput="setVolume(event)">
+    </div>
+    
+    <button class="audio-close" onclick="closeAudioPlayer()" title="Cerrar reproductor">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+</div>
 
 </body>
 </html>
