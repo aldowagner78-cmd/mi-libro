@@ -12,6 +12,9 @@ capitulos/*.docx
 # Documentación de desarrollo
 GUIA_FORMATO_DOCX.md
 
+# Carpeta de utilidades de desarrollo
+utilidades/
+
 # Archivos del sistema
 .DS_Store
 Thumbs.db
