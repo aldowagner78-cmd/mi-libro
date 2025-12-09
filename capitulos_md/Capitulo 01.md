@@ -8,7 +8,7 @@
 
 *Debajo de la tinta del mapa, debajo de la corteza de la realidad consensuada, el territorio es algo mucho más antiguo, mucho más extraño y, sobre todo, mucho más silencioso. Hemos caminado sobre las tumbas de gigantes durante milenios, convencidos de que eran simplemente colinas. La ignorancia no fue un accidente; fue un mecanismo de defensa."*
 
-*— ****Dr. James Gordon.**** Cuaderno de campo, anotación del 12 de octubre de 2026.*
+— **Dr. James Gordon.** *Cuaderno de campo, anotación del 12 de octubre de 2026.*
 
 **Cuenca del Río Negro, Amazonas.** **Coordenada Desconocida.** **15 de octubre, 2026. 09:45 AM.**
 

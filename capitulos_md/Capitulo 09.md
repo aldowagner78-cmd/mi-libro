@@ -1,6 +1,8 @@
+**EL SILENCIO DE LOS DIOSES**
+
 **CAPÍTULO 9: EL DIOS FRACTAL**
 
-**INTERLUDIO IX: EL TEOREMA DE LA COLMENA**
+***INTERLUDIO IX: EL TEOREMA DE LA COLMENA***
 
 *"La individualidad es una ineficiencia evolutiva. Millones de hormigas forman una sola inteligencia capaz de construir catedrales de barro y cultivar hongos. Una sola hormiga es estúpida; la colonia es un genio. Los humanos valoramos el 'Yo' por encima de todo. Creemos que nuestra soledad es nuestra fuerza. Pero es nuestra debilidad. El siguiente paso no es el Superhombre de Nietzsche. Es el Superorganismo. Cuando todas las mentes se unen, la suma es mayor que las partes. El miedo desaparece porque la muerte de una célula no es la muerte del cuerpo. El ego desaparece. El Santuario no es una dictadura. Es una orquesta. Y nosotros somos instrumentos desafinados intentando tocar un solo."*
 
