@@ -71,12 +71,21 @@ def md_to_html_with_notes(md_path, html_path, json_path):
     # Extraer notas
     content_md, notes = extract_notes_from_md(md_text)
     
-    # IMPORTANTE: Convertir ^[(N)] a <sup>(N)</sup> ANTES de pasar a Markdown
-    content_md = re.sub(r'\^\[(\d+)\]', r'<sup>(\1)</sup>', content_md)
+    # Limpiar ^[ ] sobrantes (espacios vacíos)
+    content_md = re.sub(r'\^\[\s*\]', '', content_md)
+    
+    # Usar marcador HTML comment que Markdown no procesa
+    content_md = re.sub(r'\^\[(\d+)\]', r'<!--SUPREF:\1-->', content_md)
     
     # Convertir Markdown a HTML
     md_converter = markdown.Markdown(extensions=['extra', 'nl2br'])
     html = md_converter.convert(content_md)
+    
+    # Reemplazar comentarios por <sup> tags
+    html = re.sub(r'<!--SUPREF:(\d+)-->', r'<sup>(\1)</sup>', html)
+    
+    # Limpiar cualquier ^[ ] sobrante alrededor de los SUP
+    html = re.sub(r'\^\s*\[\s*(<sup>\(\d+\)</sup>)\s*\]', r'\1', html)
     
     # Guardar HTML
     with open(html_path, 'w', encoding='utf-8') as f:
