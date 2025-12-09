@@ -1176,7 +1176,7 @@ function buildChapterList() {
         
         if (hasImage) {
             li.innerHTML = `
-                <img src="imagenes/cap_${chapterNum}.png" alt="Capítulo ${chapterNum}" class="chapter-thumbnail" loading="lazy">
+                <img src="imagenes/cap_${chapterNum}.png" alt="Capítulo ${chapterNum}" class="chapter-thumbnail" width="36" height="36" loading="lazy" decoding="async">
                 Capítulo ${chapterNum}
             `;
         } else {
