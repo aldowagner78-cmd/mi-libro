@@ -1,6 +1,6 @@
 import re
 
-capitulos = [20, 21, 22, 23, 24]
+capitulos = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
 
 for num in capitulos:
     md_path = f'capitulos_md/Capitulo {num:02d}.md'

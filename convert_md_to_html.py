@@ -11,11 +11,16 @@ from pathlib import Path
 def extract_notes_from_md(md_text):
     """Extrae las notas de un archivo Markdown."""
     
-    # Buscar sección de notas
-    if "**NOTAS DEL CAPÍTULO" not in md_text:
+    # Buscar sección de notas (ambos formatos)
+    if "**NOTAS DEL CAPÍTULO" not in md_text and "**NOTAS DE AUTOR**" not in md_text:
         return md_text, {}
     
-    parts = md_text.split("**NOTAS DEL CAPÍTULO", maxsplit=1)
+    # Separar por cualquiera de los dos formatos
+    if "**NOTAS DEL CAPÍTULO" in md_text:
+        parts = md_text.split("**NOTAS DEL CAPÍTULO", maxsplit=1)
+    else:
+        parts = md_text.split("**NOTAS DE AUTOR**", maxsplit=1)
+    
     content = parts[0].strip()
     
     if len(parts) < 2:
