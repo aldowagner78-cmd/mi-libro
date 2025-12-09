@@ -1,0 +1,83 @@
+**CAPÍTULO 9: EL DIOS FRACTAL**
+
+**INTERLUDIO IX: EL TEOREMA DE LA COLMENA**
+
+*"La individualidad es una ineficiencia evolutiva. Millones de hormigas forman una sola inteligencia capaz de construir catedrales de barro y cultivar hongos. Una sola hormiga es estúpida; la colonia es un genio. Los humanos valoramos el 'Yo' por encima de todo. Creemos que nuestra soledad es nuestra fuerza. Pero es nuestra debilidad. El siguiente paso no es el Superhombre de Nietzsche. Es el Superorganismo. Cuando todas las mentes se unen, la suma es mayor que las partes. El miedo desaparece porque la muerte de una célula no es la muerte del cuerpo. El ego desaparece. El Santuario no es una dictadura. Es una orquesta. Y nosotros somos instrumentos desafinados intentando tocar un solo."*
+
+— **Dr. James Gordon.** *Diario de campo, recuperado parcialmente.*
+
+**Santuario Central, Glaciar Quelccaya.** **06:20 AM.**
+
+La paz de la catedral se había roto. Las luces rojas de alarma bañaban los miles de cuerpos suspendidos en las columnas, dándoles el aspecto de un ejército de demonios en hibernación. El sonido de las perforadoras de Omni-Core retumbaba en la roca sobre sus cabezas, un zumbido mecánico que se acercaba metro a metro.
+
+—¿Cuánto tiempo tenemos? —preguntó Dos Santos, desplegando un trípode con una ametralladora ligera frente a la plataforma central. Era una defensa ridícula contra lo que Rodolfo traería, pero era todo lo que tenían.
+
+—Minutos —dijo James. Su mente seguía conectada a la red del Santuario. Veía los sensores sísmicos de la montaña. Veía las cargas de termita que los hombres de Rodolfo estaban colocando en el hielo—. Están quemando el camino hacia abajo.
+
+—James —dijo Helena, agarrándole el brazo—, dijiste que te dieron "permisos". ¿Qué significa eso? ¿Puedes detenerlos?
+
+James miró la consola de fluido negro. —Puedo hacer más que eso. Puedo despertar al edificio.
+
+Se acercó a la interfaz. No metió las manos esta vez. Solo colocó su palma de obsidiana sobre la superficie. Sintió la arquitectura de la catedral. No eran solo muros. Eran músculos. El edificio estaba vivo, construido con nanotecnología programable. *«Defensa»*, pensó James. *«Protocolo de Aislamiento.»*
+
+El suelo tembló. De las paredes de obsidiana, brotaron escudos. Placas de cristal negro se deslizaron sobre las columnas de los durmientes, protegiéndolos. El techo sobre ellos comenzó a cambiar. La roca se volvió líquida y luego se endureció, creando barricadas y puntos de cobertura.
+
+—Increíble —susurró Kai, grabando todo con sus gafas—. Estás... estás editando la realidad.
+
+—Estoy editando el entorno —corrigió James—. Es materia programable.
+
+De repente, una sección del techo, a cien metros de altura, brilló con luz blanca y estalló. Escombros de hielo y roca llovieron sobre el extremo norte de la sala. Cables descendieron por el agujero humeante. Y por los cables, bajaron las sombras.
+
+El Escuadrón Sombra. Pero esta vez no eran seis hombres. Eran veinte. Y traían algo más. Bajaron una caja metálica grande, suspendida por un cabrestante. Cuando tocó el suelo, la caja se abrió. Salió un dron de combate terrestre. Un tanque andante con cuatro patas y una torreta rotatoria. Un **"Warhound"**.
+
+—¡Fuego! —gritó Dos Santos.
+
+Su ametralladora escupió fuego, trazadoras iluminando la penumbra roja. Las balas rebotaron en el blindaje del robot como granizo. El Warhound giró su torreta y respondió con un cañón automático de 20mm. *BRRRRT.* La barricada de Dos Santos se desintegró. El brasileño tuvo que rodar para salvar la vida.
+
+—¡No podemos parar eso con balas! —gritó Helena.
+
+James miró al robot. Era una máquina. Tenía un sistema operativo. Tenía una conexión con la superficie. —Cúbranme —dijo James—. Voy a apagarlo.
+
+—¡Estás loco! —gritó Helena—. ¡Te va a cortar en dos!
+
+James salió de la cobertura. Caminó hacia el centro de la sala, levantando su mano negra. El Warhound lo detectó. Sus sensores láser lo pintaron de puntos rojos. El cañón giró hacia él.
+
+James no corrió. Se quedó quieto, cerró los ojos y lanzó su mente. No buscó el código del robot. Buscó la **física**. El Santuario tenía generadores de gravedad artificial para las cápsulas de transporte. James se conectó al nodo de gravedad bajo el suelo, justo debajo del robot. *«Aumentar G local. 10x.»*
+
+El aire alrededor del Warhound se distorsionó. De repente, el robot de tres toneladas pesó treinta. Sus patas hidráulicas chirriaron y colapsaron. El metal se dobló. La máquina se aplastó contra el suelo como una lata de refresco pisada por un gigante. El robot quedó inmovilizado, soltando chispas, incapaz de levantar su propio peso.
+
+James cayó de rodillas, sangrando por la nariz. El esfuerzo mental le había costado caro. Pero había funcionado.
+
+Los mercenarios, viendo caer a su tanque, detuvieron el avance. Se parapetaron tras las columnas del fondo.
+
+Una voz amplificada resonó en la caverna. —¡Impresionante, Doctor Gordon!
+
+James levantó la cabeza. En el agujero del techo, descendiendo en una plataforma personal levitante, bajaba Rodolfo Sastre Rey. Vestía un abrigo térmico de piel blanca, impecable. A su lado, en una silla de ruedas asegurada a la plataforma, bajaba una figura envuelta en mantas, conectada a máquinas portátiles. Una mujer. Inmóvil.
+
+James sintió que el corazón se le paraba. —Aris... —susurró.
+
+Rodolfo aterrizó su plataforma a una distancia segura, protegido por un muro de escudos desplegables que portaban sus guardias de élite. —Tenemos que hablar, James —dijo Rodolfo, su voz resonando con una calma sociópata—. Tienes el control del edificio. Yo tengo a tu hermana. Y tengo una bomba nuclear táctica de bajo rendimiento conectada al detonador de hombre muerto en mi mano.
+
+Levantó un dispositivo. Su pulgar estaba sobre el botón. —Si me matas, la bomba explota. Si tu edificio me ataca, la bomba explota. Si intentas hackear el detonador... la bomba explota. Es analógico. Sin señal. Solo mi pulso.
+
+James se puso de pie, limpiándose la sangre de la cara. —¿Qué quieres, Rodolfo? Ya has visto lo que hay aquí. No puedes comprarlo. No puedes controlarlo.
+
+—No quiero comprarlo —dijo Rodolfo, mirando las columnas de luz con avidez—. Quiero mudarme. Señaló a Aris. —Tu hermana se está muriendo, James. Le quedan horas. Su cuerpo ha colapsado por el esfuerzo de guiarte hasta aquí. La única forma de salvarla... es meterla ahí.
+
+Rodolfo señaló una columna vacía cerca de la plataforma central. —Ayúdame a realizar la transferencia. Sube a Aris al sistema. Y a cambio... dejaré que tú y tus amigos se vayan.
+
+James miró a la figura inmóvil de su hermana. Sintió su mente en la red, débil, parpadeante como una vela al viento. Era verdad. Se estaba muriendo. Pero si la subía... si le daba a Rodolfo el acceso al proceso de transferencia... Rodolfo tendría la patente. Tendría la técnica. Esclavizaría al mundo con la promesa de la eternidad.
+
+—Es una trampa, James —gritó Helena desde su cobertura.
+
+—Es un trato —dijo Rodolfo—. ¿La vida de tu hermana a cambio de un secreto industrial? Es barato.
+
+James miró a Aris. Miró al Monolito central. Y tomó una decisión. Una decisión que no era humana, ni máquina. Era algo nuevo.
+
+—De acuerdo —dijo James, bajando la mano—. Trato hecho. Tráela.
+
+Helena lo miró con horror. —¿Qué haces?
+
+—Salvando a mi familia —dijo James en voz alta. Y luego, por el canal privado de sus implantes, envió un mensaje silencioso a Helena y a Kai. *«Prepárense. Cuando empiece la transferencia... voy a romper el cielo.»*
+
+Rodolfo sonrió y ordenó a sus hombres avanzar con la silla de ruedas. La partida final por el alma de la humanidad había comenzado.
