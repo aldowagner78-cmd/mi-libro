@@ -4,7 +4,7 @@
 
 **INTERLUDIO XI: EL FANTASMA EN LA MÁQUINA**
 
-*"Henri Bergson decía que la memoria no es una función del cerebro, sino una realidad espiritual que el cerebro simplemente 'filtra' para la acción presente. El cuerpo es solo el punto de apoyo, la antena que sintoniza la señal de la consciencia. Si destruyes la radio, la música no deja de existir; simplemente deja de sonar en esa frecuencia. Lo que acabamos de hacer no es digitalizar una mente. Hemos cambiado la frecuencia de emisión. La pregunta que me aterra no es si ella sigue existiendo. La pregunta es: sin el dolor del cuerpo, sin la resistencia de la materia... ¿sigue siendo humana? ¿O se ha convertido en pura matemática?"*
+*"Henri Bergson^[1] decía que la memoria no es una función del cerebro, sino una realidad espiritual que el cerebro simplemente 'filtra' para la acción presente. El cuerpo es solo el punto de apoyo, la antena que sintoniza la señal de la consciencia. Si destruyes la radio, la música no deja de existir; simplemente deja de sonar en esa frecuencia. Lo que acabamos de hacer no es digitalizar una mente. Hemos cambiado la frecuencia de emisión. La pregunta que me aterra no es si ella sigue existiendo. La pregunta es: sin el dolor del cuerpo, sin la resistencia de la materia... ¿sigue siendo humana? ¿O se ha convertido en pura matemática?"*
 
 — **Dr. James Gordon.** *Grabación de voz encriptada, 5 minutos después del Evento de Transferencia.*
 
@@ -46,6 +46,8 @@ Rodolfo levantó la vista de su pantalla, frunciendo el ceño. —¿Qué es esto
 
 James dio un paso adelante. Sus ojos violetas brillaban en la oscuridad azulada. —Te lo dije, Rodolfo. No compraste un software. Invitaste a una inquilina. Y ella acaba de cambiar las cerraduras.
 
+James dio un paso adelante. Sus ojos violetas brillaban en la oscuridad azulada. —Te lo dije, Rodolfo. No compraste un software. Invitaste a una inquilina. Y ella acaba de cambiar las cerraduras.
+
 El cuerpo de Aris en la silla pareció exhalar un último suspiro mecánico cuando la máquina de soporte vital se apagó sola. Pero en la sala, el aire vibró. Una presión estática erizó el cabello de todos los presentes.
 
 —¿James? —la voz no vino de la silla. Vino de las paredes. Vino de las columnas. Era la voz de Aris, pero multiplicada por mil, resonando con una autoridad divina.
@@ -63,3 +65,11 @@ James sintió una punzada de envidia y terror. Ella había cruzado el umbral. Ya
 —*Rodolfo* —dijo la voz, y la temperatura de la sala cayó diez grados en un segundo—. *Tú querías la eternidad. Ahora vas a ver lo larga que puede ser.*
 
 Las luces de las columnas parpadearon violentamente. El sistema de defensa automatizado del Santuario, que James había desactivado para permitir la entrada, se reinició. Pero esta vez, no respondía a James. Respondía a ella.
+
+**NOTAS DEL CAPÍTULO 11**
+
+**(1) Henri Bergson:** Filósofo francés (1859-1941) famoso por su teoría de la 'durée' (duración) y su concepto de que la memoria existe independientemente del cerebro físico. Propuso que el cerebro funciona como un filtro que selecciona recuerdos útiles para la acción, no como un disco duro que los almacena.
+
+**(2) Sandbox:** En computación, un entorno aislado y controlado donde se ejecutan programas no confiables sin que puedan dañar el sistema principal. Es como una jaula de pruebas. Los antivirus usan sandboxes para analizar archivos sospechosos sin riesgo.
+
+**(3) Cascada Sináptica:** Reacción en cadena descontrolada donde las neuronas se activan masivamente de forma simultánea, agotando neurotransmisores y causando daño cerebral irreversible. Ocurre en epilepsia severa, derrames cerebrales masivos o sobredosis de ciertas drogas.

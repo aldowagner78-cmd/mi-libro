@@ -4,7 +4,7 @@
 
 **INTERLUDIO XII: EL JARDÍN DE SENDEROS QUE SE BIFURCAN**
 
-*"El Edén no fue un lugar geográfico; fue un estado neuroquímico. Antes de la 'Caída', el cerebro humano no tenía la capacidad de disociar el 'Yo' del 'Otro'. Vivíamos en un estado de flujo continuo, sin autoconsciencia, sin culpa, sin tiempo. La 'Manzana' fue el desarrollo del córtex prefrontal: la capacidad de prever el futuro y, por tanto, la muerte. Este Santuario es un intento de ingeniería inversa para volver al Edén. Pero hay un problema: no puedes volver al útero sin destruir al adulto. Para entrar en este paraíso digital, debes renunciar a la herramienta que te hace humano: tu ansiedad por el futuro. Debes aceptar ser un niño eterno en un jardín de silicio."*
+*"El Edén no fue un lugar geográfico; fue un estado neuroquímico. Antes de la 'Caída', el cerebro humano no tenía la capacidad de disociar el 'Yo' del 'Otro'. Vivíamos en un estado de flujo continuo, sin autoconsciencia, sin culpa, sin tiempo. La 'Manzana' fue el desarrollo del córtex prefrontal^[1]: la capacidad de prever el futuro y, por tanto, la muerte. Este Santuario es un intento de ingeniería inversa para volver al Edén. Pero hay un problema: no puedes volver al útero sin destruir al adulto. Para entrar en este paraíso digital, debes renunciar a la herramienta que te hace humano: tu ansiedad por el futuro. Debes aceptar ser un niño eterno en un jardín de silicio."*
 
 — **Dra. Helena Jenkins.** *Diario de campo, reflexión sobre la teología de la simulación.*
 
@@ -28,7 +28,7 @@ James se giró. La Bibliotecaria estaba allí. La interfaz de usuario que había
 
 —Ella fue torturada durante cinco años —dijo James, sintiendo su propia ira burbujear, aunque aquí se sentía distante, intelectualizada—. Tiene derecho a estar enfadada.
 
-—Aquí no existe el "derecho" —dijo la Bibliotecaria suavemente—. Aquí solo existe la coherencia. Si su ira persiste, desestabilizará la red. Se convertirá en un virus. Tendremos que... formatearla.
+—Aquí no existe el "derecho" —dijo la Bibliotecaria suavemente—. Aquí solo existe la coherencia. Si su ira persiste, desestabilizará la red. Se convertirá en un virus. Tendremos que... formatearla^[2].
 
 James se tensó. —¿Formatearla? ¿Borrarla?
 
@@ -52,10 +52,18 @@ La realidad de la biblioteca parpadeó. James vio, por un segundo, la cueva de h
 
 —Llévame con ella —dijo James.
 
-—Ten cuidado —advirtió la Bibliotecaria, tocándole el pecho—. Entrar en la mente de un recién fallecido es peligroso. Su realidad es inestable. Si mueres en su sueño... tu cerebro físico sufrirá una cascada sináptica masiva. Morirás de un derrame cerebral instantáneo.
+—Ten cuidado —advirtió la Bibliotecaria, tocándole el pecho—. Entrar en la mente de un recién fallecido es peligroso. Su realidad es inestable. Si mueres en su sueño... tu cerebro físico sufrirá una cascada sináptica^[3] masiva. Morirás de un derrame cerebral instantáneo.
 
 —Llévame —repitió James.
 
 La Bibliotecaria chasqueó los dedos. El suelo de la biblioteca se abrió y James cayó al vacío digital, descendiendo hacia el infierno personal que Aris había construido para sí misma.
 
 Un infierno que, irónicamente, se parecía mucho a las oficinas de Omni-Core en Zúrich, pero hechas de fuego y hueso.
+
+**NOTAS DEL CAPÍTULO 12**
+
+**(1) Córtex Prefrontal:** Región del cerebro ubicada en la parte frontal del lóbulo frontal. Es responsable de funciones ejecutivas como planificación, toma de decisiones, control de impulsos y consciencia del futuro. Es la última área en desarrollarse completamente (hacia los 25 años).
+
+**(2) Neuropsicoanálisis:** Disciplina que combina neurociencia con psicoanálisis freudiano, buscando bases biológicas para conceptos como el inconsciente, la represión y los traumas. Fue fundada en la década de 1990 por neurocientíficos como Mark Solms.
+
+**(3) Formatear:** En informática, borrar completamente el contenido de un dispositivo de almacenamiento y restaurarlo a su estado original de fábrica. Elimina todos los archivos, programas y configuraciones. No hay recuperación posible después de un formato completo.

@@ -28,11 +28,11 @@ James abrió los ojos. Sus pupilas estaban dilatadas al máximo, dos agujeros ne
 
 La tentación del Santuario seguía ahí, un canto de sirena en su lóbulo temporal. *«Vuelve»*, le decía la memoria reciente. *«Allí no duele. Allí eres luz.»*
 
-—No vas a volver a ningún lado —dijo Helena con una dureza nacida del pánico. Se giró hacia Rodolfo Sastre Rey, que observaba la escena con una ceja levantada y el detonador en la mano—. ¡Necesito que me suelten las manos! ¡Está entrando en shock neurogénico! ¡Si muere ahora, su cerebro se freirá y perderá la llave para siempre!
+—No vas a volver a ningún lado —dijo Helena con una dureza nacida del pánico. Se giró hacia Rodolfo Sastre Rey, que observaba la escena con una ceja levantada y el detonador en la mano—. ¡Necesito que me suelten las manos! ¡Está entrando en shock neurogénico^[1]! ¡Si muere ahora, su cerebro se freirá y perderá la llave para siempre!
 
 Rodolfo evaluó la situación en un microsegundo. La utilidad de James vivo superaba el riesgo de soltar a la doctora. Hizo un gesto seco con la cabeza.
 
-El mercenario más cercano sacó un cuchillo y cortó las bridas de plástico de las muñecas de Helena. Ella no perdió tiempo frotándose la piel magullada. Se lanzó sobre su mochila médica, que los guardias habían tirado a un lado, y sacó una jeringa de epinefrina y un blister de analgésicos opioides de grado militar.
+El mercenario más cercano sacó un cuchillo y cortó las bridas de plástico de las muñecas de Helena. Ella no perdió tiempo frotándose la piel magullada. Se lanzó sobre su mochila médica, que los guardias habían tirado a un lado, y sacó una jeringa de epinefrina^[2] y un blister de analgésicos opioides de grado militar.
 
 —Sujétalo —le ordenó a Dos Santos, que se había arrastrado cerca.
 
@@ -72,11 +72,19 @@ Kai negó con la cabeza, temblando. —¡Tráiganlo! —ordenó Rodolfo.
 
 Un mercenario arrastró a Kai y lo tiró a los pies de James. —Tú dijiste que la llave era biológica —dijo Rodolfo, apuntando con el detonador a la cabeza de Kai como si fuera una pistola—. Dijiste que James necesitaba estar vivo. Bien, está vivo. Está despierto. Pero se niega a cooperar. Así que vamos a probar una hipótesis alternativa.
 
-Rodolfo miró a James. —La neurociencia dice que el dolor empático se procesa en la misma región del cerebro que el dolor físico. La corteza cingulada anterior. Si torturo a este niño frente a ti, James, tu cerebro registrará el mismo nivel de estrés que si te estuviera cortando a ti. Y tal vez, solo tal vez, ese estrés rompa tu bloqueo mental. O tal vez Aris, desde el cielo, sienta lástima por él y abra la puerta.
+Rodolfo miró a James. —La neurociencia dice que el dolor empático se procesa en la misma región del cerebro que el dolor físico. La corteza cingulada anterior^[3]. Si torturo a este niño frente a ti, James, tu cerebro registrará el mismo nivel de estrés que si te estuviera cortando a ti. Y tal vez, solo tal vez, ese estrés rompa tu bloqueo mental. O tal vez Aris, desde el cielo, sienta lástima por él y abra la puerta.
 
 —No lo hagas, Rodolfo —advirtió James, intentando levantarse, pero sus piernas fallaron. Su mano de obsidiana soltó chispas rojas—. Si lo tocas, te juro que...
 
 —¿Qué? —interrumpió Rodolfo—. ¿Me vas a hackear? ¿Con qué? ¿Con tu Wi\-Fi mental? —Se rió—. Esto es analógico, James. —Levantó el cuchillo táctico que le quitó a uno de sus hombres—. Esto es acero y carne. No hay código aquí. Solo física.
+
+**NOTAS DEL CAPÍTULO 16**
+
+**(1) Shock Neurogénico:** Condición médica grave donde el sistema nervioso falla en regular el flujo sanguíneo, causando presión arterial peligrosamente baja. Puede ser causado por lesión de médula espinal, trauma severo o, teóricamente, por una desconexión abrupta de una interfaz cerebro-máquina.
+
+**(2) Epinefrina:** También conocida como adrenalina. Hormona y neurotransmisor que aumenta la frecuencia cardíaca, contrae vasos sanguíneos y dilata las vías respiratorias. Se usa en emergencias médicas para tratar shock anafiláctico, paro cardíaco y colapso circulatorio.
+
+**(3) Corteza Cingulada Anterior:** Región del cerebro involucrada en el procesamiento del dolor físico y emocional, toma de decisiones, empatía y regulación emocional. Estudios de neuroimagen muestran que se activa tanto cuando sufrimos dolor como cuando vemos sufrir a otros.
 
 Rodolfo agarró la mano de Kai. El chico gritó antes de que el cuchillo tocara su piel. —Vamos a empezar con los dedos —dijo Rodolfo con tono clínico—. Necesitas dedos para teclear, ¿verdad, Kai? Sería una lástima que tu carrera terminara aquí.
 

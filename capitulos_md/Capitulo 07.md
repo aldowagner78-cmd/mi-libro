@@ -14,7 +14,7 @@ El frío no era algo que sentías; era algo que te agredía.
 
 Era un animal invisible con dientes de aguja que mordía la piel expuesta, congelaba las pestañas y convertía el aire en cristales microscópicos que rasgaban la garganta al respirar. La hipoxia[^4] golpeaba con la misma fuerza: a cinco mil metros, cada paso requería el esfuerzo de diez.
 
-James, Helena, Kai, Dos Santos y Mateo avanzaban en fila india, pegados a la pared de roca para protegerse del viento **catabático**[^5] que barría el glaciar. Iban envueltos en las mantas térmicas plateadas, pareciendo una procesión de fantasmas futuristas perdidos en la prehistoria.
+James, Helena, Kai, Dos Santos y Mateo avanzaban en fila india, pegados a la pared de roca para protegerse del viento **catabático**^[5] que barría el glaciar. Iban envueltos en las mantas térmicas plateadas, pareciendo una procesión de fantasmas futuristas perdidos en la prehistoria.
 
 —No siento los pies —gimió Kai. Su voz era apenas un susurro arrastrado por el viento—. Creo... creo que me voy a caer.
 
@@ -66,8 +66,10 @@ James señaló la base de las columnas. Pulsaban. Una luz dorada subía y bajaba
 
 James se detuvo frente a un pedestal central. —Hemos llegado —dijo—. Bienvenidos a la Catedral de Hielo.
 
-**NOTAS AL PIE DEL CAPÍTULO 7**
+**NOTAS DEL CAPÍTULO 7**
 
-[^4]: **Hipoxia:** Condición en la que el cuerpo o una región del mismo se ve privado de un suministro adecuado de oxígeno. En alta montaña, causa mareos, confusión, fatiga extrema y, en casos graves, edema cerebral o pulmonar. 
+**(4) Hipoxia:** Condición en la que el cuerpo o una región del mismo se ve privado de un suministro adecuado de oxígeno. En alta montaña, causa mareos, confusión, fatiga extrema y, en casos graves, edema cerebral o pulmonar.
+
+**(5) Viento Catabático:** Viento que desciende por una pendiente bajo la influencia de la gravedad. En glaciares y montañas polares, el aire frío (más denso) fluye hacia abajo acelerándose, creando vientos devastadores de hasta 300 km/h. Común en Antártida y Groenlandia. 
 
 [^5]: **Viento Catabático:** Viento que transporta aire de alta densidad desde una elevación mayor a una menor debido a la gravedad. En los glaciares, estos vientos caen por las laderas a velocidades huracanadas, enfriando drásticamente el ambiente.
