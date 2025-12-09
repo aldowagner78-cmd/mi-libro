@@ -1022,7 +1022,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     const savedFont = localStorage.getItem('fontSize');
     const firstVisit = localStorage.getItem('firstVisit');
-    const scrollPosition = localStorage.getItem('scrollPosition');
     
     if (saved) currentChapter = parseInt(saved);
     if (savedTheme) setTheme(savedTheme);
@@ -1031,32 +1030,26 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('content').style.fontSize = fontSize + 'rem';
     }
     
+    // Ocultar loading inicial
+    document.getElementById('loading').classList.remove('show');
+    
     // Detectar primera visita
     if (!firstVisit) {
         // Primera vez: mostrar portada principal
         localStorage.setItem('firstVisit', 'true');
         showMainCover();
     } else {
-        // Visitas posteriores: ir directo al último capítulo
+        // Visitas posteriores: ir directo al último capítulo sin portada
         if (saved) {
             loadChapterDirectly(parseInt(saved));
-            // Restaurar posición de scroll después de cargar
-            if (scrollPosition) {
-                setTimeout(() => {
-                    document.getElementById('reader').scrollTop = parseInt(scrollPosition);
-                }, 100);
-            }
         } else {
-            showMainCover();
+            showWelcome();
         }
     }
     
     // Actualizar estados de lectura
     updateChapterStates();
     updateProgressBar();
-    
-    // Guardar scroll cada 2 segundos
-    setInterval(saveScrollPosition, 2000);
 });
 
 // ========== CHAPTERS ==========
@@ -1076,8 +1069,11 @@ function showMainCover() {
 function enterBook() {
     const coverScreen = document.getElementById('mainCoverScreen');
     coverScreen.classList.remove('show');
-    
-    // Mostrar mensaje de bienvenida en el lector
+    showWelcome();
+}
+
+function showWelcome() {
+    // Mostrar mensaje de bienvenida instantáneo
     const content = document.getElementById('content');
     content.innerHTML = `
         <div style="text-align: center; padding: 80px 20px; max-width: 600px; margin: 0 auto;">
@@ -1093,6 +1089,7 @@ function enterBook() {
         </div>
     `;
     document.getElementById('chapterTitle').textContent = 'Bienvenido';
+    document.getElementById('loading').classList.remove('show');
 }
 
 function addSpecialSection(list, key) {
@@ -1179,7 +1176,7 @@ function buildChapterList() {
         
         if (hasImage) {
             li.innerHTML = `
-                <img src="imagenes/cap_${chapterNum}.png" alt="Capítulo ${chapterNum}" class="chapter-thumbnail">
+                <img src="imagenes/cap_${chapterNum}.png" alt="Capítulo ${chapterNum}" class="chapter-thumbnail" loading="lazy">
                 Capítulo ${chapterNum}
             `;
         } else {
@@ -1266,7 +1263,6 @@ async function loadChapter(n) {
     currentChapter = n;
     localStorage.setItem('chapter', n);
     highlightChapter(n);
-    markChapterAsReading(n);
     
     // Mostrar pantalla de portada primero
     showCoverScreen(n);
@@ -1275,20 +1271,17 @@ async function loadChapter(n) {
 async function loadChapterDirectly(n) {
     // Cargar capítulo sin mostrar portada (para restaurar sesión)
     currentChapter = n;
+    localStorage.setItem('chapter', n);
     highlightChapter(n);
-    markChapterAsReading(n);
     
     const content = document.getElementById('content');
     const loading = document.getElementById('loading');
     
-    loading.classList.add('show');
-    content.innerHTML = '';
-    
     const num = n.toString().padStart(2, '0');
     document.getElementById('chapterTitle').textContent = 'Capítulo ' + num;
     
-    const htmlFile = FOLDER + '/' + encodeURIComponent(PREFIX + num + HTML_EXT);
-    const jsonFile = FOLDER + '/' + encodeURIComponent(PREFIX + num + JSON_EXT);
+    const htmlFile = FOLDER + '/' + PREFIX + num + HTML_EXT;
+    const jsonFile = FOLDER + '/' + PREFIX + num + JSON_EXT;
     
     try {
         const htmlRes = await fetch(htmlFile);
@@ -1296,20 +1289,17 @@ async function loadChapterDirectly(n) {
         
         const html = await htmlRes.text();
         content.innerHTML = html;
+        loading.classList.remove('show');
         
-        try {
-            const jsonRes = await fetch(jsonFile);
-            if (jsonRes.ok) {
-                const notesData = await jsonRes.json();
-                setupNotesWithJSON(notesData);
-            }
-        } catch (jsonErr) {
-            console.error('❌ Error cargando notas:', jsonErr);
-        }
+        // Cargar notas en segundo plano sin bloquear
+        fetch(jsonFile)
+            .then(r => r.ok ? r.json() : null)
+            .then(notes => notes && setupNotesWithJSON(notes))
+            .catch(() => {});
         
         addNavButtons(n);
-        loading.classList.remove('show');
         updateBookmarkButton();
+        markChapterAsReading(n);
         
     } catch (e) {
         console.error('❌ Error cargando capítulo:', e);
@@ -1350,8 +1340,8 @@ async function startReading() {
     const num = n.toString().padStart(2, '0');
     document.getElementById('chapterTitle').textContent = 'Capítulo ' + num;
     
-    const htmlFile = FOLDER + '/' + encodeURIComponent(PREFIX + num + HTML_EXT);
-    const jsonFile = FOLDER + '/' + encodeURIComponent(PREFIX + num + JSON_EXT);
+    const htmlFile = FOLDER + '/' + PREFIX + num + HTML_EXT;
+    const jsonFile = FOLDER + '/' + PREFIX + num + JSON_EXT;
     
     try {
         // Cargar HTML del capítulo
@@ -1360,35 +1350,21 @@ async function startReading() {
         
         const html = await htmlRes.text();
         content.innerHTML = html;
-        
-        console.log('✅ HTML cargado:', html.length, 'chars');
-        
-        // Cargar notas JSON
-        try {
-            const jsonRes = await fetch(jsonFile);
-            console.log('🔍 Fetch JSON status:', jsonRes.status);
-            
-            if (jsonRes.ok) {
-                const notesData = await jsonRes.json();
-                console.log('✅ Notas cargadas:', Object.keys(notesData).length);
-                console.log('📋 Números de notas:', Object.keys(notesData).join(', '));
-                
-                // Configurar notas con el mapa JSON
-                setupNotesWithJSON(notesData);
-            } else {
-                console.log('ℹ️ Sin notas para este capítulo (status:', jsonRes.status, ')');
-            }
-        } catch (jsonErr) {
-            console.error('❌ Error cargando notas:', jsonErr);
-        }
-        
-        addNavButtons(n);
         loading.classList.remove('show');
         document.getElementById('reader').scrollTop = 0;
+        
+        // Cargar notas en segundo plano sin bloquear
+        fetch(jsonFile)
+            .then(r => r.ok ? r.json() : null)
+            .then(notes => notes && setupNotesWithJSON(notes))
+            .catch(() => {});
+        
+        addNavButtons(n);
         updateBookmarkButton();
+        markChapterAsReading(n);
         
     } catch (e) {
-        console.error('❌ Error cargando capítulo:', e);
+        console.error('Error cargando capítulo:', e);
         loading.classList.remove('show');
         content.innerHTML = `
             <div style="text-align:center; padding:60px 20px;">
@@ -1453,15 +1429,19 @@ function updateBookmarkButton() {
 }
 
 function markChapterAsReading(n) {
-    const readChapters = getReadChapters();
-    readChapters[`ch-${n}`] = 'reading';
-    localStorage.setItem('readChapters', JSON.stringify(readChapters));
-    updateChapterStates();
-    updateProgressBar();
+    // Ejecutar en segundo plano para no bloquear
+    setTimeout(() => {
+        const readChapters = getReadChapters();
+        readChapters[`ch-${n}`] = 'reading';
+        localStorage.setItem('readChapters', JSON.stringify(readChapters));
+        updateChapterStates();
+        updateProgressBar();
+    }, 50);
 }
 
 function markChapterAsRead(n) {
     const readChapters = getReadChapters();
+    if (readChapters[`ch-${n}`] === 'read') return; // Ya está marcado
     readChapters[`ch-${n}`] = 'read';
     localStorage.setItem('readChapters', JSON.stringify(readChapters));
     updateChapterStates();
@@ -1565,12 +1545,8 @@ function setupNotesWithJSON(notesData) {
     const content = document.getElementById('content');
     if (!content) return;
     
-    console.log('📝 Configurando notas al pie con JSON...');
-    console.log('📋 Total notas disponibles:', Object.keys(notesData).length);
-    
     // Buscar todos los SUP en el contenido
     const allSups = content.querySelectorAll('sup');
-    console.log(`📌 SUPs encontrados: ${allSups.length}`);
     
     allSups.forEach((sup) => {
         const text = sup.textContent.trim();
@@ -1593,23 +1569,16 @@ function setupNotesWithJSON(notesData) {
                     
                     const noteHTML = notesData[noteNum];
                     showNote(noteHTML);
-                    console.log(`✅ Mostrando nota ${noteNum}`);
                 });
-                
-                console.log(`✓ SUP (${noteNum}) configurado`);
             }
         }
     });
-    
-    console.log('✅ Setup de notas completado');
 }
 
 function showNote(html) {
-    console.log('📢 showNote() llamada con:', html.substring(0, 100));
     document.getElementById('noteBody').innerHTML = html;
     document.getElementById('overlay').classList.add('show');
     document.getElementById('note-popup').classList.add('show');
-    console.log('✅ Popup abierto');
 }
 
 function closeNote() {
@@ -1738,13 +1707,13 @@ function updateAudioInfo() {
 
 function togglePlayPause() {
     if (isReading && !isPaused) {
-        pauseReading();
+        pauseAudio();
     } else {
-        startReading();
+        playAudio();
     }
 }
 
-function startReading() {
+function playAudio() {
     if (textChunks.length === 0) {
         prepareTextForReading();
     }
@@ -1762,7 +1731,7 @@ function startReading() {
     updatePlayButton(true);
 }
 
-function pauseReading() {
+function pauseAudio() {
     if (speechSynthesis.speaking) {
         speechSynthesis.pause();
         isPaused = true;
