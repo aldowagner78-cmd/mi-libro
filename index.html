@@ -962,7 +962,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('content').style.fontSize = fontSize + 'rem';
     }
     
-    loadChapter(currentChapter);
+    // Mostrar portada principal al inicio
+    showMainCover();
 });
 
 // ========== CHAPTERS ==========
@@ -982,6 +983,23 @@ function showMainCover() {
 function enterBook() {
     const coverScreen = document.getElementById('mainCoverScreen');
     coverScreen.classList.remove('show');
+    
+    // Mostrar mensaje de bienvenida en el lector
+    const content = document.getElementById('content');
+    content.innerHTML = `
+        <div style="text-align: center; padding: 80px 20px; max-width: 600px; margin: 0 auto;">
+            <h1 style="font-size: 32px; color: var(--accent); margin-bottom: 20px;">📚 El Silencio de los Dioses</h1>
+            <p style="font-size: 20px; line-height: 1.8; color: var(--text-soft); margin-bottom: 40px;">
+                Selecciona un capítulo del índice para comenzar tu viaje.
+            </p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.3;">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                <path d="M12 6v7"/>
+                <path d="m9 9 3 3 3-3"/>
+            </svg>
+        </div>
+    `;
+    document.getElementById('chapterTitle').textContent = 'Bienvenido';
 }
 
 function addSpecialSection(list, key) {
@@ -1158,16 +1176,6 @@ async function loadChapter(n) {
     
     // Mostrar pantalla de portada primero
     showCoverScreen(n);
-}
-
-function showMainCover() {
-    const coverScreen = document.getElementById('mainCoverScreen');
-    coverScreen.classList.add('show');
-}
-
-function enterBook() {
-    const coverScreen = document.getElementById('mainCoverScreen');
-    coverScreen.classList.remove('show');
 }
 
 function showCoverScreen(n) {
