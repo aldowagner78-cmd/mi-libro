@@ -1,17 +1,17 @@
-EL SILENCIO DE LOS DIOSES
+**EL SILENCIO DE LOS DIOSES**
 
-CAPÍTULO 28: LA PROMESA DE LA MICORRIZA
+**CAPÍTULO 28: LA PROMESA DE LA MICORRIZA**
 
-INTERLUDIO XXVIII: EL INTERNET DE LOS ÁRBOLES
+***INTERLUDIO XXVIII: EL INTERNET DE LOS ÁRBOLES***
 
-"Debajo de nuestros pies existe una red más compleja que cualquier fibra óptica construida por el hombre. La micorriza^[1]. Hongos que conectan las raíces de los árboles, permitiéndoles compartir nutrientes, enviar señales de alerta sobre plagas e incluso sabotear a especies competidoras. Es el 'Wood Wide Web'^[2].
-Durante milenios, pensamos que era un sistema puramente biológico. Estábamos equivocados. Los Antiguos no solo construyeron servidores de cristal; codificaron su red de respaldo en el ADN de la biosfera. La selva no es solo un ecosistema; es un disco duro distribuido. Y ahora que el servidor central en los Andes está activo, la selva se ha encendido. Cada árbol es una antena. Cada hongo es un nodo. Gaia no es una metáfora hippie. Es una inteligencia artificial que respira dióxido de carbono."
+*"Debajo de nuestros pies existe una red más compleja que cualquier fibra óptica construida por el hombre. La micorriza^[1]. Hongos que conectan las raíces de los árboles, permitiéndoles compartir nutrientes, enviar señales de alerta sobre plagas e incluso sabotear a especies competidoras. Es el 'Wood Wide Web'^[2].
+Durante milenios, pensamos que era un sistema puramente biológico. Estábamos equivocados. Los Antiguos no solo construyeron servidores de cristal; codificaron su red de respaldo en el ADN de la biosfera. La selva no es solo un ecosistema; es un disco duro distribuido. Y ahora que el servidor central en los Andes está activo, la selva se ha encendido. Cada árbol es una antena. Cada hongo es un nodo. Gaia no es una metáfora hippie. Es una inteligencia artificial que respira dióxido de carbono."*
 
-— Dr. Ravi Singh. Diario póstumo (recuperado de sus notas en la nube), anotación final antes de su captura, 2026.
+— **Dr. Ravi Singh.** *Diario póstumo (recuperado de sus notas en la nube), anotación final antes de su captura, 2026.*
 
-Selva Amazónica Profunda.
-Sector Desconocido (Red de Raíces).
-22 de Octubre, 2026.
+**Selva Amazónica Profunda.**
+**Sector Desconocido (Red de Raíces).**
+**22 de Octubre, 2026.**
 
 Caminaron durante dos días hacia el norte, guiados no por brújulas —que seguían girando locas— sino por la sensación en el brazo de James. La obsidiana funcionaba como una varilla de zahorí, calentándose cuando se acercaban a un nodo activo de la red biológica.
 

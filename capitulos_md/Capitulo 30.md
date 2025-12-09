@@ -1,21 +1,21 @@
-EL SILENCIO DE LOS DIOSES
+**EL SILENCIO DE LOS DIOSES**
 
-CAPÍTULO 30: EL JARDÍN DE LA FRICCIÓN
+**CAPÍTULO 30: EL JARDÍN DE LA FRICCIÓN**
 
-INTERLUDIO XXX: LA RESPUESTA DE FERMI
+***INTERLUDIO XXX: LA RESPUESTA DE FERMI***
 
-"¿Dónde están todos Esa fue la pregunta de Enrico Fermi^[1] sobre los alienígenas. Si el universo es tan viejo y vasto, ¿por qué no hemos visto a nadie
+*"¿Dónde están todos Esa fue la pregunta de Enrico Fermi^[1] sobre los alienígenas. Si el universo es tan viejo y vasto, ¿por qué no hemos visto a nadie
 La respuesta no es que no existan. La respuesta es que estábamos buscando señales de radio, cuando deberíamos haber estado buscando silencio.
 Las civilizaciones avanzadas no gritan al vacío. Se vuelven hacia adentro. Ascienden a espacios interiores de simulación perfecta, donde la física es opcional y la energía es infinita. Se vuelven silenciosos para el universo exterior porque el universo exterior es aburrido y hostil.
 El 'Gran Silencio' no es soledad. Es una fiesta privada a la que no estábamos invitados. Hasta ahora.
 Hemos roto la puerta. Hemos interrumpido el sueño de los dioses. Y ahora, la humanidad se enfrenta a su elección evolutiva final: quedarse en el porche frío de la realidad biológica, peleando por migajas, o cruzar el umbral hacia el silencio eterno.
-Yo elijo quedarme en la puerta. Sosteniéndola abierta. Porque alguien tiene que recordarles a los dioses de dónde vinieron."
+Yo elijo quedarme en la puerta. Sosteniéndola abierta. Porque alguien tiene que recordarles a los dioses de dónde vinieron."*
 
-— Dr. James Gordon. Epílogo de "El Silencio Roto", publicado globalmente en 2030.
+— **Dr. James Gordon.** *Epílogo de "El Silencio Roto", publicado globalmente en 2030.*
 
-Seis meses después.
-Ubicación: "El Faro" (Antiguo observatorio abandonado en los Andes, recuperado).
-12 de Abril, 2027.
+**Seis meses después.**
+**Ubicación: "El Faro" (Antiguo observatorio abandonado en los Andes, recuperado).**
+**12 de Abril, 2027.**
 
 El amanecer en los Andes seguía siendo el espectáculo más impresionante de la Tierra, independientemente de cuántos terabytes de realidad virtual uno hubiera consumido. El sol pintaba de rosa los picos nevados, indiferente a la revolución que ocurría a sus pies.
 

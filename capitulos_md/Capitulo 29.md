@@ -1,19 +1,19 @@
-EL SILENCIO DE LOS DIOSES
+**EL SILENCIO DE LOS DIOSES**
 
-CAPÍTULO 29: EL DOLOR COMO ANCLA
+**CAPÍTULO 29: EL DOLOR COMO ANCLA**
 
-INTERLUDIO XXIX: LA ÉTICA DEL CIBORG
+***INTERLUDIO XXIX: LA ÉTICA DEL CIBORG***
 
-"Durante siglos, definimos la salud como la ausencia de enfermedad. Un cuerpo sano era un cuerpo silencioso. Pero en la era de la hibridación, esa definición es insuficiente.
+*"Durante siglos, definimos la salud como la ausencia de enfermedad. Un cuerpo sano era un cuerpo silencioso. Pero en la era de la hibridación, esa definición es insuficiente.
 Mi mano no es humana. Mi columna vertebral es un desastre biológico. Vivo en un estado de dolor crónico^[1] interrumpido por ráfagas de omnipotencia cuántica. ¿Soy un monstruo ¿Soy un enfermo
 No. Soy un prototipo.
-El dolor que siento en mi vértebra L4 no es un fallo; es una característica. Es el ancla que me impide disolverme en la red. Es el recordatorio constante de mi origen, de mi fragilidad, de mi empatía. Si perdiera el dolor, perdería la conexión con los que sufren. Y un dios que no entiende el sufrimiento es un tirano en potencia. Acepto mi dolor como mi brújula moral. Me duele, luego existo. Me duele, luego me importas."
+El dolor que siento en mi vértebra L4 no es un fallo; es una característica. Es el ancla que me impide disolverme en la red. Es el recordatorio constante de mi origen, de mi fragilidad, de mi empatía. Si perdiera el dolor, perdería la conexión con los que sufren. Y un dios que no entiende el sufrimiento es un tirano en potencia. Acepto mi dolor como mi brújula moral. Me duele, luego existo. Me duele, luego me importas."*
 
-— Dr. James Gordon. Primer Manifiesto del Movimiento de Integración Consciente, 2027.
+— **Dr. James Gordon.** *Primer Manifiesto del Movimiento de Integración Consciente, 2027.*
 
-Campamento Oculto "Génesis".
-Selva Amazónica.
-15 de Noviembre, 2026. Un mes después.
+**Campamento Oculto "Génesis".**
+**Selva Amazónica.**
+**15 de Noviembre, 2026. Un mes después.**
 
 La lluvia golpeaba el techo de hoja de palma con la insistencia de un tambor. James estaba sentado en una silla de madera rústica, tallando un trozo de madera con un cuchillo normal, usando su mano de obsidiana como tornillo de banco. La precisión era milimétrica.
 

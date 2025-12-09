@@ -1,17 +1,17 @@
-EL SILENCIO DE LOS DIOSES
+**EL SILENCIO DE LOS DIOSES**
 
-CAPÍTULO 25: EL SILENCIO DEL TITÁN
+**CAPÍTULO 25: EL SILENCIO DEL TITÁN**
 
-INTERLUDIO XXV: EL LEVIATÁN DESDENTADO
+***INTERLUDIO XXV: EL LEVIATÁN DESDENTADO***
 
-"Thomas Hobbes escribió que, en su estado natural, la vida del hombre es 'solitaria, pobre, desagradable, brutal y corta'. Su solución fue el Leviatán: un poder soberano absoluto al que entregamos nuestra libertad a cambio de seguridad.
-Rodolfo Sastre Rey se veía a sí mismo como ese Leviatán. Creía que la humanidad era un rebaño suicida que necesitaba un pastor de silicio. Pero Hobbes cometió un error de cálculo: subestimó la cooperación. En la biología, el depredador alfa siempre muere solo, devorado por sus propias enfermedades o por un rival más joven. Pero las especies que sobreviven a las extinciones masivas no son las más fuertes; son las que forman redes. Las que comparten el alimento. Las que cuidan a sus heridos. La empatía no es una debilidad sentimental; es la estrategia de supervivencia más robusta del universo conocido."
+*"Thomas Hobbes escribió que, en su estado natural, la vida del hombre es 'solitaria, pobre, desagradable, brutal y corta'. Su solución fue el Leviatán: un poder soberano absoluto al que entregamos nuestra libertad a cambio de seguridad.
+Rodolfo Sastre Rey se veía a sí mismo como ese Leviatán. Creía que la humanidad era un rebaño suicida que necesitaba un pastor de silicio. Pero Hobbes cometió un error de cálculo: subestimó la cooperación. En la biología, el depredador alfa siempre muere solo, devorado por sus propias enfermedades o por un rival más joven. Pero las especies que sobreviven a las extinciones masivas no son las más fuertes; son las que forman redes. Las que comparten el alimento. Las que cuidan a sus heridos. La empatía no es una debilidad sentimental; es la estrategia de supervivencia más robusta del universo conocido."*
 
-— Dra. Helena Jenkins. Diario personal, entrada escrita en el vuelo de extracción, 2026.
+— **Dra. Helena Jenkins.** *Diario personal, entrada escrita en el vuelo de extracción, 2026.*
 
-Mundo Físico. Catedral de Hielo (Sector Central).
-Glaciar Quelccaya, Andes Peruanos.
-16 de Octubre, 2026. 09:20 AM.
+**Mundo Físico. Catedral de Hielo (Sector Central).**
+**Glaciar Quelccaya, Andes Peruanos.**
+**16 de Octubre, 2026. 09:20 AM.**
 
 La batalla física había terminado, pero la atmósfera en la caverna estaba cargada con una electricidad estática que erizaba el vello de los brazos. Los cuerpos rotos de los mercenarios yacían esparcidos cerca de la entrada sellada, un recordatorio brutal de la capacidad defensiva de la arquitectura.
 
