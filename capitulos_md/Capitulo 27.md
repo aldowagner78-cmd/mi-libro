@@ -90,7 +90,7 @@ El anciano asintió y volvió a la canoa. Antes de irse, se giró.
 El anciano señaló hacia la espesura, hacia una zona que James conocía de los mapas antiguos como un "punto ciego".
 Cuando los Baniwa se fueron, James se quitó la venda de la mano. La obsidiana brillaba con un pulso verde suave, sincronizado con el bosque.
 
-—¿Escucharon eso —dijo James—. Aris no está solo en la nube. Está bajando a la tierra.
+—¿Escucharon eso? —dijo James—. Aris no está solo en la nube. Está bajando a la tierra.
 
 —¿Micorriza? —preguntó Kai, fascinado.
 

@@ -122,7 +122,7 @@ El chico bajó resbalando por la pendiente, casi perdiendo el equilibrio, y apun
 
 James se quitó la mochila y la dejó en el suelo con un suspiro de alivio físico. Se frotó la zona lumbar. —Tengo que saber si es sólido o hueco.
 
-—No lo toques, James —advirtió Helena—. Si está  bajo cero, te quemará la piel por congelación.
+—No lo toques, James —advirtió Helena—. Si está bajo cero, te quemará la piel por congelación.
 
 —Tengo guantes. ¡Y muchísima curiosidad!.
 
