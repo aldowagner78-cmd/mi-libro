@@ -12,7 +12,7 @@
 
 El regreso a la carne fue una colisión a alta velocidad contra un muro de hormigón.
 
-No hubo una transición suave, un despertar gradual como en las mañanas de domingo. Hubo un *shoc*k térmico y gravitacional absoluto. James Gordon aspiró una bocanada de aire helado que le quemó los alvéolos como si hubiera inhalado vidrio molido. Su cuerpo se arqueó sobre el suelo de obsidiana, convulsionando violentamente, mientras sus sinapsis intentaban recalibrarse desde la velocidad de la luz a la velocidad de la química biológica.
+No hubo una transición suave, un despertar gradual como en las mañanas de domingo. Hubo un shock térmico y gravitacional absoluto. James Gordon aspiró una bocanada de aire helado que le quemó los alvéolos como si hubiera inhalado vidrio molido. Su cuerpo se arqueó sobre el suelo de obsidiana, convulsionando violentamente, mientras sus sinapsis intentaban recalibrarse desde la velocidad de la luz a la velocidad de la química biológica.
 
 Y entonces, llegó el dolor.
 

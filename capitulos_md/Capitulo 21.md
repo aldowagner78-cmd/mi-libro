@@ -35,7 +35,7 @@ James cerró los ojos físicos. Su mano de obsidiana pulsaba sobre la consola. S
 
 —Helena —dijo James, sin abrir los ojos—. Necesito que me hables.
 
-—¿Qué —Helena estaba junto a él, vigilando los monitores sísmicos que empezaban a mostrar actividad preocupante—. ¿Qué quieres que te diga
+—¿Qué? —Helena estaba junto a él, vigilando los monitores sísmicos que empezaban a mostrar actividad preocupante—. ¿Qué quieres que te diga?
 
 —Háblame de algo real. Háblame de dolor. Háblame de miedo. Necesito anclar la señal. Aris es pura lógica y furia. Necesita... empatía. Necesita el algoritmo del deseo humano.
 
@@ -83,7 +83,7 @@ En el túnel de acceso, a quinientos metros de ellos, la roca comenzó a crecer.
 
 —Están sellados —dijo James—. Tendrán que usar explosivos pesados para pasar. Eso nos da... veinte minutos.
 
-—Veinte minutos para qué —preguntó Helena.
+—Veinte minutos para qué? —preguntó Helena.
 
 —Para convencer al mundo de que no nos bombardee —dijo James, mirando el Monolito—. O para prepararnos para morir bajo el hielo.
 

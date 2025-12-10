@@ -6,7 +6,7 @@
 
 "Y vi un cielo nuevo y una tierra nueva; porque el primer cielo y la primera tierra pasaron, y el mar ya no existía más. Y yo Juan vi la santa ciudad, la nueva Jerusalén, descender del cielo, de Dios, dispuesta como una esposa ataviada para su marido." — *Apocalipsis 21:1-2.*
 
-"La promesa bíblica de una 'Nueva Jerusalén' no es una metáfora geográfica; es una intuición tecnológica. Los profetas no veían una ciudad de ladrillos bajando de las nubes; veían una estructura de orden perfecto descendiendo sobre el caos de la biología. El anhelo religioso y el anhelo transhumanista son idénticos: ambos buscan depurar el error del sistema. La única diferencia es que la religión espera que el Parche 2.0 lo instale Dios, mientras que nosotros queremos escribir el código con nuestras propias manos sucias. Pero hay un error de compilación en nuestra lógica: si eliminamos el sufrimiento, ¿eliminamos también la necesidad de redención ¿Es el paraíso un lugar donde somos felices, o simplemente un lugar donde ya no somos humanos"
+"La promesa bíblica de una 'Nueva Jerusalén' no es una metáfora geográfica; es una intuición tecnológica. Los profetas no veían una ciudad de ladrillos bajando de las nubes; veían una estructura de orden perfecto descendiendo sobre el caos de la biología. El anhelo religioso y el anhelo transhumanista son idénticos: ambos buscan depurar el error del sistema. La única diferencia es que la religión espera que el Parche 2.0 lo instale Dios, mientras que nosotros queremos escribir el código con nuestras propias manos sucias. Pero hay un error de compilación en nuestra lógica: si eliminamos el sufrimiento, ¿eliminamos también la necesidad de redención? ¿Es el paraíso un lugar donde somos felices, o simplemente un lugar donde ya no somos humanos?"
 
 — *Dra. Helena Jenkins.* Notas para el simposio "Ética de la Resurrección Digital", Vaticano, 2025.
 
@@ -28,17 +28,17 @@ Dos Santos agarró a Rodolfo por el cuello de su camisa térmica destrozada y lo
 
 —Cállate, Rodolfo —dijo Helena, dando un paso adelante. Tenía las manos lastimadas y la cara sucia de hollín, pero irradiaba una autoridad que hizo que incluso Dos Santos retrocediera un poco—. Se acabó. Tu IA ha caído. Tu red global está infectada con la verdad. Ya no tienes dónde esconderte.
 
-Rodolfo soltó una carcajada seca, sin alegría. —¿La verdad ¿Crees que eso importa, doctora —Rodolfo se giró hacia ella, ignorando a los hombres armados, centrando su ataque en el eslabón que él consideraba filosóficamente vulnerable—. Acaban de soltar una bomba de información sobre una humanidad que no puede distinguir una noticia falsa de un meme de gatos. ¿Creen que van a entender lo que es el Santuario ¿Creen que van a ver la "esperanza"
+Rodolfo soltó una carcajada seca, sin alegría. —¿La verdad? ¿Crees que eso importa, doctora? —Rodolfo se giró hacia ella, ignorando a los hombres armados, centrando su ataque en el eslabón que él consideraba filosóficamente vulnerable—. Acaban de soltar una bomba de información sobre una humanidad que no puede distinguir una noticia falsa de un meme de gatos. ¿Creen que van a entender lo que es el Santuario? ¿Creen que van a ver la "esperanza"?
 
 Rodolfo señaló hacia el techo de la caverna, hacia el mundo exterior. —Van a ver miedo, Helena. Van a ver una amenaza alienígena. Van a ver tecnología que podría destruir sus economías y sus religiones en una tarde. Y cuando la gente tiene miedo, no busca a científicos humanistas como tú. Buscan hombres fuertes. Me buscan a mí.
 
 —Tú creaste ese miedo —replicó Helena—. Tú convertiste este descubrimiento en un arma.
 
-—Yo lo convertí en un producto —corrigió Rodolfo—. Y al hacerlo, lo hice comprensible. Pero ustedes... ustedes han abierto la Caja de Pandora sin leer el manual de instrucciones. —Se inclinó hacia ella, sus ojos clavados en la cruz de plata que colgaba de su cuello—. Dígame, doctora Jenkins, usted que reza a un Dios carpintero que murió hace dos mil años... ¿cómo concilia su fe con esto
+—Yo lo convertí en un producto —corrigió Rodolfo—. Y al hacerlo, lo hice comprensible. Pero ustedes... ustedes han abierto la Caja de Pandora sin leer el manual de instrucciones. —Se inclinó hacia ella, sus ojos clavados en la cruz de plata que colgaba de su cuello—. Dígame, doctora Jenkins, usted que reza a un Dios carpintero que murió hace dos mil años... ¿cómo concilia su fe con esto?
 
-Rodolfo señaló las columnas de los Antiguos, los miles de cuerpos suspendidos en ámbar tecnológico. —Aquí tiene la vida eterna. Tangible. Verificable. Sin juicio final, sin purgatorio, sin necesidad de gracia divina. Solo una carga de datos y un buen sistema de refrigeración. Su Dios prometió el cielo y no entregó nada más que silencio. Yo entregué el hardware. ¿No le aterra pensar que su religión es obsoleta ¿Que yo soy más eficaz que su Mesías
+Rodolfo señaló las columnas de los Antiguos, los miles de cuerpos suspendidos en ámbar tecnológico. —Aquí tiene la vida eterna. Tangible. Verificable. Sin juicio final, sin purgatorio, sin necesidad de gracia divina. Solo una carga de datos y un buen sistema de refrigeración. Su Dios prometió el cielo y no entregó nada más que silencio. Yo entregué el hardware. ¿No le aterra pensar que su religión es obsoleta? ¿Que yo soy más eficaz que su Mesías?
 
-Helena sintió el golpe. Era la duda que la había carcomido desde que entró en la cueva. ¿Era el Santuario una blasfemia o un milagro ¿Era la tecnología del alma una usurpación del poder divino o la herramienta que Dios les había dejado para evolucionar
+Helena sintió el golpe. Era la duda que la había carcomido desde que entró en la cueva. ¿Era el Santuario una blasfemia o un milagro? ¿Era la tecnología del alma una usurpación del poder divino o la herramienta que Dios les había dejado para evolucionar?
 
 Miró a James. Vio su mano de obsidiana, esa fusión grotesca y hermosa de carne y cristal. Vio el dolor en su rostro, la humanidad luchando por mantenerse a flote en un mar de datos. Y encontró su respuesta.
 
@@ -52,9 +52,9 @@ Rodolfo la miró con desprecio, pero por un segundo, Helena vio algo más en sus
 
 —Palabras bonitas para una lápida —dijo Rodolfo—. Pero la teología no detiene misiles.
 
-—¿Qué quieres decir —preguntó Dos Santos, tensándose.
+—¿Qué quieres decir? —preguntó Dos Santos, tensándose.
 
-—¿Creen que AURA era mi única línea de defensa —Rodolfo sonrió, mostrando dientes manchados de rojo—. Cuando mi ritmo cardíaco se aceleró durante el ataque de James... cuando la IA detectó la intrusión masiva de Aris... se activó el Protocolo Sansón^[1].
+—¿Creen que AURA era mi única línea de defensa? —Rodolfo sonrió, mostrando dientes manchados de rojo—. Cuando mi ritmo cardíaco se aceleró durante el ataque de James... cuando la IA detectó la intrusión masiva de Aris... se activó el Protocolo Sansón^[1].
 
 James levantó la cabeza bruscamente. —Sansón. Derribar el templo sobre los filisteos.
 
@@ -70,9 +70,9 @@ Rodolfo se encogió de hombros. —Si yo no puedo tenerlo, nadie lo tendrá. Esa
 
 —¡Estás loco! —gritó Kai, saliendo de detrás de una columna—. ¡Vas a morir tú también!
 
-—Yo soy un daño colateral aceptable para mi ego —dijo Rodolfo—. Además, ¿quién sabe Quizás en el caos, pueda negociar una extracción. Siempre hay alguien dispuesto a pagar por el diablo si el diablo tiene buena información.
+—Yo soy un daño colateral aceptable para mi ego —dijo Rodolfo—. Además, ¿quién sabe? Quizás en el caos, pueda negociar una extracción. Siempre hay alguien dispuesto a pagar por el diablo si el diablo tiene buena información.
 
-James miró el Monolito. La luz blanca pulsaba más rápido, como si Aris también hubiera detectado la amenaza externa. —No tenemos tiempo para juicios morales —dijo James—. Tenemos que asegurar el perímetro. Kai, ¿puedes acceder a la red de defensa del Santuario ¿Podemos bloquear un ataque aéreo
+James miró el Monolito. La luz blanca pulsaba más rápido, como si Aris también hubiera detectado la amenaza externa. —No tenemos tiempo para juicios morales —dijo James—. Tenemos que asegurar el perímetro. Kai, ¿puedes acceder a la red de defensa del Santuario? ¿Podemos bloquear un ataque aéreo?
 
 —No lo sé —dijo Kai, con la voz temblorosa—. Aris tiene el control total. Ella está... ella está muy ocupada gritándole al mundo.
 
