@@ -749,14 +749,31 @@
             .audio-player {
                 flex-wrap: wrap;
                 padding: 12px 16px;
+                gap: 12px;
             }
-            .audio-volume, .audio-speed {
+            .audio-volume {
                 display: none;
             }
-            .audio-progress-container {
-                order: -1;
+            .audio-speed {
+                display: flex;
+                order: 3;
+                margin-left: auto;
+            }
+            .audio-info {
+                order: 1;
                 width: 100%;
                 margin-bottom: 8px;
+            }
+            .audio-controls {
+                order: 2;
+            }
+            .audio-progress-container {
+                order: 0;
+                width: 100%;
+                margin-bottom: 8px;
+            }
+            .speed-slider {
+                width: 60px;
             }
         }
 
@@ -948,7 +965,7 @@
 <!-- SIDEBAR -->
 <aside id="sidebar">
     <div class="sidebar-head">
-        <img src="imagenes/cover.png" alt="El Silencio de los Dioses" class="book-cover" onclick="showMainCover()" title="Ver portada completa">
+        <img src="imagenes/cover.png" alt="El Silencio de los Dioses" class="book-cover" onclick="showMainCover()" title="Ver portada completa" loading="lazy" decoding="async">
         <div class="sidebar-title">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M12 6v7"/><path d="m9 9 3 3 3-3"/></svg>
             <h1>El Silencio de los Dioses</h1>
@@ -1331,10 +1348,10 @@ function showCoverScreen(n) {
     // Configurar portada
     chapterTitle.textContent = `Capítulo ${num}`;
     
-    if (n <= 10) {
-        coverImg.src = `imagenes/cap_${num}.png`;
-    } else {
-        coverImg.src = `imagenes/cover.png`;
+    // Optimizar carga de imagen: solo cambiar si es necesario
+    const newSrc = n <= 10 ? `imagenes/cap_${num}.png` : `imagenes/cover.png`;
+    if (!coverImg.src.endsWith(newSrc.split('/').pop())) {
+        coverImg.src = newSrc;
     }
     
     // Mostrar pantalla de portada
@@ -1712,12 +1729,13 @@ function updateAudioInfo() {
     const num = currentChapter.toString().padStart(2, '0');
     document.getElementById('audioChapterTitle').textContent = `Capítulo ${num}`;
     
-    // Actualizar portada
+    // Actualizar portada solo si es necesario (lazy load)
     const coverImg = document.getElementById('audioCover');
-    if (currentChapter <= 10) {
-        coverImg.src = `imagenes/cap_${num}.png`;
-    } else {
-        coverImg.src = `imagenes/cover.png`;
+    const newSrc = currentChapter <= 10 ? `imagenes/cap_${num}.png` : `imagenes/cover.png`;
+    
+    // Solo cambiar si es diferente para evitar recargas innecesarias
+    if (coverImg.src !== newSrc && !coverImg.src.endsWith(newSrc)) {
+        coverImg.src = newSrc;
     }
 }
 
@@ -1931,7 +1949,7 @@ loadChapter = function(n) {
 <!-- PORTADA PRINCIPAL -->
 <div class="cover-screen main-cover-screen" id="mainCoverScreen">
     <div class="cover-image-container">
-        <img src="imagenes/cover.png" alt="Portada" class="cover-image-full">
+        <img src="imagenes/cover.png" alt="Portada" class="cover-image-full" loading="lazy" decoding="async">
     </div>
     <h1 class="cover-book-title">El Silencio de los Dioses</h1>
     <p class="cover-author">Por Aldo Wagner</p>
@@ -1941,7 +1959,7 @@ loadChapter = function(n) {
 <!-- PANTALLA DE PORTADA DE CAPÍTULO -->
 <div class="cover-screen" id="coverScreen">
     <div class="cover-image-container">
-        <img id="coverImageFull" src="imagenes/cover.png" alt="Portada" class="cover-image-full">
+        <img id="coverImageFull" src="imagenes/cover.png" alt="Portada" class="cover-image-full" loading="lazy" decoding="async">
     </div>
     <h1 class="cover-chapter-title" id="coverChapterTitle">Capítulo 01</h1>
     <p class="cover-book-title">El Silencio de los Dioses</p>
@@ -1951,7 +1969,7 @@ loadChapter = function(n) {
 <!-- REPRODUCTOR DE AUDIO -->
 <div class="audio-player" id="audioPlayer">
     <div class="audio-info">
-        <img id="audioCover" src="imagenes/cover.png" alt="Portada" class="audio-cover">
+        <img id="audioCover" src="imagenes/cover.png" alt="Portada" class="audio-cover" loading="lazy" decoding="async">
         <div class="audio-details">
             <div class="audio-title" id="audioChapterTitle">Capítulo 01</div>
             <div class="audio-subtitle">Narración por voz sintética</div>
