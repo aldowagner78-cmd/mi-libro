@@ -29,7 +29,7 @@ Un silencio reverencial cayó sobre la multitud, roto solo por el sonido de mile
 
 Washington D.C., Estados Unidos.
 En la Sala de Situación de la Casa Blanca, el Presidente miraba los monitores con incredulidad.
-—¿Es un deepfake —preguntó al Director de la CIA—. Dígame que es un ataque ruso.
+—¿Es un deepfake? —preguntó al Director de la CIA—. Dígame que es un ataque ruso.
 —No es falso, señor Presidente —dijo el Director, pálido—. Los metadatos son cuánticos^[4]. No podemos falsificar esto. Y... hay más.
 —¿Qué más
 —La señal ha abierto todos los archivos de Omni-Core. Todo. Sus sobornos a senadores. Sus operaciones ilegales. Sus contratos con nosotros.
@@ -37,9 +37,9 @@ El Presidente se desplomó en su silla. La revelación no solo exponía la tecno
 
 Londres, Reino Unido.
 En un pub, un grupo de obreros miraba la televisión. El video explicaba, con diagramas simples diseñados por Kai, cómo funcionaba la transferencia de consciencia.
-—Entonces... ¿no morimos —preguntó uno, con la cerveza a medio camino de la boca.
+—Entonces... ¿no morimos? —preguntó uno, con la cerveza a medio camino de la boca.
 —Dice que el cuerpo muere —dijo otro, leyendo los textos—. Pero la mente se guarda. Como en la nube.
-—¿Y quién paga eso —preguntó el primero, cínico—. Seguro que cuesta una fortuna.
+—¿Y quién paga eso? —preguntó el primero, cínico—. Seguro que cuesta una fortuna.
 En la pantalla, apareció una nueva línea de texto, firmada por "El Administrador":
 EL ACCESO ES UN DERECHO BIOLÓGICO. EL CÓDIGO ES DE CÓDIGO ABIERTO (OPEN SOURCE)^[5]. NADIE PUEDE COMPRARLO. NADIE PUEDE VENDERLO.
 El pub estalló en vítores. La promesa de la gratuidad era más revolucionaria que la promesa de la vida.
@@ -51,12 +51,12 @@ James, Helena, Kai y Dos Santos emergieron del túnel de ventilación geotérmic
 Estaban vivos.
 
 James se dejó caer en la nieve, jadeando. Su cuerpo era un mapa de agonía, pero su mente estaba extrañamente en paz. Sacó el dispositivo de Kai, que seguía conectado a la red global.
-—¿Lo tienen —preguntó.
+—¿Lo tienen? —preguntó.
 
 Kai miró la pantalla, sus ojos brillando con lágrimas.
 —Lo tienen, James. Todo el mundo. Hay... tres mil millones de descargas en la última hora. Internet se está cayendo a pedazos por el tráfico, pero la señal de Aris lo mantiene en pie.
 
-—¿Y Omni-Core —preguntó Dos Santos, vigilando el horizonte con los prismáticos.
+—¿Y Omni-Core? —preguntó Dos Santos, vigilando el horizonte con los prismáticos.
 
 —Omni-Core ha dejado de existir —dijo Kai, riendo histéricamente—. Sus acciones valen cero. Sus cuentas han sido congeladas en cien países. La gente está asaltando sus oficinas en Berlín y San Francisco. Rodolfo lo perdió todo antes de perderse a sí mismo.
 
@@ -65,12 +65,12 @@ Helena se sentó junto a James y le tomó la mano sana.
 
 —Empezamos el incendio —corrigió James, mirando hacia el sur, donde se veían estelas de condensación de aviones militares dando la vuelta. Los cazas se retiraban. Ya no tenía sentido bombardear. El secreto había salido. No se puede matar una idea con misiles.
 
-—¿Qué pasará ahora —preguntó Helena.
+—¿Qué pasará ahora? —preguntó Helena.
 
 James miró al cielo azul. Sabía que allá arriba, en la órbita invisible de los datos, Aris estaba vigilando.
 —Ahora viene el caos —dijo James—. La gente va a tener miedo. Las religiones van a colapsar o radicalizarse. Los gobiernos intentarán regular la muerte. Habrá guerras por esto, Helena. Gente que querrá destruir el Santuario porque lo consideran una abominación, y gente que peregrinará aquí para adorarlo.
 
-—¿Y nosotros —preguntó ella.
+—¿Y nosotros? —preguntó ella.
 
 James intentó levantarse. Su espalda gritó, recordándole su humanidad.
 —Nosotros somos los mensajeros que sobrevivieron. Tenemos que desaparecer. Al menos por un tiempo. El mundo querrá respuestas, y yo no estoy listo para darlas.

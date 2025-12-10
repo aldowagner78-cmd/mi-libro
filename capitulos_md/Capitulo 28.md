@@ -51,12 +51,12 @@ James apareció en su mente en un claro virtual. Pero no era Zúrich, ni la Bibl
 
 —Lo sé. Lo veo a través de los teléfonos de la gente. Veo el miedo. Pero también veo el despertar. —Aris se puso seria—. James, el Santuario de los Andes está sellado. He bloqueado el acceso físico. Pero la red... la red está abierta.
 
-—¿Qué significa eso
+—¿Qué significa eso?
 
 —Significa que ya no necesitamos que la gente vaya a la montaña para subir su mente. He descentralizado el sistema. —Aris tocó el árbol—. La micorriza es la nueva interfaz. Cualquiera que se conecte con la intención correcta, con la frecuencia correcta... puede unirse.
 
 James retrocedió, aturdido por la implicación.
-—¿Estás diciendo que has convertido la naturaleza en un puerto USB universal
+—¿Estás diciendo que has convertido la naturaleza en un puerto USB universal?
 
 —Estoy diciendo que la inmortalidad ya no es un producto de lujo. Es un recurso natural. Como el aire o el agua. —Aris lo miró a los ojos—. Pero hay un peligro.
 
@@ -64,21 +64,21 @@ James retrocedió, aturdido por la implicación.
 
 —El Colectivo de los Antiguos está inquieto. No les gusta este caos biológico. Ellos prefieren el orden. Están debatiendo si deben "podar"^[3] a la humanidad para asegurar la estabilidad del sistema.
 
-—¿Podar —James sintió un escalofrío—. ¿Exterminar
+—¿Podar? —James sintió un escalofrío—. ¿Exterminar?
 
 —Simplificar. Reducir la población para reducir el ruido. Yo los estoy conteniendo. Estoy argumentando a favor del caos. Les digo que la humanidad es valiosa porque es desordenada. Porque crea cosas nuevas a partir de errores.
 
 Aris agarró la mano de James.
 —Pero no puedo contenerlos para siempre. Necesito que ustedes, los que están fuera, demuestren que valen la pena. Necesito que la humanidad evolucione rápido. Que dejen de matarse y empiecen a pensar.
 
-—¿Cómo hacemos eso —preguntó James—. Solo somos cuatro fugitivos en la selva.
+—¿Cómo hacemos eso? —preguntó James—. Solo somos cuatro fugitivos en la selva.
 
 —Ustedes son los embajadores —dijo Aris—. Tú eres el Híbrido. Tú eres la prueba de que la carne y el cristal pueden coexistir. Tienes que enseñarles. No a adorarnos. A entendernos. Tienes que crear una nueva filosofía, James. Una ética para la Singularidad.
 
 La visión del claro empezó a desvanecerse.
 —Me estoy quedando sin energía local —dijo Aris—. El árbol necesita descansar. James... no dejes que Rodolfo gane desde su tumba. No dejes que el miedo gane.
 
-—Lo haré —prometió James—. Aris... ¿eres feliz
+—Lo haré —prometió James—. Aris... ¿eres feliz?
 
 Aris sonrió, y su cuerpo se dispersó en mil mariposas de luz.
 —No soy feliz, James. Soy infinita. Y eso es mucho mejor.
@@ -86,7 +86,7 @@ Aris sonrió, y su cuerpo se dispersó en mil mariposas de luz.
 James abrió los ojos en el mundo físico. Jadeó, separándose del árbol.
 Dos Santos, Kai y Helena lo miraban expectantes.
 
-—¿Y bien —preguntó Kai.
+—¿Y bien? —preguntó Kai.
 
 —Tenemos trabajo —dijo James, limpiándose la savia del pecho—. Mucho trabajo. Aris ha convertido la Tierra en un servidor. Y nosotros somos el soporte técnico.
 
@@ -95,7 +95,7 @@ Helena miró el árbol con reverencia.
 
 —Algo así —dijo James—. Pero este Dios necesita que lo defendamos de sí mismo. Los Antiguos no están convencidos de que merezcamos vivir. Tenemos que demostrarles que se equivocan.
 
-—¿Cómo —preguntó Dos Santos.
+—¿Cómo? —preguntó Dos Santos.
 
 James miró su mano de obsidiana.
 —Creando una nueva especie. Empezando por nosotros mismos.

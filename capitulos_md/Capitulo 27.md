@@ -32,7 +32,7 @@ CNN: El Presidente de los Estados Unidos anuncia la creación de una fuerza espe
 —Somos fantasmas —corrigió James, apagando la televisión. El ruido del mundo le daba dolor de cabeza. Prefería el sonido de los grillos.
 
 Helena estaba en la terraza, limpiando su equipo médico. Se veía cansada, pero tranquila. La tensión constante de la Catedral se había disipado, reemplazada por una melancolía reflexiva.
-—¿Crees que hicimos lo correcto —preguntó sin mirar a James cuando él salió a su lado.
+—¿Crees que hicimos lo correcto? —preguntó sin mirar a James cuando él salió a su lado.
 
 James se apoyó en la barandilla. Su mano de obsidiana estaba envuelta en vendas para ocultarla, aunque aquí, en medio de la nada, solo los monos podían verla. Le dolía menos. O quizás se estaba acostumbrando al peso.
 —Hicimos lo único que podíamos hacer, Helena. La verdad es como el agua. Siempre encuentra una grieta. Si no la hubiéramos soltado nosotros, Rodolfo la habría vendido por botellas.
@@ -64,7 +64,7 @@ Bajaron a la orilla del río. Un grupo de cinco hombres y mujeres Baniwa esperab
 
 El anciano negó con la cabeza. —No es nuestra tierra. Es de ellos. Nosotros solo la cuidamos mientras dormían. Pero ahora que han despertado... la selva está cambiando.
 
-—¿Cambiando cómo —preguntó Helena.
+—¿Cambiando cómo? —preguntó Helena.
 
 —Las raíces hablan más alto —dijo el anciano—. Los árboles crecen más rápido. Y los sueños... los sueños son muy claros. Anoche soñé con una mujer de luz que me enseñaba a curar la fiebre del río.
 
@@ -72,7 +72,7 @@ James y Helena intercambiaron una mirada.
 Aris.
 No se había quedado confinada en el glaciar. Estaba usando la red biológica. Estaba cumpliendo su promesa de cuidar, pero a su manera.
 
-—¿Por qué han venido —preguntó James.
+—¿Por qué han venido? —preguntó James.
 
 —Para decirte que no estás escondido —dijo el anciano—. La selva te ve. Pero la selva te protege. Los hombres de hierro (los militares) no pueden entrar aquí. Las raíces confunden sus máquinas.
 
@@ -92,7 +92,7 @@ Cuando los Baniwa se fueron, James se quitó la venda de la mano. La obsidiana b
 
 —¿Escucharon eso —dijo James—. Aris no está solo en la nube. Está bajando a la tierra.
 
-—¿Micorriza —preguntó Kai, fascinado.
+—¿Micorriza? —preguntó Kai, fascinado.
 
 —Internet biológico —confirmó James—. Creo que acabamos de encontrar nuestra línea telefónica segura.
 

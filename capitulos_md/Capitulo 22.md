@@ -32,7 +32,7 @@ La caverna tembló. No fue un movimiento tectónico. Fue la onda sónica de los 
 
 James estaba en la consola, conectado a Aris. Su rostro estaba pálido, bañado en sudor frío. —Aris los ve —dijo James, con los ojos cerrados—. Ve sus sistemas de aviónica. Ve sus intenciones.
 
-—¿Puede detenerlos —preguntó Helena.
+—¿Puede detenerlos? —preguntó Helena.
 
 —Puede derribarlos —corrigió James—. Puede freír sus sistemas electrónicos con un pulso EMP dirigido. Convertiría esos aviones de cien millones de dólares en ladrillos cayendo del cielo.
 
@@ -42,7 +42,7 @@ James estaba en la consola, conectado a Aris. Su rostro estaba pálido, bañado 
 
 Rodolfo, desde el suelo, soltó una risa nerviosa. —El dilema se resuelve fácil, Gordon. Véndeles el objetivo.
 
-Todos lo miraron. —¿Qué —preguntó Kai.
+Todos lo miraron. —¿Qué? —preguntó Kai.
 
 —Comunícate con ellos —dijo Rodolfo—. Usa la frecuencia de emergencia. Diles que esto es una instalación de contención biológica que ha fallado. Diles que hay un patógeno suelto. Nadie bombardea un laboratorio de virus si cree que la explosión va a dispersar la plaga por todo el continente. El miedo al contagio es más fuerte que el miedo a la tecnología.
 
@@ -82,11 +82,11 @@ James soltó el botón del micrófono y se derrumbó sobre la consola. —Han pi
 
 Pero entonces, el Monolito emitió un sonido. Un tañido profundo, como una campana sumergida. La luz blanca se volvió roja.
 
-—¿Qué pasa —preguntó Helena.
+—¿Qué pasa? —preguntó Helena.
 
 James miró su mano. Pulsaba con dolor. —Aris... —murmuró James—. Aris dice que no le gusta mentir. Y dice que ha detectado algo más.
 
-—¿Qué —preguntó Kai.
+—¿Qué? —preguntó Kai.
 
 —No son solo los americanos —dijo James, mirando el techo con horror—. Hay algo más llegando. Algo que no aparece en el radar. Algo que viene desde abajo.
 

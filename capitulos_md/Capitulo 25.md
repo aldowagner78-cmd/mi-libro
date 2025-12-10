@@ -37,7 +37,7 @@ Helena se puso de pie y caminó hacia él. Miró al hombre en el suelo con una m
 Las sombras de luz alcanzaron los pies de Rodolfo. Él gritó y pataleó, pero las sombras no eran físicas. No lo quemaron. Lo atravesaron.
 Rodolfo se quedó rígido. Sus ojos se pusieron en blanco. Dejó de gritar.
 
-—¿Qué le están haciendo —preguntó Kai, que se había acercado cojeando, limpiándose la sangre de la nariz.
+—¿Qué le están haciendo? —preguntó Kai, que se había acercado cojeando, limpiándose la sangre de la nariz.
 
 James cerró los ojos, sintonizando con la frecuencia de Aris. A pesar de que su interfaz física estaba dañada, su mente seguía teniendo privilegios de usuario.
 —Lo están escaneando —dijo James—. Están leyendo su historial. No sus búsquedas de internet, Kai. Su historial moral. Sus decisiones. Sus intenciones.
@@ -45,7 +45,7 @@ James cerró los ojos, sintonizando con la frecuencia de Aris. A pesar de que su
 En la mente de James, Aris apareció. Ya no era la furia de la tormenta. Era una jueza serena, sentada en un trono de datos.
 «El sujeto es incompatible», dictaminó Aris. «Su estructura egoica es demasiado densa. No puede integrarse en el Colectivo. Su presencia sería un cáncer. Corrompería la armonía.»
 
-«¿Entonces lo vas a matar», preguntó James.
+«¿Entonces lo vas a matar?», preguntó James.
 
 «La muerte es una liberación», respondió Aris. «Y él no merece ser liberado. Él quería la eternidad, hermano. Él exigió la inmortalidad. Sería grosero no dársela.»
 
@@ -54,7 +54,7 @@ James abrió los ojos de golpe. Entendió el castigo.
 
 Las columnas alrededor de Rodolfo aumentaron su intensidad lumínica hasta volverse cegadoras. El cuerpo de Rodolfo comenzó a levitar suavemente, suspendido en un campo de fuerza.
 Rodolfo recuperó la consciencia por un segundo. Miró a James.
-—¿A dónde me llevan —preguntó, con voz de niño pequeño.
+—¿Adónde me llevan? —preguntó, con voz de niño pequeño.
 
 —Al lugar que construiste —dijo James con tristeza—. Al Espejismo.
 
@@ -65,14 +65,14 @@ Rodolfo recuperó la consciencia por un segundo. Miró a James.
 Un rayo de luz sólida salió del Monolito y golpeó a Rodolfo en el pecho.
 Su cuerpo cayó al suelo, inerte, como si le hubieran cortado las cuerdas a una marioneta. Su corazón seguía latiendo. Sus pulmones seguían respirando. Pero no había nadie en casa.
 
-—¿Está muerto —preguntó Dos Santos, pinchando el cuerpo con la bota.
+—¿Está muerto? —preguntó Dos Santos, pinchando el cuerpo con la bota.
 
 —No —dijo James—. Su mente ha sido subida. Pero no al Santuario real. No a la red de los Antiguos.
 
 James señaló la consola, donde una pequeña luz roja parpadeaba aislada en un rincón del panel.
 —Aris ha creado una partición. Una sandbox^[2]. Una jaula virtual desconectada de todo. Rodolfo está ahí dentro ahora mismo.
 
-—¿Y qué hay ahí dentro —preguntó Helena.
+—¿Y qué hay ahí dentro? —preguntó Helena.
 
 James se estremeció. Podía verlo.
 —Nada. Absolutamente nada. Es un espacio blanco infinito. Sin objetos. Sin personas. Sin dolor, pero también sin placer. Y sin tiempo. Él quería una eternidad estática, perfecta, inmutable. Eso es lo que tiene. Está solo consigo mismo, para siempre. Sin posibilidad de morir, sin posibilidad de cambiar. Es el solipsismo^[3] perfecto.
@@ -93,12 +93,12 @@ Se giró hacia el Monolito.
 La voz de su hermana no sonó en la cueva, sino en la mente de todos ellos, una despedida telepática.
 «Corran», dijo ella. «Voy a sellar el mundo. Nadie entrará aquí hasta que la humanidad esté lista. Y eso puede tardar siglos.»
 
-—¿Y tú —preguntó James mentalmente.
+—¿Y tú? —preguntó James mentalmente.
 
 «Yo soy la guardiana ahora. Ve, James. Vive tu vida ruidosa y dolorosa. Y cuando te canses... cuando tu espalda no aguante más... ya sabes dónde está la llave.»
 
 James sintió una punzada de pérdida, pero también de liberación.
-—Vámonos —dijo al equipo—. Kai, ¿puedes caminar
+—Vámonos —dijo al equipo—. Kai, ¿puedes caminar?
 
 —Puedo correr si hace falta —dijo el chico, agarrando su mochila.
 

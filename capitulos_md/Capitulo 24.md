@@ -68,7 +68,7 @@ James bajó el puño, pero no golpeó a Rodolfo. Golpeó el hielo junto a su cab
 
 Se giró hacia los mercenarios que se acercaban, que habían detenido el avance al ver la pelea de los líderes. James se levantó, apoyándose en la consola. Su mano brillaba ahora con una intensidad solar. Se conectó con Aris.
 
-«¿Estás lista», preguntó.
+«¿Estás lista?», preguntó.
 
 «Estoy lista», respondió ella. Su voz ya no era furia descontrolada. Era enfoque frío. «He aislado los objetivos. He calculado las trayectorias.»
 
@@ -86,7 +86,7 @@ Helena corrió hacia Kai, que estaba sangrando pero sonriendo. —Lo detuve —d
 
 James se dejó caer sentado en la base de la consola. Estaba exhausto. Su cuerpo era un mapa de dolor. Pero estaba vivo. Miró el Monolito. La luz se suavizó, volviendo a un ámbar cálido. —Gracias, hermana —susurró.
 
-«De nada», respondió Aris. «Pero esto no ha terminado. Los militares siguen ahí fuera. Y el mundo está mirando. ¿Qué hacemos con él»
+«De nada», respondió Aris. «Pero esto no ha terminado. Los militares siguen ahí fuera. Y el mundo está mirando. ¿Qué hacemos con él?»
 
 Aris se refería a Rodolfo. James miró al hombre caído. —El juicio —dijo James—. Deja que el Colectivo decida.
 

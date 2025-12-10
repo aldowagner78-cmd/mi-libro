@@ -88,7 +88,7 @@ El dispositivo se fundió en una masa de metal y plástico inerte en sus manos q
 
 James cayó hacia atrás, separado del Monolito. Su cuerpo humeaba. Su mano de obsidiana estaba apagada, gris, inerte. El silencio volvió a la cueva, roto solo por los disparos lejanos de Dos Santos.
 
-—¿James —Helena corrió hacia él, ignorando las balas.
+—¿James? —Helena corrió hacia él, ignorando las balas.
 
 James estaba en el suelo, mirando el techo con ojos vidriosos. Su pecho subía y bajaba espasmódicamente. —Está... apagada —susurró, y tosió ceniza—. El fusible... se rompió.
 

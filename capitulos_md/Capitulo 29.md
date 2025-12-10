@@ -5,7 +5,7 @@
 ***INTERLUDIO XXIX: LA ÉTICA DEL CIBORG***
 
 *"Durante siglos, definimos la salud como la ausencia de enfermedad. Un cuerpo sano era un cuerpo silencioso. Pero en la era de la hibridación, esa definición es insuficiente.
-Mi mano no es humana. Mi columna vertebral es un desastre biológico. Vivo en un estado de dolor crónico^[1] interrumpido por ráfagas de omnipotencia cuántica. ¿Soy un monstruo ¿Soy un enfermo
+Mi mano no es humana. Mi columna vertebral es un desastre biológico. Vivo en un estado de dolor crónico^[1] interrumpido por ráfagas de omnipotencia cuántica. ¿Soy un monstruo? ¿Soy un enfermo?
 No. Soy un prototipo.
 El dolor que siento en mi vértebra L4 no es un fallo; es una característica. Es el ancla que me impide disolverme en la red. Es el recordatorio constante de mi origen, de mi fragilidad, de mi empatía. Si perdiera el dolor, perdería la conexión con los que sufren. Y un dios que no entiende el sufrimiento es un tirano en potencia. Acepto mi dolor como mi brújula moral. Me duele, luego existo. Me duele, luego me importas."*
 
@@ -33,7 +33,7 @@ James dejó de tallar. —Aris. Está recogiendo a los que están listos. A los 
 James miró su mano negra.
 —Quizás el juicio es interno, Helena. Quizás cuando te conectas, te ves a ti mismo con tanta claridad que tú mismo decides si mereces entrar o no. Como le pasó a Rodolfo. Él no pudo soportar su propia verdad.
 
-—¿Y tú —preguntó ella suavemente—. Tuviste la oportunidad. Podrías estar ahí. Sin dolor. Sin esa espalda que te tortura.
+—¿Y tú? —preguntó ella suavemente—. Tuviste la oportunidad. Podrías estar ahí. Sin dolor. Sin esa espalda que te tortura.
 
 James sonrió, una sonrisa cansada pero genuina.
 —Elegí quedarme. Y cada vez que me da un pinchazo la ciática, sé que elegí bien.
@@ -51,11 +51,11 @@ Se giró hacia ella.
 Kai y Dos Santos entraron corriendo, empapados.
 —¡Doc! —gritó Kai—. ¡Tienes que ver esto! ¡La red está cambiando!
 
-—¿Qué pasa
+—¿Qué pasa?
 
 —¡Están surgiendo nuevos códigos! —Kai mostró su pantalla. Eran líneas de código fractal que se auto-escribían—. No es Aris. Son... otros. Gente que ha subido. Están empezando a programar desde el otro lado. Están enviando soluciones.
 
-—¿Soluciones a qué —preguntó Dos Santos.
+—¿Soluciones a qué? —preguntó Dos Santos.
 
 —A todo —dijo Kai, con los ojos brillantes—. Fusión fría. Limpieza de microplásticos. Curas para priones^[2]. Están pagando el alquiler, James. Nos están dando las herramientas para arreglar el planeta.
 

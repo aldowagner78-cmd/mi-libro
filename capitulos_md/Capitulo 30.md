@@ -4,7 +4,7 @@
 
 ***INTERLUDIO XXX: LA RESPUESTA DE FERMI***
 
-*"¿Dónde están todos Esa fue la pregunta de Enrico Fermi^[1] sobre los alienígenas. Si el universo es tan viejo y vasto, ¿por qué no hemos visto a nadie
+*"¿Dónde están todos? Esa fue la pregunta de Enrico Fermi^[1] sobre los alienígenas. Si el universo es tan viejo y vasto, ¿por qué no hemos visto a nadie?
 La respuesta no es que no existan. La respuesta es que estábamos buscando señales de radio, cuando deberíamos haber estado buscando silencio.
 Las civilizaciones avanzadas no gritan al vacío. Se vuelven hacia adentro. Ascienden a espacios interiores de simulación perfecta, donde la física es opcional y la energía es infinita. Se vuelven silenciosos para el universo exterior porque el universo exterior es aburrido y hostil.
 El 'Gran Silencio' no es soledad. Es una fiesta privada a la que no estábamos invitados. Hasta ahora.
@@ -34,7 +34,7 @@ Helena salió a la terraza, abrochándose una chaqueta de lana.
 
 James se rió. —El sentido del humor de Aris está evolucionando.
 
-—¿Cómo estás hoy —preguntó Helena, tocándole la espalda baja.
+—¿Cómo estás hoy? —preguntó Helena, tocándole la espalda baja.
 
 —Me duele —dijo James—. Va a llover.
 
@@ -45,9 +45,9 @@ James se rió. —El sentido del humor de Aris está evolucionando.
 El mundo había cambiado, pero no se había acabado.
 La sociedad se había fracturado, sí. Había países que prohibían la tecnología del Santuario ("Zonas Biológicas") y ciudades-estado que se habían entregado totalmente a la integración ("Zonas Híbridas"). Había tensión. Había miedo. Pero también había una explosión de creatividad y esperanza como no se había visto desde el Renacimiento.
 
-La muerte ya no era el final, sino una opción de menú. Y eso obligaba a la gente a preguntarse, por primera vez en serio: ¿Qué quiero hacer con mi vida si mi vida no tiene fecha de caducidad obligatoria
+La muerte ya no era el final, sino una opción de menú. Y eso obligaba a la gente a preguntarse, por primera vez en serio: ¿Qué quiero hacer con mi vida si mi vida no tiene fecha de caducidad obligatoria?
 
-—¿Crees que lo lograremos —preguntó Helena—. ¿Crees que la humanidad puede madurar lo suficiente antes de que nos destruyamos con estos juguetes nuevos
+—¿Crees que lo lograremos? —preguntó Helena—. ¿Crees que la humanidad puede madurar lo suficiente antes de que nos destruyamos con estos juguetes nuevos?
 
 James miró al cielo. A veces, cuando la luz era correcta, creía ver los hilos de datos conectando las estrellas.
 —Darwin decía que sobrevivía el más apto. Pero "apto" no significa fuerte. Significa adaptable. Somos la especie más adaptable del planeta, Helena. Hemos sobrevivido a glaciaciones, plagas y bombas atómicas. Sobreviviremos a la inmortalidad.
