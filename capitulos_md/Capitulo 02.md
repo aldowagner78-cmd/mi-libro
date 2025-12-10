@@ -78,9 +78,9 @@ El punto de quiebre llegó la noche del "Incidente de Basilea", en 2021. Aris de
 
 James y Aris intentaron destruirlo. Aris borró los servidores. James robó las copias de seguridad físicas. Rodolfo los descubrió. Esa noche, James logró sacar los discos duros con la evidencia y huir, pero cometió el error fatal de dejar a Aris atrás cubriendo su escape. Rodolfo utilizó su influencia para destruir la vida de James: borró sus credenciales, plantó evidencia de fraude académico y lo convirtió en un paria tóxico para cualquier universidad respetable. Le dejó la libertad, pero le quitó la voz.
 
-Con Aris, el castigo fue diferente. Cuando ella intentó huir en su coche días después, los frenos "fallaron". El mundo vio un funeral cerrado. James lloró ante un ataúd que, ahora sabía, contenía lastre. Rodolfo había rescatado el cuerpo roto de Aris de los restos humeantes. No por piedad, sino por necesidad. Ella era la única que entendía la arquitectura de AURA. La conectó a las máquinas, la aisló sensorialmente y le ofreció un trato faustiano: *«Tu cuerpo es una jaula rota, Aris. Trabaja para mí, termina lo que empezamos, y te daré un cuerpo nuevo. Te daré la eternidad que soñabas. Niégate, y te mantendré viva en este estado de dolor perpetuo hasta que el sol se apague.»*
-
-Cinco años de esclavitud. Cinco años diseñando la jaula digital de la humanidad, esperando el día en que su hermano encontrara la llave para liberarla.
+Con Aris, el castigo fue diferente. Cuando ella intentó huir en su coche días después, los frenos "fallaron". El mundo vio un funeral cerrado. James lloró ante un ataúd que, ahora sabía, contenía lastre. Rodolfo había rescatado el cuerpo roto de Aris de los restos humeantes. No por piedad, sino por necesidad. Ella era la única que entendía la arquitectura de AURA. La conectó a las máquinas, la aisló sensorialmente y le ofreció un trato faustiano: «Tu cuerpo es una jaula rota, Aris. Trabaja para mí, termina lo que empezamos, y te daré un cuerpo y una identidad nueva. Te daré la eternidad que soñabas. Niégate, y te mantendré viva en este estado de dolor perpetuo hasta que el sol se apague».
+Para sobrevivir al cautiverio y a su acelerada enfermedad degenerativa, Aris Gordon aceptó trabajar para su captor, adoptando la identidad profesional de: Dra. Amira Thorne, nombre que, a parir de 2021, comenzó a aparecer repetidamente en muchos documentos internos de Omni-Core.
+Cinco años de esclavitud habían transcurrido. Cinco años diseñando la jaula digital de la humanidad, esperando el día en que su hermano encontrara la llave para liberarla.
 
 —AURA —dijo Rodolfo, abriendo los ojos—. Muéstrame el análisis de la Anomalía. Quiero ver lo que Gordon vio antes de huir.
 
@@ -146,7 +146,7 @@ Cayó como una piedra durante tres segundos antes de que su sistema de descenso 
 
 **Laboratorio Subterráneo de Omni-Core. Ubicación Clasificada (Brasil).** **15 de Octubre, 2026. 10:30 AM.**
 
-La Doctora Aris Thorne no estaba muerta. Ese era el secreto mejor guardado de Rodolfo Sastre Rey.
+La Doctora Aris Gordon no estaba muerta. Ese era el secreto mejor guardado de Rodolfo Sastre Rey.
 
 El mundo creía que la brillante neurocientífica, y hermana gemela de James Gordon, había muerto en un accidente de laboratorio en 2020. James Gordon lo creía. Había enterrado un ataúd vacío y había llorado durante años, culpándose por no haber estado allí.
 

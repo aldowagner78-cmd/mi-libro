@@ -38,7 +38,7 @@ De repente, una de las columnas cercanas, que hasta entonces había estado brill
 
 Rodolfo levantó la vista de su pantalla, frunciendo el ceño. —¿Qué es esto? —preguntó a AURA—. ¿Por qué fluctúa la energía?
 
-—*Detección de nueva entidad en el sistema raíz* —respondió la IA, su voz sonando por primera vez insegura—. *El archivo 'Aris_Thorne' se está... expandiendo. Está reescribiendo los protocolos de la arquitectura.*
+—*Detección de nueva entidad en el sistema raíz* —respondió la IA, su voz sonando por primera vez insegura—. *El archivo 'Amira_Thorne' se está... expandiendo. Está reescribiendo los protocolos de la arquitectura.*
 
 —¡Bloquéala! —ordenó Rodolfo, tecleando furiosamente—. ¡Aísla el archivo en la *sandbox*!
 

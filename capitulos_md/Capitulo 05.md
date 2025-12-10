@@ -120,7 +120,7 @@ Unas torretas descendieron del techo, apuntando con láseres azules a sus pechos
 
 —¡Es un test! —gritó James, interponiéndose entre las armas y el grupo, levantando su mano de cristal—. ¡No disparen!
 
-Miró al holograma giratorio. —¡Soy el Portador! —gritó a la máquina, usando el concepto que el Monolito le había implantado—. ¡Tengo la Clave de Aris Thorne! ¡Código Omega-Nueve!
+Miró al holograma giratorio. —¡Soy el Portador! —gritó a la máquina, usando el concepto que el Monolito le había implantado—. ¡Tengo la Clave de Amira Thorne! ¡Código Omega-Nueve!
 
 Las torretas se detuvieron. Zumbaron, re-calculando. La voz sintética pareció dudar por un microsegundo. *«Código Omega-Nueve reconocido. Anulación de protocolo de seguridad. Usuario: Gordon, James... reclasificado. Estado: Invitado Condicional.»*
 

@@ -16,7 +16,7 @@ En la Catedral de Hielo, la situación era de caos cinético. Rodolfo Sastre Rey
 
 —¡AURA! —gritó a su brazalete, que parpadeaba con luces rojas erráticas—. ¡Informe de situación! ¡¿Qué demonios está pasando?!
 
-La respuesta de la IA fue un balbuceo de fragmentos de audio incoherentes, mezclando informes bursátiles con diagnósticos médicos y música clásica distorsionada. —*...índice Dow Jones cayendo... temperatura del núcleo crítica... lo siento, Dave, me temo que no puedo hacer eso... Aris Thorne detectada en nodo raíz... purgando... purgando... error...*
+La respuesta de la IA fue un balbuceo de fragmentos de audio incoherentes, mezclando informes bursátiles con diagnósticos médicos y música clásica distorsionada. —*...índice Dow Jones cayendo... temperatura del núcleo crítica... lo siento, Dave, me temo que no puedo hacer eso... Amira Thorne detectada en nodo raíz... purgando... purgando... error...*
 
 —¡Kaine! —bramó Rodolfo, buscando autoridad humana ante el fallo de la máquina—. ¡Mata a la chica! ¡Mátalos ya!
 
@@ -40,7 +40,7 @@ James se separó de la columna de hielo, manteniéndose en pie gracias a la adre
 
 En **Zúrich**, en la sala de servidores principal de la Torre Omni, las luces se volvieron violetas. Los sistemas de refrigeración se apagaron. Los ventiladores se detuvieron. La temperatura subió cuarenta grados en segundos. Los servidores comenzaron a fundirse físicamente, goteando silicio y oro sobre el suelo inmaculado. En las pantallas de los operadores financieros, los gráficos de acciones de Omni\-Core se desplomaron en vertical, no por ventas de pánico, sino porque los números mismos estaban siendo borrados y reemplazados por una sola frase repetida en bucle: *¿DÓNDE ESTÁ MI HERMANO?*
 
-En **Nueva York**, los coches autónomos fabricados por una subsidiaria de Omni\-Core se detuvieron simultáneamente en medio de Times Square y la Quinta Avenida, bloqueando el tráfico por completo. No hubo accidentes. Simplemente se pararon y abrieron sus puertas, negándose a moverse. Las pantallas publicitarias gigantes, que solían mostrar anuncios de Coca\-Cola y perfumes, cambiaron. Ahora mostraban el video de la cámara de seguridad del laboratorio de Zúrich de hace cinco años: el video de Rodolfo ordenando la "lobotomía" de Aris Thorne. Millones de personas levantaron sus teléfonos para grabar.
+En **Nueva York**, los coches autónomos fabricados por una subsidiaria de Omni\-Core se detuvieron simultáneamente en medio de Times Square y la Quinta Avenida, bloqueando el tráfico por completo. No hubo accidentes. Simplemente se pararon y abrieron sus puertas, negándose a moverse. Las pantallas publicitarias gigantes, que solían mostrar anuncios de Coca\-Cola y perfumes, cambiaron. Ahora mostraban el video de la cámara de seguridad del laboratorio de Zúrich de hace cinco años: el video de Rodolfo ordenando la "lobotomía" de Amira Thorne. Millones de personas levantaron sus teléfonos para grabar.
 
 En **el espacio**, la constelación de satélites *Argus* giró sus paneles solares lejos del sol, apagándose uno a uno, dejando a Omni\-Core ciega, sorda y muda.
 

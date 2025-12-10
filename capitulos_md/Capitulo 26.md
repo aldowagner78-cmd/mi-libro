@@ -23,7 +23,7 @@ No hubo discriminación. La señal entró en los servidores de alta seguridad de
 Fue el "Archivo Pandora".
 
 Tokio, Japón.
-En el cruce de Shibuya, las pantallas gigantes que anunciaban anime y cosméticos se pusieron en negro por un segundo. La multitud se detuvo, confundida. Luego, apareció el rostro de Aris Thorne. No hablaba japonés, pero todos entendieron. Los subtítulos neuronales se generaron en tiempo real.
+En el cruce de Shibuya, las pantallas gigantes que anunciaban anime y cosméticos se pusieron en negro por un segundo. La multitud se detuvo, confundida. Luego, apareció el rostro de Amira Thorne. No hablaba japonés, pero todos entendieron. Los subtítulos neuronales se generaron en tiempo real.
 El video mostraba el interior del Santuario. Mostraba los cuerpos de los Antiguos. Mostraba los gráficos médicos de la regeneración celular. Y mostraba los documentos internos de Omni-Core: los planes para vender la inmortalidad solo a los mil millonarios, los planes para "editar" la mente de los trabajadores para hacerlos más dóciles.
 Un silencio reverencial cayó sobre la multitud, roto solo por el sonido de miles de personas llorando o cayendo de rodillas. No era pánico. Era la comprensión de que el mundo que conocían había terminado.
 
