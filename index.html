@@ -947,6 +947,142 @@
         }
         .note-body strong { color: var(--text); }
 
+        /* ===================== MODO EDICIÓN ===================== */
+        .edit-mode-btn {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1001;
+            transition: all 0.3s;
+        }
+        .edit-mode-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .edit-mode-btn svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+            fill: none;
+        }
+        .edit-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .edit-modal-content {
+            background: var(--bg);
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .edit-modal h3 {
+            margin: 0 0 20px 0;
+            color: var(--text);
+            font-size: 1.5rem;
+        }
+        .edit-modal input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            background: var(--bg-secondary);
+            color: var(--text);
+        }
+        .edit-modal-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .edit-modal-buttons button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .edit-modal-buttons .btn-cancel {
+            background: var(--bg-secondary);
+            color: var(--text-soft);
+        }
+        .edit-modal-buttons .btn-confirm {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .edit-mode-active #chapterContent p {
+            outline: 2px dashed transparent;
+            transition: outline 0.2s;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .edit-mode-active #chapterContent p:hover {
+            outline-color: #667eea;
+            background: rgba(102, 126, 234, 0.05);
+        }
+        .edit-mode-active #chapterContent p[contenteditable="true"]:focus {
+            outline-color: #764ba2;
+            background: rgba(118, 75, 162, 0.1);
+        }
+        .edit-controls {
+            display: none;
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: var(--bg-card);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            gap: 10px;
+        }
+        .edit-controls.active {
+            display: flex;
+            flex-direction: column;
+        }
+        .edit-controls button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .edit-controls .btn-save {
+            background: #10b981;
+            color: white;
+        }
+        .edit-controls .btn-export {
+            background: #3b82f6;
+            color: white;
+        }
+        .edit-controls .btn-exit {
+            background: #ef4444;
+            color: white;
+        }
+
         /* ===================== RESPONSIVE ===================== */
         @media(max-width: 600px) {
             #content { font-size: 1.05rem; }
@@ -1043,6 +1179,8 @@ const JSON_EXT = '_notas.json';
 
 let currentChapter = 1;
 let fontSize = 1.15;
+let editMode = false;
+const EDIT_PASSWORD = 'ElSilencio2025'; // Cambia esta contraseña por la que quieras
 
 // ========== INIT ==========
 document.addEventListener('DOMContentLoaded', () => {
@@ -2018,5 +2156,142 @@ loadChapter = function(n) {
     </button>
 </div>
 
+<!-- Modo Edición -->
+<button class="edit-mode-btn" onclick="showEditModal()" title="Modo Edición">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+    </svg>
+</button>
+
+<div class="edit-modal" id="editModal">
+    <div class="edit-modal-content">
+        <h3>🔐 Modo Edición</h3>
+        <p style="margin-bottom:15px; color: var(--text-soft);">Ingresa la contraseña para editar el libro:</p>
+        <input type="password" id="editPassword" placeholder="Contraseña">
+        <div class="edit-modal-buttons">
+            <button class="btn-cancel" onclick="closeEditModal()">Cancelar</button>
+            <button class="btn-confirm" onclick="activateEditMode()">Activar</button>
+        </div>
+    </div>
+</div>
+
+<div class="edit-controls" id="editControls">
+    <button class="btn-save" onclick="saveEdits()">💾 Guardar Cambios</button>
+    <button class="btn-export" onclick="exportEdits()">📥 Exportar Cambios</button>
+    <button class="btn-exit" onclick="exitEditMode()">❌ Salir</button>
+</div>
+
+<script>
+// ========== MODO EDICIÓN ==========
+function showEditModal() {
+    document.getElementById('editModal').style.display = 'flex';
+    document.getElementById('editPassword').value = '';
+    document.getElementById('editPassword').focus();
+}
+
+function closeEditModal() {
+    document.getElementById('editModal').style.display = 'none';
+}
+
+function activateEditMode() {
+    const password = document.getElementById('editPassword').value;
+    if (password === EDIT_PASSWORD) {
+        editMode = true;
+        document.body.classList.add('edit-mode-active');
+        document.getElementById('editControls').classList.add('active');
+        makeContentEditable();
+        closeEditModal();
+        loadSavedEdits();
+        alert('✅ Modo edición activado. Haz clic en cualquier párrafo para editarlo.');
+    } else {
+        alert('❌ Contraseña incorrecta');
+        document.getElementById('editPassword').value = '';
+    }
+}
+
+function makeContentEditable() {
+    const paragraphs = document.querySelectorAll('#chapterContent p');
+    paragraphs.forEach((p, index) => {
+        p.setAttribute('contenteditable', 'true');
+        p.setAttribute('data-index', index);
+        p.addEventListener('input', () => markAsEdited(p));
+    });
+}
+
+function markAsEdited(element) {
+    element.style.borderLeft = '3px solid #10b981';
+}
+
+function saveEdits() {
+    const edits = {};
+    const paragraphs = document.querySelectorAll('#chapterContent p[contenteditable="true"]');
+    
+    paragraphs.forEach((p) => {
+        const index = p.getAttribute('data-index');
+        edits[`cap${currentChapter}_p${index}`] = p.innerHTML;
+    });
+    
+    localStorage.setItem('bookEdits', JSON.stringify(edits));
+    alert('✅ Cambios guardados localmente');
+}
+
+function loadSavedEdits() {
+    const saved = localStorage.getItem('bookEdits');
+    if (!saved) return;
+    
+    const edits = JSON.parse(saved);
+    const paragraphs = document.querySelectorAll('#chapterContent p[contenteditable="true"]');
+    
+    paragraphs.forEach((p) => {
+        const index = p.getAttribute('data-index');
+        const key = `cap${currentChapter}_p${index}`;
+        if (edits[key]) {
+            p.innerHTML = edits[key];
+            markAsEdited(p);
+        }
+    });
+}
+
+function exportEdits() {
+    const saved = localStorage.getItem('bookEdits');
+    if (!saved) {
+        alert('No hay cambios para exportar');
+        return;
+    }
+    
+    const edits = JSON.parse(saved);
+    const blob = new Blob([JSON.stringify(edits, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `ediciones_libro_${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    
+    alert('✅ Archivo de cambios descargado. Envíamelo para aplicar las correcciones.');
+}
+
+function exitEditMode() {
+    if (confirm('¿Salir del modo edición? Los cambios guardados se mantendrán.')) {
+        editMode = false;
+        document.body.classList.remove('edit-mode-active');
+        document.getElementById('editControls').classList.remove('active');
+        
+        const paragraphs = document.querySelectorAll('#chapterContent p');
+        paragraphs.forEach(p => {
+            p.setAttribute('contenteditable', 'false');
+            p.style.borderLeft = '';
+        });
+    }
+}
+
+// Permitir Enter en el modal de contraseña
+document.getElementById('editPassword')?.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') activateEditMode();
+});
+</script>
+
 </body>
 </html>
+
