@@ -8,6 +8,13 @@
     <!-- Preload de imagen crítica -->
     <link rel="preload" href="imagenes/cover_opt.png" as="image">
     
+    <!-- Preload miniaturas visibles -->
+    <link rel="preload" href="imagenes/cap_01.png" as="image">
+    <link rel="preload" href="imagenes/cap_02.png" as="image">
+    <link rel="preload" href="imagenes/cap_03.png" as="image">
+    <link rel="preload" href="imagenes/cap_04.png" as="image">
+    <link rel="preload" href="imagenes/cap_05.png" as="image">
+    
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -1347,9 +1354,13 @@ function buildChapterList() {
         const chapterNum = i.toString().padStart(2, '0');
         const hasImage = i <= 30;
         
+        // Las primeras 10 miniaturas con carga eager para instantaneidad
+        const loadingAttr = i <= 10 ? 'eager' : 'lazy';
+        const priorityAttr = i <= 10 ? 'high' : 'low';
+        
         if (hasImage) {
             li.innerHTML = `
-                <img src="imagenes/cap_${chapterNum}.png" alt="Capítulo ${chapterNum}" class="chapter-thumbnail" width="36" height="36" loading="lazy" decoding="async" fetchpriority="low">
+                <img src="imagenes/cap_${chapterNum}.png" alt="Capítulo ${chapterNum}" class="chapter-thumbnail" width="36" height="36" loading="${loadingAttr}" decoding="async" fetchpriority="${priorityAttr}">
                 Capítulo ${chapterNum}
             `;
         } else {
