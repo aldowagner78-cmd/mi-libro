@@ -1048,11 +1048,11 @@
             padding: 5px;
             border-radius: 4px;
         }
-        .edit-mode-active #chapterContent p:hover {
+        .edit-mode-active #content p:hover {
             outline-color: #667eea;
             background: rgba(102, 126, 234, 0.05);
         }
-        .edit-mode-active #mainContent p[contenteditable="true"]:focus {
+        .edit-mode-active #content p[contenteditable="true"]:focus {
             outline-color: #764ba2;
             background: rgba(118, 75, 162, 0.1);
         }
@@ -1475,6 +1475,12 @@ async function loadChapterDirectly(n) {
         content.innerHTML = html;
         loading.classList.remove('show');
         
+        // Reactivar modo edición si está activo
+        if (editMode) {
+            makeContentEditable();
+            loadSavedEdits();
+        }
+        
         // Cargar notas en segundo plano sin bloquear
         fetch(jsonFile)
             .then(r => r.ok ? r.json() : null)
@@ -1536,6 +1542,12 @@ async function startReading() {
         content.innerHTML = html;
         loading.classList.remove('show');
         document.getElementById('reader').scrollTop = 0;
+        
+        // Reactivar modo edición si está activo
+        if (editMode) {
+            makeContentEditable();
+            loadSavedEdits();
+        }
         
         // Cargar notas en segundo plano sin bloquear
         fetch(jsonFile)
@@ -2225,7 +2237,7 @@ function activateEditMode() {
 }
 
 function makeContentEditable() {
-    const paragraphs = document.querySelectorAll('#mainContent p');
+    const paragraphs = document.querySelectorAll('#content p');
     paragraphs.forEach((p, index) => {
         p.setAttribute('contenteditable', 'true');
         p.setAttribute('data-index', index);
@@ -2239,7 +2251,7 @@ function markAsEdited(element) {
 
 function saveEdits() {
     const edits = {};
-    const paragraphs = document.querySelectorAll('#mainContent p[contenteditable="true"]');
+    const paragraphs = document.querySelectorAll('#content p[contenteditable="true"]');
     
     paragraphs.forEach((p) => {
         const index = p.getAttribute('data-index');
@@ -2255,7 +2267,7 @@ function loadSavedEdits() {
     if (!saved) return;
     
     const edits = JSON.parse(saved);
-    const paragraphs = document.querySelectorAll('#mainContent p[contenteditable="true"]');
+    const paragraphs = document.querySelectorAll('#content p[contenteditable="true"]');
     
     paragraphs.forEach((p) => {
         const index = p.getAttribute('data-index');
