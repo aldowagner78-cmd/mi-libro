@@ -1349,7 +1349,7 @@ function showCoverScreen(n) {
     chapterTitle.textContent = `Capítulo ${num}`;
     
     // Optimizar carga de imagen: solo cambiar si es necesario
-    const newSrc = n <= 10 ? `imagenes/cap_${num}.png` : `imagenes/cover.png`;
+    const newSrc = n <= 30 ? `imagenes/cap_${num}.png` : `imagenes/cover.png`;
     if (!coverImg.src.endsWith(newSrc.split('/').pop())) {
         coverImg.src = newSrc;
     }
@@ -1731,7 +1731,7 @@ function updateAudioInfo() {
     
     // Actualizar portada solo si es necesario (lazy load)
     const coverImg = document.getElementById('audioCover');
-    const newSrc = currentChapter <= 10 ? `imagenes/cap_${num}.png` : `imagenes/cover.png`;
+    const newSrc = currentChapter <= 30 ? `imagenes/cap_${num}.png` : `imagenes/cover.png`;
     
     // Solo cambiar si es diferente para evitar recargas innecesarias
     if (coverImg.src !== newSrc && !coverImg.src.endsWith(newSrc)) {

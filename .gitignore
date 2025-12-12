@@ -15,6 +15,21 @@ GUIA_FORMATO_DOCX.md
 # Carpeta de utilidades de desarrollo
 utilidades/
 
+# Archivos de conversión y edición (no necesarios para el libro digital)
+capitulos_word/
+capitulos_word_editables/
+capitulos_rtf/
+capitulos_pdf_final/
+capitulos_imprimibles/
+capitulos_pdf/
+
+# Scripts de conversión (herramientas de desarrollo)
+convertir_*.ps1
+generar_imprimibles.ps1
+plantilla_*.docx
+plantilla_*.md
+test_*.docx
+
 # Archivos del sistema
 .DS_Store
 Thumbs.db
