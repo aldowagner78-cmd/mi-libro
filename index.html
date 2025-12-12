@@ -6,7 +6,7 @@
     <title>El Silencio de los Dioses - Lector</title>
     
     <!-- Preload de imagen crítica -->
-    <link rel="preload" href="imagenes/cover.png" as="image">
+    <link rel="preload" href="imagenes/cover_opt.png" as="image">
     
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1045,7 +1045,7 @@
             outline-color: #667eea;
             background: rgba(102, 126, 234, 0.05);
         }
-        .edit-mode-active #chapterContent p[contenteditable="true"]:focus {
+        .edit-mode-active #mainContent p[contenteditable="true"]:focus {
             outline-color: #764ba2;
             background: rgba(118, 75, 162, 0.1);
         }
@@ -1104,7 +1104,7 @@
 <!-- SIDEBAR -->
 <aside id="sidebar">
     <div class="sidebar-head">
-        <img src="imagenes/cover.png" alt="El Silencio de los Dioses" class="book-cover" onclick="showMainCover()" title="Ver portada completa" loading="eager" fetchpriority="high" decoding="async">
+        <img src="imagenes/cover_opt.png" alt="El Silencio de los Dioses" class="book-cover" onclick="showMainCover()" title="Ver portada completa" loading="eager" fetchpriority="high" decoding="async">
         <div class="sidebar-title">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M12 6v7"/><path d="m9 9 3 3 3-3"/></svg>
             <h1>El Silencio de los Dioses</h1>
@@ -1490,7 +1490,7 @@ function showCoverScreen(n) {
     chapterTitle.textContent = `Capítulo ${num}`;
     
     // Optimizar carga de imagen: solo cambiar si es necesario
-    const newSrc = n <= 30 ? `imagenes/cap_${num}.png` : `imagenes/cover.png`;
+    const newSrc = n <= 30 ? `imagenes/cap_${num}.png` : `imagenes/cover_opt.png`;
     if (!coverImg.src.endsWith(newSrc.split('/').pop())) {
         coverImg.src = newSrc;
     }
@@ -1872,7 +1872,7 @@ function updateAudioInfo() {
     
     // Actualizar portada solo si es necesario (lazy load)
     const coverImg = document.getElementById('audioCover');
-    const newSrc = currentChapter <= 30 ? `imagenes/cap_${num}.png` : `imagenes/cover.png`;
+    const newSrc = currentChapter <= 30 ? `imagenes/cap_${num}.png` : `imagenes/cover_opt.png`;
     
     // Solo cambiar si es diferente para evitar recargas innecesarias
     if (coverImg.src !== newSrc && !coverImg.src.endsWith(newSrc)) {
@@ -2090,7 +2090,7 @@ loadChapter = function(n) {
 <!-- PORTADA PRINCIPAL -->
 <div class="cover-screen main-cover-screen" id="mainCoverScreen">
     <div class="cover-image-container">
-        <img src="imagenes/cover.png" alt="Portada" class="cover-image-full" loading="eager" decoding="async" fetchpriority="high">
+        <img src="imagenes/cover_opt.png" alt="Portada" class="cover-image-full" loading="eager" decoding="async" fetchpriority="high">
     </div>
     <h1 class="cover-book-title">El Silencio de los Dioses</h1>
     <p class="cover-author">Por Aldo Wagner</p>
@@ -2100,7 +2100,7 @@ loadChapter = function(n) {
 <!-- PANTALLA DE PORTADA DE CAPÍTULO -->
 <div class="cover-screen" id="coverScreen">
     <div class="cover-image-container">
-        <img id="coverImageFull" src="imagenes/cover.png" alt="Portada" class="cover-image-full" loading="lazy" decoding="async">
+        <img id="coverImageFull" src="imagenes/cover_opt.png" alt="Portada" class="cover-image-full" loading="lazy" decoding="async">
     </div>
     <h1 class="cover-chapter-title" id="coverChapterTitle">Capítulo 01</h1>
     <p class="cover-book-title">El Silencio de los Dioses</p>
@@ -2110,7 +2110,7 @@ loadChapter = function(n) {
 <!-- REPRODUCTOR DE AUDIO -->
 <div class="audio-player" id="audioPlayer">
     <div class="audio-info">
-        <img id="audioCover" src="imagenes/cover.png" alt="Portada" class="audio-cover" loading="eager" decoding="async" fetchpriority="high">
+        <img id="audioCover" src="imagenes/cover_opt.png" alt="Portada" class="audio-cover" loading="eager" decoding="async" fetchpriority="high">
         <div class="audio-details">
             <div class="audio-title" id="audioChapterTitle">Capítulo 01</div>
             <div class="audio-subtitle">Narración por voz sintética</div>
@@ -2214,7 +2214,7 @@ function activateEditMode() {
 }
 
 function makeContentEditable() {
-    const paragraphs = document.querySelectorAll('#chapterContent p');
+    const paragraphs = document.querySelectorAll('#mainContent p');
     paragraphs.forEach((p, index) => {
         p.setAttribute('contenteditable', 'true');
         p.setAttribute('data-index', index);
@@ -2228,7 +2228,7 @@ function markAsEdited(element) {
 
 function saveEdits() {
     const edits = {};
-    const paragraphs = document.querySelectorAll('#chapterContent p[contenteditable="true"]');
+    const paragraphs = document.querySelectorAll('#mainContent p[contenteditable="true"]');
     
     paragraphs.forEach((p) => {
         const index = p.getAttribute('data-index');
@@ -2244,7 +2244,7 @@ function loadSavedEdits() {
     if (!saved) return;
     
     const edits = JSON.parse(saved);
-    const paragraphs = document.querySelectorAll('#chapterContent p[contenteditable="true"]');
+    const paragraphs = document.querySelectorAll('#mainContent p[contenteditable="true"]');
     
     paragraphs.forEach((p) => {
         const index = p.getAttribute('data-index');
