@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Silencio de los Dioses - Lector</title>
     
+    <!-- Preload de imagen crítica -->
+    <link rel="preload" href="imagenes/cover.png" as="image">
+    
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -959,10 +962,10 @@
             border: none;
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-            display: flex;
+            display: flex !important;
             align-items: center;
             justify-content: center;
-            z-index: 1001;
+            z-index: 9999;
             transition: all 0.3s;
         }
         .edit-mode-btn:hover {
@@ -1101,7 +1104,7 @@
 <!-- SIDEBAR -->
 <aside id="sidebar">
     <div class="sidebar-head">
-        <img src="imagenes/cover.png" alt="El Silencio de los Dioses" class="book-cover" onclick="showMainCover()" title="Ver portada completa" loading="lazy" decoding="async">
+        <img src="imagenes/cover.png" alt="El Silencio de los Dioses" class="book-cover" onclick="showMainCover()" title="Ver portada completa" loading="eager" fetchpriority="high" decoding="async">
         <div class="sidebar-title">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M12 6v7"/><path d="m9 9 3 3 3-3"/></svg>
             <h1>El Silencio de los Dioses</h1>
@@ -1346,7 +1349,7 @@ function buildChapterList() {
         
         if (hasImage) {
             li.innerHTML = `
-                <img src="imagenes/cap_${chapterNum}.png" alt="Capítulo ${chapterNum}" class="chapter-thumbnail" width="36" height="36" loading="lazy" decoding="async">
+                <img src="imagenes/cap_${chapterNum}.png" alt="Capítulo ${chapterNum}" class="chapter-thumbnail" width="36" height="36" loading="lazy" decoding="async" fetchpriority="low">
                 Capítulo ${chapterNum}
             `;
         } else {
@@ -2087,7 +2090,7 @@ loadChapter = function(n) {
 <!-- PORTADA PRINCIPAL -->
 <div class="cover-screen main-cover-screen" id="mainCoverScreen">
     <div class="cover-image-container">
-        <img src="imagenes/cover.png" alt="Portada" class="cover-image-full" loading="lazy" decoding="async">
+        <img src="imagenes/cover.png" alt="Portada" class="cover-image-full" loading="eager" decoding="async" fetchpriority="high">
     </div>
     <h1 class="cover-book-title">El Silencio de los Dioses</h1>
     <p class="cover-author">Por Aldo Wagner</p>
@@ -2107,7 +2110,7 @@ loadChapter = function(n) {
 <!-- REPRODUCTOR DE AUDIO -->
 <div class="audio-player" id="audioPlayer">
     <div class="audio-info">
-        <img id="audioCover" src="imagenes/cover.png" alt="Portada" class="audio-cover" loading="lazy" decoding="async">
+        <img id="audioCover" src="imagenes/cover.png" alt="Portada" class="audio-cover" loading="eager" decoding="async" fetchpriority="high">
         <div class="audio-details">
             <div class="audio-title" id="audioChapterTitle">Capítulo 01</div>
             <div class="audio-subtitle">Narración por voz sintética</div>
