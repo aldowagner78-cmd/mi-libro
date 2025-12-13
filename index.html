@@ -1078,6 +1078,14 @@
             background: #10b981;
             color: white;
         }
+        .edit-controls .btn-note {
+            background: #8b5cf6;
+            color: white;
+        }
+        .edit-controls .btn-renumber {
+            background: #f59e0b;
+            color: white;
+        }
         .edit-controls .btn-export {
             background: #3b82f6;
             color: white;
@@ -1085,6 +1093,10 @@
         .edit-controls .btn-exit {
             background: #ef4444;
             color: white;
+        }
+        .edit-controls button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
         }
 
         /* ===================== RESPONSIVE ===================== */
@@ -2198,8 +2210,22 @@ loadChapter = function(n) {
 
 <div class="edit-controls" id="editControls">
     <button class="btn-save" onclick="saveEdits()">💾 Guardar Cambios</button>
+    <button class="btn-note" onclick="insertFootnote()" title="Insertar nota al pie (Ctrl+Shift+N)">📝 Insertar Nota</button>
+    <button class="btn-renumber" onclick="renumberFootnotes()" title="Renumerar todas las notas">🔢 Renumerar Notas</button>
     <button class="btn-export" onclick="exportEdits()">📥 Exportar Cambios</button>
     <button class="btn-exit" onclick="exitEditMode()">❌ Salir</button>
+</div>
+
+<div class="edit-modal" id="noteModal">
+    <div class="edit-modal-content">
+        <h3>📝 Agregar Nota al Pie</h3>
+        <p style="margin-bottom:10px; color: var(--text-soft);">Número de nota: <strong id="noteNumber"></strong></p>
+        <textarea id="noteDefinition" placeholder="Escribe aquí la definición o explicación de esta nota..." rows="5" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--card-bg); color: var(--text); font-family: inherit; resize: vertical;"></textarea>
+        <div class="edit-modal-buttons">
+            <button class="btn-cancel" onclick="closeNoteModal()">Cancelar</button>
+            <button class="btn-confirm" onclick="confirmFootnote()">Insertar</button>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -2309,6 +2335,172 @@ function exitEditMode() {
 // Permitir Enter en el modal de contraseña
 document.getElementById('editPassword')?.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') activateEditMode();
+});
+
+// ========== SISTEMA DE NOTAS AL PIE ==========
+let pendingNoteSelection = null;
+
+function insertFootnote() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+        alert('⚠️ Por favor, selecciona el texto al que quieres agregar la nota');
+        return;
+    }
+    
+    // Guardar la selección actual
+    const range = selection.getRangeAt(0);
+    pendingNoteSelection = {
+        range: range.cloneRange(),
+        text: selection.toString()
+    };
+    
+    // Calcular el siguiente número de nota
+    const currentNotes = document.querySelectorAll('#content sup');
+    const nextNumber = currentNotes.length + 1;
+    
+    // Mostrar modal
+    document.getElementById('noteNumber').textContent = nextNumber;
+    document.getElementById('noteDefinition').value = '';
+    document.getElementById('noteModal').style.display = 'flex';
+    document.getElementById('noteDefinition').focus();
+}
+
+function closeNoteModal() {
+    document.getElementById('noteModal').style.display = 'none';
+    pendingNoteSelection = null;
+}
+
+function confirmFootnote() {
+    const definition = document.getElementById('noteDefinition').value.trim();
+    if (!definition) {
+        alert('⚠️ Por favor, escribe la definición de la nota');
+        return;
+    }
+    
+    if (!pendingNoteSelection) {
+        alert('⚠️ Error: no se encontró la selección de texto');
+        closeNoteModal();
+        return;
+    }
+    
+    const noteNumber = document.getElementById('noteNumber').textContent;
+    
+    // Crear el elemento sup con el estilo correcto
+    const sup = document.createElement('sup');
+    sup.style.cursor = 'pointer';
+    sup.style.color = 'var(--accent)';
+    sup.style.textDecoration = 'none';
+    sup.style.borderBottom = '1px dotted var(--accent)';
+    sup.title = `Ver nota ${noteNumber}`;
+    sup.textContent = `(${noteNumber})`;
+    
+    // Insertar la nota en el texto
+    try {
+        pendingNoteSelection.range.deleteContents();
+        const textNode = document.createTextNode(pendingNoteSelection.text);
+        pendingNoteSelection.range.insertNode(textNode);
+        pendingNoteSelection.range.collapse(false);
+        pendingNoteSelection.range.insertNode(sup);
+        
+        // Agregar la definición a la sección de NOTAS al final
+        addNoteDefinition(noteNumber, definition);
+        
+        closeNoteModal();
+        alert(`✅ Nota ${noteNumber} insertada correctamente`);
+        
+        // Marcar el párrafo como editado
+        const paragraph = sup.closest('p');
+        if (paragraph) markAsEdited(paragraph);
+        
+    } catch (error) {
+        console.error('Error insertando nota:', error);
+        alert('❌ Error al insertar la nota. Intenta de nuevo.');
+    }
+}
+
+function addNoteDefinition(number, definition) {
+    // Buscar o crear la sección de NOTAS al final del contenido
+    let notesSection = document.querySelector('#content .notes-section');
+    
+    if (!notesSection) {
+        // Crear nueva sección de notas
+        const contentDiv = document.getElementById('content');
+        const separator = document.createElement('hr');
+        separator.style.margin = '40px 0 20px 0';
+        separator.style.border = 'none';
+        separator.style.borderTop = '2px solid var(--border)';
+        
+        const notesTitle = document.createElement('p');
+        notesTitle.innerHTML = '<strong>NOTAS</strong>';
+        notesTitle.style.fontSize = '1.2em';
+        notesTitle.style.marginBottom = '15px';
+        notesTitle.setAttribute('contenteditable', 'false');
+        
+        notesSection = document.createElement('div');
+        notesSection.className = 'notes-section';
+        
+        contentDiv.appendChild(separator);
+        contentDiv.appendChild(notesTitle);
+        contentDiv.appendChild(notesSection);
+    }
+    
+    // Agregar la nueva nota
+    const noteP = document.createElement('p');
+    noteP.setAttribute('contenteditable', 'true');
+    noteP.innerHTML = `<strong>${number}.</strong> ${definition}`;
+    noteP.style.marginBottom = '10px';
+    noteP.setAttribute('data-note-number', number);
+    noteP.addEventListener('input', () => markAsEdited(noteP));
+    
+    notesSection.appendChild(noteP);
+}
+
+function renumberFootnotes() {
+    if (!confirm('¿Renumerar todas las notas del capítulo en orden de aparición?')) {
+        return;
+    }
+    
+    const contentDiv = document.getElementById('content');
+    const allSups = contentDiv.querySelectorAll('sup');
+    
+    if (allSups.length === 0) {
+        alert('ℹ️ No hay notas para renumerar en este capítulo');
+        return;
+    }
+    
+    // Renumerar los superíndices
+    allSups.forEach((sup, index) => {
+        const newNumber = index + 1;
+        sup.textContent = `(${newNumber})`;
+        sup.title = `Ver nota ${newNumber}`;
+    });
+    
+    // Renumerar las definiciones en la sección de NOTAS
+    const noteParagraphs = document.querySelectorAll('.notes-section p[data-note-number]');
+    noteParagraphs.forEach((p, index) => {
+        const newNumber = index + 1;
+        p.setAttribute('data-note-number', newNumber);
+        const content = p.innerHTML.replace(/^<strong>\d+\./, `<strong>${newNumber}.`);
+        p.innerHTML = content;
+    });
+    
+    alert(`✅ ${allSups.length} notas renumeradas correctamente`);
+}
+
+// Atajo de teclado Ctrl+Shift+N para insertar nota
+document.addEventListener('keydown', (e) => {
+    if (editMode && e.ctrlKey && e.shiftKey && e.key === 'N') {
+        e.preventDefault();
+        insertFootnote();
+    }
+});
+
+// Permitir Enter en el modal de notas
+document.getElementById('noteDefinition')?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && e.ctrlKey) {
+        e.preventDefault();
+        confirmFootnote();
+    }
 });
 </script>
 
