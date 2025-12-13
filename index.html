@@ -407,30 +407,21 @@
             transform: rotateY(180deg);
         }
         .flip-btn {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
             background: rgba(0,0,0,0.7);
             color: white;
             border: none;
-            padding: 10px 18px;
+            padding: 12px 24px;
             border-radius: 25px;
             cursor: pointer;
-            font-size: 14px;
-            z-index: 10;
+            font-size: 15px;
             transition: all 0.3s;
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            margin-top: 16px;
         }
         .flip-btn:hover {
             background: rgba(0,0,0,0.9);
             transform: scale(1.05);
-        }
-        .book-back .flip-btn {
-            transform: rotateY(180deg);
-        }
-        .book-back .flip-btn:hover {
-            transform: rotateY(180deg) scale(1.05);
         }
         .sidebar-head {
             position: relative;
@@ -455,13 +446,13 @@
             transform: scale(1.05);
         }
         .main-cover-screen .cover-image-container {
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
         }
         .main-cover-screen .cover-image-full {
             width: 100%;
             height: auto;
-            max-height: 60vh;
+            max-height: calc(100vh - 180px);
             object-fit: contain;
             border-radius: 8px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
@@ -1356,7 +1347,14 @@ function showMainCover() {
 
 function flipBook() {
     const flipContainer = document.getElementById('bookFlipContainer');
+    const flipBtn = document.getElementById('flipBtn');
     flipContainer.classList.toggle('flipped');
+    
+    if (flipContainer.classList.contains('flipped')) {
+        flipBtn.textContent = '🔄 Ver Portada';
+    } else {
+        flipBtn.textContent = '🔄 Ver Contratapa';
+    }
 }
 
 function enterBook() {
@@ -2342,7 +2340,6 @@ loadChapter = function(n) {
         <div class="book-flip-container" id="bookFlipContainer">
             <!-- PORTADA (Frente) -->
             <div class="book-face">
-                <button class="flip-btn" onclick="flipBook()">🔄 Contratapa</button>
                 <div class="cover-image-container">
                     <img src="imagenes/cover_opt.jpg" alt="Portada" class="cover-image-full" loading="eager" decoding="async" fetchpriority="high">
                 </div>
@@ -2350,14 +2347,15 @@ loadChapter = function(n) {
             
             <!-- CONTRATAPA (Reverso) -->
             <div class="book-face book-back">
-                <button class="flip-btn" onclick="flipBook()">🔄 Portada</button>
                 <div class="cover-image-container">
                     <img src="imagenes/contratapa.jpg" alt="Contratapa" class="cover-image-full" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
         
-        <!-- TÍtulo y botón FUERA del flip -->
+        <!-- Botón de volteo FUERA del flip -->
+        <button class="flip-btn" id="flipBtn" onclick="flipBook()">🔄 Ver Contratapa</button>
+        
         <h1 class="cover-book-title">El Silencio de los Dioses</h1>
         <p class="cover-author">Por Aldo Wagner</p>
         <button class="enter-book-btn" onclick="enterBook()">📖 Entrar al Libro</button>
