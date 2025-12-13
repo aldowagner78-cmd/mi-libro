@@ -5,15 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Silencio de los Dioses - Lector</title>
     
-    <!-- Preload de imagen crítica -->
+    <!-- Preload solo portada principal -->
     <link rel="preload" href="imagenes/cover_opt.png" as="image">
-    
-    <!-- Preload miniaturas visibles -->
     <link rel="preload" href="imagenes/cap_01.png" as="image">
-    <link rel="preload" href="imagenes/cap_02.png" as="image">
-    <link rel="preload" href="imagenes/cap_03.png" as="image">
-    <link rel="preload" href="imagenes/cap_04.png" as="image">
-    <link rel="preload" href="imagenes/cap_05.png" as="image">
     
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1354,9 +1348,9 @@ function buildChapterList() {
         const chapterNum = i.toString().padStart(2, '0');
         const hasImage = i <= 30;
         
-        // Las primeras 10 miniaturas con carga eager para instantaneidad
-        const loadingAttr = i <= 10 ? 'eager' : 'lazy';
-        const priorityAttr = i <= 10 ? 'high' : 'low';
+        // Solo las primeras 5 miniaturas con carga eager
+        const loadingAttr = i <= 5 ? 'eager' : 'lazy';
+        const priorityAttr = i <= 5 ? 'high' : 'low';
         
         if (hasImage) {
             li.innerHTML = `
