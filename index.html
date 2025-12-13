@@ -2333,6 +2333,24 @@ function loadSavedEdits() {
         if (edits[key]) {
             p.innerHTML = edits[key];
             markAsEdited(p);
+            
+            // Reactivar listeners de notas con data-note (notas creadas en modo edición)
+            const notesInParagraph = p.querySelectorAll('sup[data-note]');
+            notesInParagraph.forEach(sup => {
+                const definition = sup.getAttribute('data-note');
+                if (definition) {
+                    // Limpiar listeners previos
+                    const newSup = sup.cloneNode(true);
+                    sup.parentNode.replaceChild(newSup, sup);
+                    
+                    // Agregar listener para mostrar popup
+                    newSup.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        showNote(definition);
+                    });
+                }
+            });
         }
     });
 }
