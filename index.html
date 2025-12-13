@@ -1494,20 +1494,26 @@ async function loadChapterDirectly(n) {
         content.innerHTML = html;
         loading.classList.remove('show');
         
-        // Reactivar modo edición si está activo
-        if (editMode) {
-            makeContentEditable();
-            loadSavedEdits();
-        }
-        
-        // Cargar notas en segundo plano sin bloquear
+        // Cargar notas PRIMERO, luego reactivar ediciones
         fetch(jsonFile)
             .then(r => r.ok ? r.json() : null)
             .then(notes => {
                 currentNotesData = notes;
                 if (notes) setupNotesWithJSON(notes);
+                
+                // AHORA sí reactivar modo edición (después de tener las notas)
+                if (editMode) {
+                    makeContentEditable();
+                    loadSavedEdits();
+                }
             })
-            .catch(() => {});
+            .catch(() => {
+                // Si falla cargar notas, igual activar modo edición
+                if (editMode) {
+                    makeContentEditable();
+                    loadSavedEdits();
+                }
+            });
         
         addNavButtons(n);
         updateBookmarkButton();
@@ -1565,18 +1571,28 @@ async function startReading() {
         loading.classList.remove('show');
         document.getElementById('reader').scrollTop = 0;
         
-        // Reactivar modo edición si está activo
-        if (editMode) {
-            makeContentEditable();
-            loadSavedEdits();
-        }
-        
-        // Cargar notas en segundo plano sin bloquear
+        // Cargar notas PRIMERO, luego reactivar ediciones
         fetch(jsonFile)
             .then(r => r.ok ? r.json() : null)
             .then(notes => {
                 currentNotesData = notes;
                 if (notes) setupNotesWithJSON(notes);
+                
+                // AHORA sí reactivar modo edición (después de tener las notas)
+                if (editMode) {
+                    makeContentEditable();
+                    loadSavedEdits();
+                }
+            })
+            .catch(() => {
+                // Si falla cargar notas, igual activar modo edición
+                if (editMode) {
+                    makeContentEditable();
+                    loadSavedEdits();
+                }
+            });
+        
+        addNavButtons(n);
             })
             .catch(() => {});
         
