@@ -2324,7 +2324,7 @@ function exitEditMode() {
         document.body.classList.remove('edit-mode-active');
         document.getElementById('editControls').classList.remove('active');
         
-        const paragraphs = document.querySelectorAll('#chapterContent p');
+        const paragraphs = document.querySelectorAll('#content p');
         paragraphs.forEach(p => {
             p.setAttribute('contenteditable', 'false');
             p.style.borderLeft = '';
