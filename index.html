@@ -363,11 +363,10 @@
         
         /* Portada Principal */
         .main-cover-screen {
-            padding: 20px;
-            padding-top: max(20px, env(safe-area-inset-top));
+            padding: 5px 10px;
             perspective: 1500px;
             overflow-y: auto;
-            justify-content: flex-start;
+            justify-content: center;
         }
         .main-cover-wrapper {
             display: flex;
@@ -377,7 +376,6 @@
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
-            min-height: calc(100vh - 40px);
         }
         .book-flip-container {
             position: relative;
@@ -407,21 +405,19 @@
             transform: rotateY(180deg);
         }
         .flip-btn {
-            background: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.6);
             color: white;
             border: none;
-            padding: 12px 24px;
-            border-radius: 25px;
+            padding: 6px 14px;
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 15px;
+            font-size: 12px;
             transition: all 0.3s;
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            margin-top: 16px;
+            margin-top: 8px;
         }
         .flip-btn:hover {
-            background: rgba(0,0,0,0.9);
-            transform: scale(1.05);
+            background: rgba(0,0,0,0.8);
         }
         .sidebar-head {
             position: relative;
@@ -446,39 +442,40 @@
             transform: scale(1.05);
         }
         .main-cover-screen .cover-image-container {
-            max-width: 600px;
+            max-width: 100%;
             width: 100%;
         }
         .main-cover-screen .cover-image-full {
             width: 100%;
             height: auto;
-            max-height: calc(100vh - 180px);
+            max-height: calc(100vh - 120px);
             object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
         .main-cover-screen .cover-book-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 2px;
+            margin-top: 6px;
         }
         .main-cover-screen .cover-author {
-            font-size: 18px;
+            font-size: 12px;
             color: var(--text-soft);
-            margin-bottom: 40px;
+            margin-bottom: 8px;
         }
         .enter-book-btn {
             background: var(--accent);
             color: white;
             border: none;
-            padding: 18px 56px;
-            font-size: 20px;
-            font-weight: 700;
-            border-radius: 50px;
+            padding: 10px 30px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 25px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
         }
         .enter-book-btn:hover {
             transform: translateY(-3px);
