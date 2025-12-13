@@ -1,6 +1,8 @@
-**EL SILENCIO DE LOS DIOSES**
+﻿**CAPÍTULO 1: LA TIERRA NEGRA DEL OLVIDO**
 
 **CAPÍTULO 1: LA TIERRA NEGRA DEL OLVIDO**
+
+***INTERLUDIO I: EL MAPA Y EL TERRITORIO***
 
 ***INTERLUDIO I: EL MAPA Y EL TERRITORIO***
 
@@ -14,13 +16,13 @@
 
 El Amazonas no te da la bienvenida; te tolera. Y esa mañana, la tolerancia de la selva se estaba agotando.
 
-El calor no caía del cielo; brotaba de la tierra como el aliento de un animal enfermo. Era un vapor denso, con olor a vainilla podrida, madera húmeda y ozono^[ ^[1]], que se pegaba a la piel y convertía la ropa técnica en una mordaza cutánea asfixiante. No había brisa. El aire parecía sólido, una gelatina invisible que había que apartar con las manos para poder avanzar.
+El calor no caía del cielo; brotaba de la tierra como el aliento de un animal enfermo. Era un vapor denso, con olor a vainilla podrida, madera húmeda y ozono^[^[1]], que se pegaba a la piel y convertía la ropa técnica en una mordaza cutánea asfixiante. No había brisa. El aire parecía sólido, una gelatina invisible que había que apartar con las manos para poder avanzar.
 
-El Dr. James Gordon se detuvo para secar el sudor que le escurría por los ojos, una mezcla salada de transpiración y repelente de insectos que nublaba su vista. A sus 52 años, James sentía que cada articulación de su cuerpo tenía una opinión hostil sobre esta expedición. Su espalda baja, castigada por una hernia L4 ^[^[2]] crónica —el precio a pagar por décadas encorvado sobre yacimientos en Siria y escritorios en Boston— palpitaba con un ritmo sordo. Era un metrónomo de dolor que marcaba el paso de la marcha: *un, dos, duele. Un, dos, duele.*
+El Dr. James Gordon se detuvo para secar el sudor que recorría sus ojos, una mezcla salada de transpiración y repelente de insectos que le nublaba la vista. A sus 52 años, James sentía que cada articulación de su cuerpo tenía una opinión hostil sobre esta expedición. Su espalda baja, castigada por una hernia L4 ^[^[2]] crónica —el precio a pagar por años encorvado sobre yacimientos en Siria y escritorios en Boston— palpitaba con un ritmo sordo. Era un metrónomo de dolor que marcaba el paso de la marcha: *un, dos, duele. Un, dos, duele.*
 
 Habían salido del Campamento Beta antes del amanecer, dejando a la Dra. Sarah Maine, la jefa de logística, monitoreando los radares con ojos cansados, y al Dr. Liam Chen, el geofísico principal, custodiando los bancos de datos en el módulo central. Dejar atrás a sus colegas y la seguridad relativa de aquella fortaleza científica se sentía ahora como una apuesta imprudente. El campamento no era una simple colección de tiendas de campaña; era una imposición tecnológica sobre el caos biológico. Cinco módulos habitacionales de polímero con memoria de forma se alzaban sobre pilotes hidráulicos autonivelantes, diseñados para no dejar huella en el suelo protegido. En su interior, sistemas de filtrado de aire de grado militar mantenían una atmósfera estéril y fresca, una burbuja de civilización alimentada por generadores de hidrógeno silenciosos y mantas solares desplegables de alta eficiencia. El perímetro estaba custodiado por una red de sensores de movimiento y drones "colibrí" en patrulla constante, creando un círculo de seguridad invisible contra jaguares y curiosos no deseados. Era una estación espacial de la Universidad de Cambridge incrustada en el paleolítico.
 
-La expedición distaba mucho de ser un simple grupo de entusiastas; se trataba de un contingente de nueve especialistas altamente equipados, capaces de avanzar con precisión militar a través de la espesura. Detrás de James, luchando con una caja de equipo de espectrometría ^[^[3] ]venía Ravi Singh, el biólogo molecular del equipo, un hombre brillante que había pasado los últimos tres días en estado de pánico silencioso por las sanguijuelas. Cerrando la marcha estaba Dos Santos, el jefe de seguridad y logística, un ex-militar brasileño contratado para asegurar que ninguna guerrilla o narco local decidiera que los científicos eran un buen objetivo de secuestro. Y entre ellos, tres porteadores ^[^[4]] locales de la etnia Baniwa ^[^[5]] cargaban con lo pesado: las baterías de grafeno, las unidades de refrigeración y las provisiones para tres días de marcha.
+La expedición distaba mucho de ser un simple grupo de entusiastas; se trataba de un contingente de nueve especialistas altamente equipados, capaces de avanzar con precisión militar a través de la espesura. Detrás de James, luchando con una caja de equipo de espectrometría ^[^[3]]venía Ravi Singh, el biólogo molecular del equipo, un hombre brillante que había pasado los últimos tres días en estado de pánico silencioso por las sanguijuelas. Cerrando la marcha estaba Dos Santos, el jefe de seguridad y logística, un ex-militar brasileño contratado para asegurar que ninguna guerrilla o narco local decidiera que los científicos eran un buen objetivo de secuestro. Y entre ellos, tres porteadores ^[^[4]] locales de la etnia Baniwa ^[^[5]] cargaban con lo pesado: las baterías de grafeno, las unidades de refrigeración y las provisiones para tres días de marcha.
 
 La excusa oficial para estar allí —la que figuraba en la subvención millonaria que James había tardado dos años en conseguir— era el estudio de *"Anomalías Hidrológicas y Sedimentación Pre-Holocena"*. Un título aburrido, diseñado específicamente para que los burócratas firmaran los cheques sin hacer preguntas. Pero James no buscaba agua. James buscaba lo que había distorsionado las lecturas del satélite *Sentinel-6 *^[^[6]] seis meses atrás: una fluctuación gravitacional localizada que no debería existir en una cuenca sedimentaria. Había apostado su reputación y los ahorros de su vida a que esa "falla del sensor" era, en realidad, una estructura masiva enterrada.
 
@@ -140,7 +142,7 @@ De repente, el teléfono satelital de James, guardado en el bolsillo seguro de s
 
 James miró la pantalla y luego al cielo, entrecerrando los ojos. A lo lejos, por encima del dosel de los árboles, el susurro del viento fue reemplazado por el batir rítmico y pesado de rotores cortando el aire. Estaban cerca. Demasiado cerca.
 
- —¡Helena, Kai, Ravi! —bramó James, guardando el teléfono con brusquedad—. ¡Olviden las muestras! ¡Suban la pendiente ahora! Dos Santos tiene que saber que nos están cazando.
+—¡Helena, Kai, Ravi! —bramó James, guardando el teléfono con brusquedad—. ¡Olviden las muestras! ¡Suban la pendiente ahora! Dos Santos tiene que saber que nos están cazando.
 
 ¡¿Pero qué...?! —Helena trastabilló, aferrando su tablet contra el pecho, pálida. 
 
@@ -158,11 +160,9 @@ Se miró la mano. Estaba ardiendo. La piel de la palma y los dedos se había vue
 
 James cerró el puño, ocultando la mano transmutada contra su pecho. El dolor era atroz, pero su mente estaba extrañamente clara. —Vámonos —ordenó con voz ronca—. Regresemos con Dos Santos y los Baniwas, luego vayamos al río. Si nos atrapan aquí con esto, nunca saldremos de la selva.
 
-El equipo logró salir del cráter, dejando atrás el monolito vibrante en su círculo de silencio, mientras la sombra de una corporación global se cernía sobre el Amazonas como una nube de tormenta y James Gordon corría sabiendo que ya no era el mismo hombre que había entrado.
-
 **NOTAS DEL CAPÍTULO 1**
 
-**(1) Olor a ozono:** El ozono (O3) es un gas incoloro de olor acre y metálico, similar al que se percibe cerca de chispas eléctricas o después de una tormenta fuerte. En el contexto geológico, su presencia a nivel del suelo sin tormenta visible sugiere la presencia de una fuente de energía de alta tensión.
+El equipo logró salir del cráter, dejando atrás el monolito vibrante en su círculo de silencio, mientras la sombra de una corporación global se cernía sobre el Amazonas como una nube de tormenta y James Gordon corría sabiendo que ya no era el mismo hombre que había entrado.
 
 **(2) Hernia L4:** Se refiere a la cuarta vértebra lumbar. La zona lumbar baja soporta gran parte del peso del cuerpo y es propensa a lesiones por esfuerzo o mala postura, común en trabajos de campo extenuantes.
 
