@@ -448,34 +448,32 @@
         .main-cover-screen .cover-image-full {
             width: 100%;
             height: auto;
-            max-height: calc(100vh - 120px);
+            max-height: calc(100vh - 80px);
             object-fit: contain;
             border-radius: 4px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
-        .main-cover-screen .cover-book-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 2px;
-            margin-top: 6px;
-        }
+        .main-cover-screen .cover-book-title,
         .main-cover-screen .cover-author {
-            font-size: 12px;
-            color: var(--text-soft);
-            margin-bottom: 8px;
+            display: none;
+        }
+        .main-cover-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .enter-book-btn {
             background: var(--accent);
             color: white;
             border: none;
-            padding: 10px 30px;
-            font-size: 14px;
+            padding: 8px 20px;
+            font-size: 13px;
             font-weight: 600;
-            border-radius: 25px;
+            border-radius: 20px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            margin-bottom: 10px;
         }
         .enter-book-btn:hover {
             transform: translateY(-3px);
@@ -2350,12 +2348,11 @@ loadChapter = function(n) {
             </div>
         </div>
         
-        <!-- Botón de volteo FUERA del flip -->
-        <button class="flip-btn" id="flipBtn" onclick="flipBook()">🔄 Ver Contratapa</button>
-        
-        <h1 class="cover-book-title">El Silencio de los Dioses</h1>
-        <p class="cover-author">Por Aldo Wagner</p>
-        <button class="enter-book-btn" onclick="enterBook()">📖 Entrar al Libro</button>
+        <!-- Botones en una sola línea -->
+        <div class="main-cover-buttons">
+            <button class="flip-btn" id="flipBtn" onclick="flipBook()">🔄 Ver Contratapa</button>
+            <button class="enter-book-btn" onclick="enterBook()">📖 Entrar al Libro</button>
+        </div>
     </div>
 </div>
 
