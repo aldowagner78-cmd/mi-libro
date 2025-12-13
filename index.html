@@ -2224,6 +2224,7 @@ loadChapter = function(n) {
     <button class="btn-save" onclick="saveEdits()">💾 Guardar Cambios</button>
     <button class="btn-note" onclick="insertFootnote()" title="Insertar nota al pie (Ctrl+Shift+N)">📝 Insertar Nota</button>
     <button class="btn-renumber" onclick="renumberFootnotes()" title="Renumerar todas las notas">🔢 Renumerar Notas</button>
+    <button class="btn-delete-note" onclick="toggleDeleteNoteMode()" title="Activar modo eliminar notas">🗑️ Eliminar Nota</button>
     <button class="btn-export" onclick="exportEdits()">📥 Exportar Cambios</button>
     <button class="btn-exit" onclick="exitEditMode()">❌ Salir</button>
 </div>
@@ -2494,6 +2495,64 @@ function renumberFootnotes() {
     
     alert(`✅ ${allSups.length} notas renumeradas correctamente`);
 }
+
+// ========== ELIMINAR NOTAS ==========
+let deleteNoteMode = false;
+
+function toggleDeleteNoteMode() {
+    deleteNoteMode = !deleteNoteMode;
+    const btn = document.querySelector('.btn-delete-note');
+    const content = document.getElementById('content');
+    
+    if (deleteNoteMode) {
+        btn.style.background = '#e74c3c';
+        btn.style.color = 'white';
+        btn.textContent = '🗑️ Modo Eliminar ON';
+        content.style.cursor = 'crosshair';
+        
+        // Agregar efecto hover a las notas
+        content.querySelectorAll('sup').forEach(sup => {
+            sup.style.outline = '2px dashed #e74c3c';
+        });
+        
+        alert('ℹ️ Haz clic en cualquier nota para eliminarla. Presiona el botón de nuevo para salir del modo eliminar.');
+    } else {
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.textContent = '🗑️ Eliminar Nota';
+        content.style.cursor = '';
+        
+        // Quitar efecto hover
+        content.querySelectorAll('sup').forEach(sup => {
+            sup.style.outline = '';
+        });
+    }
+}
+
+function deleteNoteAtClick(e) {
+    if (!deleteNoteMode || !editMode) return;
+    
+    const target = e.target;
+    if (target.tagName === 'SUP') {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const noteText = target.textContent;
+        if (confirm(`¿Eliminar nota ${noteText}?`)) {
+            const paragraph = target.closest('p');
+            target.remove();
+            
+            if (paragraph) {
+                markAsEdited(paragraph);
+            }
+            
+            alert(`✅ Nota ${noteText} eliminada. Recuerda renumerar las notas restantes si es necesario.`);
+        }
+    }
+}
+
+// Agregar listener para eliminar notas al hacer clic
+document.addEventListener('click', deleteNoteAtClick, true);
 
 // Atajo de teclado Ctrl+Shift+N para insertar nota
 document.addEventListener('keydown', (e) => {
