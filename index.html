@@ -366,22 +366,21 @@
             padding: 0;
             perspective: 1500px;
             overflow: hidden;
-            justify-content: center;
-            align-items: center;
         }
         .main-cover-wrapper {
+            width: 100%;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            height: 100%;
-            position: relative;
         }
         .book-flip-container {
             position: relative;
-            width: 100%;
-            height: 100%;
+            max-width: 90%;
+            max-height: 95vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: transform 0.8s;
             transform-style: preserve-3d;
         }
@@ -464,16 +463,11 @@
         }
         .main-cover-screen .cover-image-container {
             width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 100%;
         }
         .main-cover-screen .cover-image-full {
-            max-width: 95%;
-            max-height: 95vh;
-            width: auto;
-            height: auto;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
         }
         .main-cover-screen .cover-book-title,
