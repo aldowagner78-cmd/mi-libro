@@ -1196,6 +1196,7 @@ const JSON_EXT = '_notas.json';
 let currentChapter = 1;
 let fontSize = 1.15;
 let editMode = false;
+let currentNotesData = null; // Almacenar las notas del capítulo actual
 const EDIT_PASSWORD = '26716975'; // Contraseña del modo edición
 
 // ========== INIT ==========
@@ -1502,7 +1503,10 @@ async function loadChapterDirectly(n) {
         // Cargar notas en segundo plano sin bloquear
         fetch(jsonFile)
             .then(r => r.ok ? r.json() : null)
-            .then(notes => notes && setupNotesWithJSON(notes))
+            .then(notes => {
+                currentNotesData = notes;
+                if (notes) setupNotesWithJSON(notes);
+            })
             .catch(() => {});
         
         addNavButtons(n);
@@ -1570,7 +1574,10 @@ async function startReading() {
         // Cargar notas en segundo plano sin bloquear
         fetch(jsonFile)
             .then(r => r.ok ? r.json() : null)
-            .then(notes => notes && setupNotesWithJSON(notes))
+            .then(notes => {
+                currentNotesData = notes;
+                if (notes) setupNotesWithJSON(notes);
+            })
             .catch(() => {});
         
         addNavButtons(n);
@@ -1783,6 +1790,53 @@ function setupNotesWithJSON(notesData) {
                     
                     const noteHTML = notesData[noteNum];
                     showNote(noteHTML);
+                });
+            }
+        }
+    });
+}
+
+// Reactivar listeners de notas en un elemento específico (para después de ediciones)
+function reactivateNotesInElement(element, notesData) {
+    const allSups = element.querySelectorAll('sup');
+    
+    allSups.forEach((sup) => {
+        // Primero verificar si es una nota nueva con data-note
+        const dataNote = sup.getAttribute('data-note');
+        if (dataNote) {
+            // Nota creada en modo edición
+            const newSup = sup.cloneNode(true);
+            sup.parentNode.replaceChild(newSup, sup);
+            
+            newSup.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                showNote(dataNote);
+            });
+            return;
+        }
+        
+        // Si no, verificar si es una nota del servidor
+        const text = sup.textContent.trim();
+        const numMatch = text.match(/\((\d+)\)/);
+        
+        if (numMatch && notesData) {
+            const noteNum = numMatch[1];
+            if (notesData[noteNum]) {
+                sup.style.cursor = 'pointer';
+                sup.style.color = 'var(--accent)';
+                sup.style.textDecoration = 'none';
+                sup.style.borderBottom = '1px dotted var(--accent)';
+                sup.title = `Ver nota ${noteNum}`;
+                
+                // Limpiar listeners previos
+                const newSup = sup.cloneNode(true);
+                sup.parentNode.replaceChild(newSup, sup);
+                
+                newSup.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    showNote(notesData[noteNum]);
                 });
             }
         }
@@ -2334,23 +2388,8 @@ function loadSavedEdits() {
             p.innerHTML = edits[key];
             markAsEdited(p);
             
-            // Reactivar listeners de notas con data-note (notas creadas en modo edición)
-            const notesInParagraph = p.querySelectorAll('sup[data-note]');
-            notesInParagraph.forEach(sup => {
-                const definition = sup.getAttribute('data-note');
-                if (definition) {
-                    // Limpiar listeners previos
-                    const newSup = sup.cloneNode(true);
-                    sup.parentNode.replaceChild(newSup, sup);
-                    
-                    // Agregar listener para mostrar popup
-                    newSup.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        showNote(definition);
-                    });
-                }
-            });
+            // Reactivar TODAS las notas del párrafo (viejas del JSON + nuevas con data-note)
+            reactivateNotesInElement(p, currentNotesData);
         }
     });
 }
