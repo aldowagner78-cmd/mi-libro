@@ -363,10 +363,11 @@
         
         /* Portada Principal */
         .main-cover-screen {
-            padding: 5px 10px;
+            padding: 0;
             perspective: 1500px;
-            overflow-y: auto;
+            overflow: hidden;
             justify-content: center;
+            align-items: center;
         }
         .main-cover-wrapper {
             display: flex;
@@ -374,8 +375,8 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
+            height: 100%;
+            position: relative;
         }
         .book-flip-container {
             position: relative;
@@ -421,6 +422,28 @@
         }
         .sidebar-head {
             position: relative;
+            perspective: 800px;
+        }
+        .sidebar-cover-flip {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .sidebar-cover-flip.flipped {
+            transform: rotateY(180deg);
+        }
+        .sidebar-cover-flip .book-cover {
+            backface-visibility: hidden;
+        }
+        .sidebar-cover-flip .sidebar-back-cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
         }
         .sidebar-flip-btn {
             position: absolute;
@@ -439,30 +462,33 @@
         }
         .sidebar-flip-btn:hover {
             background: rgba(0,0,0,0.9);
-            transform: scale(1.05);
         }
         .main-cover-screen .cover-image-container {
-            max-width: 100%;
             width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .main-cover-screen .cover-image-full {
-            width: 100%;
+            max-width: 100%;
+            max-height: 100vh;
+            width: auto;
             height: auto;
-            max-height: calc(100vh - 80px);
             object-fit: contain;
-            border-radius: 4px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
         .main-cover-screen .cover-book-title,
         .main-cover-screen .cover-author {
             display: none;
         }
         .main-cover-buttons {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             gap: 10px;
-            margin-top: 8px;
-            flex-wrap: wrap;
-            justify-content: center;
+            z-index: 100;
         }
         .enter-book-btn {
             background: var(--accent);
@@ -473,7 +499,6 @@
             font-weight: 600;
             border-radius: 20px;
             cursor: pointer;
-            transition: all 0.3s ease;
         }
         .enter-book-btn:hover {
             transform: translateY(-3px);
@@ -1200,8 +1225,11 @@
 <!-- SIDEBAR -->
 <aside id="sidebar">
     <div class="sidebar-head">
-        <img src="imagenes/cover_opt.jpg" alt="El Silencio de los Dioses" class="book-cover" onclick="showMainCover()" title="Ver portada completa" loading="eager" fetchpriority="high" decoding="async">
-        <button class="sidebar-flip-btn" onclick="event.stopPropagation(); showMainCover(); setTimeout(() => flipBook(), 100);" title="Ver contratapa">🔄</button>
+        <div class="sidebar-cover-flip" id="sidebarCoverFlip">
+            <img src="imagenes/cover_opt.jpg" alt="El Silencio de los Dioses" class="book-cover" onclick="showMainCover()" title="Ver portada completa" loading="eager" fetchpriority="high" decoding="async">
+            <img src="imagenes/contratapa.jpg" alt="Contratapa" class="sidebar-back-cover" onclick="showMainCover(); setTimeout(() => { if(!document.getElementById('bookFlipContainer').classList.contains('flipped')) flipBook(); }, 100);" title="Ver contratapa completa">
+        </div>
+        <button class="sidebar-flip-btn" onclick="event.stopPropagation(); flipSidebarCover();" title="Voltear">🔄</button>
         <div class="sidebar-title">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M12 6v7"/><path d="m9 9 3 3 3-3"/></svg>
             <h1>El Silencio de los Dioses</h1>
@@ -1350,6 +1378,11 @@ function flipBook() {
     } else {
         flipBtn.textContent = '🔄 Ver Contratapa';
     }
+}
+
+function flipSidebarCover() {
+    const sidebarFlip = document.getElementById('sidebarCoverFlip');
+    sidebarFlip.classList.toggle('flipped');
 }
 
 function enterBook() {
