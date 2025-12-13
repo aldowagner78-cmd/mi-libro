@@ -2530,10 +2530,12 @@ function toggleDeleteNoteMode() {
 }
 
 function deleteNoteAtClick(e) {
+    // Solo interceptar si estamos en modo eliminar
     if (!deleteNoteMode || !editMode) return;
     
     const target = e.target;
     if (target.tagName === 'SUP') {
+        // IMPORTANTE: Solo prevenir el evento cuando realmente estamos eliminando
         e.preventDefault();
         e.stopPropagation();
         
@@ -2551,7 +2553,7 @@ function deleteNoteAtClick(e) {
     }
 }
 
-// Agregar listener para eliminar notas al hacer clic
+// Agregar listener para eliminar notas (solo actúa cuando deleteNoteMode=true)
 document.addEventListener('click', deleteNoteAtClick, true);
 
 // Atajo de teclado Ctrl+Shift+N para insertar nota
