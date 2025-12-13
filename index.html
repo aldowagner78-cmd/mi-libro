@@ -363,17 +363,21 @@
         
         /* Portada Principal */
         .main-cover-screen {
-            padding: 60px 20px 40px;
+            padding: 20px;
+            padding-top: max(20px, env(safe-area-inset-top));
             perspective: 1500px;
             overflow-y: auto;
+            justify-content: flex-start;
         }
         .main-cover-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
+            min-height: calc(100vh - 40px);
         }
         .book-flip-container {
             position: relative;
@@ -390,6 +394,10 @@
             backface-visibility: hidden;
             -webkit-backface-visibility: hidden;
             position: relative;
+        }
+        .book-face * {
+            backface-visibility: inherit;
+            -webkit-backface-visibility: inherit;
         }
         .book-back {
             position: absolute;
@@ -418,6 +426,12 @@
             background: rgba(0,0,0,0.9);
             transform: scale(1.05);
         }
+        .book-back .flip-btn {
+            transform: rotateY(180deg);
+        }
+        .book-back .flip-btn:hover {
+            transform: rotateY(180deg) scale(1.05);
+        }
         .sidebar-head {
             position: relative;
         }
@@ -442,7 +456,15 @@
         }
         .main-cover-screen .cover-image-container {
             max-width: 500px;
-            max-height: 80vh;
+            width: 100%;
+        }
+        .main-cover-screen .cover-image-full {
+            width: 100%;
+            height: auto;
+            max-height: 60vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
         .main-cover-screen .cover-book-title {
             font-size: 28px;
