@@ -1321,6 +1321,12 @@ function loadSpecialSection(key) {
             loading.classList.remove('show');
             document.getElementById('reader').scrollTop = 0;
             document.getElementById('chapterTitle').textContent = section.title;
+            
+            // Reactivar modo edición si está activo
+            if (editMode) {
+                makeContentEditable();
+                loadSavedEdits();
+            }
         })
         .catch(err => {
             console.error('Error cargando sección:', err);
@@ -1442,6 +1448,12 @@ function loadSpecialSection(key) {
             loading.classList.remove('show');
             document.getElementById('reader').scrollTop = 0;
             document.getElementById('chapterTitle').textContent = section.title;
+            
+            // Reactivar modo edición si está activo
+            if (editMode) {
+                makeContentEditable();
+                loadSavedEdits();
+            }
         })
         .catch(err => {
             console.error('Error cargando sección:', err);
@@ -2273,9 +2285,22 @@ function saveEdits() {
     const edits = {};
     const paragraphs = document.querySelectorAll('#content p[contenteditable="true"]');
     
+    // Detectar si estamos en un capítulo o sección especial
+    const titleText = document.getElementById('chapterTitle').textContent;
+    let prefix = `cap${currentChapter}`;
+    
+    // Si el título no empieza con "Capítulo", es una sección especial
+    if (!titleText.startsWith('Capítulo')) {
+        // Convertir título a clave (ej: "Introducción" -> "introduccion")
+        const sectionKey = titleText.toLowerCase()
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Quitar acentos
+            .replace(/\s+/g, '-'); // Espacios a guiones
+        prefix = `sec_${sectionKey}`;
+    }
+    
     paragraphs.forEach((p) => {
         const index = p.getAttribute('data-index');
-        edits[`cap${currentChapter}_p${index}`] = p.innerHTML;
+        edits[`${prefix}_p${index}`] = p.innerHTML;
     });
     
     localStorage.setItem('bookEdits', JSON.stringify(edits));
@@ -2289,9 +2314,21 @@ function loadSavedEdits() {
     const edits = JSON.parse(saved);
     const paragraphs = document.querySelectorAll('#content p[contenteditable="true"]');
     
+    // Detectar si estamos en un capítulo o sección especial
+    const titleText = document.getElementById('chapterTitle').textContent;
+    let prefix = `cap${currentChapter}`;
+    
+    // Si el título no empieza con "Capítulo", es una sección especial
+    if (!titleText.startsWith('Capítulo')) {
+        const sectionKey = titleText.toLowerCase()
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+            .replace(/\s+/g, '-');
+        prefix = `sec_${sectionKey}`;
+    }
+    
     paragraphs.forEach((p) => {
         const index = p.getAttribute('data-index');
-        const key = `cap${currentChapter}_p${index}`;
+        const key = `${prefix}_p${index}`;
         if (edits[key]) {
             p.innerHTML = edits[key];
             markAsEdited(p);
@@ -2385,7 +2422,7 @@ function confirmFootnote() {
     
     const noteNumber = document.getElementById('noteNumber').textContent;
     
-    // Crear el elemento sup con el estilo correcto
+    // Crear el elemento sup con el estilo correcto y guardar la definición
     const sup = document.createElement('sup');
     sup.style.cursor = 'pointer';
     sup.style.color = 'var(--accent)';
@@ -2393,6 +2430,14 @@ function confirmFootnote() {
     sup.style.borderBottom = '1px dotted var(--accent)';
     sup.title = `Ver nota ${noteNumber}`;
     sup.textContent = `(${noteNumber})`;
+    sup.setAttribute('data-note', definition);
+    
+    // Agregar evento click para mostrar popup
+    sup.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        showNote(definition);
+    });
     
     // Insertar la nota en el texto
     try {
@@ -2401,9 +2446,6 @@ function confirmFootnote() {
         pendingNoteSelection.range.insertNode(textNode);
         pendingNoteSelection.range.collapse(false);
         pendingNoteSelection.range.insertNode(sup);
-        
-        // Agregar la definición a la sección de NOTAS al final
-        addNoteDefinition(noteNumber, definition);
         
         closeNoteModal();
         alert(`✅ Nota ${noteNumber} insertada correctamente`);
@@ -2418,41 +2460,10 @@ function confirmFootnote() {
     }
 }
 
+// NOTA: Esta función ya no se usa. Las definiciones se guardan en data-note del sup
 function addNoteDefinition(number, definition) {
-    // Buscar o crear la sección de NOTAS al final del contenido
-    let notesSection = document.querySelector('#content .notes-section');
-    
-    if (!notesSection) {
-        // Crear nueva sección de notas
-        const contentDiv = document.getElementById('content');
-        const separator = document.createElement('hr');
-        separator.style.margin = '40px 0 20px 0';
-        separator.style.border = 'none';
-        separator.style.borderTop = '2px solid var(--border)';
-        
-        const notesTitle = document.createElement('p');
-        notesTitle.innerHTML = '<strong>NOTAS</strong>';
-        notesTitle.style.fontSize = '1.2em';
-        notesTitle.style.marginBottom = '15px';
-        notesTitle.setAttribute('contenteditable', 'false');
-        
-        notesSection = document.createElement('div');
-        notesSection.className = 'notes-section';
-        
-        contentDiv.appendChild(separator);
-        contentDiv.appendChild(notesTitle);
-        contentDiv.appendChild(notesSection);
-    }
-    
-    // Agregar la nueva nota
-    const noteP = document.createElement('p');
-    noteP.setAttribute('contenteditable', 'true');
-    noteP.innerHTML = `<strong>${number}.</strong> ${definition}`;
-    noteP.style.marginBottom = '10px';
-    noteP.setAttribute('data-note-number', number);
-    noteP.addEventListener('input', () => markAsEdited(noteP));
-    
-    notesSection.appendChild(noteP);
+    // No hacer nada - las notas se muestran como popup, no como sección visible
+    return;
 }
 
 function renumberFootnotes() {
@@ -2473,15 +2484,12 @@ function renumberFootnotes() {
         const newNumber = index + 1;
         sup.textContent = `(${newNumber})`;
         sup.title = `Ver nota ${newNumber}`;
-    });
-    
-    // Renumerar las definiciones en la sección de NOTAS
-    const noteParagraphs = document.querySelectorAll('.notes-section p[data-note-number]');
-    noteParagraphs.forEach((p, index) => {
-        const newNumber = index + 1;
-        p.setAttribute('data-note-number', newNumber);
-        const content = p.innerHTML.replace(/^<strong>\d+\./, `<strong>${newNumber}.`);
-        p.innerHTML = content;
+        
+        // Marcar el párrafo como editado si tiene data-note (nota nueva)
+        if (sup.hasAttribute('data-note')) {
+            const paragraph = sup.closest('p');
+            if (paragraph) markAsEdited(paragraph);
+        }
     });
     
     alert(`✅ ${allSups.length} notas renumeradas correctamente`);
