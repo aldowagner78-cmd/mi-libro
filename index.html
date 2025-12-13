@@ -1501,6 +1501,24 @@ async function loadChapterDirectly(n) {
                 currentNotesData = notes;
                 if (notes) setupNotesWithJSON(notes);
                 
+                // Activar notas con data-note (creadas en modo edición) SIEMPRE
+                const allDataNotes = content.querySelectorAll('sup[data-note]');
+                allDataNotes.forEach(sup => {
+                    const definition = sup.getAttribute('data-note');
+                    if (definition) {
+                        sup.style.cursor = 'pointer';
+                        sup.style.color = 'var(--accent)';
+                        sup.style.textDecoration = 'none';
+                        sup.style.borderBottom = '1px dotted var(--accent)';
+                        
+                        sup.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            showNote(definition);
+                        });
+                    }
+                });
+                
                 // AHORA sí reactivar modo edición (después de tener las notas)
                 if (editMode) {
                     makeContentEditable();
@@ -1577,6 +1595,24 @@ async function startReading() {
             .then(notes => {
                 currentNotesData = notes;
                 if (notes) setupNotesWithJSON(notes);
+                
+                // Activar notas con data-note (creadas en modo edición) SIEMPRE
+                const allDataNotes = content.querySelectorAll('sup[data-note]');
+                allDataNotes.forEach(sup => {
+                    const definition = sup.getAttribute('data-note');
+                    if (definition) {
+                        sup.style.cursor = 'pointer';
+                        sup.style.color = 'var(--accent)';
+                        sup.style.textDecoration = 'none';
+                        sup.style.borderBottom = '1px dotted var(--accent)';
+                        
+                        sup.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            showNote(definition);
+                        });
+                    }
+                });
                 
                 // AHORA sí reactivar modo edición (después de tener las notas)
                 if (editMode) {
