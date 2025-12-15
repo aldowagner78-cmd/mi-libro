@@ -559,6 +559,12 @@
             transform: scale(1.15);
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
         }
+        .main-cover-buttons .fullscreen-btn svg {
+            width: 20px;
+            height: 20px;
+            stroke: white;
+            fill: none;
+        }
         /* Ocultar botón fullscreen cuando ya está en pantalla completa */
         :fullscreen .main-cover-buttons .fullscreen-btn,
         :-webkit-full-screen .main-cover-buttons .fullscreen-btn {
@@ -2561,7 +2567,7 @@ loadChapter = function(n) {
         <!-- Botones flotantes en esquina inferior derecha -->
         <div class="main-cover-buttons">
             <button class="fullscreen-btn" onclick="requestFullscreen()" title="Pantalla Completa">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
             </button>
             <button class="flip-btn" id="flipBtn" onclick="flipBook()" title="Voltear / Ver Contratapa">🔄</button>
             <button class="enter-book-btn" onclick="enterBook()" title="Entrar al Libro">📖</button>
