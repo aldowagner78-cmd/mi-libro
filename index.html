@@ -521,18 +521,18 @@
             display: none;
         }
         .main-cover-buttons {
-            position: fixed;
-            bottom: 120px;
-            right: 16px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 10px;
             z-index: 100;
         }
         .main-cover-buttons .flip-btn,
         .main-cover-buttons .enter-book-btn {
-            width: 56px;
-            height: 56px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             backdrop-filter: blur(10px);
@@ -542,20 +542,13 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 24px;
+            font-size: 16px;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
         }
         .main-cover-buttons button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-        }
-        .enter-book-btn {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4) !important;
-        }
-        .enter-book-btn:hover {
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6) !important;
+            transform: scale(1.15);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
         }
         .enter-book-btn:hover {
             transform: translateY(-3px);
