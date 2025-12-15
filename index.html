@@ -2728,11 +2728,10 @@ loadChapter = function(n) {
 </div>
 
 <div class="edit-controls" id="editControls">
-    <button class="btn-save" onclick="saveEdits()">💾 Guardar Cambios</button>
+    <button class="btn-save" onclick="saveEdits()">💾 Guardar y Exportar</button>
     <button class="btn-note" onclick="insertFootnote()" title="Insertar nota al pie (Ctrl+Shift+N)">📝 Insertar Nota</button>
     <button class="btn-renumber" onclick="renumberFootnotes()" title="Renumerar todas las notas">🔢 Renumerar Notas</button>
     <button class="btn-delete-note" onclick="toggleDeleteNoteMode()" title="Activar modo eliminar notas">🗑️ Eliminar Nota</button>
-    <button class="btn-export" onclick="exportEdits()">📥 Exportar Cambios</button>
     <button class="btn-exit" onclick="exitEditMode()">❌ Salir</button>
 </div>
 
@@ -2812,7 +2811,17 @@ function saveEdits() {
     });
     
     localStorage.setItem('bookEdits', JSON.stringify(edits));
-    alert('✅ Cambios guardados localmente');
+    
+    // Exportar automáticamente el JSON para aplicar con el script
+    const blob = new Blob([JSON.stringify(edits, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `ediciones_libro_${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    
+    alert('✅ Cambios guardados y exportados. Ejecuta el script PowerShell para aplicar las correcciones.');
 }
 
 function loadSavedEdits() {
