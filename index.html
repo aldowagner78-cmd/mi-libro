@@ -2,7 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1a1a2e">
     <title>El Silencio de los Dioses - Lector</title>
     
     <!-- Preload solo portada principal -->
@@ -526,15 +530,16 @@
         }
         .main-cover-buttons {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+            right: calc(20px + env(safe-area-inset-right, 0px));
             display: flex;
             flex-direction: column;
             gap: 10px;
             z-index: 1000;
         }
         .main-cover-buttons .flip-btn,
-        .main-cover-buttons .enter-book-btn {
+        .main-cover-buttons .enter-book-btn,
+        .main-cover-buttons .fullscreen-btn {
             width: 32px;
             height: 32px;
             border-radius: 50%;
@@ -554,9 +559,10 @@
             transform: scale(1.15);
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
         }
-        .enter-book-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        /* Ocultar botón fullscreen cuando ya está en pantalla completa */
+        :fullscreen .main-cover-buttons .fullscreen-btn,
+        :-webkit-full-screen .main-cover-buttons .fullscreen-btn {
+            display: none;
         }
         
         /* Secciones especiales del libro */
@@ -1479,6 +1485,22 @@ document.addEventListener('DOMContentLoaded', () => {
     updateProgressBar();
 });
 
+// ========== FULLSCREEN API ==========
+function requestFullscreen() {
+    const elem = document.documentElement;
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen().catch(() => {});
+    } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+    }
+}
+
+function isFullscreen() {
+    return !!(document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement);
+}
+
 // ========== CHAPTERS ==========
 const SPECIAL_SECTIONS = {
     'introduccion': { title: 'Introducción', icon: 'book-open', file: 'secciones/introduccion.html' },
@@ -1523,6 +1545,11 @@ function flipSidebarCover() {
 }
 
 function enterBook() {
+    // Activar pantalla completa en móviles
+    if (!isFullscreen()) {
+        requestFullscreen();
+    }
+    
     const coverScreen = document.getElementById('mainCoverScreen');
     coverScreen.classList.remove('show');
     
@@ -2533,6 +2560,7 @@ loadChapter = function(n) {
         
         <!-- Botones flotantes en esquina inferior derecha -->
         <div class="main-cover-buttons">
+            <button class="fullscreen-btn" onclick="requestFullscreen()" title="Pantalla Completa">⛶</button>
             <button class="flip-btn" id="flipBtn" onclick="flipBook()" title="Voltear / Ver Contratapa">🔄</button>
             <button class="enter-book-btn" onclick="enterBook()" title="Entrar al Libro">📖</button>
         </div>
