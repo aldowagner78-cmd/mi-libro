@@ -1264,6 +1264,63 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
         }
+        
+        /* Modal de notificación personalizado */
+        .custom-notification {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background: var(--bg);
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            z-index: 10000;
+            opacity: 0;
+            transition: all 0.3s;
+            max-width: 400px;
+            text-align: center;
+        }
+        .custom-notification.show {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .custom-notification .notification-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .custom-notification .notification-message {
+            color: var(--text);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .custom-notification .notification-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .custom-notification .notification-btn:hover {
+            transform: scale(1.05);
+        }
+        .notification-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .notification-overlay.show {
+            opacity: 1;
+        }
+        
         .edit-mode-active #chapterContent p {
             outline: 2px dashed transparent;
             transition: outline 0.2s;
@@ -2747,7 +2804,74 @@ loadChapter = function(n) {
     </div>
 </div>
 
+<!-- Modales personalizados -->
+<div class="notification-overlay" id="notificationOverlay"></div>
+<div class="custom-notification" id="customNotification">
+    <div class="notification-icon" id="notificationIcon"></div>
+    <div class="notification-message" id="notificationMessage"></div>
+    <button class="notification-btn" onclick="hideNotification()">Aceptar</button>
+</div>
+
+<div class="notification-overlay" id="confirmOverlay"></div>
+<div class="custom-notification" id="customConfirm">
+    <div class="notification-icon">⚠️</div>
+    <div class="notification-message" id="confirmMessage"></div>
+    <div style="display: flex; gap: 10px; justify-content: center;">
+        <button class="notification-btn" style="background: var(--bg-secondary); color: var(--text);" onclick="hideConfirm(false)">Cancelar</button>
+        <button class="notification-btn" onclick="hideConfirm(true)">Confirmar</button>
+    </div>
+</div>
+
 <script>
+// ========== MODALES PERSONALIZADOS ==========
+function showNotification(icon, message) {
+    const overlay = document.getElementById('notificationOverlay');
+    const notification = document.getElementById('customNotification');
+    const iconEl = document.getElementById('notificationIcon');
+    const messageEl = document.getElementById('notificationMessage');
+    
+    iconEl.textContent = icon;
+    messageEl.textContent = message;
+    
+    overlay.classList.add('show');
+    notification.classList.add('show');
+}
+
+function hideNotification() {
+    const overlay = document.getElementById('notificationOverlay');
+    const notification = document.getElementById('customNotification');
+    
+    overlay.classList.remove('show');
+    notification.classList.remove('show');
+}
+
+let confirmCallback = null;
+
+function showConfirm(message, callback) {
+    const overlay = document.getElementById('confirmOverlay');
+    const confirmEl = document.getElementById('customConfirm');
+    const messageEl = document.getElementById('confirmMessage');
+    
+    messageEl.textContent = message;
+    confirmCallback = callback;
+    
+    overlay.classList.add('show');
+    confirmEl.classList.add('show');
+}
+
+function hideConfirm(result) {
+    const overlay = document.getElementById('confirmOverlay');
+    const confirmEl = document.getElementById('customConfirm');
+    
+    overlay.classList.remove('show');
+    confirmEl.classList.remove('show');
+    
+    if (confirmCallback) {
+        confirmCallback(result);
+        confirmCallback = null;
+    }
+}
+
 // ========== MODO EDICIÓN ==========
 function showEditModal() {
     document.getElementById('editModal').style.display = 'flex';
@@ -2765,12 +2889,17 @@ function activateEditMode() {
         editMode = true;
         document.body.classList.add('edit-mode-active');
         document.getElementById('editControls').classList.add('active');
+        
+        // Ocultar botón de modo edición
+        const editBtn = document.querySelector('.edit-mode-btn');
+        if (editBtn) editBtn.style.display = 'none';
+        
         makeContentEditable();
         closeEditModal();
         loadSavedEdits();
-        alert('✅ Modo edición activado. Haz clic en cualquier párrafo para editarlo.');
+        showNotification('✅', 'Modo edición activado. Haz clic en cualquier párrafo para editarlo.');
     } else {
-        alert('❌ Contraseña incorrecta');
+        showNotification('❌', 'Contraseña incorrecta');
         document.getElementById('editPassword').value = '';
     }
 }
@@ -2821,7 +2950,7 @@ function saveEdits() {
     a.click();
     URL.revokeObjectURL(url);
     
-    alert('✅ Cambios guardados y exportados. Ejecuta el script PowerShell para aplicar las correcciones.');
+    showNotification('✅', 'Cambios guardados y exportados. Ejecuta el script PowerShell para aplicar las correcciones.');
 }
 
 function loadSavedEdits() {
@@ -2859,7 +2988,7 @@ function loadSavedEdits() {
 function exportEdits() {
     const saved = localStorage.getItem('bookEdits');
     if (!saved) {
-        alert('No hay cambios para exportar');
+        showNotification('⚠️', 'No hay cambios para exportar');
         return;
     }
     
@@ -2872,21 +3001,27 @@ function exportEdits() {
     a.click();
     URL.revokeObjectURL(url);
     
-    alert('✅ Archivo de cambios descargado. Envíamelo para aplicar las correcciones.');
+    showNotification('✅', 'Archivo de cambios descargado. Envíamelo para aplicar las correcciones.');
 }
 
 function exitEditMode() {
-    if (confirm('¿Salir del modo edición? Los cambios guardados se mantendrán.')) {
-        editMode = false;
-        document.body.classList.remove('edit-mode-active');
-        document.getElementById('editControls').classList.remove('active');
-        
-        const paragraphs = document.querySelectorAll('#content p');
-        paragraphs.forEach(p => {
-            p.setAttribute('contenteditable', 'false');
-            p.style.borderLeft = '';
-        });
-    }
+    showConfirm('¿Salir del modo edición? Los cambios guardados se mantendrán.', (confirmed) => {
+        if (confirmed) {
+            editMode = false;
+            document.body.classList.remove('edit-mode-active');
+            document.getElementById('editControls').classList.remove('active');
+            
+            // Mostrar botón de modo edición nuevamente
+            const editBtn = document.querySelector('.edit-mode-btn');
+            if (editBtn) editBtn.style.display = 'flex';
+            
+            const paragraphs = document.querySelectorAll('#content p');
+            paragraphs.forEach(p => {
+                p.setAttribute('contenteditable', 'false');
+                p.style.borderLeft = '';
+            });
+        }
+    });
 }
 
 // ============= SISTEMA DE RESALTADO =============
@@ -3074,7 +3209,7 @@ let pendingNoteSelection = null;
 function insertFootnote() {
     const selection = window.getSelection();
     if (!selection.rangeCount || selection.isCollapsed) {
-        alert('⚠️ Por favor, selecciona el texto al que quieres agregar la nota');
+        showNotification('⚠️', 'Por favor, selecciona el texto al que quieres agregar la nota');
         return;
     }
     
@@ -3104,12 +3239,12 @@ function closeNoteModal() {
 function confirmFootnote() {
     const definition = document.getElementById('noteDefinition').value.trim();
     if (!definition) {
-        alert('⚠️ Por favor, escribe la definición de la nota');
+        showNotification('⚠️', 'Por favor, escribe la definición de la nota');
         return;
     }
     
     if (!pendingNoteSelection) {
-        alert('⚠️ Error: no se encontró la selección de texto');
+        showNotification('⚠️', 'Error: no se encontró la selección de texto');
         closeNoteModal();
         return;
     }
@@ -3142,7 +3277,7 @@ function confirmFootnote() {
         pendingNoteSelection.range.insertNode(sup);
         
         closeNoteModal();
-        alert(`✅ Nota ${noteNumber} insertada correctamente`);
+        showNotification('✅', `Nota ${noteNumber} insertada correctamente`);
         
         // Marcar el párrafo como editado
         const paragraph = sup.closest('p');
@@ -3150,7 +3285,8 @@ function confirmFootnote() {
         
     } catch (error) {
         console.error('Error insertando nota:', error);
-        alert('❌ Error al insertar la nota. Intenta de nuevo.');
+        closeNoteModal();
+        showNotification('❌', 'Error al insertar la nota. Intenta de nuevo.');
     }
 }
 
@@ -3161,32 +3297,32 @@ function addNoteDefinition(number, definition) {
 }
 
 function renumberFootnotes() {
-    if (!confirm('¿Renumerar todas las notas del capítulo en orden de aparición?')) {
-        return;
-    }
-    
-    const contentDiv = document.getElementById('content');
-    const allSups = contentDiv.querySelectorAll('sup');
-    
-    if (allSups.length === 0) {
-        alert('ℹ️ No hay notas para renumerar en este capítulo');
-        return;
-    }
-    
-    // Renumerar los superíndices
-    allSups.forEach((sup, index) => {
-        const newNumber = index + 1;
-        sup.textContent = `(${newNumber})`;
-        sup.title = `Ver nota ${newNumber}`;
+    showConfirm('¿Renumerar todas las notas del capítulo en orden de aparición?', (confirmed) => {
+        if (!confirmed) return;
         
-        // Marcar el párrafo como editado si tiene data-note (nota nueva)
-        if (sup.hasAttribute('data-note')) {
-            const paragraph = sup.closest('p');
-            if (paragraph) markAsEdited(paragraph);
+        const contentDiv = document.getElementById('content');
+        const allSups = contentDiv.querySelectorAll('sup');
+        
+        if (allSups.length === 0) {
+            showNotification('ℹ️', 'No hay notas para renumerar en este capítulo');
+            return;
         }
+        
+        // Renumerar los superíndices
+        allSups.forEach((sup, index) => {
+            const newNumber = index + 1;
+            sup.textContent = `(${newNumber})`;
+            sup.title = `Ver nota ${newNumber}`;
+            
+            // Marcar el párrafo como editado si tiene data-note (nota nueva)
+            if (sup.hasAttribute('data-note')) {
+                const paragraph = sup.closest('p');
+                if (paragraph) markAsEdited(paragraph);
+            }
+        });
+        
+        showNotification('✅', `${allSups.length} notas renumeradas correctamente`);
     });
-    
-    alert(`✅ ${allSups.length} notas renumeradas correctamente`);
 }
 
 // ========== ELIMINAR NOTAS ==========
@@ -3208,7 +3344,7 @@ function toggleDeleteNoteMode() {
             sup.style.outline = '2px dashed #e74c3c';
         });
         
-        alert('ℹ️ Haz clic en cualquier nota para eliminarla. Presiona el botón de nuevo para salir del modo eliminar.');
+        showNotification('ℹ️', 'Haz clic en cualquier nota para eliminarla. Presiona el botón de nuevo para salir del modo eliminar.');
     } else {
         btn.style.background = '';
         btn.style.color = '';
@@ -3233,16 +3369,18 @@ function deleteNoteAtClick(e) {
         e.stopPropagation();
         
         const noteText = target.textContent;
-        if (confirm(`¿Eliminar nota ${noteText}?`)) {
-            const paragraph = target.closest('p');
-            target.remove();
-            
-            if (paragraph) {
-                markAsEdited(paragraph);
+        showConfirm(`¿Eliminar nota ${noteText}?`, (confirmed) => {
+            if (confirmed) {
+                const paragraph = target.closest('p');
+                target.remove();
+                
+                if (paragraph) {
+                    markAsEdited(paragraph);
+                }
+                
+                showNotification('✅', `Nota ${noteText} eliminada. Recuerda renumerar las notas restantes si es necesario.`);
             }
-            
-            alert(`✅ Nota ${noteText} eliminada. Recuerda renumerar las notas restantes si es necesario.`);
-        }
+        });
     }
 }
 
