@@ -1602,6 +1602,10 @@ function enterBook() {
 function showWelcome() {
     const content = document.getElementById('content');
     
+    // Ocultar botón editar en pantalla de bienvenida
+    const editBtn = document.querySelector('.edit-mode-btn');
+    if (editBtn) editBtn.style.display = 'none';
+    
     // Construir lista de capítulos para mostrar en bienvenida
     let chaptersHTML = '';
     
