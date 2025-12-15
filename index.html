@@ -1113,6 +1113,72 @@
         }
         .note-body strong { color: var(--text); }
 
+        /* ===================== PANTALLA BIENVENIDA ===================== */
+        .welcome-chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+            max-height: calc(100vh - 250px);
+            overflow-y: auto;
+            padding: 10px;
+        }
+        .welcome-chapter-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 12px;
+            background: var(--bg-card);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .welcome-chapter-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+            border-color: var(--accent);
+        }
+        .welcome-chapter-item img.welcome-thumbnail {
+            width: 80px;
+            height: 115px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .welcome-chapter-item svg {
+            width: 80px;
+            height: 80px;
+            color: var(--accent);
+            opacity: 0.6;
+        }
+        .welcome-chapter-item span {
+            font-size: 13px;
+            color: var(--text);
+            font-weight: 500;
+        }
+        @media (max-width: 768px) {
+            .welcome-chapters-grid {
+                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+                gap: 10px;
+                max-height: calc(100vh - 220px);
+            }
+            .welcome-chapter-item {
+                padding: 10px;
+            }
+            .welcome-chapter-item img.welcome-thumbnail {
+                width: 60px;
+                height: 86px;
+            }
+            .welcome-chapter-item svg {
+                width: 60px;
+                height: 60px;
+            }
+            .welcome-chapter-item span {
+                font-size: 12px;
+            }
+        }
+
         /* ===================== MODO EDICIÓN ===================== */
         .edit-mode-btn {
             position: fixed;
@@ -1534,19 +1600,43 @@ function enterBook() {
 }
 
 function showWelcome() {
-    // Mostrar mensaje de bienvenida instantáneo
     const content = document.getElementById('content');
+    
+    // Construir lista de capítulos para mostrar en bienvenida
+    let chaptersHTML = '';
+    
+    // Capítulos
+    for (let i = 1; i <= TOTAL_CHAPTERS; i++) {
+        const chapterNum = i.toString().padStart(2, '0');
+        const hasImage = i <= 30;
+        const loadingAttr = i <= 5 ? 'eager' : 'lazy';
+        
+        if (hasImage) {
+            chaptersHTML += `
+                <div class="welcome-chapter-item" onclick="loadChapter(${i})">
+                    <img src="imagenes/thumbnails/cap_${chapterNum}.jpg" alt="Capítulo ${chapterNum}" class="welcome-thumbnail" loading="${loadingAttr}">
+                    <span>Capítulo ${chapterNum}</span>
+                </div>
+            `;
+        } else {
+            chaptersHTML += `
+                <div class="welcome-chapter-item" onclick="loadChapter(${i})">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"/></svg>
+                    <span>Capítulo ${chapterNum}</span>
+                </div>
+            `;
+        }
+    }
+    
     content.innerHTML = `
-        <div style="text-align: center; padding: 80px 20px; max-width: 600px; margin: 0 auto;">
-            <h1 style="font-size: 32px; color: var(--accent); margin-bottom: 20px;">📚 El Silencio de los Dioses</h1>
-            <p style="font-size: 20px; line-height: 1.8; color: var(--text-soft); margin-bottom: 40px;">
-                Selecciona un capítulo del índice para comenzar tu viaje.
+        <div style="text-align: center; padding: 30px 20px 20px; max-width: 900px; margin: 0 auto;">
+            <h1 style="font-size: 22px; color: var(--accent); margin-bottom: 10px; font-weight: 700;">📚 El Silencio de los Dioses</h1>
+            <p style="font-size: 15px; line-height: 1.5; color: var(--text-soft); margin-bottom: 25px;">
+                Selecciona un capítulo del índice para comenzar tu viaje
             </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.3;">
-                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
-                <path d="M12 6v7"/>
-                <path d="m9 9 3 3 3-3"/>
-            </svg>
+            <div class="welcome-chapters-grid">
+                ${chaptersHTML}
+            </div>
         </div>
     `;
     document.getElementById('chapterTitle').textContent = 'Bienvenido';
