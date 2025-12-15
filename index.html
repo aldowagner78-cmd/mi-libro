@@ -1280,10 +1280,14 @@
             transition: all 0.3s;
             max-width: 400px;
             text-align: center;
+            display: none;
+            pointer-events: none;
         }
         .custom-notification.show {
             opacity: 1;
             transform: translate(-50%, -50%) scale(1);
+            display: block;
+            pointer-events: auto;
         }
         .custom-notification .notification-icon {
             font-size: 48px;
@@ -1316,9 +1320,13 @@
             z-index: 9999;
             opacity: 0;
             transition: opacity 0.3s;
+            display: none;
+            pointer-events: none;
         }
         .notification-overlay.show {
             opacity: 1;
+            display: block;
+            pointer-events: auto;
         }
         
         .edit-mode-active #chapterContent p {
