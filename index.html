@@ -1163,6 +1163,98 @@
             outline-color: #764ba2;
             background: rgba(118, 75, 162, 0.1);
         }
+        
+        /* Resaltados de texto */
+        .highlight-yellow { background-color: #ffeb3b; padding: 2px 0; }
+        .highlight-green { background-color: #8bc34a; padding: 2px 0; }
+        .highlight-pink { background-color: #f48fb1; padding: 2px 0; }
+        .highlight-blue { background-color: #64b5f6; padding: 2px 0; }
+        .highlight-review { background-color: #ff9800; padding: 2px 0; border-bottom: 2px dotted #e65100; }
+        .text-underline { text-decoration: underline; text-decoration-color: #667eea; text-decoration-thickness: 2px; }
+        .text-strikethrough { text-decoration: line-through; text-decoration-color: #e53935; text-decoration-thickness: 2px; opacity: 0.7; }
+        
+        /* Menú contextual de resaltado */
+        .highlight-menu {
+            display: none;
+            position: absolute;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            padding: 8px;
+            z-index: 10000;
+            gap: 4px;
+        }
+        .highlight-menu.show {
+            display: flex;
+        }
+        .highlight-menu button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .highlight-menu button:hover {
+            transform: scale(1.05);
+        }
+        .hl-yellow { background: #ffeb3b; color: #000; }
+        .hl-green { background: #8bc34a; color: #000; }
+        .hl-pink { background: #f48fb1; color: #000; }
+        .hl-blue { background: #64b5f6; color: #000; }
+        .hl-review { background: #ff9800; color: #fff; }
+        .hl-underline { background: var(--bg-alt); color: var(--text); border-bottom: 2px solid #667eea; }
+        .hl-strike { background: var(--bg-alt); color: var(--text); text-decoration: line-through; }
+        .hl-clear { background: var(--bg-alt); color: var(--text-soft); border: 1px solid var(--border); }
+        
+        /* Resaltados de texto */
+        .highlight-yellow { background-color: #ffeb3b; padding: 2px 0; }
+        .highlight-green { background-color: #8bc34a; padding: 2px 0; }
+        .highlight-pink { background-color: #f48fb1; padding: 2px 0; }
+        .highlight-blue { background-color: #64b5f6; padding: 2px 0; }
+        .highlight-review { background-color: #ff9800; padding: 2px 0; border-bottom: 2px dotted #e65100; }
+        .text-underline { text-decoration: underline; text-decoration-color: #667eea; text-decoration-thickness: 2px; }
+        .text-strikethrough { text-decoration: line-through; text-decoration-color: #e53935; text-decoration-thickness: 2px; opacity: 0.7; }
+        
+        /* Menú contextual de resaltado */
+        .highlight-menu {
+            display: none;
+            position: absolute;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            padding: 8px;
+            z-index: 10000;
+            gap: 4px;
+        }
+        .highlight-menu.show {
+            display: flex;
+        }
+        .highlight-menu button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .highlight-menu button:hover {
+            transform: scale(1.05);
+        }
+        .hl-yellow { background: #ffeb3b; color: #000; }
+        .hl-green { background: #8bc34a; color: #000; }
+        .hl-pink { background: #f48fb1; color: #000; }
+        .hl-blue { background: #64b5f6; color: #000; }
+        .hl-review { background: #ff9800; color: #fff; }
+        .hl-underline { background: var(--bg-alt); color: var(--text); border-bottom: 2px solid #667eea; }
+        .hl-strike { background: var(--bg-alt); color: var(--text); text-decoration: line-through; }
+        .hl-clear { background: var(--bg-alt); color: var(--text-soft); border: 1px solid var(--border); }
         .edit-controls {
             display: none;
             position: fixed;
@@ -2464,6 +2556,18 @@ loadChapter = function(n) {
     </svg>
 </button>
 
+<!-- MENÚ CONTEXTUAL DE RESALTADO -->
+<div class="highlight-menu" id="highlightMenu">
+    <button class="hl-yellow" onclick="applyHighlight('yellow')" title="Resaltar amarillo">🟡</button>
+    <button class="hl-green" onclick="applyHighlight('green')" title="Resaltar verde">🟢</button>
+    <button class="hl-pink" onclick="applyHighlight('pink')" title="Resaltar rosa">🔴</button>
+    <button class="hl-blue" onclick="applyHighlight('blue')" title="Resaltar azul">🔵</button>
+    <button class="hl-review" onclick="applyHighlight('review')" title="Marcar para revisar">⚠️</button>
+    <button class="hl-underline" onclick="applyHighlight('underline')" title="Subrayar">U̲</button>
+    <button class="hl-strike" onclick="applyHighlight('strikethrough')" title="Tachar">A̶B̶</button>
+    <button class="hl-clear" onclick="clearHighlight()" title="Quitar resaltado">✕</button>
+</div>
+
 <div class="edit-modal" id="editModal">
     <div class="edit-modal-content">
         <h3>🔐 Modo Edición</h3>
@@ -2626,6 +2730,180 @@ function exitEditMode() {
             p.setAttribute('contenteditable', 'false');
             p.style.borderLeft = '';
         });
+    }
+}
+
+// ============= SISTEMA DE RESALTADO =============
+
+let currentSelection = null;
+let highlightMenu = null;
+
+// Inicializar menú de resaltado
+document.addEventListener('DOMContentLoaded', () => {
+    highlightMenu = document.getElementById('highlightMenu');
+    
+    // Detectar selección de texto en modo edición
+    document.addEventListener('mouseup', handleTextSelection);
+    document.addEventListener('touchend', handleTextSelection);
+    
+    // Ocultar menú al hacer clic fuera
+    document.addEventListener('click', (e) => {
+        if (highlightMenu && !highlightMenu.contains(e.target) && !window.getSelection().toString()) {
+            hideHighlightMenu();
+        }
+    });
+});
+
+function handleTextSelection(e) {
+    if (!editMode) return;
+    
+    const selection = window.getSelection();
+    const selectedText = selection.toString().trim();
+    
+    if (selectedText && selectedText.length > 0) {
+        // Verificar que la selección está dentro del contenido
+        const range = selection.getRangeAt(0);
+        const container = range.commonAncestorContainer;
+        const contentDiv = document.getElementById('content');
+        
+        if (contentDiv && contentDiv.contains(container)) {
+            currentSelection = {
+                selection: selection,
+                range: range.cloneRange(),
+                text: selectedText
+            };
+            showHighlightMenu(e);
+        }
+    } else {
+        hideHighlightMenu();
+    }
+}
+
+function showHighlightMenu(e) {
+    const menu = document.getElementById('highlightMenu');
+    if (!menu) return;
+    
+    // Posicionar el menú cerca del cursor
+    const x = e.clientX || (e.touches && e.touches[0].clientX);
+    const y = e.clientY || (e.touches && e.touches[0].clientY);
+    
+    menu.style.left = x + 'px';
+    menu.style.top = (y + 10) + 'px';
+    menu.classList.add('show');
+}
+
+function hideHighlightMenu() {
+    const menu = document.getElementById('highlightMenu');
+    if (menu) {
+        menu.classList.remove('show');
+    }
+}
+
+function applyHighlight(type) {
+    if (!currentSelection || !currentSelection.range) {
+        hideHighlightMenu();
+        return;
+    }
+    
+    try {
+        const range = currentSelection.range;
+        const span = document.createElement('span');
+        
+        // Aplicar la clase según el tipo
+        switch(type) {
+            case 'yellow':
+                span.className = 'highlight-yellow';
+                break;
+            case 'green':
+                span.className = 'highlight-green';
+                break;
+            case 'pink':
+                span.className = 'highlight-pink';
+                break;
+            case 'blue':
+                span.className = 'highlight-blue';
+                break;
+            case 'review':
+                span.className = 'highlight-review';
+                break;
+            case 'underline':
+                span.className = 'text-underline';
+                break;
+            case 'strikethrough':
+                span.className = 'text-strikethrough';
+                break;
+        }
+        
+        // Envolver el texto seleccionado
+        span.appendChild(range.extractContents());
+        range.insertNode(span);
+        
+        // Limpiar selección
+        window.getSelection().removeAllRanges();
+        currentSelection = null;
+        hideHighlightMenu();
+        
+        // Guardar resaltado
+        saveHighlights();
+        
+    } catch (error) {
+        console.error('Error al aplicar resaltado:', error);
+        hideHighlightMenu();
+    }
+}
+
+function clearHighlight() {
+    if (!currentSelection || !currentSelection.range) {
+        hideHighlightMenu();
+        return;
+    }
+    
+    try {
+        const range = currentSelection.range;
+        const container = range.commonAncestorContainer;
+        
+        // Si está dentro de un span de resaltado, quitarlo
+        let parent = container.parentElement;
+        while (parent && parent.tagName === 'SPAN') {
+            if (parent.className.includes('highlight-') || 
+                parent.className.includes('text-underline') || 
+                parent.className.includes('text-strikethrough')) {
+                
+                const text = document.createTextNode(parent.textContent);
+                parent.parentNode.replaceChild(text, parent);
+                break;
+            }
+            parent = parent.parentElement;
+        }
+        
+        window.getSelection().removeAllRanges();
+        currentSelection = null;
+        hideHighlightMenu();
+        saveHighlights();
+        
+    } catch (error) {
+        console.error('Error al quitar resaltado:', error);
+        hideHighlightMenu();
+    }
+}
+
+function saveHighlights() {
+    // Guardar el HTML del contenido con los resaltados
+    const content = document.getElementById('content');
+    if (content) {
+        localStorage.setItem('highlighted_content', content.innerHTML);
+    }
+}
+
+function loadHighlights() {
+    // Cargar resaltados guardados
+    const savedContent = localStorage.getItem('highlighted_content');
+    if (savedContent) {
+        const content = document.getElementById('content');
+        if (content && content.innerHTML !== savedContent) {
+            // Solo cargar si el contenido actual no tiene los resaltados
+            // content.innerHTML = savedContent;
+        }
     }
 }
 
