@@ -419,8 +419,7 @@
         .book-flip-container {
             position: relative;
             width: auto;
-            height: calc(100vh - 100px);
-            max-height: 85vh;
+            height: 100vh;
             max-width: 90vw;
             display: flex;
             align-items: center;
@@ -523,11 +522,11 @@
         }
         .main-cover-buttons {
             position: fixed;
-            bottom: 90px;
-            right: 20px;
+            bottom: 120px;
+            right: 16px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 16px;
             z-index: 100;
         }
         .main-cover-buttons .flip-btn,
@@ -535,29 +534,28 @@
             width: 56px;
             height: 56px;
             border-radius: 50%;
-            background: rgba(0,0,0,0.7);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             backdrop-filter: blur(10px);
             color: white;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: none;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             font-size: 24px;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
         }
         .main-cover-buttons button:hover {
-            background: rgba(0,0,0,0.85);
             transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
         }
         .enter-book-btn {
-            background: var(--accent) !important;
-            border-color: var(--accent) !important;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4) !important;
         }
         .enter-book-btn:hover {
-            filter: brightness(1.1);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6) !important;
         }
         .enter-book-btn:hover {
             transform: translateY(-3px);
