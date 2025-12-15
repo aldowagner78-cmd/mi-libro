@@ -522,37 +522,42 @@
             display: none;
         }
         .main-cover-buttons {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
             display: flex;
+            flex-direction: column;
             gap: 12px;
             z-index: 100;
-            background: rgba(0,0,0,0.7);
-            backdrop-filter: blur(10px);
-            padding: 12px 20px;
-            border-radius: 30px;
         }
         .main-cover-buttons .flip-btn,
         .main-cover-buttons .enter-book-btn {
-            background: rgba(255,255,255,0.2);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
             color: white;
-            border: 1px solid rgba(255,255,255,0.3);
-            padding: 10px 20px;
-            border-radius: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 24px;
             transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
         .main-cover-buttons button:hover {
-            background: rgba(255,255,255,0.3);
-            transform: scale(1.05);
+            background: rgba(0,0,0,0.85);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
         }
         .enter-book-btn {
             background: var(--accent) !important;
             border-color: var(--accent) !important;
+        }
+        .enter-book-btn:hover {
+            filter: brightness(1.1);
         }
         .enter-book-btn:hover {
             transform: translateY(-3px);
@@ -1553,11 +1558,9 @@ function flipBook() {
     flipContainer.classList.toggle('flipped');
     
     if (flipContainer.classList.contains('flipped')) {
-        flipBtn.innerHTML = '🔄 Portada';
         flipBtn.title = 'Ver Portada';
     } else {
-        flipBtn.innerHTML = '🔄 Voltear';
-        flipBtn.title = 'Ver Contratapa';
+        flipBtn.title = 'Voltear / Ver Contratapa';
     }
 }
 
@@ -2562,10 +2565,10 @@ loadChapter = function(n) {
             </div>
         </div>
         
-        <!-- Botones en barra inferior -->
+        <!-- Botones flotantes en esquina inferior derecha -->
         <div class="main-cover-buttons">
-            <button class="flip-btn" id="flipBtn" onclick="flipBook()" title="Ver Contratapa">🔄 Voltear</button>
-            <button class="enter-book-btn" onclick="enterBook()" title="Entrar al Libro">📖 Entrar al Libro</button>
+            <button class="flip-btn" id="flipBtn" onclick="flipBook()" title="Voltear / Ver Contratapa">🔄</button>
+            <button class="enter-book-btn" onclick="enterBook()" title="Entrar al Libro">📖</button>
         </div>
     </div>
 </div>
