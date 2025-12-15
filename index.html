@@ -594,6 +594,41 @@
             margin: 32px auto;
         }
         
+        /* ===================== PROTECCIÓN MODO LECTURA ===================== */
+        /* Deshabilitar selección solo en modo lectura */
+        #content {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        
+        /* Habilitar selección en modo edición */
+        .edit-mode-active #content {
+            user-select: text;
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+        }
+        
+        /* Ocultar contenido al imprimir en modo lectura */
+        @media print {
+            body:not(.edit-mode-active) #content,
+            body:not(.edit-mode-active) #sidebar,
+            body:not(.edit-mode-active) .toolbar,
+            body:not(.edit-mode-active) .bottom-bar {
+                display: none !important;
+            }
+            body:not(.edit-mode-active)::before {
+                content: "⚠️ Este contenido está protegido contra impresión";
+                display: block;
+                text-align: center;
+                font-size: 24px;
+                padding: 100px;
+                color: #999;
+            }
+        }
+        
         .cover-image-container {
             max-width: 600px;
             max-height: 70vh;
@@ -1608,6 +1643,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Actualizar estados de lectura
     updateChapterStates();
     updateProgressBar();
+    
+    // ========== PROTECCIÓN MODO LECTURA ==========
+    // Bloquear menú contextual solo en modo lectura
+    document.addEventListener('contextmenu', (e) => {
+        if (!editMode && e.target.closest('#content')) {
+            e.preventDefault();
+            return false;
+        }
+    });
+    
+    // Bloquear atajos de teclado solo en modo lectura
+    document.addEventListener('keydown', (e) => {
+        if (editMode) return; // Permitir todo en modo edición
+        
+        // Bloquear Ctrl+C, Ctrl+P, Ctrl+S, Ctrl+U, F12
+        if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'C' || 
+            e.key === 'p' || e.key === 'P' || 
+            e.key === 's' || e.key === 'S' || 
+            e.key === 'u' || e.key === 'U')) {
+            e.preventDefault();
+            return false;
+        }
+        
+        // Bloquear F12 (DevTools)
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+    });
 });
 
 // ========== CHAPTERS ==========
