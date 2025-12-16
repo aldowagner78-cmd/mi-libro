@@ -88,12 +88,6 @@ James vio cómo el guía se alejaba remando hacia la oscuridad del túnel, una s
 
 —Ha elegido la vida —dijo James, volviéndose hacia la puerta de mercurio—. Nosotros hemos elegido... otra cosa.
 
-James se acercó al pedestal del Nodo. —Aquí es donde Aris quería que llegáramos —dijo en voz baja—. El Nodo de Acceso Secundario.
-
-—¿Y ahora qué? —preguntó Helena—. ¿Llamas y pides hablar con el encargado?
-
-—Ahora —dijo James, poniendo su mano negra sobre el pedestal—... ahora negociamos nuestra entrada al cielo.
-
 El grupo comenzó a caminar por la pasarela de material óseo. Helena miró hacia atrás una última vez, hacia la oscuridad donde Mateo había desaparecido. —¿Crees que lo logrará?
 
 —Mateo conoce estos ríos mejor que nosotros —dijo James—. Si alguien puede sobrevivir ahí abajo, es él.
