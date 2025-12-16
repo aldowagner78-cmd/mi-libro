@@ -100,29 +100,25 @@ El grupo comenzó a caminar por la pasarela de material óseo. Helena miró haci
 
 Siguieron avanzando. A ambos lados, las cápsulas flotantes permanecían silenciosas, como centinelas dormidos. El túnel se extendía hacia el interior de la montaña, iluminado por la luz ámbar que emanaba de las propias paredes.
 
-James se detuvo ante un segundo pedestal más adelante. Sus botas hicieron un sonido seco sobre el material óseo. Se sentía en casa. Y eso le dio más miedo que cualquier cosa que hubiera pasado en la selva. Su cuerpo reconocía este lugar. Su mano vibraba en armonía con la frecuencia de las luces ámbar.
+Caminaron unos cientos de metros hasta que el pasillo terminó en un atrio circular inmenso. En el centro del atrio, había una puerta. Esta no era de piedra. Era de **metal líquido ^[4]**. Una superficie de mercurio vertical que ondulaba sin caerse, reflejando sus rostros distorsionados. Junto a la puerta, había un pedestal con una superficie negra, idéntica a la mano de James.
 
-—Tenemos que seguir a pie desde aquí —dijo James, volviéndose hacia el grupo—. Las cápsulas requieren un nivel de acceso que aún no tengo.
+Kai se detuvo en seco, mirando la puerta ondulante con ojos desorbitados. Estaba temblando, pálido. —No —susurró el chico—. Esto está mal. Se siente mal. Es... es como entrar en la tripa de un monstruo que nos va a digerir.
 
-Kai no se movió del bote. Estaba temblando, pálido. —No voy a bajar —susurró el chico—. Esto está mal. Se siente mal. Es... es como entrar en la tripa de un monstruo que nos va a digerir.
+—Kai, no podemos volver —dijo Helena, intentando ser amable—. Rodolfo encontrará la entrada. Tienen explosivos. Tarde o temprano volarán la primera puerta.
 
-—Kai, no podemos quedarnos aquí —dijo Helena, intentando ser amable—. Rodolfo encontrará la entrada. Tienen explosivos. Tarde o temprano volarán la puerta.
+—Prefiero que me disparen a entrar ahí —insistió Kai, señalando hacia la puerta de mercurio.
 
-—Prefiero que me disparen a entrar ahí —insistió Kai, señalando hacia el fondo del túnel, donde la luz ámbar se volvía más intensa.
+James se volvió. Miró a Kai con ojos fríos, pero no crueles. —Nadie te va a comer, Kai. Pero si te quedas aquí, te quedarás solo en la oscuridad cuando los sistemas de ahorro de energía detecten inactividad y apaguen las luces. Y te aseguro que la oscuridad aquí abajo no tiene fondo.
 
-James se acercó al borde del muelle. Miró a Kai con ojos fríos, pero no crueles. —Nadie te va a comer, Kai. Pero si te quedas en el barco, te quedarás solo en la oscuridad cuando los sistemas de ahorro de energía detecten inactividad y apaguen las luces. Y te aseguro que la oscuridad aquí abajo no tiene fondo.
+Dos Santos agarró a Kai por el chaleco y lo empujó hacia adelante sin miramientos. —Muévete, chico. El Doc tiene razón. El miedo es útil, el pánico no.
 
-Dos Santos agarró a Kai por el chaleco y lo levantó sin miramientos. —Arriba, chico. El Doc tiene razón. El miedo es útil, el pánico no. Muévete.
-
-El grupo desembarcó. James lideró la marcha, pasando junto a las cápsulas flotantes. Caminaron unos cientos de metros hasta que el pasillo terminó en un atrio circular inmenso. En el centro del atrio, había una puerta. Esta no era de piedra. Era de **metal líquido ^[6]**. Una superficie de mercurio vertical que ondulaba sin caerse, reflejando sus rostros distorsionados. Junto a la puerta, había un pedestal con una superficie negra, idéntica a la mano de James.
-
-James se acercó. —Aquí es donde Aris quería que llegáramos —dijo en voz baja—. El Nodo de Acceso Secundario.
+James se acercó al pedestal. —Aquí es donde Aris quería que llegáramos —dijo en voz baja—. El Nodo de Acceso Secundario.
 
 —¿Y ahora qué? —preguntó Helena—. ¿Llamas y pides hablar con el encargado?
 
 —Ahora —dijo James, poniendo su mano negra sobre el pedestal—... ahora negociamos nuestra entrada al cielo.
 
-La superficie negra del pedestal se iluminó al contacto. Un holograma apareció en el aire. No era una pantalla plana. Era una forma tridimensional, compleja, que giraba rápidamente. Parecía una cadena de ADN, pero con tres hélices en lugar de dos.
+El atrio respondió al tacto de James. Una vibración grave sacudió el suelo bajo sus botas. La superficie negra del pedestal se iluminó al contacto. Un holograma apareció en el aire. No era una pantalla plana. Era una forma tridimensional, compleja, que giraba rápidamente. Parecía una cadena de ADN, pero con tres hélices en lugar de dos.
 
 Una voz sonó en el atrio. No era la voz de Dios. Era una voz sintética, femenina, cortés pero inflexible, que hablaba en un idioma que ninguno entendió, pero que el cerebro de James tradujo instantáneamente.
 
@@ -130,25 +126,29 @@ Una voz sonó en el atrio. No era la voz de Dios. Era una voz sintética, femeni
 
 La luz del atrio cambió de ámbar acogedor a un rojo parpadeante de alarma. *«Protocolo de Esterilización iniciado. Por favor, permanezcan quietos para una incineración rápida.»*
 
-Unas torretas descendieron del techo, apuntando con láseres azules a sus pechos.
+De repente, el aire se llenó de zumbidos mecánicos. Del techo abovedado descendieron media docena de formas ovoides, brillantes y letales. Torretas defensivas flotantes que apuntaron sus emisores hacia el grupo desprotegido sobre el suelo de hueso pulido.
 
-—¿Decías? —gritó Dos Santos, levantando su rifle inútilmente contra la tecnología superior.
+—¡Defensas automatizadas! —gritó Dos Santos, empujando a Helena detrás de una columna de material óseo—. ¡Al suelo!
 
-—¡Es un test! —gritó James, interponiéndose entre las armas y el grupo, levantando su mano de cristal—. ¡No disparen!
+Un punto rojo láser barrió el pecho de James. No había cubierta donde esconderse; estaban completamente expuestos en aquella plataforma.
 
-Miró al holograma giratorio. —¡Soy el Portador! —gritó a la máquina, usando el concepto que el Monolito le había implantado—. ¡Tengo la Clave de Amira Thorne! ¡Código Omega-Nueve!
+—¡Es un test! —gritó James, levantando su mano de obsidiana hacia los sensores, manteniéndose firme mientras los demás se encogían—. ¡No disparen!
 
-Las torretas se detuvieron. Zumbaron, re-calculando. La voz sintética pareció dudar por un microsegundo. *«Código Omega-Nueve reconocido. Anulación de protocolo de seguridad. Usuario: Gordon, James... reclasificado. Estado: Invitado Condicional.»*
+Miró al ojo central de la máquina líder. —¡Soy el Portador! —bramó, proyectando su voz en el eco del atrio—. ¡Tengo la Clave de Amira Thorne! ¡Código Omega-Nueve!
 
-La puerta de mercurio se disolvió, cayendo al suelo como lluvia plateada y revelando un pasillo de luz blanca cegadora. *«Pueden pasar. El Bibliotecario los espera.»*
+Las torretas se detuvieron en seco, flotando a pocos metros de sus cabezas. Zumbaron, re-calculando. La voz sintética pareció dudar por un microsegundo. *«Código Omega-Nueve reconocido. Anulación de protocolo de seguridad. Usuario: Gordon, James... reclasificado. Estado: Invitado Condicional.»*
 
-James se volvió hacia su equipo. Estaban pálidos, sudorosos, al límite de su cordura. —Bienvenidos a los Andes —dijo James, aunque sabía que ya no estaban en ningún lugar que apareciera en un mapa geográfico—. No toquen nada. No hablen a menos que les pregunten. Y por lo que más quieran... no piensen en nada violento.
+Las armas se retrajeron hacia el techo. Frente a ellos, la inmensa pared de **metal líquido ^[5]** comenzó a ondular. La puerta de mercurio se disolvió, cayendo al suelo como lluvia plateada y revelando un pasillo de luz blanca cegadora que se adentraba en la roca. *«Pueden pasar. El Bibliotecario los espera.»*
 
-—¿Por qué? —susurró Kai.
+James se volvió hacia su equipo, que se levantaba lentamente del suelo duro, sacudiéndose el polvo. Estaban pálidos, sudorosos, al límite de su cordura.
 
-—Porque aquí —dijo James, señalando su propia cabeza—, los pensamientos son ruidosos. Y no queremos despertar a los vecinos.
+—Bienvenidos a los Andes —dijo James, señalando el camino a pie hacia la luz—. No toquen nada. No hablen a menos que les pregunten. Y por lo que más quieran... no piensen en nada violento.
 
-Cruzaron el umbral hacia la luz blanca, dejando atrás el mundo de la materia y entrando en el dominio de la mente, mientras la puerta de mercurio se regeneraba detrás de ellos, sellando su destino.
+—¿Por qué? —susurró Kai, ajustándose la mochila.
+
+—Porque aquí —dijo James, golpeando suavemente su propia sien—, los pensamientos son ruidosos. Y no queremos despertar a los vecinos.
+
+Cruzaron el umbral caminando, dejando atrás el muelle y el río subterráneo, adentrándose en el vientre de la montaña, mientras la puerta de mercurio se regeneraba detrás de ellos, sellando su destino.
 
 **NOTAS DEL CAPÍTULO 5**
 
@@ -158,8 +158,6 @@ Cruzaron el umbral hacia la luz blanca, dejando atrás el mundo de la materia y 
 
 **(3) Energía de Punto Cero:** Concepto de física cuántica que se refiere a la energía más baja posible que puede tener un sistema físico mecánico cuántico. En la ciencia ficción, a menudo se usa como una fuente de energía inagotable y "limpia" extraída del vacío del espacio.
 
-**(4) Píxeles de Piedra (Materia Programable):** Se refiere a la capacidad de la materia física para cambiar de forma, densidad y propiedades bajo comando, similar a cómo los píxeles en una pantalla cambian de color para formar imágenes. Aquí, la roca sólida se comporta como un fluido controlado.
+**(4) Metal Líquido:** Aleación metálica que se mantiene en estado líquido a temperatura ambiente (como el mercurio o el galio), pero que puede solidificarse instantáneamente bajo una carga eléctrica o magnética específica.
 
-**(5) Nanoconstrucción Biológica:** Técnica de ingeniería donde estructuras (como edificios o túneles) no se construyen bloque a bloque, sino que se "cultivan" átomo por átomo utilizando nanobots o bacterias modificadas, resultando en formas orgánicas sin costuras.
-
-**(6) Metal Líquido:** Aleación metálica que se mantiene en estado líquido a temperatura ambiente (como el mercurio o el galio), pero que puede solidificarse instantáneamente bajo una carga eléctrica o magnética específica.
+**(5) Metal Líquido (Puerta):** La puerta de mercurio vertical desafía la gravedad mediante campos magnéticos controlados, actuando como barrera física y escáner biométrico simultáneamente.
