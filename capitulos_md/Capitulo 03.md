@@ -6,7 +6,7 @@
 
 *"En la naturaleza, no existe el asesinato; solo existe la transferencia de energía. Cuando un jaguar mata a un tapir, no hay malicia, hay termodinámica. El depredador reduce la entropía del sistema consumiendo orden biológico ajeno.*
 
-*El Mercado opera bajo la misma ley física, pero la hemos disfrazado con trajes de seda y consejos de administración. Una ****OPA hostil ^[1]**** es una cacería. Una patente exclusiva es un territorio marcado con orina química. Omni-Core no es malvada por querer la inmortalidad para unos pocos. Simplemente es el depredador alfa en un ecosistema donde la compasión es una ineficiencia calórica. Y en la selva, ser ineficiente es sinónimo de estar extinto."*
+*El Mercado opera bajo la misma ley física, pero la hemos disfrazado con trajes de seda y consejos de administración. Una **OPA hostil**^[1] es una cacería. Una patente exclusiva es un territorio marcado con orina química. Omni-Core no es malvada por querer la inmortalidad para unos pocos. Simplemente es el depredador alfa en un ecosistema donde la compasión es una ineficiencia calórica. Y en la selva, ser ineficiente es sinónimo de estar extinto."*
 
 — **Dra. Amira Thorne.** *Notas personales encriptadas, recuperadas del Servidor 7, 2024.*
 
@@ -14,7 +14,7 @@
 
 La selva, que minutos antes había sido un templo de silencio estático, ahora gritaba.
 
-No eran gritos humanos. Era el estruendo mecánico de la intrusión. El cielo, visible solo a través de las fracturas en el **dosel arbóreo ^[2]**, se había llenado de sombras rápidas y zumbidos agudos. Drones de reconocimiento táctico, pequeños como halcones y rápidos como balas, zigzagueaban entre las copas de los árboles, mapeando el terreno con láseres LIDAR que atravesaban las hojas como si fueran humo.
+No eran gritos humanos. Era el estruendo mecánico de la intrusión. El cielo, visible solo a través de las fracturas en el **dosel arbóreo**^[2], se había llenado de sombras rápidas y zumbidos agudos. Drones de reconocimiento táctico, pequeños como halcones y rápidos como balas, zigzagueaban entre las copas de los árboles, mapeando el terreno con láseres LIDAR que atravesaban las hojas como si fueran humo.
 
 James Gordon corría. O al menos, eso intentaba. Su carrera era un tropiezo agónico, una sucesión de caídas controladas impulsadas por el pánico. Su mochila, cargada con las muestras de *Terra Preta* y los discos duros con los escaneos del Monolito, golpeaba su columna vertebral con cada paso, enviando descargas eléctricas de dolor desde su hernia hasta la base del cráneo.
 
@@ -68,7 +68,7 @@ Dos Santos se acercó, mirando la mano de James con una mezcla de repulsión y p
 
 James se concentró en su mano. No intentó soltarse. Intentó empujar. Si esta tecnología era una interfaz, entonces podía enviar comandos, no solo recibir datos. Visualizó a los perseguidores. Visualizó el camino que iban a tomar. Y luego visualizó la defensa.
 
-No podía controlar a los hombres. Pero la selva tenía sus propios ejércitos. A cincuenta metros de la posición de los mercenarios, en el dosel de los árboles, había una colonia de **Avispas Polybia ^[5]**. Miles de ellas. Un enjambre dormido. James envió un pulso. No fue una palabra. Fue una señal química digitalizada, una imitación perfecta de la **feromona de alarma ^[6]** de la especie. *PELIGRO. ATAQUE. MATAR.*
+No podía controlar a los hombres. Pero la selva tenía sus propios ejércitos. A cincuenta metros de la posición de los mercenarios, en el dosel de los árboles, había una colonia de **avispas Polybia**^[5]. Miles de ellas. Un enjambre dormido. James envió un pulso. No fue una palabra. Fue una señal química digitalizada, una imitación perfecta de la **feromona de alarma**^[6] de la especie. *PELIGRO. ATAQUE. MATAR.*
 
 Sintió la respuesta del enjambre. Una explosión de furia colectiva.
 
@@ -92,7 +92,7 @@ Los porteadores y Ravi ayudaron a empujar el bote hacia el agua. El barro chupab
 
 —¿Qué quieres decir? —preguntó James, subiendo a bordo. Helena lo ayudó, evitando tocar su mano negra.
 
-—Los satélites. Están teniendo "**errores de paralaje**" **(7)**. Están mirando tres kilómetros al sur de nuestra posición. Es un hackeo interno. Alguien dentro de Omni-Core está desviando los ojos de Dios.
+—Los satélites. Están teniendo **errores de paralaje**^[7]. Están mirando tres kilómetros al sur de nuestra posición. Es un hackeo interno. Alguien dentro de Omni-Core está desviando los ojos de Dios.
 
 James miró al cielo. Recordó la sensación en el árbol. La presencia familiar en la red. «Aris», pensó. Pero era imposible. Aris estaba muerta. Él había identificado el cuerpo. «*O eso es lo que Rodolfo quería que creyeras*», susurró una voz insidiosa en su mente, una voz que sonaba a lógica de máquina.
 
