@@ -64,27 +64,43 @@ Dos Santos dirigió el barco hacia la isla, reduciendo la velocidad. —Doc, eso
 
 Cuando estuvieron a cincuenta metros, James levantó su mano derecha hacia la pared de roca. Sintió la cerradura en la distancia. No era una cerradura física de engranajes. Era una cerradura de frecuencia. Un acorde musical complejo que requería una clave biológica. Su mano emitió un pulso. No fue visible, pero el agua alrededor del barco se rizó en patrones concéntricos perfectos. Un sonido agudo, un chirrido ultrasónico, hizo que todos a bordo se taparan los oídos instintivamente.
 
-Frente a ellos, la pared de la isla se movió. No se abrió una puerta. La roca se reorganizó. Bloques hexagonales de basalto, de toneladas de peso, se retrajeron y giraron sobre sí mismos como **píxeles de piedra ^[4]**, creando una abertura rectangular oscura, lo suficientemente grande para el hidrodeslizador. El agua del lago comenzó a fluir hacia adentro, creando una corriente de succión irresistible.
+La pared de roca frente a ellos pareció suspirar. Una grieta de luz ámbar se abrió silenciosamente, revelando un muelle de material óseo y un atrio circular inmenso más allá.
 
-—¡Nos está tragando! —gritó Dos Santos, luchando con el motor para no perder el control.
+El grupo desembarcó. James lideró la marcha, pasando junto a las cápsulas flotantes. Sin embargo, Mateo se quedó atrás, junto al amarre, con la mano aferrada a la madera húmeda del "Caribdis" como si fuera su único ancla a la realidad.
 
-—¡Déjalo entrar! —gritó James—. ¡Corta el motor!
+—Mateo, vamos —llamó James, girándose—. No puedes quedarte aquí.
 
-Dos Santos apagó el motor. El silencio regresó, roto solo por el gorgoteo del agua precipitándose al abismo. El "Caribdis" fue arrastrado hacia la boca de la cueva. Pasaron del aire libre a la oscuridad encerrada. Detrás de ellos, los hexágonos de piedra volvieron a cerrarse con un estruendo sordo y definitivo, sellando la entrada.
+El guía negó con la cabeza lentamente. Sus ojos oscuros miraban las paredes de luz ámbar con un terror reverencial, pero también con una negativa absoluta. —No, Doctor. Mi camino termina donde termina el agua.
 
-La oscuridad total duró solo unos segundos. El tiempo suficiente para que el pánico se instalara en sus gargantas. Luego, las luces se encendieron.
+—Si te quedas, te quedarás a oscuras —advirtió Dos Santos—. Y el camino de vuelta es contra la corriente.
 
-No eran lámparas halógenas ni fluorescentes. Eran las paredes. Todo el túnel, un tubo perfecto de veinte metros de diámetro, se iluminó con una luz ámbar suave, cálida y difusa, que emanaba del propio material de construcción. El barco flotaba en un canal artificial de agua cristalina, tan pura que parecía aire. A ambos lados, pasarelas de un material blanco que parecía hueso pulido se extendían hacia el interior de la montaña.
+—La corriente de abajo siempre tiene un retorno si sabes buscarlo —dijo Mateo, empujando suavemente el bote para prepararlo—. Yo soy Baniwa. Entiendo los ríos, incluso los que corren bajo la tierra. Pero eso... —señaló la puerta de metal líquido y la tecnología alienígena— eso es un mundo de espíritus muertos. Si cruzo esa puerta, mi alma no sabrá cómo volver a casa.
 
-—Bienvenidos al vestíbulo —dijo James. Su voz resonó con un eco limpio.
+James miró a Helena, luego a Mateo. Entendió que no era cobardía, sino sabiduría ancestral. Mateo sabía a qué mundo pertenecía.
 
-Helena se puso de pie, mirando a su alrededor, maravillada. El miedo a ser perseguidos se disolvió ante la magnitud del descubrimiento. —Esto no es una cueva —dijo, tocando la pared del túnel mientras el barco se deslizaba suavemente por la inercia—. La arquitectura... no tiene uniones. Es una sola pieza continua. Como si hubiera sido cultivada.
+—Está bien —dijo James, acercándose y estrechándole la mano. Sintió la callosidad y el calor humano, un contraste brutal con la frialdad del lugar—. Gracias por traernos, Mateo. Que el río te proteja.
 
-—Fue cultivada —corrigió James—. **Materia programable. Nanoconstrucción biológica ^[5].**
+—Que los dioses de piedra no se lo coman, Doctor —dijo Mateo, subiéndose al bote—. Cierre la puerta. Yo encontraré la salida.
 
-El barco golpeó suavemente un tope en el canal y se detuvo. Estaban en un muelle de carga. Había vehículos aparcados en fila. Pero no tenían ruedas. Eran cápsulas ovoides de color plata mate, flotando a unos centímetros del suelo en silencio absoluto.
+James vio cómo el guía se alejaba remando hacia la oscuridad del túnel, una silueta solitaria contra la inmensidad de la ingeniería de los Antiguos.
 
-James saltó a la pasarela. Sus botas hicieron un sonido seco sobre el material óseo. Se sentía en casa. Y eso le dio más miedo que cualquier cosa que hubiera pasado en la selva. Su cuerpo reconocía este lugar. Su mano vibraba en armonía con la frecuencia de las luces ámbar.
+—Se ha ido —dijo Helena, con un escalofrío.
+
+—Ha elegido la vida —dijo James, volviéndose hacia la puerta de mercurio—. Nosotros hemos elegido... otra cosa.
+
+James se acercó al pedestal del Nodo. —Aquí es donde Aris quería que llegáramos —dijo en voz baja—. El Nodo de Acceso Secundario.
+
+—¿Y ahora qué? —preguntó Helena—. ¿Llamas y pides hablar con el encargado?
+
+—Ahora —dijo James, poniendo su mano negra sobre el pedestal—... ahora negociamos nuestra entrada al cielo.
+
+El grupo comenzó a caminar por la pasarela de material óseo. Helena miró hacia atrás una última vez, hacia la oscuridad donde Mateo había desaparecido. —¿Crees que lo logrará?
+
+—Mateo conoce estos ríos mejor que nosotros —dijo James—. Si alguien puede sobrevivir ahí abajo, es él.
+
+Siguieron avanzando. A ambos lados, las cápsulas flotantes permanecían silenciosas, como centinelas dormidos. El túnel se extendía hacia el interior de la montaña, iluminado por la luz ámbar que emanaba de las propias paredes.
+
+James se detuvo ante un segundo pedestal más adelante. Sus botas hicieron un sonido seco sobre el material óseo. Se sentía en casa. Y eso le dio más miedo que cualquier cosa que hubiera pasado en la selva. Su cuerpo reconocía este lugar. Su mano vibraba en armonía con la frecuencia de las luces ámbar.
 
 —Tenemos que seguir a pie desde aquí —dijo James, volviéndose hacia el grupo—. Las cápsulas requieren un nivel de acceso que aún no tengo.
 
