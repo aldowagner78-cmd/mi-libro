@@ -39,56 +39,52 @@ James se apoyó en la barandilla. Su mano de obsidiana estaba envuelta en vendas
 
 —Pero mira lo que está pasando —dijo ella, señalando hacia donde estaba la tele—. Gente matándose por entrar en servidores. Sectas suicidas que creen que si mueren ahora Aris los recogerá. Hemos creado una nueva religión sin querer.
 
-—No creamos nada —dijo James—. Solo le quitamos la venda a la humanidad. Lo que hagan con lo que ven es responsabilidad suya. Es el libre albedrío, ¿no Tu especialidad.
+—No creamos nada —dijo James—. Solo le quitamos la venda a la humanidad. Lo que hagan con lo que ven es responsabilidad suya. Es el libre albedrío, ¿no? Tu especialidad.
 
 Helena sonrió tristemente. —El libre albedrío es una carga muy pesada, James. A veces la gente prefiere que le digan qué hacer.
 
 Dos Santos subió las escaleras de madera, cargando un rifle de caza y dos conejos muertos. El soldado se había adaptado a la vida de fugitivo con una facilidad pasmosa. Para él, la selva era más segura que la ciudad.
-—Tenemos visita —dijo Dos Santos, sin alarma, pero con seriedad—. No son militares.
+—Tenemos visita —dijo Dos Santos, bajando el arma pero sin soltarla—. Y te aseguro que te vas a sorprender.
 
-James se tensó. —¿Quién
+James se tensó. —¿Militares?
 
-—Indígenas —dijo Dos Santos—. Baniwa. Dicen que quieren hablar con el "Hombre de Piedra".
+—No. Un viejo amigo. O un desertor, según se mire.
 
-James miró su mano vendada. La leyenda se había extendido más rápido que el internet. La red de la selva, la red humana, funcionaba a su propia velocidad.
+Bajaron a la orilla del río. Una canoa larga se mecía en la corriente, tripulada por cuatro remeros Baniwa. En la proa, de pie, con la postura digna de quien ha hecho las paces con sus miedos, estaba Mateo.
 
-Bajaron a la orilla del río. Un grupo de cinco hombres y mujeres Baniwa esperaba en una canoa. No llevaban armas de guerra, solo lanzas de pesca. El líder, un anciano con la piel curtida como cuero viejo, dio un paso adelante.
+Ya no parecía el guía asustado que había saltado del barco en la Zona Muerta. Llevaba pinturas ceremoniales en el rostro. Cuando vio a James, y vio la mano vendada, asintió lentamente.
 
-—Tú eres el que tocó a los Abuelos —dijo el anciano, mirando la mano de James.
+—Sobreviviste al Inframundo —dijo Mateo, saltando a tierra.
 
-—Toqué la piedra —admitió James.
+—Y tú sobreviviste a la vuelta —respondió James, ofreciéndole la mano izquierda (la humana). Mateo la estrechó con fuerza, rompiendo el protocolo de distancia que había mantenido durante la expedición.
 
-—La piedra no es piedra —dijo el anciano—. La piedra es memoria. Nosotros sabíamos que estaban ahí. Las historias lo decían. "Los que duermen en el hielo". Pero tú los despertaste.
+—No fue fácil. El cañón gritaba cuando ustedes entraron. —Mateo miró a Helena y a Kai con respeto, y luego clavó sus ojos en James—. Traigo a los Abuelos de mi aldea. —Señaló a un anciano que permanecía sentado en la canoa—. Ellos querían ver al "Hombre de Piedra".
 
-—Lo siento si perturbé su tierra —dijo James con respeto.
+—Pensé que no querías saber nada de la piedra —dijo James.
 
-El anciano negó con la cabeza. —No es nuestra tierra. Es de ellos. Nosotros solo la cuidamos mientras dormían. Pero ahora que han despertado... la selva está cambiando.
+—La piedra que dormía me daba miedo —admitió Mateo—. Pero la piedra ahora está despierta. Y la selva... la selva está contenta, Doctor.
 
-—¿Cambiando cómo? —preguntó Helena.
+—¿Contenta? —preguntó Helena, acercándose.
 
-—Las raíces hablan más alto —dijo el anciano—. Los árboles crecen más rápido. Y los sueños... los sueños son muy claros. Anoche soñé con una mujer de luz que me enseñaba a curar la fiebre del río.
+—Las raíces crecen más rápido. La caza es abundante. Y anoche, soñé con la mujer de luz. Ella me dijo dónde encontrarlos. Me dijo que ya no hay dos mundos, el de arriba y el de abajo. Ahora son uno.
 
-James y Helena intercambiaron una mirada.
-Aris.
-No se había quedado confinada en el glaciar. Estaba usando la red biológica. Estaba cumpliendo su promesa de cuidar, pero a su manera.
+El anciano de la canoa habló en su lengua, con una voz que sonaba a hojas secas, y Mateo tradujo.
 
-—¿Por qué han venido? —preguntó James.
+—El Abuelo dice que ya no estás escondido. La selva te ve. Pero la selva te protege. Los hombres de hierro no pueden entrar aquí. Las raíces confunden sus máquinas.
 
-—Para decirte que no estás escondido —dijo el anciano—. La selva te ve. Pero la selva te protege. Los hombres de hierro (los militares) no pueden entrar aquí. Las raíces confunden sus máquinas.
+James entendió. Aris estaba extendiendo su protección. La huida de Mateo había sido necesaria; si él no hubiera regresado a su gente, no habría nadie para interpretar los sueños, nadie para traer este mensaje de alianza.
 
-James entendió. Aris estaba extendiendo su protección. La micorriza, la red de hongos y raíces, estaba actuando como una interferencia natural contra los drones y satélites espías. Había creado un santuario verde para ellos.
+—Gracias, Mateo —dijo James—. Por volver.
 
-—Gracias —dijo James.
+El guía asintió y volvió a subir a la canoa. Antes de que los remeros empujaran la embarcación hacia la corriente, se giró una última vez.
 
-El anciano asintió y volvió a la canoa. Antes de irse, se giró.
-—No te quedes mucho tiempo, Hombre de Piedra. Tienes que ir al norte.
+—No te quedes mucho tiempo, James —dijo, usando su nombre de pila por primera vez—. Tienes que ir al norte.
 
-—¿Por qué al norte
+—¿Por qué al norte?
 
 —Porque ahí es donde la red es más fuerte. Y porque ella te está esperando para hablar. No en sueños. En la tierra.
 
-El anciano señaló hacia la espesura, hacia una zona que James conocía de los mapas antiguos como un "punto ciego".
-Cuando los Baniwa se fueron, James se quitó la venda de la mano. La obsidiana brillaba con un pulso verde suave, sincronizado con el bosque.
+Mateo señaló hacia la espesura, hacia una zona que James conocía de los mapas antiguos como un "punto ciego". Cuando los Baniwa se fueron, desapareciendo en el recodo del río como fantasmas de la selva, James se quitó la venda de la mano. La obsidiana brillaba con un pulso verde suave, perfectamente sincronizado con el bosque.
 
 —¿Escucharon eso? —dijo James—. Aris no está solo en la nube. Está bajando a la tierra.
 
@@ -96,7 +92,7 @@ Cuando los Baniwa se fueron, James se quitó la venda de la mano. La obsidiana b
 
 —Internet biológico —confirmó James—. Creo que acabamos de encontrar nuestra línea telefónica segura.
 
-—Entonces no estamos huyendo —dijo Dos Santos, sonriendo—. Estamos reagrupándonos.
+—Entonces no estamos huyendo —dijo Dos Santos, sonriendo por primera vez en días—. Estamos reagrupándonos.
 
 James miró la selva. Ya no le parecía un infierno verde. Le parecía una placa base gigante.
 —Exacto. El mundo está despierto, pero todavía está aturdido. Nosotros tenemos que enseñarle a caminar.
