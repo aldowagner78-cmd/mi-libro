@@ -12,11 +12,11 @@
 
 La noche en el río no era negra; era una ausencia de color tan profunda que parecía sólida.
 
-El "Caribdis" avanzaba contra la corriente, su motor de aviación reducido a un ronroneo bajo para ahorrar combustible y reducir la **firma acústica ^[1]**. El haz del reflector de proa cortaba la oscuridad, iluminando troncos flotantes que parecían caimanes y caimanes que parecían troncos. A ambos lados, la selva era una pared de sombras que respiraba, llena de ojos que reflejaban la luz con un brillo depredador.
+El "Caribdis" avanzaba contra la corriente, su motor de aviación reducido a un ronroneo bajo para ahorrar combustible y reducir la **firma acústica**^[1]. El haz del reflector de proa cortaba la oscuridad, iluminando troncos flotantes que parecían caimanes y caimanes que parecían troncos. A ambos lados, la selva era una pared de sombras que respiraba, llena de ojos que reflejaban la luz con un brillo depredador.
 
 James Gordon estaba sentado en la popa, temblando. No era por el frío, aunque la temperatura había bajado. Era una fiebre interna, seca y eléctrica. Su mano derecha descansaba sobre su rodilla, pesada como un yunque. A la luz de la luna, la obsidiana negra parecía beberse la oscuridad. Las venas violetas pulsaban con un ritmo que no coincidía con su corazón. *Tum-tum-tum*. Rápido. Urgente. Como si estuviera procesando datos mientras él intentaba simplemente respirar.
 
-—Tienes fiebre —dijo Helena, apareciendo de la oscuridad con un botiquín de primeros auxilios. Su voz era dura, pero sus ojos estaban rojos. Había llorado por Ravi, pero lo había hecho en silencio, lejos de los hombres, para no romper la moral frágil del grupo.
+—Tienes fiebre —dijo Helena, apareciendo de la oscuridad con un botiquín de primeros auxilios. Tenía la voz dura, pero los ojos rojos. Había llorado por Ravi, pero lo había hecho en silencio, lejos de los hombres, para no romper la moral frágil del grupo.
 
 —Estoy bien —mintió James, cerrando el puño. El sonido de sus dedos al cerrarse fue el de dos piedras chocando—. Es solo... la integración. Mi sistema inmunológico está intentando rechazarlo, pero no puede. Ya no es un cuerpo extraño. Es mi cuerpo.
 
@@ -24,7 +24,7 @@ Helena se arrodilló frente a él y encendió una linterna química, bañándolo
 
 James extendió la mano. Helena contuvo una mueca. La transformación había avanzado. La piel negra y cristalina había subido por el antebrazo, desapareciendo bajo la manga de su camisa táctica sucia. Donde la carne humana se encontraba con el material alienígena, no había cicatriz, ni costra, ni sangre. Había una transición perfecta, un degradado molecular donde las células de la piel se convertían en... otra cosa.
 
-—No hay inflamación —observó Helena, tocando el borde de la transformación. Su dedo estaba caliente contra la frialdad de James—. No hay pus. No hay necrosis. James, esto no es una infección. Es una reescritura.
+—No hay inflamación —observó Helena, tocando el borde de la transformación. Tenía el dedo caliente contra la frialdad de James—. No hay pus. No hay necrosis. James, esto no es una infección. Es una reescritura.
 
 —Es una actualización —corrigió él, con una sonrisa que parecía una mueca de dolor.
 
@@ -32,7 +32,7 @@ James extendió la mano. Helena contuvo una mueca. La transformación había ava
 
 El nombre de Ravi cayó entre ellos como una piedra en el agua. Dos Santos, que estaba al timón, escupió al río. Kai, acurrucado junto a la caja de servidores, se abrazó las rodillas.
 
-—No está muerto —dijo Dos Santos, sin girarse. Su voz era grave, profesional—. Omni-Core no desperdicia activos. Ravi es un científico de Cambridge. Lo interrogarán. Le sacarán todo lo que sabe sobre nuestra ruta, sobre el Monolito, sobre tus teorías, Doc. Y luego... bueno, luego quizás tenga un accidente.
+—No está muerto —dijo Dos Santos sin girarse, con voz grave y profesional—. Omni-Core no desperdicia activos. Ravi es un científico de Cambridge. Lo interrogarán. Le sacarán todo lo que sabe sobre nuestra ruta, sobre el Monolito, sobre tus teorías, Doc. Y luego... bueno, luego quizás tenga un accidente.
 
 —Lo abandonamos —susurró Kai.
 
@@ -54,7 +54,7 @@ James se inclinó hacia adelante, bajando la voz. —Escúchenme todos. Lo que p
 
 El silencio que siguió fue absoluto. Solo el motor y los grillos. Dos Santos se giró lentamente. —¿Su hermana? ¿La que enterramos hace cinco años? Doc, con todo respeto, el estrés le está haciendo alucinar. Yo estuve en el funeral. Vi el ataúd.
 
-—Viste una caja de madera —dijo James. Su mente, potenciada por la conexión, empezó a atar cabos sueltos que durante años habían parecido coincidencias. Recuerdos, anomalías en sus cuentas bancarias, correos electrónicos crípticos que había ignorado—. Aris y yo escribimos el código base de AURA. Sé cómo piensa. Sé cómo estructura los datos. La interferencia que nos salvó hoy tenía su firma. Su sintaxis. Era como... como escuchar su voz en una habitación llena de ruido blanco.
+—Viste una caja de madera —dijo James, mientras su mente, potenciada por la conexión, empezaba a atar cabos sueltos que durante años habían parecido coincidencias. Recuerdos, anomalías en sus cuentas bancarias, correos electrónicos crípticos que había ignorado—. Aris y yo escribimos el código base de AURA. Sé cómo piensa. Sé cómo estructura los datos. La interferencia que nos salvó hoy tenía su firma. Su sintaxis. Era como... como escuchar su voz en una habitación llena de ruido blanco.
 
 —Si está viva —preguntó Helena, escéptica pero intrigada—, ¿dónde está? ¿Por qué no te ha contactado antes?
 
@@ -82,7 +82,7 @@ Helena lo miró, entendiendo a dónde iba. —James... no estarás pensando en e
 
 La "Zona Muerta" era una región de la selva alta, cerca de la frontera con Perú, que los locales evitaban. Decían que allí las brújulas no funcionaban y que la gente se olvidaba de su nombre. Geológicamente, era un laberinto de cañones de **karst**^[2] y cuevas inexploradas.
 
-—Es el único lugar donde sus satélites son ciegos —dijo James—. La **anomalía magnética ^[3]** es tan fuerte que bloqueará sus sensores. Y bloqueará mi señal también. Seremos invisibles.
+—Es el único lugar donde sus satélites son ciegos —dijo James—. La **anomalía magnética**^[3] es tan fuerte que bloqueará sus sensores. Y bloqueará mi señal también. Seremos invisibles.
 
 —Seremos invisibles porque estaremos perdidos —replicó Helena—. Nadie ha mapeado esa zona. Es un suicidio logístico.
 
@@ -92,7 +92,15 @@ La "Zona Muerta" era una región de la selva alta, cerca de la frontera con Per�
 
 —¿Te parece ciencia ficción? —James levantó su mano transformada y golpeó el metal del bote. El sonido resonó, y por un segundo, las luces del panel de control del barco parpadearon y cambiaron de color, de verde a violeta—. Mira mi mano, Dos Santos. La ciencia ficción se acabó esta mañana. Esto es la realidad. Hay una civilización durmiendo bajo nuestros pies, y vamos a usar su puerta trasera para entrar en su casa.
 
-Hubo un silencio largo. El río chapoteaba contra el casco. Helena miró la cruz en su pecho, luego miró la mano de James. —¿Y si llegamos a esa "Catedral de Hielo"? —preguntó—. ¿Qué pasa entonces? ¿Qué vas a hacer, James? ¿Vas a entregarnos a ellos? ¿Vas a dejar que te conviertan en... en polvo y datos?
+Hubo un silencio largo. El río chapoteaba contra el casco. 
+
+Kai miró el agua negra, abrazándose las rodillas. —Todavía espero que Ravi se queje de los mosquitos —susurró, con la voz rota—. O ver a Sarah regañándonos por el protocolo. No debió terminar así. No para ellos.
+
+Helena tocó la pequeña cruz de plata en su pecho, cerrando los ojos un instante. —Se quedaron atrás para que nosotros tuviéramos esta conversación —dijo, y por primera vez, su voz tembló—. Liam y Sarah compraron nuestros latidos con los suyos. Eso es una deuda que no se paga con datos, James.
+
+James abrió los ojos. El dolor físico de su mano era menos agudo que la culpa. —Eran científicos, no soldados. No firmaron para esto. —Miró a los supervivientes—. No dejaremos que sus nombres se borren. Si salimos de esta, me aseguraré de que el mundo sepa quiénes eran antes de que Omni-Core reescriba la historia.
+
+Helena miró la cruz en su pecho, luego miró la mano de James. —¿Y si llegamos a esa "Catedral de Hielo"? —preguntó—. ¿Qué pasa entonces? ¿Qué vas a hacer, James? ¿Vas a entregarnos a ellos? ¿Vas a dejar que te conviertan en... en polvo y datos?
 
 James miró la oscuridad. Recordó la sensación de paz absoluta. La tentación. Pero también recordó a Ravi cayendo al agua. Recordó a Aris en su prisión invisible. —No —dijo—. Voy a hacerles una oferta que no podrán rechazar. Voy a proponerles una alianza. Rodolfo quiere robar su tecnología. Yo quiero... quiero que nos enseñen a no extinguirnos.
 

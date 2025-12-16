@@ -26,17 +26,17 @@ Cuando cruzaron el umbral de la puerta de mercurio, James Gordon esperaba encont
 
 Antes de que alguien pudiera protestar, el suelo desapareció. O esa fue la sensación. No hubo ruido de motores. No hubo vibración. Solo una presión repentina y brutal en el estómago, la sensación inconfundible de la gravedad invirtiéndose. La cápsula no se movía por ruedas ni rieles. Estaba siendo acelerada magnéticamente dentro de un tubo de vacío.
 
-—¡Dios santo! —gritó Mateo, cayendo de rodillas y cubriéndose la cabeza, rezando en baniwa a espíritus que probablemente nunca habían viajado a **Mach 4**[^1].
+—¡Dios santo! —gritó Mateo, cayendo de rodillas y cubriéndose la cabeza, rezando en baniwa a espíritus que probablemente nunca habían viajado a **Mach 4**^[1].
 
 —¡Sujétense! —gritó Dos Santos, intentando mantenerse en pie, pero la fuerza G lo empujó contra la pared.
 
-James cerró los ojos. Para él, el viaje no era físico; era datos. A través de su mano, la cápsula le estaba hablando. Le mostraba la ruta. Un mapa tridimensional del subsuelo sudamericano se desplegó en su mente. Veía la **litosfera**[^2] como un sándwich de estratos geológicos. Veía los acuíferos subterráneos como venas azules. Y atravesándolo todo, como una aguja de plata, veía el túnel por el que viajaban. Era la "Vena". Un tubo de vacío de tres mil kilómetros de largo que conectaba el nodo de entrada en la Amazonía con el servidor central en los Andes.
+James cerró los ojos. Para él, el viaje no era físico; era datos. A través de su mano, la cápsula le estaba hablando. Le mostraba la ruta. Un mapa tridimensional del subsuelo sudamericano se desplegó en su mente. Veía la **litosfera**^[2] como un sándwich de estratos geológicos. Veía los acuíferos subterráneos como venas azules. Y atravesándolo todo, como una aguja de plata, veía el túnel por el que viajaban. Era la "Vena". Un tubo de vacío de tres mil kilómetros de largo que conectaba el nodo de entrada en la Amazonía con el servidor central en los Andes.
 
 —No hay fricción —murmuró James, con una sonrisa extática que contrastaba con el terror de sus compañeros—. Estamos viajando en un colchón de campos magnéticos superconductores. La eficiencia energética es del 99.9%.
 
 —¡Nos vamos a matar! —gritó Kai, con la cara verde—. ¡Siento que mis órganos están flotando!
 
-—Son los **amortiguadores inerciales**[^3] —dijo James, sin abrir los ojos—. La cápsula está manipulando la gravedad local para que no nos convirtamos en gelatina contra las paredes. A esta velocidad, sin protección, nuestros huesos se pulverizarían.
+—Son los **amortiguadores inerciales**^[3] —dijo James, sin abrir los ojos—. La cápsula está manipulando la gravedad local para que no nos convirtamos en gelatina contra las paredes. A esta velocidad, sin protección, nuestros huesos se pulverizarían.
 
 El viaje duró horas, o quizás minutos. En ese entorno estéril, sin ventanas y sin referencias, el tiempo subjetivo se disolvía. Era una privación sensorial de alta velocidad. James aprovechó la calma forzada para examinar su propia condición. La transformación de su brazo se había estabilizado. La piel negra y brillante llegaba ahora hasta su codo, terminando en un degradado perfecto donde el cristal se fundía con la carne. Podía sentir los huesos de su antebrazo cambiando, volviéndose más densos, reorganizando su estructura molecular en una red de carbono diamante. Lo más inquietante era que no le dolía. Al contrario. Sentía una fuerza vibrante, una claridad eléctrica. Su dolor de espalda crónico, esa hernia L4 que había sido su compañera de vida, había desaparecido por completo. *«Me estoy curando»*, pensó. *«O me están reemplazando.»*
 
@@ -84,10 +84,10 @@ James asintió. La euforia del viaje tecnológico se evaporó, reemplazada por l
 
 —Síganme —dijo James, echando a andar hacia la pared de hielo. Su mano de obsidiana brillaba en la oscuridad, pulsando con un calor radiante. Era la única fuente de calor en kilómetros a la redonda—. La señal viene de allí.
 
-**NOTAS AL PIE DEL CAPÍTULO 6**
+**NOTAS DEL CAPÍTULO 6**
 
-[^1]: **Mach 4:** Velocidad equivalente a cuatro veces la velocidad del sonido (aprox. 4.900 km/h). A esta velocidad, la fricción del aire convertiría cualquier vehículo convencional en una bola de fuego, por lo que el vacío es necesario. 
+**(1) Mach 4:** Velocidad equivalente a cuatro veces la velocidad del sonido (aprox. 4.900 km/h). A esta velocidad, la fricción del aire convertiría cualquier vehículo convencional en una bola de fuego, por lo que el vacío es necesario. 
 
-[^2]: **Litosfera:** La capa externa y rígida de la Tierra, que incluye la corteza y la parte superior del manto. Es donde ocurren los terremotos y donde se asientan las placas tectónicas. 
+**(2) Litosfera:** La capa externa y rígida de la Tierra, que incluye la corteza y la parte superior del manto. Es donde ocurren los terremotos y donde se asientan las placas tectónicas. 
 
-[^3]: **Amortiguadores Inerciales:** Tecnología teórica (común en ciencia ficción) que anula o reduce los efectos de la inercia y la fuerza G sobre los ocupantes de un vehículo que acelera rápidamente. Sin esto, la aceleración súbita licuaría los órganos internos.
+**(3) Amortiguadores Inerciales:** Tecnología teórica (común en ciencia ficción) que anula o reduce los efectos de la inercia y la fuerza G sobre los ocupantes de un vehículo que acelera rápidamente. Sin esto, la aceleración súbita licuaría los órganos internos.

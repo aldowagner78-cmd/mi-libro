@@ -62,7 +62,7 @@ James desplegó la pala y la clavó en el suelo. Esperaba la resistencia chiclos
 
 James se arrodilló, ignorando el pinchazo agónico en su lumbar. Tomó un puñado de tierra y lo desmenuzó. Sus manos se tiñeron de negro. No marrón oscuro. No gris ceniza. Negro absoluto. Un negro mate, profundo, que parecía tragarse la luz del sol que se filtraba por las hojas, negándose a reflejarla.
 
-—*Terra Preta*^[12] —susurró Helena, arrodillándose a su lado, sus ojos verdes muy abiertos.
+—*Terra Preta*^[11] —susurró Helena arrodillándose a su lado, con los ojos verdes muy abiertos.
 
 —Pero no es normal —dijo James, frotando el polvo entre sus dedos índice y pulgar. La textura era incorrecta. Era demasiado fina, demasiado sedosa. No había granos de sílice, ni restos de cerámica, ni fragmentos de hueso de pescado como en los yacimientos arqueológicos antropogénicos comunes—. Está fría.
 
@@ -76,15 +76,15 @@ James sacó una pequeña botella de reactivo químico de su chaleco (ácido clor
 
 —Repelente al agua —murmuró James—. Por eso no es un pantano. El suelo está diseñado para mantenerse seco.
 
-Se puso de pie, sacudiéndose las manos negras. Miró a su alrededor con ojos nuevos. Ya no veía solo árboles y maleza luchando por la luz. Empezaba a ver la anomalía. Los árboles en esta zona no crecían al azar. Si uno entrecerraba los ojos y miraba a través de la maraña verde, podía ver líneas. Corredores. La vegetación había colonizado una estructura que estaba debajo, creciendo en los huecos, evitando las zonas donde el suelo repelía sus raíces.
+Se puso de pie, sacudiéndose las manos negras. Miró a su alrededor con ojos nuevos. Ya no veía solo árboles y maleza luchando por la luz. Empezaba a ver la anomalía. Los árboles en esta zona no crecían al azar. Si uno entrecerrar los ojos y miraba a través de la maraña verde, podía ver líneas. Corredores. La vegetación había colonizado una estructura que estaba debajo, creciendo en los huecos, evitando las zonas donde el suelo repelía sus raíces.
 
-—Estamos caminando sobre un techo —dijo James, su voz ronca por la deshidratación.
+—Estamos caminando sobre un techo —dijo James con la voz ronca por la deshidratación.
 
 —¿Un techo de qué? —preguntó Helena, mirando el suelo con desconfianza—. ¿Una ciudad perdida? ¿El Dorado?
 
 —El Dorado era un cuento para que los conquistadores se perdieran y murieran buscando oro —dijo James con su cinismo habitual—. Esto no es oro. Esto es ingeniería. Mateo, ¿cuánto falta para la coordenada central que marcó el satélite?
 
-—Quinientos metros —dijo el guía, sin mirar atrás, con la espalda rígida—. Pero yo no paso de ese árbol de allá. El *Mapinguari*^[13] vive ahí. El que tiene una boca en la panza.
+—Quinientos metros —dijo el guía, sin mirar atrás, con la espalda rígida—. Pero yo no paso de ese árbol de allá. El *Mapinguari*^[12] vive ahí. El que tiene una boca en la panza.
 
 —Bien, tus incesantes supersticiones son un peso extra que no quiero cargar, espéranos aquí con los porteadores. Dos Santos, quédate con ellos y asegura el perímetro. Ravi, Kai, Helena, vengan conmigo. Traigan el escáner de penetración terrestre y el magnetómetro.
 

@@ -64,7 +64,7 @@ Rodolfo frunció el ceño. —Denegado. Quiero a Gordon vivo. Su cerebro es el �
 
 Rodolfo apagó el holograma con un gesto brusco de la mano. La habitación volvió a sumirse en la penumbra elegante. Caminó hacia el mueble bar y se sirvió un vaso de agua mineral. No bebía alcohol. El alcohol enturbiaba el juicio, y Rodolfo necesitaba cada neurona disparando a la máxima capacidad.
 
-Se sentó en su silla de cuero, girándose para mirar de nuevo a la ciudad gris. La gente pensaba que Omni-Core era una empresa de *Big Data*^[3]. Pensaban que vendían algoritmos de predicción bursátil o sistemas de logística para grandes conglomerados globales. Y era cierto, vendían todo eso. Pero esos eran los productos de escaparate. El verdadero negocio de Omni-Core era la Eternidad.
+Se sentó en su silla de cuero, girándose para mirar de nuevo a la ciudad gris. La gente pensaba que Omni-Core era una empresa de *Big Data*. Pensaban que vendían algoritmos de predicción bursátil o sistemas de logística para grandes conglomerados globales. Y era cierto, vendían todo eso. Pero esos eran los productos de escaparate. El verdadero negocio de Omni-Core era la Eternidad.
 
 El nombre de "Gordon" en la pantalla trajo consigo la memoria de una vida compartida que se sentía como una amputación fantasma.
 
@@ -118,7 +118,7 @@ Silas se ajustó el exoesqueleto ligero que cubría sus piernas. El servomecanis
 
 Silas se levantó y caminó hacia la rampa trasera, que comenzaba a abrirse. El ruido del viento y el olor a vegetación inundaron la cabina. Abajo, el dosel de la selva pasaba a doscientos kilómetros por hora, una alfombra verde interminable.
 
-—Escúchenme bien —gritó Silas por la red táctica, su voz sonando clara en los auriculares de su equipo—. Ya neutralizamos el nido de las ratas en el campamento, ahora vamos por la reina. El objetivo principal es el Doctor Gordon. Lo queremos vivo y consciente. Si pierde una pierna, me da igual, pero su cabeza tiene que estar intacta. La mujer y el chico son daños colaterales aceptables. Si estorban, elimínenlos. Pero no gasten munición en ellos si no es necesario.
+—Escúchenme bien —gritó Silas por la red táctica, mientras su voz sonaba clara en los auriculares de su equipo—. Ya neutralizamos el nido de las ratas en el campamento, ahora vamos por la reina. El objetivo principal es el Doctor Gordon. Lo queremos vivo y consciente. Si pierde una pierna, me da igual, pero su cabeza tiene que estar intacta. La mujer y el chico son daños colaterales aceptables. Si estorban, elimínenlos. Pero no gasten munición en ellos si no es necesario.
 
 —¿Qué hay de la "Anomalía", Jefe? —preguntó *Viper*, la francotiradora del equipo, mientras calibraba su mira térmica.
 

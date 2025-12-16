@@ -18,7 +18,7 @@ James Gordon estaba de pie en la proa, inmóvil como una gárgola. No tenía fr�
 
 Helena se acercó a Dos Santos, que peleaba con el timón. El ex-militar tenía la cara bañada en sudor frío. —Estamos ciegos —masculló Dos Santos, golpeando el tablero de instrumentos—. El magnetómetro está muerto. El escáner LIDAR no rebota. Incluso la brújula analógica gira como un trompo. Es la Zona Muerta.
 
-—La concentración de *Terra Preta* en el subsuelo es tan densa aquí que actúa como una **Jaula de Faraday ^[2]** geológica —explicó Helena, mirando su tablet con la pantalla en negro—. Absorbe el espectro electromagnético. Estamos invisibles para los satélites de Omni-Core, sí. Pero también estamos perdidos.
+—La concentración de *Terra Preta* en el subsuelo es tan densa aquí que actúa como una **Jaula de Faraday**^[2] geológica —explicó Helena, mirando su tablet con la pantalla en negro—. Absorbe el espectro electromagnético. Estamos invisibles para los satélites de Omni-Core, sí. Pero también estamos perdidos.
 
 —Si no tenemos instrumentos, no puedo navegar —Dos Santos bajó las revoluciones del motor hasta casi el ralentí—. El río está lleno de bancos de arena y troncos sumergidos. Si encallamos aquí, con el equipo de Rodolfo bloqueando la salida del cañón, seremos patos de feria.
 
@@ -26,13 +26,13 @@ James giró la cabeza. En la oscuridad, sus ojos reflejaron la luz tenue del pan
 
 Dos Santos lo miró, incrédulo. —Doc, si apago la luz, nos estrellamos en dos minutos. No se ve ni la mano delante de la cara.
 
-—La luz nos delata —dijo James, su voz sonando extrañamente metálica, desprovista de la fatiga que mostraba horas antes—. Los drones de Rodolfo pueden tener problemas con los sensores aquí dentro, pero sus cámaras ópticas siguen funcionando. Si ven un haz de luz en la oscuridad, nos dispararán un misil *Hellfire* a ciegas. Apaga la maldita luz.
+—La luz nos delata —dijo James con voz extrañamente metálica, desprovista de la fatiga que mostraba horas antes—. Los drones de Rodolfo pueden tener problemas con los sensores aquí dentro, pero sus cámaras ópticas siguen funcionando. Si ven un haz de luz en la oscuridad, nos dispararán un misil *Hellfire* a ciegas. Apaga la maldita luz.
 
 Dos Santos apretó la mandíbula, miró a Helena buscando apoyo, pero ella asintió levemente. El "clic" del interruptor sumió al barco en una negrura absoluta. El motor tosió. El sonido del agua golpeando el casco se amplificó, llenando el vacío visual.
 
 —Bien —dijo Dos Santos en la oscuridad—. Ahora somos invisibles. Y también estamos muertos. Dígame, Doc, ¿hacia dónde giro? Porque oigo agua rompiendo contra rocas a la derecha.
 
-James se agarró a la barandilla de proa con su mano de obsidiana. El metal estaba frío y húmedo. Cerró los ojos. No necesitaba ver. En la selva abierta, la conexión había sido caótica, llena de ruido biológico, árboles y animales gritando datos. Aquí, en la Zona Muerta, la señal era pura. Geometría sagrada. Debajo del lodo del río, enterrada bajo estratos de caliza, corría la "Autopista". Una línea de transmisión de **energía de punto cero ^[3]** que conectaba los nodos periféricos con el Núcleo en los Andes.
+James se agarró a la barandilla de proa con su mano de obsidiana. El metal estaba frío y húmedo. Cerró los ojos. No necesitaba ver. En la selva abierta, la conexión había sido caótica, llena de ruido biológico, árboles y animales gritando datos. Aquí, en la Zona Muerta, la señal era pura. Geometría sagrada. Debajo del lodo del río, enterrada bajo estratos de caliza, corría la "Autopista". Una línea de transmisión de **energía de punto cero**^[3] que conectaba los nodos periféricos con el Núcleo en los Andes.
 
 James sintió la vibración en sus huesos. Un zumbido grave, un Si bemol profundo que resonaba en los cristales de su brazo.
 
@@ -94,7 +94,7 @@ El grupo comenzó a caminar por la pasarela de material óseo. Helena miró haci
 
 Siguieron avanzando. A ambos lados, las cápsulas flotantes permanecían silenciosas, como centinelas dormidos. El túnel se extendía hacia el interior de la montaña, iluminado por la luz ámbar que emanaba de las propias paredes.
 
-Caminaron unos cientos de metros hasta que el pasillo terminó en un atrio circular inmenso. En el centro del atrio, había una puerta. Esta no era de piedra. Era de **metal líquido ^[4]**. Una superficie de mercurio vertical que ondulaba sin caerse, reflejando sus rostros distorsionados. Junto a la puerta, había un pedestal con una superficie negra, idéntica a la mano de James.
+Caminaron unos cientos de metros hasta que el pasillo terminó en un atrio circular inmenso. En el centro del atrio, había una puerta. Esta no era de piedra. Era de **metal líquido**^[4]. Una superficie de mercurio vertical que ondulaba sin caerse, reflejando sus rostros distorsionados. Junto a la puerta, había un pedestal con una superficie negra, idéntica a la mano de James.
 
 Kai se detuvo en seco, mirando la puerta ondulante con ojos desorbitados. Estaba temblando, pálido. —No —susurró el chico—. Esto está mal. Se siente mal. Es... es como entrar en la tripa de un monstruo que nos va a digerir.
 
@@ -132,7 +132,7 @@ Miró al ojo central de la máquina líder. —¡Soy el Portador! —bramó, pro
 
 Las torretas se detuvieron en seco, flotando a pocos metros de sus cabezas. Zumbaron, re-calculando. La voz sintética pareció dudar por un microsegundo. *«Código Omega-Nueve reconocido. Anulación de protocolo de seguridad. Usuario: Gordon, James... reclasificado. Estado: Invitado Condicional.»*
 
-Las armas se retrajeron hacia el techo. Frente a ellos, la inmensa pared de **metal líquido ^[5]** comenzó a ondular. La puerta de mercurio se disolvió, cayendo al suelo como lluvia plateada y revelando un pasillo de luz blanca cegadora que se adentraba en la roca. *«Pueden pasar. El Bibliotecario los espera.»*
+Las armas se retrajeron hacia el techo. Frente a ellos, la inmensa pared de **metal líquido**^[5] comenzó a ondular. La puerta de mercurio se disolvió, cayendo al suelo como lluvia plateada y revelando un pasillo de luz blanca cegadora que se adentraba en la roca. *«Pueden pasar. El Bibliotecario los espera.»*
 
 James se volvió hacia su equipo, que se levantaba lentamente del suelo duro, sacudiéndose el polvo. Estaban pálidos, sudorosos, al límite de su cordura.
 

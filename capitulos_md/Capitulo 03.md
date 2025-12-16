@@ -52,7 +52,7 @@ Al conectarse al árbol, su sistema nervioso, ya alterado por el contacto con el
 
 James vio. No con los ojos. Vio en su mente, proyectado sobre la oscuridad de sus párpados como un radar de control de tráfico aéreo. La selva se volvió una estructura de alambre verde neón. Vio los puntos de calor de su equipo a su alrededor. Y vio los puntos rojos que descendían del cielo a trescientos metros al este.
 
-—Están bajando —dijo James, su voz sonando metálica, vacía—. Dos helicópteros. Black Hawks modificados. Están desplegando infantería en el claro que acabamos de dejar.
+—Están bajando —dijo James con voz metálica, vacía—. Dos helicópteros. Black Hawks modificados. Están desplegando infantería en el claro que acabamos de dejar.
 
 Dos Santos se acercó, mirando la mano de James con una mezcla de repulsión y pragmatismo militar. —¿Cómo sabe eso, Doctor?
 
