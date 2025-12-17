@@ -3072,9 +3072,14 @@ function activateEditMode() {
 function makeContentEditable() {
     const paragraphs = document.querySelectorAll('#content p');
     paragraphs.forEach((p, index) => {
-        p.setAttribute('contenteditable', 'true');
+        // Guardar contenido original ANTES de hacer contenteditable
+        const originalHTML = p.innerHTML;
         p.setAttribute('data-index', index);
-        p.setAttribute('data-original', p.innerHTML); // Guardar contenido original
+        p.setAttribute('contenteditable', 'true');
+        // Esperar a que el navegador normalice el HTML, luego guardar ESE como original
+        setTimeout(() => {
+            p.setAttribute('data-original', p.innerHTML);
+        }, 0);
         p.addEventListener('input', () => markAsEdited(p));
         
         // Agregar botón de eliminar párrafo
