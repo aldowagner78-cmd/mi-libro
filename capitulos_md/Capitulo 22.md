@@ -7,6 +7,10 @@
 
 **CAPÍTULO 22: EL ESPECTRO DEL UAP**
 
+"Durante décadas, la comunidad científica ridiculizó el fenómeno OVNI (ahora UAP - Fenómenos Anómalos No Identificados) como folclore moderno, errores de percepción o delirios conspirativos. Era una postura de defensa inmunológica: la ciencia no podía tolerar datos que violaran sus paradigmas establecidos. Pero cuando el Pentágono confirmó la existencia de objetos que desafiaban la física conocida, la narrativa cambió de la noche a la mañana. Lo imposible se convirtió en 'amenaza a la seguridad nacional'. No pasamos de la incredulidad a la curiosidad; pasamos de la incredulidad al pánico militar. El Santuario es el UAP definitivo. Es la prueba física de que no somos la cúspide de la inteligencia. Y la respuesta humana ante un intelecto superior nunca es el diálogo; es el disparo preventivo. Como dijo Arthur C. Clarke: 'Cualquier tecnología suficientemente avanzada es indistinguible de la magia'. Y nosotros quemamos a los magos."
+
+— *Informe Clasificado "Proyecto Libro Azul 2.0".* Filtración de WikiLeaks, Noviembre 2026.
+
 *Mundo Exterior / Estratosfera.* *Espacio Aéreo Andino, Frontera Perú-Bolivia.* *16 de Octubre, 2026. 08:45 AM.*
 
 El cielo sobre los Andes ya no estaba vacío.

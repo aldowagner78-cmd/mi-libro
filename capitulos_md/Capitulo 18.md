@@ -7,6 +7,10 @@
 
 **CAPÍTULO 18: EL ENGAÑO DEL ESPEJISMO FINAL**
 
+*"La mejor manera de ocultar un elefante no es en un sótano oscuro, sino en un desfile de elefantes. Si quieres esconder una verdad peligrosa, no la censures; entiérrala bajo una montaña de verdades irrelevantes o mentiras fascinantes. Omni-Core ha dominado este arte durante décadas. Nos distraen con el nuevo modelo de teléfono para que no miremos las minas de cobalto. Nos distraen con debates estériles en redes sociales para que no miremos los algoritmos de manipulación masiva. Pero el 'Ojo de Dios' tiene un punto ciego: su propia arrogancia. Cree que lo ve todo. Para vencerlo, no necesitamos cegarlo. Solo necesitamos que mire hacia otro lado durante el nanosegundo exacto en que cambiamos las cartas de la mesa."*
+
+— **Manifiesto de 'La Cripta'.** *Protocolo de Inserción de Memes Subversivos, V.4.0, 2024.*
+
 **Mundo Físico. Catedral de Hielo.** **16 de Octubre, 2026. 07:50 AM.**
 
 La tensión en la caverna era un cable de acero estirado hasta el punto de ruptura. El aire olía a ozono residual de la descarga gravitacional y al miedo agrio de los hombres armados que acababan de ver cómo la arquitectura intentaba comérselos.

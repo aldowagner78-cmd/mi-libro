@@ -7,6 +7,12 @@
 
 **CAPÍTULO 3: EL ALGORITMO DE LA CACERÍA**
 
+*"En la naturaleza, no existe el asesinato; solo existe la transferencia de energía. Cuando un jaguar mata a un tapir, no hay malicia, hay termodinámica. El depredador reduce la entropía del sistema consumiendo orden biológico ajeno.*
+
+*El Mercado opera bajo la misma ley física, pero la hemos disfrazado con trajes de seda y consejos de administración. Una **OPA hostil**^[1] es una cacería. Una patente exclusiva es un territorio marcado con orina química. Omni-Core no es malvada por querer la inmortalidad para unos pocos. Simplemente es el depredador alfa en un ecosistema donde la compasión es una ineficiencia calórica. Y en la selva, ser ineficiente es sinónimo de estar extinto."*
+
+— **Dra. Amira Thorne.** *Notas personales encriptadas, recuperadas del Servidor 7, 2024.*
+
 **Cuenca del Río Negro, Amazonas. Sector de Evasión. 15 de Octubre, 2026. 10:15 AM.**
 
 La selva, que minutos antes había sido un templo de silencio estático, ahora gritaba.

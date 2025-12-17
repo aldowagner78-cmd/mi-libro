@@ -7,6 +7,10 @@
 
 **CAPÍTULO 12: EL NEUROPSICOANÁLISIS DEL EDÉN**
 
+*"El Edén no fue un lugar geográfico; fue un estado neuroquímico. Antes de la 'Caída', el cerebro humano no tenía la capacidad de disociar el 'Yo' del 'Otro'. Vivíamos en un estado de flujo continuo, sin autoconsciencia, sin culpa, sin tiempo. La 'Manzana' fue el desarrollo del córtex prefrontal^[1]: la capacidad de prever el futuro y, por tanto, la muerte. Este Santuario es un intento de ingeniería inversa para volver al Edén. Pero hay un problema: no puedes volver al útero sin destruir al adulto. Para entrar en este paraíso digital, debes renunciar a la herramienta que te hace humano: tu ansiedad por el futuro. Debes aceptar ser un niño eterno en un jardín de silicio."*
+
+— **Dra. Helena Jenkins.** *Diario de campo, reflexión sobre la teología de la simulación.*
+
 **Mundo Virtual / Capa de Interfaz.** **Tiempo Subjetivo: Indeterminado.**
 
 James abrió los ojos.

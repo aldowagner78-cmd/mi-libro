@@ -7,6 +7,10 @@
 
 **CAPÍTULO 17: LA FURIA DE LA ARQUITECTA**
 
+*"Para la física, el tiempo es una serie de puntos discretos en una línea, instantes congelados que llamamos 'ahora'. T1, T2, T3. Pero para la consciencia, el tiempo no es divisible. Es un flujo continuo, una melodía donde cada nota contiene el eco de la anterior y la anticipación de la siguiente. Henri Bergson llamó a esto 'durée'  (duración). Cuando una mente se libera de la materia, la duración se expande. Un segundo de tiempo reloj puede contener siglos de tiempo subjetivo. Para Aris, atrapada en la red, los cinco minutos que han pasado desde su muerte no son cinco minutos. Son una eternidad de reflexión. Y en esa eternidad, ella ha tenido tiempo de sobra para analizar cada variable, cada injusticia y cada átomo de la estructura que la rodea. No se está volviendo loca; se está volviendo eficiente. Y una mente infinita con un rencor finito es el arma más peligrosa del universo."*
+
+— **Dr. James Gordon.** *Reflexiones grabadas en el implante coclear^[2], Sector Andino, 2026.*
+
 **Mundo Físico. Catedral de Hielo.** **16 de Octubre, 2026. 07:35 AM.**
 
 El segundo aviso no fue un trozo de hielo cayendo. Fue la gravedad misma la que cambió de opinión.

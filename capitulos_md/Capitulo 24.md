@@ -7,6 +7,10 @@
 
 **CAPÍTULO 24: COLISIÓN DE VOLUNTADES**
 
+"La nanotecnología no es mecánica; es biológica. No construimos máquinas pequeñas con engranajes; cultivamos cristales que siguen instrucciones de ADN. El Santuario no fue construido; fue plantado. Cuando James Gordon toca la piedra, no está usando una herramienta. Está haciendo un injerto. Su cuerpo se ha convertido en el suelo donde la tecnología de los Antiguos echa raíces. Y como en cualquier injerto, existe el riesgo de rechazo. Pero si el injerto prende... el resultado no es humano ni máquina. Es una nueva taxonomía. James ya no es un hombre con una prótesis. Es el primer brote de una nueva especie."
+
+— *Dra. Amira Thorne.* Notas de laboratorio recuperadas, Proyecto Aion, 2021.
+
 *Mundo Físico. Catedral de Hielo.* *16 de Octubre, 2026. 09:10 AM.*
 
 James Gordon no estaba muerto, pero deseaba estarlo.

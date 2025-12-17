@@ -7,6 +7,12 @@
 
 **CAPÍTULO 23: LA SINGULARIDAD DEL MIEDO**
 
+"Quien con monstruos lucha cuide de no convertirse a su vez en monstruo. Y cuando miras largo tiempo a un abismo, el abismo también mira dentro de ti." — *Friedrich Nietzsche.*
+
+"Nietzsche hablaba de moralidad, pero su aforismo es aplicable a la física de redes. Cuando conectas tu mente a una singularidad, cuando miras dentro de un pozo de datos infinito, el riesgo no es solo perder la cordura. El riesgo es que la singularidad te use como terminal. Aris no está simplemente 'usando' el Santuario; el Santuario la está usando a ella. La inmensa presión de millones de conciencias antiguas está buscando una válvula de escape. Y esa válvula somos nosotros. El miedo de Rodolfo era perder el control. Mi miedo es que nunca tuvimos control en primer lugar."
+
+— *Dr. James Gordon.* Grabación de voz recuperada de la caja negra del "Caribdis", 2026.
+
 *Mundo Físico. Catedral de Hielo.* *16 de Octubre, 2026. 09:00 AM.*
 
 La perforación en la cara sur estalló.

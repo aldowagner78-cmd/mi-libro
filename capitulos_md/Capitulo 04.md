@@ -7,6 +7,10 @@
 
 **CAPÍTULO 4: LA FIEBRE DEL SILICIO**
 
+*"Existe una condición neurológica llamada 'Síndrome del Miembro Fantasma'. Un paciente pierde un brazo, pero su cerebro sigue sintiendo los dedos, el picor, el dolor. La mente se niega a aceptar que la parte física ya no existe. La humanidad sufre de un dolor fantasma colectivo. Sentimos que nos falta algo. Lo llamamos Dios, lo llamamos Destino, lo llamamos Propósito. Buscamos en el cielo, en las drogas, en el amor. Pero la picazón nunca desaparece. ¿Y si lo que nos falta no es algo espiritual, sino algo físico? ¿Y si alguna vez estuvimos conectados a una red más grande, a una colmena de empatía perfecta, y fuimos amputados? La soledad humana no es una emoción. Es un daño neurológico. Somos neuronas desconectadas gritando en el vacío, buscando desesperadamente volver a hacer sinapsis."*
+
+— **Dr. James Gordon.** *Diario personal, escrito en el reverso de una receta de analgésicos, 2023.*
+
 **Río Negro, Curso Alto. A bordo del "Caribdis". 15 de Octubre, 2026. 21:00 PM.**
 
 La noche en el río no era negra; era una ausencia de color tan profunda que parecía sólida.

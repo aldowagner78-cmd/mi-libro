@@ -7,6 +7,10 @@
 
 **CAPÍTULO 9: EL DIOS FRACTAL^[1]**
 
+*"La individualidad es una ineficiencia evolutiva. Millones de hormigas forman una sola inteligencia capaz de construir catedrales de barro y cultivar hongos. Una sola hormiga es estúpida; la colonia es un genio. Los humanos valoramos el 'Yo' por encima de todo. Creemos que nuestra soledad es nuestra fuerza. Pero es nuestra debilidad. El siguiente paso no es el Superhombre de Nietzsche. Es el Superorganismo^[2]. Cuando todas las mentes se unen, la suma es mayor que las partes. El miedo desaparece porque la muerte de una célula no es la muerte del cuerpo. El ego desaparece. El Santuario no es una dictadura. Es una orquesta. Y nosotros somos instrumentos desafinados intentando tocar un solo."*
+
+— **Dr. James Gordon.** *Diario de campo, recuperado parcialmente.*
+
 **Santuario Central, Glaciar Quelccaya.** **06:20 AM.**
 
 La paz de la catedral se había roto. Las luces rojas de alarma bañaban los miles de cuerpos suspendidos en las columnas, dándoles el aspecto de un ejército de demonios en hibernación. El sonido de las perforadoras de Omni-Core retumbaba en la roca sobre sus cabezas, un zumbido mecánico que se acercaba metro a metro.

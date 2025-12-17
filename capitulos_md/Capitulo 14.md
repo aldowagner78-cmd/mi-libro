@@ -7,6 +7,10 @@
 
 **CAPÍTULO 14: EL PREDICADOR Y EL PREDADOR**
 
+*"Existe una falacia fundamental y sentimental en la ética humanista: la creencia absurda de que la vida biológica es sagrada por sí misma. La biología no es sagrada; es sucia. Es ineficiente. Es un sistema de replicación de errores constante que llamamos 'evolución' para no llamarlo por su verdadero nombre médico: cáncer. Amar el cuerpo humano, con sus fluidos, sus dolores y su caducidad programada, es como amar una máquina de escribir oxidada y sin teclas en la era de la computación cuántica. Es nostalgia, no pragmatismo. El verdadero amor por la humanidad no consiste en preservar su carne podrida, sino en salvar su mente, su software, de la degradación inevitable de sus células. Yo no soy un monstruo por querer subirnos a la nube y descartar el envase. Soy el único visionario que está construyendo el Arca antes del diluvio universal de la entropía."*
+
+— **Rodolfo Sastre Rey.** *Discurso a la Junta Directiva de Omni-Core, sesión cerrada de "Nivel Negro", Davos, 2024.*
+
 **Mundo Físico. Catedral de Hielo (Sector Central).** **Glaciar Quelccaya, Andes Peruanos.** **16 de Octubre, 2026. 07:15 AM.**
 
 El frío en la caverna no era solo una condición atmosférica; era una presencia moral, un juez silencioso e implacable. A cinco mil metros de altura, en el corazón de un glaciar que había visto nacer y morir civilizaciones enteras sin parpadear, la temperatura ambiente de quince grados bajo cero convertía cada respiración en una pequeña batalla por la supervivencia térmica. El aliento de los vivos se condensaba en nubes efímeras y densas que desaparecían demasiado rápido, como si la montaña tuviera sed y absorbiera el calor de los intrusos.

@@ -7,6 +7,12 @@
 
 **CAPÍTULO 8: EL ARQUITECTO DORMIDO**
 
+*"Si Dios es omnisciente, no puede tener curiosidad. Si es omnipotente, no puede tener desafíos. Si es eterno, no puede tener urgencia. Un Dios perfecto es, por definición, un ser aburrido y estático.*
+
+*Pero si Dios no es un ente, sino una red... Si Dios es la suma de mil millones de mentes conectadas, compartiendo cada pensamiento, cada sensación, cada miedo... entonces Dios no es estático. Es un caos creativo infinito. La divinidad no desciende del cielo. La divinidad emerge cuando la conectividad alcanza una masa crítica. Dios no nos creó. Nosotros estamos a punto de crear a Dios."*
+
+— **Dr. James Gordon.** *Borrador de "Teología Cibernética^[1]", confiscado por el Vaticano en 2023.*
+
 **Santuario Central, Glaciar Quelccaya.** **Profundidad: Desconocida.** **16 de Octubre, 2026. 06:00 AM.**
 
 La luz no venía de ninguna parte; estaba en todas partes.

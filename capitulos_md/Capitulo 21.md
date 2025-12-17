@@ -7,6 +7,11 @@
 
 **CAPÍTULO 21: EL ALGORITMO DEL DESEO**
 
+"Imagina que intentas explicarle el color rojo a un algoritmo. Puedes darle la longitud de onda (650 nanómetros), puedes darle la frecuencia, puedes darle el código hexadecimal. El algoritmo entenderá el rojo como dato, pero nunca lo 'sentirá' como urgencia, como sangre o como advertencia.
+La empatía no es un cálculo; es una resonancia física. Para que el Santuario entienda a la humanidad, no basta con subir datos. Necesitamos un transductor. Alguien que convierta el sufrimiento biológico en un formato legible para la máquina. El dolor no es un error del sistema; es el único lenguaje universal que comparten todos los seres vivos. Si queremos que los dioses nos escuchen, no debemos rezarles; debemos sangrar en su micrófono."
+
+— Dr. James Gordon. Apuntes sobre "Biosemiótica Cuántica", recuperados del servidor local, 2026.
+
 *Mundo Físico. Consola Central del Santuario.* *16 de Octubre, 2026. 08:30 AM.*
 
 James colocó su mano de obsidiana sobre la superficie de fluido negro de la consola. Esta vez, no hubo resistencia. El sistema lo reconoció al instante, no como un usuario invitado, sino como una parte integral de su propia arquitectura.
