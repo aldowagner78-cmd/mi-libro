@@ -3074,6 +3074,7 @@ function makeContentEditable() {
     paragraphs.forEach((p, index) => {
         p.setAttribute('contenteditable', 'true');
         p.setAttribute('data-index', index);
+        p.setAttribute('data-original', p.innerHTML); // Guardar contenido original
         p.addEventListener('input', () => markAsEdited(p));
         
         // Agregar botón de eliminar párrafo
@@ -3150,16 +3151,22 @@ function saveEdits() {
     paragraphs.forEach((p) => {
         const index = p.getAttribute('data-index');
         const key = `${prefix}_p${index}`;
+        const originalContent = p.getAttribute('data-original') || '';
+        const currentContent = p.innerHTML;
         
         // Si está marcado para eliminar
         if (parrafosEliminados.has(index)) {
             edits[key] = ""; // Marcar como eliminado (string vacío)
             changesCount++;
         } 
-        // Si tiene borde verde (fue editado)
-        else if (p.style.borderLeft.includes('10b981')) {
-            edits[key] = p.innerHTML;
+        // Si el contenido cambió (comparar con original)
+        else if (currentContent !== originalContent) {
+            edits[key] = currentContent;
             changesCount++;
+            // Marcar visualmente
+            if (!p.style.borderLeft.includes('10b981')) {
+                p.style.borderLeft = '3px solid #10b981';
+            }
         }
     });
     
