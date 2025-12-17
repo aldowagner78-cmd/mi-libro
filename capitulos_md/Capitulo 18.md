@@ -28,7 +28,7 @@ Rodolfo escuchaba. Sus ojos se movían, procesando la amenaza. Era un hombre de 
 
 —¿Y qué propones? —preguntó Rodolfo.
 
-—Una filtración controlada —dijo James—. Kai puede preparar un paquete de datos. Imágenes del Santuario. Datos preliminares sobre la preservación criogénica^[1] de los Antiguos. Pruebas de que Amira Thorne está "viva" en el sistema. Lo lanzamos a la red global ahora mismo. Lo presentamos como una *joint venture* entre Omni\-Core y mi equipo académico.
+—Una filtración controlada —dijo James—. Kai puede preparar un paquete de datos. Imágenes del Santuario. Datos preliminares sobre la preservación criogénica^[1] de los Antiguos. Pruebas de que Aris está "viva" en el sistema. Lo lanzamos a la red global ahora mismo. Lo presentamos como una *joint venture* entre Omni\-Core y mi equipo académico.
 
 James dio un paso adelante, soltándose de Helena. —Tú te llevas el crédito, Rodolfo. Serás el Colón del siglo XXI. El hombre que descubrió la vida eterna. Las acciones de Omni\-Core se dispararán tanto que podrás comprar países enteros. Y a cambio... nosotros salimos vivos. Nos dejas ir. Y te quedas con tu montaña y tus fantasmas.
 

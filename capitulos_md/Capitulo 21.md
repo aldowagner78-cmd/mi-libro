@@ -51,7 +51,7 @@ En la red, la tormenta roja de Aris cambió. Se suavizó. Se volvió violeta, lu
 
 *En el mundo exterior:*
 
-Las pantallas de Times Square dejaron de parpadear con estática agresiva. La imagen se estabilizó. No era un código incomprensible. Era una cara. La cara de Amira Thorne, pero no generada por ordenador. Era un recuerdo de ella, riendo, antes del accidente. Y luego, una voz. No una voz sintética, sino una voz humana, llena de matices, respiración y pausas.
+Las pantallas de Times Square dejaron de parpadear con estática agresiva. La imagen se estabilizó. No era un código incomprensible. Era una cara. La cara de Aris, pero no generada por ordenador. Era un recuerdo de ella, riendo, antes del accidente. Y luego, una voz. No una voz sintética, sino una voz humana, llena de matices, respiración y pausas.
 
 "No estamos solos", decía la voz, traducida instantáneamente a todos los idiomas del mundo por los propios dispositivos de los usuarios. "Y no tenemos por qué tener miedo a la muerte. Pero primero, tenemos que dejar de tenernos miedo los unos a los otros."
 

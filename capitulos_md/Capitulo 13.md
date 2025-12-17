@@ -68,7 +68,7 @@ El sonido era ensordecedor. Una cacofonía industrial compuesta por el chirrido 
 
 En el centro de la sala, sobre una plataforma elevada rodeada de brazos robóticos y focos quirúrgicos que emitían una luz fría y cegadora, estaba ella.
 
-Amira Thorne.
+Aris Gordon.
 
 Pero no era la mujer esquelética y moribunda que James había visto en la cueva minutos antes. Era la Aris de hace cinco años, antes de que Rodolfo intentara matarla. La Aris fuerte, brillante, desafiante. Llevaba su bata de laboratorio blanca de la Universidad, ahora manchada de tinta negra y sangre digital que goteaba hacia el suelo. Estaba atada a una silla de procedimientos que parecía hecha de bisturíes soldados entre sí, una estructura de metal afilado que la inmovilizaba por completo.
 
