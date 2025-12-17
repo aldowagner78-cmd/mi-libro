@@ -1472,6 +1472,57 @@
             opacity: 0.9;
             transform: translateY(-2px);
         }
+        
+        /* Botón de eliminar párrafo */
+        .delete-paragraph-btn {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 26px;
+            height: 26px;
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 14px;
+            opacity: 0;
+            transition: all 0.2s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+        }
+        
+        .edit-mode-active #content p {
+            position: relative;
+        }
+        
+        .edit-mode-active #content p:hover .delete-paragraph-btn {
+            opacity: 1;
+        }
+        
+        .delete-paragraph-btn:hover {
+            background: #dc2626;
+            transform: scale(1.15);
+        }
+        
+        /* Contador de cambios */
+        #changeCounter {
+            margin-left: auto;
+            padding: 8px 16px;
+            background: var(--accent);
+            color: white;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            display: none;
+        }
+        
+        #changeCounter.active {
+            display: block;
+        }
 
         /* ===================== RESPONSIVE ===================== */
         @media(max-width: 600px) {
@@ -2857,11 +2908,12 @@ loadChapter = function(n) {
 </div>
 
 <div class="edit-controls" id="editControls">
-    <button class="btn-save" onclick="saveEdits()">💾 Guardar y Exportar</button>
+    <button class="btn-save" onclick="saveEdits()">💾 Guardar</button>
     <button class="btn-note" onclick="insertFootnote()" title="Insertar nota al pie (Ctrl+Shift+N)">📝 Insertar Nota</button>
     <button class="btn-renumber" onclick="renumberFootnotes()" title="Renumerar todas las notas">🔢 Renumerar Notas</button>
     <button class="btn-delete-note" onclick="toggleDeleteNoteMode()" title="Activar modo eliminar notas">🗑️ Eliminar Nota</button>
     <button class="btn-exit" onclick="exitEditMode()">❌ Salir</button>
+    <span id="changeCounter"></span>
 </div>
 
 <div class="edit-modal" id="noteModal">
@@ -2945,6 +2997,9 @@ function hideConfirm(result) {
 }
 
 // ========== MODO EDICIÓN ==========
+let cambiosPendientes = {}; // Objeto para acumular cambios
+let parrafosEliminados = new Set(); // Set para párrafos eliminados
+
 function showEditModal() {
     document.getElementById('editModal').style.display = 'flex';
     document.getElementById('editPassword').value = '';
@@ -2959,6 +3014,8 @@ function activateEditMode() {
     const password = document.getElementById('editPassword').value;
     if (password === EDIT_PASSWORD) {
         editMode = true;
+        cambiosPendientes = {}; // Limpiar cambios previos (objeto vacío)
+        parrafosEliminados = new Set();
         document.body.classList.add('edit-mode-active');
         document.getElementById('editControls').classList.add('active');
         
@@ -2969,6 +3026,7 @@ function activateEditMode() {
         makeContentEditable();
         closeEditModal();
         loadSavedEdits();
+        updateChangeCounter();
         showNotification('✅', 'Modo edición activado. Haz clic en cualquier párrafo para editarlo.');
     } else {
         showNotification('❌', 'Contraseña incorrecta');
@@ -2982,11 +3040,57 @@ function makeContentEditable() {
         p.setAttribute('contenteditable', 'true');
         p.setAttribute('data-index', index);
         p.addEventListener('input', () => markAsEdited(p));
+        
+        // Agregar botón de eliminar párrafo
+        if (!p.querySelector('.delete-paragraph-btn')) {
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'delete-paragraph-btn';
+            deleteBtn.innerHTML = '🗑️';
+            deleteBtn.title = 'Eliminar párrafo';
+            deleteBtn.onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                deleteParagraph(p);
+            };
+            p.style.position = 'relative';
+            p.appendChild(deleteBtn);
+        }
     });
 }
 
 function markAsEdited(element) {
     element.style.borderLeft = '3px solid #10b981';
+    // No incrementar contador aquí, solo en saveEdits()
+}
+
+function deleteParagraph(paragraph) {
+    showConfirm('¿Eliminar este párrafo?', (confirmed) => {
+        if (confirmed) {
+            const index = paragraph.getAttribute('data-index');
+            parrafosEliminados.add(index);
+            
+            // Marcar visualmente como eliminado
+            paragraph.style.opacity = '0.3';
+            paragraph.style.textDecoration = 'line-through';
+            paragraph.style.borderLeft = '3px solid #ef4444';
+            paragraph.setAttribute('contenteditable', 'false');
+            
+            showNotification('🗑️', 'Párrafo marcado para eliminar. Guarda cambios para aplicar.');
+        }
+    });
+}
+
+function updateChangeCounter() {
+    const counter = document.getElementById('changeCounter');
+    if (counter) {
+        const total = Object.keys(cambiosPendientes).length + parrafosEliminados.size;
+        if (total > 0) {
+            counter.textContent = `${total} cambio${total !== 1 ? 's' : ''} pendiente${total !== 1 ? 's' : ''}`;
+            counter.classList.add('active');
+        } else {
+            counter.classList.remove('active');
+        }
+    }
 }
 
 function saveEdits() {
@@ -3006,23 +3110,33 @@ function saveEdits() {
         prefix = `sec_${sectionKey}`;
     }
     
+    let changesCount = 0;
+    
     paragraphs.forEach((p) => {
         const index = p.getAttribute('data-index');
-        edits[`${prefix}_p${index}`] = p.innerHTML;
+        const key = `${prefix}_p${index}`;
+        
+        // Si está marcado para eliminar
+        if (parrafosEliminados.has(index)) {
+            edits[key] = ""; // Marcar como eliminado (string vacío)
+            changesCount++;
+        } 
+        // Si tiene borde verde (fue editado)
+        else if (p.style.borderLeft.includes('10b981')) {
+            edits[key] = p.innerHTML;
+            changesCount++;
+        }
     });
     
-    localStorage.setItem('bookEdits', JSON.stringify(edits));
-    
-    // Exportar automáticamente el JSON para aplicar con el script
-    const blob = new Blob([JSON.stringify(edits, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `ediciones_libro_${new Date().toISOString().split('T')[0]}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-    
-    showNotification('✅', 'Cambios guardados y exportados. Ejecuta el script PowerShell para aplicar las correcciones.');
+    // Guardar en memoria temporal (no exportar todavía)
+    if (changesCount > 0) {
+        cambiosPendientes = edits;
+        localStorage.setItem('bookEdits', JSON.stringify(edits));
+        updateChangeCounter();
+        showNotification('💾', `${changesCount} cambio(s) guardado(s) temporalmente. Salir del modo edición para exportar.`);
+    } else {
+        showNotification('ℹ️', 'No hay cambios para guardar');
+    }
 }
 
 function loadSavedEdits() {
@@ -3058,14 +3172,17 @@ function loadSavedEdits() {
 }
 
 function exportEdits() {
-    const saved = localStorage.getItem('bookEdits');
-    if (!saved) {
+    // Exportar cambios acumulados si existen, si no, exportar desde localStorage
+    const editsToExport = Object.keys(cambiosPendientes).length > 0 
+        ? cambiosPendientes 
+        : JSON.parse(localStorage.getItem('bookEdits') || '{}');
+    
+    if (Object.keys(editsToExport).length === 0) {
         showNotification('⚠️', 'No hay cambios para exportar');
         return;
     }
     
-    const edits = JSON.parse(saved);
-    const blob = new Blob([JSON.stringify(edits, null, 2)], { type: 'application/json' });
+    const blob = new Blob([JSON.stringify(editsToExport, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -3073,27 +3190,75 @@ function exportEdits() {
     a.click();
     URL.revokeObjectURL(url);
     
-    showNotification('✅', 'Archivo de cambios descargado. Envíamelo para aplicar las correcciones.');
+    const total = Object.keys(editsToExport).length;
+    showNotification('✅', `${total} cambio(s) exportado(s). Ejecuta el script PowerShell para aplicarlos.`);
 }
 
 function exitEditMode() {
-    showConfirm('¿Salir del modo edición? Los cambios guardados se mantendrán.', (confirmed) => {
-        if (confirmed) {
-            editMode = false;
-            document.body.classList.remove('edit-mode-active');
-            document.getElementById('editControls').classList.remove('active');
-            
-            // Mostrar botón de modo edición nuevamente
-            const editBtn = document.querySelector('.edit-mode-btn');
-            if (editBtn) editBtn.style.display = 'flex';
-            
-            const paragraphs = document.querySelectorAll('#content p');
-            paragraphs.forEach(p => {
-                p.setAttribute('contenteditable', 'false');
-                p.style.borderLeft = '';
-            });
-        }
+    const totalChanges = Object.keys(cambiosPendientes).length;
+    
+    if (totalChanges > 0) {
+        showConfirm(`Tienes ${totalChanges} cambio(s) sin exportar. ¿Deseas exportar antes de salir?`, (confirmed) => {
+            if (confirmed) {
+                // Exportar JSON con TODOS los cambios acumulados
+                const blob = new Blob([JSON.stringify(cambiosPendientes, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `ediciones_libro_${new Date().toISOString().split('T')[0]}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+                
+                showNotification('✅', `${totalChanges} cambio(s) exportados correctamente.`);
+                
+                // Limpiar y salir
+                finalizarSalidaModoEdicion();
+            } else {
+                // Preguntar si desea descartar cambios
+                showConfirm('¿Descartar todos los cambios sin exportar?', (discardConfirmed) => {
+                    if (discardConfirmed) {
+                        localStorage.removeItem('bookEdits');
+                        cambiosPendientes = [];
+                        parrafosEliminados = new Set();
+                        finalizarSalidaModoEdicion();
+                        showNotification('🗑️', 'Cambios descartados');
+                    }
+                });
+            }
+        });
+    } else {
+        showConfirm('¿Salir del modo edición?', (confirmed) => {
+            if (confirmed) {
+                finalizarSalidaModoEdicion();
+            }
+        });
+    }
+}
+
+function finalizarSalidaModoEdicion() {
+    editMode = false;
+    cambiosPendientes = {}; // Limpiar cambios pendientes
+    parrafosEliminados = new Set(); // Limpiar párrafos eliminados
+    document.body.classList.remove('edit-mode-active');
+    document.getElementById('editControls').classList.remove('active');
+    
+    // Mostrar botón de modo edición nuevamente
+    const editBtn = document.querySelector('.edit-mode-btn');
+    if (editBtn) editBtn.style.display = 'flex';
+    
+    const paragraphs = document.querySelectorAll('#content p');
+    paragraphs.forEach(p => {
+        p.setAttribute('contenteditable', 'false');
+        p.style.borderLeft = '';
+        p.style.opacity = '';
+        p.style.textDecoration = '';
+        
+        // Eliminar botones de borrar
+        const deleteBtn = p.querySelector('.delete-paragraph-btn');
+        if (deleteBtn) deleteBtn.remove();
     });
+    
+    updateChangeCounter();
 }
 
 // ============= SISTEMA DE RESALTADO =============
