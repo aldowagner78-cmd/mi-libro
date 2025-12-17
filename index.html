@@ -2370,6 +2370,7 @@ function setupNotesWithJSON(notesData) {
     const content = document.getElementById('content');
     if (!content) return;
     
+    // Buscar todos los SUP en el contenido
     const allSups = content.querySelectorAll('sup');
     
     allSups.forEach((sup) => {
@@ -2380,26 +2381,26 @@ function setupNotesWithJSON(notesData) {
             const noteNum = numMatch[1];
             
             if (notesData[noteNum]) {
-                // CAMBIO CLAVE: Guardamos la definición en el DOM para que sea portable
-                // Reemplazamos comillas simples para evitar romper el HTML
+                // 1. INCRUSTAR DEFINICIÓN (Hidratación de datos)
                 let safeDefinition = notesData[noteNum].replace(/'/g, "&#39;");
-                sup.setAttribute('data-note', safeDefinition);
+                sup.setAttribute('data-note', safeDefinition); 
                 
+                // 2. ESTILOS VISUALES
                 sup.style.cursor = 'pointer';
                 sup.style.color = 'var(--accent)';
                 sup.style.textDecoration = 'none';
                 sup.style.borderBottom = '1px dotted var(--accent)';
                 sup.title = `Ver nota ${noteNum}`;
                 
-                // Limpiamos listeners previos clonando
+                // 3. EVENT LISTENER (Leemos SIEMPRE del atributo data-note)
                 const newSup = sup.cloneNode(true);
                 sup.parentNode.replaceChild(newSup, sup);
                 
                 newSup.addEventListener('click', (e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    // Ahora leemos siempre del atributo data-note (la fuente de verdad)
-                    const def = newSup.getAttribute('data-note');
+                    // AQUÍ ESTÁ LA CLAVE: Leer del atributo, no del array global
+                    const def = newSup.getAttribute('data-note'); 
                     showNote(def);
                 });
             }
