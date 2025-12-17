@@ -6,7 +6,7 @@
 
 *"El frío es el estado natural del universo. El calor es una anomalía temporal, un accidente de estrellas quemando hidrógeno. La vida biológica es una lucha constante y desesperada por mantener una temperatura interna de 37 grados en un universo que quiere estar a -270. Es una batalla perdida de antemano. La entropía siempre gana. El calor siempre se disipa. Pero la información... la información no necesita calor. Los superconductores funcionan mejor cerca del cero absoluto. El ruido térmico desaparece. La resistencia eléctrica desaparece. Quizás la muerte no es el final de la consciencia. Quizás es simplemente el sistema de refrigeración activándose para que el procesador pueda trabajar a máxima eficiencia."*
 
-— **Dra. Amira Thorne.** *Tesis doctoral sobre "Computación Criogénica y Sustratos Neurales", 2018.*
+— **Dra. Aris Gordon.** *Tesis doctoral sobre "Computación Criogénica y Sustratos Neurales", 2018.*
 
 **Glaciar Quelccaya, Cordillera de los Andes.** **Altitud: 5.200 m.s.n.m.** **16 de Octubre, 2026. 05:30 AM.**
 
