@@ -2370,7 +2370,6 @@ function setupNotesWithJSON(notesData) {
     const content = document.getElementById('content');
     if (!content) return;
     
-    // Buscar todos los SUP en el contenido
     const allSups = content.querySelectorAll('sup');
     
     allSups.forEach((sup) => {
@@ -2380,20 +2379,28 @@ function setupNotesWithJSON(notesData) {
         if (numMatch) {
             const noteNum = numMatch[1];
             
-            // Verificar si existe nota para este número
             if (notesData[noteNum]) {
+                // CAMBIO CLAVE: Guardamos la definición en el DOM para que sea portable
+                // Reemplazamos comillas simples para evitar romper el HTML
+                let safeDefinition = notesData[noteNum].replace(/'/g, "&#39;");
+                sup.setAttribute('data-note', safeDefinition);
+                
                 sup.style.cursor = 'pointer';
                 sup.style.color = 'var(--accent)';
                 sup.style.textDecoration = 'none';
                 sup.style.borderBottom = '1px dotted var(--accent)';
                 sup.title = `Ver nota ${noteNum}`;
                 
-                sup.addEventListener('click', (e) => {
+                // Limpiamos listeners previos clonando
+                const newSup = sup.cloneNode(true);
+                sup.parentNode.replaceChild(newSup, sup);
+                
+                newSup.addEventListener('click', (e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    
-                    const noteHTML = notesData[noteNum];
-                    showNote(noteHTML);
+                    // Ahora leemos siempre del atributo data-note (la fuente de verdad)
+                    const def = newSup.getAttribute('data-note');
+                    showNote(def);
                 });
             }
         }
@@ -3536,28 +3543,29 @@ function addNoteDefinition(number, definition) {
 function renumberFootnotes() {
     showConfirm('¿Renumerar todas las notas del capítulo en orden de aparición?', (confirmed) => {
         if (!confirmed) return;
-        
+
         const contentDiv = document.getElementById('content');
         const allSups = contentDiv.querySelectorAll('sup');
-        
+
         if (allSups.length === 0) {
             showNotification('ℹ️', 'No hay notas para renumerar en este capítulo');
             return;
         }
-        
-        // Renumerar los superíndices
+
         allSups.forEach((sup, index) => {
             const newNumber = index + 1;
             sup.textContent = `(${newNumber})`;
             sup.title = `Ver nota ${newNumber}`;
-            
-            // Marcar el párrafo como editado si tiene data-note (nota nueva)
-            if (sup.hasAttribute('data-note')) {
-                const paragraph = sup.closest('p');
-                if (paragraph) markAsEdited(paragraph);
-            }
+
+            // IMPORTANTE: No tocamos 'data-note', así que la definición correcta
+            // se mantiene unida a este elemento aunque cambie su número.
+
+            // Forzamos marcado de edición en el párrafo padre
+            const paragraph = sup.closest('p');
+            if (paragraph) markAsEdited(paragraph);
         });
-        
+
+        saveEdits(); // Guardamos automáticamente para registrar el nuevo orden
         showNotification('✅', `${allSups.length} notas renumeradas correctamente`);
     });
 }
