@@ -26,7 +26,7 @@ Cuando cruzaron el umbral de la puerta de mercurio, James Gordon esperaba encont
 
 Antes de que alguien pudiera protestar, el suelo desapareció. O esa fue la sensación. No hubo ruido de motores. No hubo vibración. Solo una presión repentina y brutal en el estómago, la sensación inconfundible de la gravedad invirtiéndose. La cápsula no se movía por ruedas ni rieles. Estaba siendo acelerada magnéticamente dentro de un tubo de vacío.
 
-—¡Dios santo! —gritó Mateo, cayendo de rodillas y cubriéndose la cabeza, rezando en baniwa a espíritus que probablemente nunca habían viajado a **Mach 4**^[1].
+—¡Es imposible! —gritó Kai, aferrándose al asiento con los nudillos blancos—. ¡La estructura no aguantará esta aceleración!
 
 —¡Sujétense! —gritó Dos Santos, intentando mantenerse en pie, pero la fuerza G lo empujó contra la pared.
 

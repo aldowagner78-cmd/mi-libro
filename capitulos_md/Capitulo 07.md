@@ -14,7 +14,7 @@ El frío no era algo que sentías; era algo que te agredía.
 
 Era un animal invisible con dientes de aguja que mordía la piel expuesta, congelaba las pestañas y convertía el aire en cristales microscópicos que rasgaban la garganta al respirar. La hipoxia[^4] golpeaba con la misma fuerza: a cinco mil metros, cada paso requería el esfuerzo de diez.
 
-James, Helena, Kai, Dos Santos y Mateo avanzaban en fila india, pegados a la pared de roca para protegerse del viento **catabático**^[5] que barría el glaciar. Iban envueltos en las mantas térmicas plateadas, pareciendo una procesión de fantasmas futuristas perdidos en la prehistoria.
+James, Helena, Kai y Dos Santos avanzaban en fila india, pegados a la pared de roca para protegerse del viento **catabático**^[5] que barría el glaciar. Iban envueltos en las mantas térmicas plateadas, pareciendo una procesión de fantasmas futuristas perdidos en la prehistoria.
 
 —No siento los pies —gimió Kai. Su voz era apenas un susurro arrastrado por el viento—. Creo... creo que me voy a caer.
 
@@ -32,7 +32,7 @@ Miró la pared de hielo frente a ellos. Parecía sólida, impenetrable. Un acant
 
 —La Entrada está sellada —dijo James—. El hielo la ha cubierto durante milenios.
 
-—¿Y cómo entramos? —preguntó Mateo, abrazándose a sí mismo, con los labios morados—. No tenemos explosivos. No tenemos picos.
+—¿Y cómo entramos? —preguntó Dos Santos, ajustándose la capucha térmica—. No tenemos explosivos. No tenemos picos.
 
 —No necesitamos romperla —dijo James—. Necesitamos derretirla.
 
@@ -42,7 +42,7 @@ Cerró los ojos y *empujó*. No empujó físicamente. Empujó termodinámicament
 
 —¡Entren detrás de mí! —gritó James, su voz resonando en el agujero de vapor—. ¡El hielo se volverá a congelar en segundos!
 
-Helena fue la primera. Se lanzó al túnel de vapor, arrastrando a Kai. Dos Santos empujó a Mateo y entraron. El calor dentro del túnel era sofocante, húmedo, tropical. Un contraste brutal con el exterior. Avanzaron diez metros, veinte metros, siguiendo la espalda brillante de James que derretía el camino.
+Helena fue la primera. Se lanzó al túnel de vapor, arrastrando a Kai. Dos Santos entró tras ellos. El calor dentro del túnel era sofocante, húmedo, tropical. Un contraste brutal con el exterior. Avanzaron diez metros, veinte metros, siguiendo la espalda brillante de James que derretía el camino.
 
 De repente, la resistencia desapareció. James cayó hacia adelante. Helena y los demás tropezaron tras él y rodaron por una pendiente suave.
 
@@ -52,9 +52,9 @@ Se pusieron de pie, encendiendo las pocas linternas que les quedaban con baterí
 
 Estaban en una galería ciclópea. El suelo era de obsidiana pulida, tan negra que parecía agua. A ambos lados, alineadas hasta el infinito, se alzaban columnas de cristal hexagonal de treinta metros de altura. Dentro de cada columna, suspendida en un líquido ámbar que brillaba con luz propia, había una sombra. No eran estatuas. Eran cuerpos. Cuerpos humanoides, altos, delgados, flotando en suspensión. Miles de ellos.
 
-—El cementerio —susurró Mateo, haciendo la señal de la cruz.
+—El cementerio —susurró Kai, haciendo la señal de la cruz.
 
-—No —dijo James, poniéndose de pie con dificultad. Su voz resonó en la inmensidad de la catedral—. No están muertos, Mateo. Mira las luces.
+—No —dijo James, poniéndose de pie con dificultad. Su voz resonó en la inmensidad de la catedral—. No están muertos. Mira las luces.
 
 James señaló la base de las columnas. Pulsaban. Una luz dorada subía y bajaba por los pilares, conectándolos entre sí en una red compleja. Era el latido de una ciudad.
 
