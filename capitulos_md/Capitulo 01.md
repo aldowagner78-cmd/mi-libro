@@ -3,6 +3,8 @@
 
 ***
 
+**EL SILENCIO DE LOS DIOSES**
+
 **CAPÍTULO 1: LA TIERRA NEGRA DEL OLVIDO**
 
 *"El mapa no es el territorio. Esta es la primera lección de la cartografía y la última lección de la vida. Miramos un mapa de la Tierra y vemos fronteras, elevaciones, océanos azules y continentes verdes. Nos sentimos dueños de la geografía porque le hemos puesto nombre a cada montaña. Pero el mapa es una mentira piadosa. Es una simplificación diseñada para que nuestros cerebros de primates no entren en pánico ante la inmensidad del caos.*
