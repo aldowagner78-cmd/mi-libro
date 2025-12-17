@@ -113,11 +113,3 @@ Dos Santos gruñó, impresionado. —Bueno, al menos tenemos un plan. Una mierda
 James asintió. —Rumbo a la Zona Muerta.
 
 El "Caribdis" viró hacia la orilla sur, abandonando la seguridad del canal principal y adentrándose en un afluente estrecho y negro que parecía la boca de un lobo. Mientras se adentraban en la oscuridad, James sintió que la fiebre remitía. Su cuerpo había dejado de luchar contra la obsidiana. La integración estaba completa. Ahora, él era el puente. Y Dios le ayude, porque el peso de dos mundos estaba a punto de romperle la espalda.
-
-**NOTAS DEL CAPÍTULO 4**
-
-**(1) Firma Acústica:** El sonido característico que emite un vehículo, maquinaria o persona. En operaciones militares, reducir la firma acústica es vital para evitar ser detectado por micrófonos direccionales o sonares pasivos.
-
-**(2) Karst (Paisaje Kárstico):** Formación topográfica producida por la disolución química de rocas solubles como la caliza y el yeso. Crea paisajes llenos de cuevas, sumideros y ríos subterráneos, ideales para ocultarse pero extremadamente peligrosos para navegar.
-
-**(3) Anomalía Magnética:** Una variación local en el campo magnético de la Tierra. Puede ser causada por grandes depósitos de minerales ferrosos o, en la ciencia ficción, por tecnología oculta. Estas anomalías hacen que las brújulas giren sin control y pueden interferir con sistemas GPS y comunicaciones.

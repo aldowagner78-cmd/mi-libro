@@ -83,11 +83,3 @@ James miró a su alrededor. La plataforma donde estaban terminaba en una pared d
 James asintió. La euforia del viaje tecnológico se evaporó, reemplazada por la brutal realidad física. Habían escapado del infierno verde para caer en el infierno blanco.
 
 —Síganme —dijo James, echando a andar hacia la pared de hielo. Su mano de obsidiana brillaba en la oscuridad, pulsando con un calor radiante. Era la única fuente de calor en kilómetros a la redonda—. La señal viene de allí.
-
-**NOTAS DEL CAPÍTULO 6**
-
-**(1) Mach 4:** Velocidad equivalente a cuatro veces la velocidad del sonido (aprox. 4.900 km/h). A esta velocidad, la fricción del aire convertiría cualquier vehículo convencional en una bola de fuego, por lo que el vacío es necesario. 
-
-**(2) Litosfera:** La capa externa y rígida de la Tierra, que incluye la corteza y la parte superior del manto. Es donde ocurren los terremotos y donde se asientan las placas tectónicas. 
-
-**(3) Amortiguadores Inerciales:** Tecnología teórica (común en ciencia ficción) que anula o reduce los efectos de la inercia y la fuerza G sobre los ocupantes de un vehículo que acelera rápidamente. Sin esto, la aceleración súbita licuaría los órganos internos.

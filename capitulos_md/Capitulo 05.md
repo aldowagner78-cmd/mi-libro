@@ -143,15 +143,3 @@ James se volvió hacia su equipo, que se levantaba lentamente del suelo duro, sa
 —Porque aquí —dijo James, golpeando suavemente su propia sien—, los pensamientos son ruidosos. Y no queremos despertar a los vecinos.
 
 Cruzaron el umbral caminando, dejando atrás el muelle y el río subterráneo, adentrándose en el vientre de la montaña, mientras la puerta de mercurio se regeneraba detrás de ellos, sellando su destino.
-
-**NOTAS DEL CAPÍTULO 5**
-
-**(1) Karst:** El mismo tipo de paisaje descrito anteriormente. La repetición aquí refuerza la dificultad del terreno, que funciona como un laberinto natural.
-
-**(2) Jaula de Faraday:** Una estructura cerrada hecha de material conductor que bloquea los campos electromagnéticos externos. En la novela, la alta concentración de minerales metálicos en la tierra actúa como una jaula natural que bloquea las señales de radio y GPS.
-
-**(3) Energía de Punto Cero:** Concepto de física cuántica que se refiere a la energía más baja posible que puede tener un sistema físico mecánico cuántico. En la ciencia ficción, a menudo se usa como una fuente de energía inagotable y "limpia" extraída del vacío del espacio.
-
-**(4) Metal Líquido:** Aleación metálica que se mantiene en estado líquido a temperatura ambiente (como el mercurio o el galio), pero que puede solidificarse instantáneamente bajo una carga eléctrica o magnética específica.
-
-**(5) Metal Líquido (Puerta):** La puerta de mercurio vertical desafía la gravedad mediante campos magnéticos controlados, actuando como barrera física y escáner biométrico simultáneamente.

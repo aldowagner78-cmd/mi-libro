@@ -137,19 +137,3 @@ James miró su mano de obsidiana. Pulsaba con fuerza, reaccionando a su ira. Pod
 Levantó su brazo cristalizado. La luz violeta brillaba intensamente bajo el sol de la tarde. —Vamos a los Andes —dijo James—. A la Catedral de Hielo. Si quieren guerra, la tendrán en mi terreno.
 
 El bote aceleró río arriba, adentrándose en la inmensidad del continente, llevando consigo a un equipo roto, un misterio geológico y al primer hombre que había dejado de ser completamente humano.
-
-**NOTAS DEL CAPÍTULO 3**
-
-**(1) OPA Hostil (Oferta Pública de Adquisición):** Es una operación financiera donde una empresa intenta comprar a otra en contra de la voluntad de la dirección de la empresa objetivo. Suele compararse con un ataque depredador en el mundo corporativo.
-
-**(2) Dosel Arbóreo:** La capa superior de la selva formada por las copas de los árboles adultos. Actúa como un techo que bloquea la luz y la visión desde el cielo, crucial para la evasión visual.
-
-**(3) Igarapé:** Término amazónico para describir cursos de agua estrechos y poco profundos que corren dentro de la selva, a menudo secos o con poca agua fuera de la temporada de lluvias. Son caminos naturales ocultos.
-
-**(4) Xilema:** Tejido vegetal leñoso que transporta agua y sales minerales desde las raíces hasta las hojas. James conecta su mano a este sistema para "leer" el flujo de nutrientes y datos de la planta.
-
-**(5) Avispas Polybia:** Género de avispas sociales agresivas comunes en el trópico. Sus nidos son grandes y sus ataques en enjambre son extremadamente dolorosos y peligrosos.
-
-**(6) Feromona de Alarma:** Sustancia química que liberan los insectos sociales cuando se sienten amenazados para alertar a la colonia y provocar un ataque masivo inmediato.
-
-**(7) Error de Paralaje:** En óptica y medición, es la diferencia aparente en la posición de un objeto dependiendo del ángulo desde el que se mira. En navegación por satélite, un error inducido aquí hace que el GPS muestre una ubicación falsa.
