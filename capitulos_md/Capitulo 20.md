@@ -1,14 +1,11 @@
+*"La fe es la certeza de lo que se espera, la convicción de lo que no se ve."*  
+— Epístola a los Hebreos 11:1
+
+***
+
 **EL SILENCIO DE LOS DIOSES**
 
 **CAPÍTULO 20: EL MIEDO Y LA FE DE HELENA**
-
-***INTERLUDIO XX: LA TEOLOGÍA DEL CÓDIGO FUENTE***
-
-"Y vi un cielo nuevo y una tierra nueva; porque el primer cielo y la primera tierra pasaron, y el mar ya no existía más. Y yo Juan vi la santa ciudad, la nueva Jerusalén, descender del cielo, de Dios, dispuesta como una esposa ataviada para su marido." — *Apocalipsis 21:1-2.*
-
-"La promesa bíblica de una 'Nueva Jerusalén' no es una metáfora geográfica; es una intuición tecnológica. Los profetas no veían una ciudad de ladrillos bajando de las nubes; veían una estructura de orden perfecto descendiendo sobre el caos de la biología. El anhelo religioso y el anhelo transhumanista son idénticos: ambos buscan depurar el error del sistema. La única diferencia es que la religión espera que el Parche 2.0 lo instale Dios, mientras que nosotros queremos escribir el código con nuestras propias manos sucias. Pero hay un error de compilación en nuestra lógica: si eliminamos el sufrimiento, ¿eliminamos también la necesidad de redención? ¿Es el paraíso un lugar donde somos felices, o simplemente un lugar donde ya no somos humanos?"
-
-— *Dra. Helena Jenkins.* Notas para el simposio "Ética de la Resurrección Digital", Vaticano, 2025.
 
 *Mundo Físico. Catedral de Hielo (Sector Central).* *Glaciar Quelccaya, Andes Peruanos.* *16 de Octubre, 2026. 08:15 AM.*
 

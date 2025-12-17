@@ -1,15 +1,11 @@
+*"Nada es más poderoso que una idea a la que le ha llegado su tiempo."*  
+— Víctor Hugo (1877)
+
+***
+
 **EL SILENCIO DE LOS DIOSES**
 
 **CAPÍTULO 26: LA ONDA GLOBAL**
-
-***INTERLUDIO XXVI: EL PRINCIPIO DE INCERTIDUMBRE SOCIAL***
-
-*"La Segunda Ley de la Termodinámica^[1] establece que la entropía de un sistema aislado siempre aumenta. El orden decae en caos. La información se degrada en ruido.
-Pero la información que salió del Glaciar Quelccaya no era ruido; era señal pura. Y cuando inyectas una señal de verdad absoluta en un sistema social basado en mentiras consensuadas, el resultado no es entropía. Es una transición de fase^[2]. Como el agua convirtiéndose en vapor en un instante.
-La sociedad humana se basa en la certeza de la muerte y la escasez del tiempo. ¿Qué sucede cuando eliminas esas dos constantes El mercado de valores colapsa porque el 'futuro' ya no es una apuesta. Las religiones tiemblan porque el 'más allá' se ha mudado al 'aquí mismo'. Los gobiernos entran en pánico porque ya no pueden amenazar a sus ciudadanos con la destrucción física.
-El 16 de Octubre de 2026 no fue el día del Juicio Final. Fue el día en que la humanidad tuvo que dejar de fingir."*
-
-— **Editorial del New York Times.** *"El fin de la prehistoria", Edición Especial del 17 de Octubre de 2026.*
 
 **Mundo Exterior / Ciberespacio Global.**
 **16 de Octubre, 2026. 10:00 AM (Hora Local).**

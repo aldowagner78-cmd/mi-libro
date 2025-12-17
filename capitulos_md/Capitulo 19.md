@@ -1,12 +1,11 @@
+*"Y conoceréis la verdad, y la verdad os hará libres."*  
+— Evangelio según San Juan 8:32
+
+***
+
 **EL SILENCIO DE LOS DIOSES**
 
 **CAPÍTULO 19: LA SOCIEDAD PANÓPTICA**
-
-***INTERLUDIO XIX: EL OJO QUE TODO LO VE SE QUEDA CIEGO***
-
-*"Jeremy Bentham diseñó el Panóptico^[1] como la prisión perfecta: una torre central desde la cual un solo guardián podía vigilar a todos los prisioneros sin que estos supieran si estaban siendo observados. La sociedad del siglo XXI es un Panóptico digital. A través del Internet de las Cosas (IoT), cada tostadora, cada reloj inteligente y cada coche autónomo es una ventana por la que las corporaciones nos miran. Hemos construido nuestra propia jaula de cristal y le hemos dado la llave a Silicon Valley. Pero hay un fallo estructural en el Panóptico: todo está conectado. Si envenenas al guardián, el veneno se propaga instantáneamente a todas las celdas. Si la torre central cae, no solo se pierde la vigilancia; se colapsa toda la estructura. Y hoy, la torre se está cayendo."*
-
-— **Dr. Kai Anderson.** *Declaración ante el Comité de Inteligencia del Senado de los EE. UU. (Sesión remota), 2027.*
 
 **Infraestructura Global / Mundo Físico.** **16 de Octubre, 2026. 08:00 AM (Hora Local Andes).** **13:00 PM (Hora Zúrich). 08:00 AM (Hora Nueva York).**
 

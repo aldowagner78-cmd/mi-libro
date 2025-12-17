@@ -1,12 +1,11 @@
+*"El cerebro es el órgano de la atención a la vida."*  
+— Henri Bergson (1896)
+
+***
+
 **EL SILENCIO DE LOS DIOSES**
 
 **CAPÍTULO 11: MATERIA Y MEMORIA**
-
-**INTERLUDIO XI: EL FANTASMA EN LA MÁQUINA**
-
-*"Henri Bergson^[1] decía que la memoria no es una función del cerebro, sino una realidad espiritual que el cerebro simplemente 'filtra' para la acción presente. El cuerpo es solo el punto de apoyo, la antena que sintoniza la señal de la consciencia. Si destruyes la radio, la música no deja de existir; simplemente deja de sonar en esa frecuencia. Lo que acabamos de hacer no es digitalizar una mente. Hemos cambiado la frecuencia de emisión. La pregunta que me aterra no es si ella sigue existiendo. La pregunta es: sin el dolor del cuerpo, sin la resistencia de la materia... ¿sigue siendo humana? ¿O se ha convertido en pura matemática?"*
-
-— **Dr. James Gordon.** *Grabación de voz encriptada, 5 minutos después del Evento de Transferencia.*
 
 **Santuario Central. El "Velatorio".** **16 de Octubre, 2026. 06:45 AM.**
 

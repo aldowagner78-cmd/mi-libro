@@ -1,14 +1,11 @@
+*"El movimiento es la causa de todo ser."*  
+— Leonardo da Vinci (c. 1510)
+
+***
+
 **EL SILENCIO DE LOS DIOSES**
 
 **CAPÍTULO 6: LA VENA DE LA TIERRA**
-
-***INTERLUDIO VI: LA RELATIVIDAD DEL MOVIMIENTO***
-
-*"La velocidad es una ilusión biológica. Un guepardo nos parece rápido; un glaciar nos parece estático. Pero a nivel geológico, ambos son irrelevantes. La verdadera velocidad no es mover materia a través del espacio; eso requiere una energía absurda y genera una fricción inmanejable. La verdadera velocidad es mover información.*
-
-*Cuando enviamos un correo electrónico a Tokio, no nos maravillamos de que llegue en milisegundos. Pero si pudiéramos enviarnos a nosotros mismos con esa misma eficiencia... si pudiéramos reducir nuestra masa a cero y convertirnos en señal pura... entonces el concepto de 'distancia' dejaría de existir. Los Antiguos no construyeron carreteras para sus cuerpos. Construyeron fibra óptica para sus almas. Y a veces, para mover lo que quedaba de su materia, construyeron algo intermedio: el vacío."*
-
-— **Dr. James Gordon.** *Conferencia sobre "Infraestructuras Hipotéticas de la Prehistoria", Universidad de Zúrich, 2019.*
 
 **Red de Transporte Subterránea "La Vena".** **Profundidad: Variable (Manto Superior).** **Ubicación: En tránsito bajo el continente sudamericano.** **16 de Octubre, 2026. 04:15 AM.**
 

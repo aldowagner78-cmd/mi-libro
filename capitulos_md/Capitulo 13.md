@@ -1,14 +1,11 @@
+*"Quien con monstruos lucha cuide de no convertirse a su vez en monstruo. Cuando miras largo tiempo a un abismo, el abismo también mira dentro de ti."*  
+— Friedrich Nietzsche (1886)
+
+***
+
 **EL SILENCIO DE LOS DIOSES**
 
 **CAPÍTULO 13: LA PESADILLA DE LA ARQUITECTA**
-
-***INTERLUDIO XIII: LA TERMODINÁMICA DEL TRAUMA***
-
-*"El cerebro no es una cámara que registra la realidad; es un generador de predicciones que alucina una realidad controlada por los sentidos. Nuestra mente es una máquina biológica diseñada obsesivamente para minimizar la sorpresa. Construimos un modelo del mundo y, cuando la realidad externa no encaja con ese modelo, sufrimos un 'error de predicción'. Eso es el estrés.*
-
-*Pero me aterra pensar qué sucedería si la realidad externa desapareciera. En un estado de consciencia pura, sin el lastre sensorial del cuerpo que corrija el modelo, el cerebro se convertiría en un prisionero recursivo de sus propias predicciones fallidas. El trauma dejaría de ser un evento para convertirse en un arquitecto. Si alguna vez logramos digitalizar una mente humana traumatizada, no crearemos la inmortalidad; crearemos un infierno de alta resolución que se compila a sí mismo eternamente."*
-
-— **Dra. Aris Gordon.** *Extracto de "Teoría del Bucle Cognitivo en Sistemas Aislados", borrador personal encriptado, 2019.*
 
 **Capa de Simulación: Nodo "Zúrich_Negro".** **Estado del Sistema: Crítico / Inestable.** **Tiempo Subjetivo: Irrelevante.**
 

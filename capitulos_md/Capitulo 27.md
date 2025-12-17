@@ -1,15 +1,11 @@
+*"En la naturaleza está la preservación del mundo."*  
+— Henry David Thoreau (1862)
+
+***
+
 **EL SILENCIO DE LOS DIOSES**
 
 **CAPÍTULO 27: EL DESPERTAR DEL MUNDO**
-
-***INTERLUDIO XXVII: MEMORIA PURA Y POLÍTICA SUCIA***
-
-*"La muerte siempre fue el gran igualador. Reyes y mendigos terminaban en el mismo polvo. Esa certeza era la base de nuestro contrato social.
-Ahora, la muerte es opcional. O al menos, redefinible. Y la igualdad se ha roto de una forma nueva. La división ya no es entre ricos y pobres, sino entre 'biológicos' y 'post-biológicos'. Entre los que aceptan la carne y los que anhelan el silicio.
-El mundo se ha despertado con una resaca existencial. En las Naciones Unidas, los embajadores gritan sobre la soberanía del alma. En las calles, se forman cultos a la Singularidad^[3] y milicias neo-luditas^[4] que quieren bombardear los centros de datos. La humanidad no estaba lista para dejar el jardín de infancia, y de repente nos han dado las llaves del laboratorio de física nuclear.
-El caos es total. Y es hermoso. Porque por primera vez en la historia, estamos debatiendo sobre nuestro destino en lugar de sufrirlo."*
-
-— **Dra. Helena Jenkins.** *Carta abierta a la comunidad científica, publicada desde la clandestinidad, 2027.*
 
 **Zona Fronteriza Perú-Brasil.**
 **Refugio Seguro "Nido del Águila".**

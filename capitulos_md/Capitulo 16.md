@@ -1,12 +1,11 @@
+*"El dolor físico no tiene voz, pero cuando encuentra una voz, comienza a contar una historia."*  
+— Elaine Scarry (1985)
+
+***
+
 **EL SILENCIO DE LOS DIOSES**
 
 **CAPÍTULO 16: EL PRECIO DE LA RETIRADA**
-
-***INTERLUDIO XVI: LA UTILIDAD DEL SUFRIMIENTO***
-
-*"Existe una paradoja cruel en la evolución: el dolor es el guardián de la vida. Las criaturas que no sienten dolor no sobreviven para reproducirse; se queman, se rompen, se desangran sin darse cuenta. El sistema nervioso no evolucionó para darnos felicidad, sino para darnos alertas de integridad estructural. El transhumanismo comete el error infantil de querer eliminar el síntoma sin entender la función. Si apagamos el dolor, apagamos el mapa de límites que nos dice dónde termina nuestro cuerpo y dónde empieza el mundo hostil. Un ser sin dolor es un ser sin fronteras. Y un ser sin fronteras es un ser que se disuelve en la entropía. Quizás la fragilidad no sea un defecto de diseño, sino nuestra característica de seguridad más avanzada."*
-
-— **Charles Darwin.** *Fragmento apócrifo de un diario personal, supuestamente escrito tras la muerte de su hija Annie, 1851.*
 
 **Mundo Físico. Catedral de Hielo (Sector Central).** **Glaciar Quelccaya, Andes Peruanos.** **16 de Octubre, 2026. 07:25 AM.**
 

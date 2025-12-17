@@ -1,12 +1,11 @@
+*"¿De qué le sirve al hombre ganar el mundo entero si pierde su alma?"*  
+— Evangelio según San Marcos 8:36
+
+***
+
 **EL SILENCIO DE LOS DIOSES**
 
 **CAPÍTULO 10: EL TRATO FAUSTIANO**
-
-**INTERLUDIO X: LA CRIPTOGRAFÍA DEL ALMA**
-
-*"Mefistófeles no quería el alma de Fausto por su valor espiritual. La quería por su valor computacional. Un alma, si la definimos termodinámicamente, es un sistema de entropía negativa capaz de generar información infinita a partir de energía finita. Es el algoritmo de compresión definitivo. Cuando vendemos nuestra privacidad, nuestra atención y nuestros recuerdos a la nube, ya hemos firmado el contrato con sangre digital. No estamos perdiendo nuestra alma; simplemente estamos externalizando su alojamiento en servidores que no nos pertenecen. La pregunta no es si iremos al infierno. La pregunta es si tendremos privilegios de administrador en él."*
-
-— **Dr. James Gordon.** *Apuntes al margen en una copia de "La Fenomenología^[1] del Espíritu" de Hegel, 2024.*
 
 **Santuario Central, Glaciar Quelccaya.** **16 de Octubre, 2026. 06:35 AM.**
 

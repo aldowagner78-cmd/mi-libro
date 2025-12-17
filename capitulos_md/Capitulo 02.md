@@ -1,8 +1,11 @@
+*"Quien controla los medios, controla la mente."*  
+— Jim Morrison (1969)
+
+***
+
 **EL SILENCIO DE LOS DIOSES**
 
 **CAPÍTULO 2: EL OJO DE DIOS EN EL CIELO**
-
-***INTERLUDIO II: LA PRIVACIDAD COMO MITO FUNDACIONAL***
 
 *"Hubo un tiempo en que creíamos que nuestros pensamientos eran privados. Creíamos que si cerrábamos la puerta de nuestra habitación, el mundo se quedaba fuera. Qué ingenuos éramos. La privacidad no murió con un disparo; murió con un 'Acepto los Términos y Condiciones'. Primero vendimos nuestra ubicación por la comodidad de no perdernos. Luego vendimos nuestras amistades por la dopamina de un 'me gusta'. Finalmente, vendimos nuestra biología —nuestro ritmo cardíaco, nuestros niveles de oxígeno, nuestros patrones de sueño— por la promesa de vivir más tiempo. Hoy, Dios no es un anciano barbudo que todo lo ve desde una nube. Dios es una red de satélites de baja órbita con resolución de cinco centímetros por píxel. Y a diferencia del Dios antiguo, este no perdona, porque el perdón no es rentable. Este Dios archiva, indexa y vende."*
 

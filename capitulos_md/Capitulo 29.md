@@ -1,15 +1,11 @@
+*"El dolor es inevitable. El sufrimiento es opcional."*  
+— Haruki Murakami
+
+***
+
 **EL SILENCIO DE LOS DIOSES**
 
 **CAPÍTULO 29: EL DOLOR COMO ANCLA**
-
-***INTERLUDIO XXIX: LA ÉTICA DEL CIBORG***
-
-*"Durante siglos, definimos la salud como la ausencia de enfermedad. Un cuerpo sano era un cuerpo silencioso. Pero en la era de la hibridación, esa definición es insuficiente.
-Mi mano no es humana. Mi columna vertebral es un desastre biológico. Vivo en un estado de dolor crónico^[1] interrumpido por ráfagas de omnipotencia cuántica. ¿Soy un monstruo? ¿Soy un enfermo?
-No. Soy un prototipo.
-El dolor que siento en mi vértebra L4 no es un fallo; es una característica. Es el ancla que me impide disolverme en la red. Es el recordatorio constante de mi origen, de mi fragilidad, de mi empatía. Si perdiera el dolor, perdería la conexión con los que sufren. Y un dios que no entiende el sufrimiento es un tirano en potencia. Acepto mi dolor como mi brújula moral. Me duele, luego existo. Me duele, luego me importas."*
-
-— **Dr. James Gordon.** *Primer Manifiesto del Movimiento de Integración Consciente, 2027.*
 
 **Campamento Oculto "Génesis".**
 **Selva Amazónica.**
