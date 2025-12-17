@@ -3509,7 +3509,8 @@ function confirmFootnote() {
     sup.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        showNote(definition);
+        // Leer siempre desde data-note para consistencia
+        showNote(sup.getAttribute('data-note'));
     });
     
     // Insertar la nota en el texto
