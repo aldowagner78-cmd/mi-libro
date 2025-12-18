@@ -12,6 +12,12 @@ let deleteNoteMode = false;
 let pendingNoteSelection = null;
 let currentNotesData = null;
 
+// Sistema de deshacer/rehacer
+const MAX_HISTORY = 30;
+let undoStack = [];
+let redoStack = [];
+let isUndoRedo = false;
+
 // Contraseña de edición (cambiar según necesidad)
 const EDIT_PASSWORD = 'admin2024';
 
@@ -111,7 +117,14 @@ function makeContentEditable() {
         setTimeout(() => {
             p.setAttribute('data-original', p.innerHTML);
         }, 0);
-        p.addEventListener('input', () => markAsEdited(p));
+
+        // Listener para guardar estado antes de cambio
+        p.addEventListener('focus', () => saveStateForUndo());
+        p.addEventListener('input', () => {
+            if (!isUndoRedo) {
+                markAsEdited(p);
+            }
+        });
 
         if (!p.querySelector('.delete-paragraph-btn')) {
             const deleteBtn = document.createElement('button');
@@ -121,16 +134,143 @@ function makeContentEditable() {
             deleteBtn.onclick = (e) => {
                 e.preventDefault();
                 e.stopPropagation();
+                saveStateForUndo();
                 deleteParagraph(p);
             };
             p.style.position = 'relative';
             p.appendChild(deleteBtn);
         }
     });
+
+    // Guardar estado inicial
+    saveStateForUndo();
 }
 
 function markAsEdited(element) {
     element.style.borderLeft = '3px solid #10b981';
+}
+
+// ========== SISTEMA DE DESHACER/REHACER ==========
+function saveStateForUndo() {
+    if (isUndoRedo) return;
+
+    const content = document.getElementById('content');
+    if (!content) return;
+
+    const state = {
+        html: content.innerHTML,
+        timestamp: Date.now()
+    };
+
+    // No guardar si es igual al último estado
+    if (undoStack.length > 0 && undoStack[undoStack.length - 1].html === state.html) {
+        return;
+    }
+
+    undoStack.push(state);
+
+    // Limitar tamaño del historial
+    if (undoStack.length > MAX_HISTORY) {
+        undoStack.shift();
+    }
+
+    // Limpiar redo stack cuando hay nuevo cambio
+    redoStack = [];
+
+    updateUndoRedoButtons();
+}
+
+function undo() {
+    if (undoStack.length <= 1) {
+        showNotification('ℹ️', 'No hay más acciones para deshacer');
+        return;
+    }
+
+    isUndoRedo = true;
+
+    // Guardar estado actual en redo
+    const currentState = undoStack.pop();
+    redoStack.push(currentState);
+
+    // Restaurar estado anterior
+    const previousState = undoStack[undoStack.length - 1];
+    const content = document.getElementById('content');
+    content.innerHTML = previousState.html;
+
+    // Reactivar funcionalidad
+    reactivateAfterUndoRedo();
+
+    isUndoRedo = false;
+    updateUndoRedoButtons();
+    showNotification('↩️', 'Cambio deshecho');
+}
+
+function redo() {
+    if (redoStack.length === 0) {
+        showNotification('ℹ️', 'No hay acciones para rehacer');
+        return;
+    }
+
+    isUndoRedo = true;
+
+    // Restaurar estado desde redo
+    const nextState = redoStack.pop();
+    undoStack.push(nextState);
+
+    const content = document.getElementById('content');
+    content.innerHTML = nextState.html;
+
+    // Reactivar funcionalidad
+    reactivateAfterUndoRedo();
+
+    isUndoRedo = false;
+    updateUndoRedoButtons();
+    showNotification('↪️', 'Cambio rehecho');
+}
+
+function reactivateAfterUndoRedo() {
+    // Reactivar contenteditable y listeners
+    const paragraphs = document.querySelectorAll('#content p');
+    paragraphs.forEach((p, index) => {
+        p.setAttribute('data-index', index);
+        p.setAttribute('contenteditable', 'true');
+
+        // Reañadir botón de eliminar si no existe
+        if (!p.querySelector('.delete-paragraph-btn')) {
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'delete-paragraph-btn';
+            deleteBtn.innerHTML = '🗑️';
+            deleteBtn.title = 'Eliminar párrafo';
+            deleteBtn.onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                saveStateForUndo();
+                deleteParagraph(p);
+            };
+            p.style.position = 'relative';
+            p.appendChild(deleteBtn);
+        }
+    });
+
+    // Reactivar notas
+    if (typeof reactivateNotesInElement === 'function') {
+        const content = document.getElementById('content');
+        reactivateNotesInElement(content, currentNotesData);
+    }
+}
+
+function updateUndoRedoButtons() {
+    const undoBtn = document.getElementById('undoBtn');
+    const redoBtn = document.getElementById('redoBtn');
+
+    if (undoBtn) {
+        undoBtn.disabled = undoStack.length <= 1;
+        undoBtn.title = `Deshacer (Ctrl+Z) - ${undoStack.length - 1} acciones`;
+    }
+    if (redoBtn) {
+        redoBtn.disabled = redoStack.length === 0;
+        redoBtn.title = `Rehacer (Ctrl+Y) - ${redoStack.length} acciones`;
+    }
 }
 
 function deleteParagraph(paragraph) {
@@ -168,12 +308,14 @@ function saveEdits() {
 
     const titleText = document.getElementById('chapterTitle').textContent;
     let prefix = `cap${currentChapter}`;
+    let storageKey = `bookEdits_cap${currentChapter}`;
 
     if (!titleText.startsWith('Capítulo')) {
         const sectionKey = titleText.toLowerCase()
             .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
             .replace(/\s+/g, '-');
         prefix = `sec_${sectionKey}`;
+        storageKey = `bookEdits_${sectionKey}`;
     }
 
     let changesCount = 0;
@@ -199,30 +341,77 @@ function saveEdits() {
 
     if (changesCount > 0) {
         cambiosPendientes = edits;
-        localStorage.setItem('bookEdits', JSON.stringify(edits));
+
+        // Guardar por capítulo específico
+        localStorage.setItem(storageKey, JSON.stringify(edits));
+
+        // También guardar en el objeto global para exportación
+        const allEdits = JSON.parse(localStorage.getItem('bookEdits') || '{}');
+        Object.assign(allEdits, edits);
+        localStorage.setItem('bookEdits', JSON.stringify(allEdits));
+
+        // Marcar capítulo como editado en sidebar
+        markChapterAsEdited(currentChapter);
+
         updateChangeCounter();
-        showNotification('💾', `${changesCount} cambio(s) guardado(s) temporalmente. Salir del modo edición para exportar.`);
+        showNotification('💾', `${changesCount} cambio(s) guardado(s) en capítulo ${currentChapter}`);
     } else {
         showNotification('ℹ️', 'No hay cambios para guardar');
     }
 }
 
+/**
+ * Marca un capítulo como editado en el sidebar
+ */
+function markChapterAsEdited(n) {
+    const chapterItem = document.getElementById('ch-' + n);
+    if (chapterItem && !chapterItem.classList.contains('edited')) {
+        chapterItem.classList.add('edited');
+    }
+}
+
+/**
+ * Actualiza los indicadores de capítulos editados
+ */
+function updateEditedChaptersIndicators() {
+    for (let i = 1; i <= 30; i++) {
+        const storageKey = `bookEdits_cap${i}`;
+        const edits = localStorage.getItem(storageKey);
+        if (edits && Object.keys(JSON.parse(edits)).length > 0) {
+            markChapterAsEdited(i);
+        }
+    }
+}
+
 function loadSavedEdits() {
-    const saved = localStorage.getItem('bookEdits');
-    if (!saved) return;
-
-    const edits = JSON.parse(saved);
-    const paragraphs = document.querySelectorAll('#content p[contenteditable="true"]');
-
     const titleText = document.getElementById('chapterTitle').textContent;
     let prefix = `cap${currentChapter}`;
+    let storageKey = `bookEdits_cap${currentChapter}`;
 
     if (!titleText.startsWith('Capítulo')) {
         const sectionKey = titleText.toLowerCase()
             .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
             .replace(/\s+/g, '-');
         prefix = `sec_${sectionKey}`;
+        storageKey = `bookEdits_${sectionKey}`;
     }
+
+    // Primero intentar cargar ediciones específicas del capítulo
+    let edits = {};
+    const chapterEdits = localStorage.getItem(storageKey);
+    if (chapterEdits) {
+        edits = JSON.parse(chapterEdits);
+    } else {
+        // Fallback a ediciones globales
+        const globalEdits = localStorage.getItem('bookEdits');
+        if (globalEdits) {
+            edits = JSON.parse(globalEdits);
+        }
+    }
+
+    if (Object.keys(edits).length === 0) return;
+
+    const paragraphs = document.querySelectorAll('#content p[contenteditable="true"]');
 
     paragraphs.forEach((p) => {
         const index = p.getAttribute('data-index');
@@ -661,12 +850,217 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('keydown', (e) => {
+        // Deshacer/Rehacer
+        if (editMode && e.ctrlKey && !e.shiftKey && e.key === 'z') {
+            e.preventDefault();
+            undo();
+        }
+        if (editMode && e.ctrlKey && (e.key === 'y' || (e.shiftKey && e.key === 'Z'))) {
+            e.preventDefault();
+            redo();
+        }
+        // Insertar nota
         if (editMode && e.ctrlKey && e.shiftKey && e.key === 'N') {
             e.preventDefault();
             insertFootnote();
         }
+        // Guardar
+        if (editMode && e.ctrlKey && e.key === 's') {
+            e.preventDefault();
+            saveEdits();
+        }
     });
 });
+
+// ========== BUSCAR Y REEMPLAZAR ==========
+let searchReplaceMatches = [];
+let currentMatchIndex = -1;
+
+function openSearchReplace() {
+    const modal = document.getElementById('searchReplaceModal');
+    if (modal) {
+        modal.classList.add('show');
+        document.getElementById('searchReplaceInput').value = '';
+        document.getElementById('replaceInput').value = '';
+        clearSearchReplaceHighlights();
+        updateSearchReplaceCount(0);
+        document.getElementById('searchReplaceInput').focus();
+    }
+}
+
+function closeSearchReplace() {
+    const modal = document.getElementById('searchReplaceModal');
+    if (modal) {
+        modal.classList.remove('show');
+    }
+    clearSearchReplaceHighlights();
+}
+
+function performSearchReplace() {
+    const searchText = document.getElementById('searchReplaceInput').value;
+    if (!searchText || searchText.length < 2) {
+        updateSearchReplaceCount(0);
+        return;
+    }
+
+    clearSearchReplaceHighlights();
+
+    const content = document.getElementById('content');
+    const paragraphs = content.querySelectorAll('p');
+    searchReplaceMatches = [];
+
+    paragraphs.forEach((p, pIndex) => {
+        const text = p.textContent;
+        const regex = new RegExp(escapeRegexForSearch(searchText), 'gi');
+        let match;
+
+        while ((match = regex.exec(text)) !== null) {
+            searchReplaceMatches.push({
+                paragraph: p,
+                paragraphIndex: pIndex,
+                start: match.index,
+                end: match.index + match[0].length,
+                text: match[0]
+            });
+        }
+    });
+
+    if (searchReplaceMatches.length > 0) {
+        currentMatchIndex = 0;
+        highlightCurrentMatch();
+    }
+
+    updateSearchReplaceCount(searchReplaceMatches.length);
+}
+
+function updateSearchReplaceCount(count) {
+    const countEl = document.getElementById('searchReplaceCount');
+    if (countEl) {
+        if (count > 0) {
+            countEl.textContent = `${currentMatchIndex + 1}/${count} coincidencias`;
+        } else {
+            countEl.textContent = 'Sin coincidencias';
+        }
+    }
+}
+
+function highlightCurrentMatch() {
+    if (searchReplaceMatches.length === 0) return;
+
+    const match = searchReplaceMatches[currentMatchIndex];
+    if (match && match.paragraph) {
+        match.paragraph.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        match.paragraph.style.outline = '3px solid var(--accent)';
+        match.paragraph.style.outlineOffset = '4px';
+    }
+
+    updateSearchReplaceCount(searchReplaceMatches.length);
+}
+
+function clearSearchReplaceHighlights() {
+    const content = document.getElementById('content');
+    if (content) {
+        content.querySelectorAll('p').forEach(p => {
+            p.style.outline = '';
+            p.style.outlineOffset = '';
+        });
+    }
+    searchReplaceMatches = [];
+    currentMatchIndex = -1;
+}
+
+function nextMatch() {
+    if (searchReplaceMatches.length === 0) return;
+
+    // Quitar highlight anterior
+    if (searchReplaceMatches[currentMatchIndex]) {
+        searchReplaceMatches[currentMatchIndex].paragraph.style.outline = '';
+    }
+
+    currentMatchIndex = (currentMatchIndex + 1) % searchReplaceMatches.length;
+    highlightCurrentMatch();
+}
+
+function prevMatch() {
+    if (searchReplaceMatches.length === 0) return;
+
+    // Quitar highlight anterior
+    if (searchReplaceMatches[currentMatchIndex]) {
+        searchReplaceMatches[currentMatchIndex].paragraph.style.outline = '';
+    }
+
+    currentMatchIndex = (currentMatchIndex - 1 + searchReplaceMatches.length) % searchReplaceMatches.length;
+    highlightCurrentMatch();
+}
+
+function replaceCurrentMatch() {
+    if (searchReplaceMatches.length === 0 || currentMatchIndex < 0) {
+        showNotification('⚠️', 'No hay coincidencia seleccionada');
+        return;
+    }
+
+    const replaceText = document.getElementById('replaceInput').value;
+    const match = searchReplaceMatches[currentMatchIndex];
+
+    if (match && match.paragraph) {
+        saveStateForUndo();
+
+        const searchText = document.getElementById('searchReplaceInput').value;
+        const regex = new RegExp(escapeRegexForSearch(searchText), 'i');
+
+        match.paragraph.innerHTML = match.paragraph.innerHTML.replace(regex, replaceText);
+        markAsEdited(match.paragraph);
+
+        // Actualizar búsqueda
+        searchReplaceMatches.splice(currentMatchIndex, 1);
+        if (currentMatchIndex >= searchReplaceMatches.length) {
+            currentMatchIndex = 0;
+        }
+
+        updateSearchReplaceCount(searchReplaceMatches.length);
+
+        if (searchReplaceMatches.length > 0) {
+            highlightCurrentMatch();
+        }
+
+        showNotification('✅', 'Reemplazo realizado');
+    }
+}
+
+function replaceAllMatches() {
+    if (searchReplaceMatches.length === 0) {
+        showNotification('⚠️', 'No hay coincidencias para reemplazar');
+        return;
+    }
+
+    const replaceText = document.getElementById('replaceInput').value;
+    const searchText = document.getElementById('searchReplaceInput').value;
+    const count = searchReplaceMatches.length;
+
+    showConfirm(`¿Reemplazar las ${count} coincidencias de "${searchText}" por "${replaceText}"?`, (confirmed) => {
+        if (confirmed) {
+            saveStateForUndo();
+
+            const regex = new RegExp(escapeRegexForSearch(searchText), 'gi');
+            const processedParagraphs = new Set();
+
+            searchReplaceMatches.forEach(match => {
+                if (!processedParagraphs.has(match.paragraph)) {
+                    match.paragraph.innerHTML = match.paragraph.innerHTML.replace(regex, replaceText);
+                    markAsEdited(match.paragraph);
+                    processedParagraphs.add(match.paragraph);
+                }
+            });
+
+            clearSearchReplaceHighlights();
+            showNotification('✅', `${count} reemplazos realizados`);
+        }
+    });
+}
+
+function escapeRegexForSearch(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
 
 // Exportar funciones globales
 window.showNotification = showNotification;
@@ -690,3 +1084,14 @@ window.makeContentEditable = makeContentEditable;
 window.loadSavedEdits = loadSavedEdits;
 window.reactivateNotesInElement = reactivateNotesInElement;
 window.markAsEdited = markAsEdited;
+window.undo = undo;
+window.redo = redo;
+window.saveStateForUndo = saveStateForUndo;
+window.openSearchReplace = openSearchReplace;
+window.closeSearchReplace = closeSearchReplace;
+window.performSearchReplace = performSearchReplace;
+window.nextMatch = nextMatch;
+window.prevMatch = prevMatch;
+window.replaceCurrentMatch = replaceCurrentMatch;
+window.replaceAllMatches = replaceAllMatches;
+window.updateEditedChaptersIndicators = updateEditedChaptersIndicators;

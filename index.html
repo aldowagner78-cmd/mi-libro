@@ -436,13 +436,17 @@
     </div>
 
     <div class="edit-controls" id="editControls">
-        <button class="btn-save" onclick="saveEdits()">💾 Guardar</button>
+        <button class="btn-undo" id="undoBtn" onclick="undo()" title="Deshacer (Ctrl+Z)" disabled>↩️ Deshacer</button>
+        <button class="btn-redo" id="redoBtn" onclick="redo()" title="Rehacer (Ctrl+Y)" disabled>↪️ Rehacer</button>
+        <button class="btn-save" onclick="saveEdits()" title="Guardar (Ctrl+S)">💾 Guardar</button>
         <button class="btn-note" onclick="insertFootnote()" title="Insertar nota al pie (Ctrl+Shift+N)">📝 Insertar
             Nota</button>
-        <button class="btn-renumber" onclick="renumberFootnotes()" title="Renumerar todas las notas">🔢 Renumerar
-            Notas</button>
+        <button class="btn-renumber" onclick="renumberFootnotes()" title="Renumerar todas las notas">🔢
+            Renumerar</button>
         <button class="btn-delete-note" onclick="toggleDeleteNoteMode()" title="Activar modo eliminar notas">🗑️
             Eliminar Nota</button>
+        <button class="btn-search-replace" onclick="openSearchReplace()" title="Buscar y reemplazar (Ctrl+H)">🔍
+            Buscar/Reemplazar</button>
         <button class="btn-export" onclick="exportEdits()">📤 Exportar JSON</button>
         <button class="btn-exit" onclick="exitEditMode()">❌ Salir</button>
         <span id="changeCounter"></span>
@@ -479,6 +483,37 @@
             <button class="notification-btn" style="background: var(--bg-secondary); color: var(--text);"
                 onclick="hideConfirm(false)">Cancelar</button>
             <button class="notification-btn" onclick="hideConfirm(true)">Confirmar</button>
+        </div>
+    </div>
+
+    <!-- MODAL BUSCAR Y REEMPLAZAR -->
+    <div class="search-replace-modal" id="searchReplaceModal">
+        <div class="search-replace-container">
+            <div class="search-replace-header">
+                <h3>🔍 Buscar y Reemplazar</h3>
+                <button class="search-replace-close" onclick="closeSearchReplace()">✕</button>
+            </div>
+            <div class="search-replace-body">
+                <div class="search-replace-row">
+                    <label>Buscar:</label>
+                    <input type="text" id="searchReplaceInput" placeholder="Texto a buscar..."
+                        oninput="performSearchReplace()"
+                        onkeydown="if(event.key==='Enter'){nextMatch();event.preventDefault();}">
+                </div>
+                <div class="search-replace-row">
+                    <label>Reemplazar:</label>
+                    <input type="text" id="replaceInput" placeholder="Nuevo texto...">
+                </div>
+                <div class="search-replace-nav">
+                    <span id="searchReplaceCount">Sin coincidencias</span>
+                    <button class="sr-btn" onclick="prevMatch()" title="Anterior">◀</button>
+                    <button class="sr-btn" onclick="nextMatch()" title="Siguiente">▶</button>
+                </div>
+                <div class="search-replace-actions">
+                    <button class="sr-btn-replace" onclick="replaceCurrentMatch()">Reemplazar</button>
+                    <button class="sr-btn-replace-all" onclick="replaceAllMatches()">Reemplazar Todo</button>
+                </div>
+            </div>
         </div>
     </div>
 

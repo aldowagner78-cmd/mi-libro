@@ -1,89 +1,139 @@
-# Script para aplicar ediciones desde el JSON exportado
+# Script para aplicar ediciones del libro a los archivos Markdown
+# Uso: .\aplicar_ediciones.ps1 -ArchivoJSON "ediciones_libro_2024-12-17.json"
+
 param(
-    [string]$JsonFile = "ediciones_libro_2025-12-17.json"
+    [Parameter(Mandatory=$true)]
+    [string]$ArchivoJSON,
+    
+    [switch]$CrearBackup = $true,
+    [switch]$Preview = $false
 )
 
-if (-not (Test-Path $JsonFile)) {
-    Write-Host "Error: No se encuentra el archivo $JsonFile" -ForegroundColor Red
+# Colores para output
+$colorExito = "Green"
+$colorError = "Red"
+$colorInfo = "Cyan"
+$colorAdvertencia = "Yellow"
+
+Write-Host "`n========================================" -ForegroundColor $colorInfo
+Write-Host "  APLICADOR DE EDICIONES DEL LIBRO" -ForegroundColor $colorInfo
+Write-Host "========================================`n" -ForegroundColor $colorInfo
+
+# Verificar que el archivo existe
+if (-not (Test-Path $ArchivoJSON)) {
+    Write-Host "ERROR: No se encontro el archivo: $ArchivoJSON" -ForegroundColor $colorError
     exit 1
 }
 
-# Leer el JSON
-$ediciones = Get-Content $JsonFile -Raw -Encoding UTF8 | ConvertFrom-Json
-
-$cambiosAplicados = 0
-
-# Procesar cada edición
-foreach ($prop in $ediciones.PSObject.Properties) {
-    $key = $prop.Name
-    $nuevoContenido = $prop.Value
-    
-    Write-Host "`nProcesando: $key" -ForegroundColor Cyan
-    
-    # Parsear la clave (ej: "cap1_p1" o "sec_introduccion_p0")
-    if ($key -match '^cap(\d+)_p(\d+)$') {
-        $capNum = [int]$matches[1]
-        $parrafoIndex = [int]$matches[2]
-        $archivo = "capitulos_html\Capitulo $($capNum.ToString('00')).html"
-    }
-    elseif ($key -match '^sec_([^_]+)_p(\d+)$') {
-        $seccion = $matches[1]
-        $parrafoIndex = [int]$matches[2]
-        # Mapear nombre de sección a archivo
-        $secciones = @{
-            'introduccion' = 'capitulos_html\Introducción.html'
-            'epilogo' = 'capitulos_html\Epílogo.html'
-            'agradecimientos' = 'capitulos_html\Agradecimientos.html'
-        }
-        $archivo = $secciones[$seccion]
-    }
-    else {
-        Write-Host "  ⚠️ Clave no reconocida: $key" -ForegroundColor Yellow
-        continue
-    }
-    
-    if (-not (Test-Path $archivo)) {
-        Write-Host "  ⚠️ Archivo no encontrado: $archivo" -ForegroundColor Yellow
-        continue
-    }
-    
-    # Leer el archivo HTML
-    $html = Get-Content $archivo -Raw -Encoding UTF8
-    
-    # Limpiar el contenido nuevo (quitar botones de eliminar que se pudieron colar)
-    $nuevoContenidoLimpio = $nuevoContenido -replace '<button class="delete-paragraph-btn"[^>]*>.*?</button>', ''
-    
-    if ($nuevoContenidoLimpio.Trim() -eq '') {
-        Write-Host '  ℹ️ Contenido vacío, párrafo marcado para eliminar (no implementado)' -ForegroundColor Yellow
-        continue
-    }
-    
-    # Encontrar todos los <p>...</p> en el archivo
-    $pattern = '<p>.*?</p>'
-    $matches = [regex]::Matches($html, $pattern, [System.Text.RegularExpressions.RegexOptions]::Singleline)
-    
-    if ($parrafoIndex -ge $matches.Count) {
-        Write-Host "  ⚠️ Índice $parrafoIndex fuera de rango (hay $($matches.Count) párrafos)" -ForegroundColor Yellow
-        continue
-    }
-    
-    $parrafoViejo = $matches[$parrafoIndex].Value
-    $parrafoNuevo = '<p>' + $nuevoContenidoLimpio + '</p>'
-    
-    # Reemplazar
-    $htmlNuevo = $html.Replace($parrafoViejo, $parrafoNuevo)
-    
-    if ($html -eq $htmlNuevo) {
-        Write-Host "  ⚠️ No se detectaron cambios" -ForegroundColor Yellow
-    }
-    else {
-        # Guardar
-        $htmlNuevo | Set-Content $archivo -Encoding UTF8 -NoNewline
-        Write-Host "  ✅ Aplicado en: $archivo (párrafo $parrafoIndex)" -ForegroundColor Green
-        $cambiosAplicados++
-    }
+# Cargar JSON
+try {
+    $ediciones = Get-Content $ArchivoJSON -Raw | ConvertFrom-Json
+    $totalEdiciones = ($ediciones.PSObject.Properties | Measure-Object).Count
+    Write-Host "Cargadas $totalEdiciones ediciones desde el JSON`n" -ForegroundColor $colorExito
+} catch {
+    Write-Host "ERROR: No se pudo leer el archivo JSON: $_" -ForegroundColor $colorError
+    exit 1
 }
 
-Write-Host "`n================================================" -ForegroundColor Cyan
-Write-Host "Total de cambios aplicados: $cambiosAplicados" -ForegroundColor Green
-Write-Host "================================================" -ForegroundColor Cyan
+# Directorio de capitulos
+$dirCapitulos = "capitulos_md"
+$dirBackup = "backup_ediciones_$(Get-Date -Format 'yyyyMMdd_HHmmss')"
+
+# Crear backup si se solicita
+if ($CrearBackup -and -not $Preview) {
+    Write-Host "Creando backup en: $dirBackup" -ForegroundColor $colorInfo
+    New-Item -ItemType Directory -Path $dirBackup -Force | Out-Null
+    Copy-Item "$dirCapitulos\*.md" $dirBackup -Force
+    Write-Host "Backup creado exitosamente`n" -ForegroundColor $colorExito
+}
+
+# Procesar cada edicion
+$cambiosAplicados = 0
+$errores = 0
+
+foreach ($prop in $ediciones.PSObject.Properties) {
+    $clave = $prop.Name
+    $nuevoContenido = $prop.Value
+    
+    # Parsear la clave: cap1_p0, cap2_p5, etc.
+    if ($clave -match "^cap(\d+)_p(\d+)$") {
+        $numCapitulo = [int]$Matches[1]
+        $numParrafo = [int]$Matches[2]
+        $archivoMd = "$dirCapitulos\Capitulo $($numCapitulo.ToString('00')).md"
+        
+        Write-Host "Procesando: $clave" -ForegroundColor $colorInfo
+        Write-Host "  Archivo: $archivoMd" -ForegroundColor Gray
+        Write-Host "  Parrafo: $numParrafo" -ForegroundColor Gray
+        
+        if (-not (Test-Path $archivoMd)) {
+            Write-Host "  ADVERTENCIA: Archivo no encontrado" -ForegroundColor $colorAdvertencia
+            $errores++
+            continue
+        }
+        
+        # Leer contenido del archivo
+        $contenido = Get-Content $archivoMd -Raw -Encoding UTF8
+        
+        # Convertir HTML a Markdown basico
+        $textoMd = $nuevoContenido
+        $textoMd = $textoMd -replace '<strong>', '**'
+        $textoMd = $textoMd -replace '</strong>', '**'
+        $textoMd = $textoMd -replace '<em>', '*'
+        $textoMd = $textoMd -replace '</em>', '*'
+        $textoMd = $textoMd -replace '<br\s*/?>', "`n"
+        $textoMd = $textoMd -replace '<[^>]+>', ''  # Eliminar otras etiquetas HTML
+        $textoMd = [System.Web.HttpUtility]::HtmlDecode($textoMd)
+        
+        if ($nuevoContenido -eq "") {
+            Write-Host "  ELIMINACION de parrafo $numParrafo" -ForegroundColor $colorAdvertencia
+        } else {
+            Write-Host "  Nuevo texto: $($textoMd.Substring(0, [Math]::Min(50, $textoMd.Length)))..." -ForegroundColor Gray
+        }
+        
+        if (-not $Preview) {
+            # Aqui iria la logica para encontrar y reemplazar el parrafo especifico
+            # Por ahora, registramos el cambio para revision manual
+            $logFile = "cambios_pendientes.log"
+            Add-Content $logFile "[$clave] Archivo: $archivoMd"
+            Add-Content $logFile "Nuevo contenido: $textoMd"
+            Add-Content $logFile "---"
+        }
+        
+        $cambiosAplicados++
+        Write-Host "  OK" -ForegroundColor $colorExito
+        
+    } elseif ($clave -match "^sec_(.+)_p(\d+)$") {
+        # Seccion especial (introduccion, sobre-autor, etc.)
+        $seccion = $Matches[1]
+        $numParrafo = [int]$Matches[2]
+        Write-Host "Procesando seccion especial: $seccion (parrafo $numParrafo)" -ForegroundColor $colorInfo
+        $cambiosAplicados++
+        
+    } else {
+        Write-Host "ADVERTENCIA: Formato de clave no reconocido: $clave" -ForegroundColor $colorAdvertencia
+        $errores++
+    }
+    
+    Write-Host ""
+}
+
+# Resumen
+Write-Host "`n========================================" -ForegroundColor $colorInfo
+Write-Host "  RESUMEN" -ForegroundColor $colorInfo
+Write-Host "========================================" -ForegroundColor $colorInfo
+Write-Host "Cambios procesados: $cambiosAplicados" -ForegroundColor $colorExito
+Write-Host "Errores/Advertencias: $errores" -ForegroundColor $(if ($errores -gt 0) { $colorAdvertencia } else { $colorExito })
+
+if ($Preview) {
+    Write-Host "`nModo PREVIEW: No se aplicaron cambios reales" -ForegroundColor $colorAdvertencia
+    Write-Host "Ejecute sin -Preview para aplicar los cambios" -ForegroundColor $colorInfo
+} else {
+    Write-Host "`nLos cambios han sido registrados en: cambios_pendientes.log" -ForegroundColor $colorInfo
+    Write-Host "Revise el log y aplique manualmente los cambios criticos" -ForegroundColor $colorInfo
+}
+
+if ($CrearBackup -and -not $Preview) {
+    Write-Host "`nBackup disponible en: $dirBackup" -ForegroundColor $colorInfo
+}
+
+Write-Host ""

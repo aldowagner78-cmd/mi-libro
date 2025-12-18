@@ -2519,3 +2519,196 @@ body {
     display: block;
     margin-bottom: 12px;
 }
+
+/* ===================== MEJORAS MODO EDICIÓN ===================== */
+
+/* Botones Undo/Redo */
+.btn-undo,
+.btn-redo {
+    background: var(--bg-alt);
+    color: var(--text-soft);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.btn-undo:hover:not(:disabled),
+.btn-redo:hover:not(:disabled) {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.btn-undo:disabled,
+.btn-redo:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Indicador de capítulo editado */
+.chapter-item.edited::after {
+    content: '✏️';
+    position: absolute;
+    right: 8px;
+    font-size: 12px;
+}
+
+/* Modal Buscar y Reemplazar */
+.search-replace-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: auto;
+    max-height: 80vh;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 0 0 0 16px;
+    box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 6000;
+    overflow: hidden;
+}
+
+.search-replace-modal.show {
+    display: block;
+}
+
+.search-replace-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-replace-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-alt);
+}
+
+.search-replace-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.search-replace-close {
+    background: none;
+    border: none;
+    color: var(--text-soft);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 4px 8px;
+}
+
+.search-replace-body {
+    padding: 16px;
+}
+
+.search-replace-row {
+    margin-bottom: 12px;
+}
+
+.search-replace-row label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-soft);
+    margin-bottom: 4px;
+}
+
+.search-replace-row input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+}
+
+.search-replace-row input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.search-replace-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 8px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+#searchReplaceCount {
+    font-size: 0.85rem;
+    color: var(--text-soft);
+}
+
+.sr-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text-soft);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sr-btn:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.search-replace-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.sr-btn-replace,
+.sr-btn-replace-all {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.sr-btn-replace {
+    background: var(--accent);
+    color: white;
+}
+
+.sr-btn-replace:hover {
+    opacity: 0.9;
+}
+
+.sr-btn-replace-all {
+    background: var(--bg-alt);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.sr-btn-replace-all:hover {
+    background: #ef4444;
+    color: white;
+    border-color: #ef4444;
+}
+
+/* Botón buscar/reemplazar en toolbar */
+.btn-search-replace {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+}
