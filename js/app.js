@@ -573,14 +573,51 @@ function hideMainCover() {
 
 function enterBook() {
     hideMainCover();
-
-    const savedChapter = localStorage.getItem('chapter');
-    if (savedChapter) {
-        loadChapterDirectly(parseInt(savedChapter));
-    } else {
-        loadChapter(1);
-    }
+    showWelcomeScreen();
 }
+
+function showWelcomeScreen() {
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    const grid = document.getElementById('welcomeChaptersGrid');
+
+    // Generar grid de capítulos
+    grid.innerHTML = '';
+
+    for (let i = 1; i <= TOTAL_CHAPTERS; i++) {
+        const num = i.toString().padStart(2, '0');
+        const item = document.createElement('div');
+        item.className = 'welcome-chapter-item';
+        item.onclick = () => {
+            hideWelcomeScreen();
+            loadChapter(i);
+        };
+
+        item.innerHTML = `
+            <img src="imagenes/cap_${num}.jpg" 
+                 alt="Capítulo ${num}" 
+                 class="welcome-thumbnail"
+                 loading="lazy"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                 stroke-width="1.5" style="display:none;">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+            </svg>
+            <span>Capítulo ${num}</span>
+        `;
+
+        grid.appendChild(item);
+    }
+
+    welcomeScreen.classList.add('show');
+}
+
+function hideWelcomeScreen() {
+    document.getElementById('welcomeScreen').classList.remove('show');
+}
+
+// Exportar nuevas funciones
+window.showWelcomeScreen = showWelcomeScreen;
+window.hideWelcomeScreen = hideWelcomeScreen;
 
 function flipBook() {
     document.getElementById('bookFlipContainer').classList.toggle('flipped');

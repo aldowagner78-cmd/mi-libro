@@ -1358,6 +1358,37 @@ body {
 }
 
 /* ===================== PANTALLA BIENVENIDA ===================== */
+.welcome-screen {
+    background: var(--bg);
+}
+
+.welcome-container {
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.welcome-header {
+    text-align: center;
+}
+
+.welcome-header h2 {
+    font-family: var(--font-ui);
+    font-size: 2rem;
+    color: var(--text);
+    margin: 0 0 8px 0;
+}
+
+.welcome-header p {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    color: var(--text-soft);
+    margin: 0;
+}
+
 .welcome-chapters-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
