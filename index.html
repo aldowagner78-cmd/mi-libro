@@ -1,343 +1,566 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Silencio de los Dioses - Lector</title>
-    
+
     <!-- Preload solo portada principal -->
     <link rel="preload" href="imagenes/cover_opt.jpg" as="image">
     <link rel="preload" href="imagenes/cap_01.jpg" as="image">
-    
+
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Estilos externos -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-<!-- BARRA DE PROGRESO GLOBAL -->
-<div class="progress-bar-container">
-    <div class="progress-bar" id="globalProgress"></div>
-</div>
-
-<!-- SIDEBAR -->
-<aside id="sidebar">
-    <div class="sidebar-head">
-        <div class="sidebar-cover-flip" id="sidebarCoverFlip">
-            <img src="imagenes/cover_opt.jpg" alt="El Silencio de los Dioses" class="book-cover" onclick="showMainCover()" title="Ver portada completa" loading="eager" fetchpriority="high" decoding="async">
-            <img src="imagenes/contratapa.jpg" alt="Contratapa" class="sidebar-back-cover" onclick="showMainCover(); setTimeout(() => { if(!document.getElementById('bookFlipContainer').classList.contains('flipped')) flipBook(); }, 100);" title="Ver contratapa completa">
-        </div>
-        <button class="sidebar-flip-btn" onclick="event.stopPropagation(); flipSidebarCover();" title="Voltear">🔄</button>
-        <div class="sidebar-title">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M12 6v7"/><path d="m9 9 3 3 3-3"/></svg>
-            <h1>El Silencio de los Dioses</h1>
-        </div>
+    <!-- BARRA DE PROGRESO GLOBAL -->
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="globalProgress"></div>
     </div>
-    <ul class="chapter-list" id="chapterList"></ul>
-</aside>
 
-<!-- MAIN -->
-<main id="main">
-    <header class="toolbar">
-        <div class="toolbar-left">
-            <button class="btn icon btn-menu" onclick="toggleSidebar()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            </button>
-            <span class="chapter-title" id="chapterTitle">Cargando...</span>
+    <!-- SIDEBAR -->
+    <aside id="sidebar">
+        <div class="sidebar-head">
+            <div class="sidebar-cover-flip" id="sidebarCoverFlip">
+                <img src="imagenes/cover_opt.jpg" alt="El Silencio de los Dioses" class="book-cover"
+                    onclick="showMainCover()" title="Ver portada completa" loading="eager" fetchpriority="high"
+                    decoding="async">
+                <img src="imagenes/contratapa.jpg" alt="Contratapa" class="sidebar-back-cover"
+                    onclick="showMainCover(); setTimeout(() => { if(!document.getElementById('bookFlipContainer').classList.contains('flipped')) flipBook(); }, 100);"
+                    title="Ver contratapa completa">
+            </div>
+            <button class="sidebar-flip-btn" onclick="event.stopPropagation(); flipSidebarCover();"
+                title="Voltear">🔄</button>
+            <div class="sidebar-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                    <path d="M12 6v7" />
+                    <path d="m9 9 3 3 3-3" />
+                </svg>
+                <h1>El Silencio de los Dioses</h1>
+            </div>
         </div>
-        <div class="toolbar-right">
-            <!-- Botón de búsqueda -->
-            <button class="btn icon" onclick="openSearch()" title="Buscar (Ctrl+F)">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <ul class="chapter-list" id="chapterList"></ul>
+    </aside>
+
+    <!-- MAIN -->
+    <main id="main">
+        <header class="toolbar">
+            <div class="toolbar-left">
+                <button class="btn icon btn-menu" onclick="toggleSidebar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="4" x2="20" y1="12" y2="12" />
+                        <line x1="4" x2="20" y1="6" y2="6" />
+                        <line x1="4" x2="20" y1="18" y2="18" />
+                    </svg>
+                </button>
+                <span class="chapter-title" id="chapterTitle">Cargando...</span>
+            </div>
+            <div class="toolbar-right">
+                <!-- Botón de búsqueda -->
+                <button class="btn icon" onclick="openSearch()" title="Buscar (Ctrl+F)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg>
+                </button>
+                <!-- Tabla de contenidos -->
+                <button class="btn icon" onclick="openTOC()" title="Tabla de Contenidos">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="8" x2="21" y1="6" y2="6" />
+                        <line x1="8" x2="21" y1="12" y2="12" />
+                        <line x1="8" x2="21" y1="18" y2="18" />
+                        <line x1="3" x2="3.01" y1="6" y2="6" />
+                        <line x1="3" x2="3.01" y1="12" y2="12" />
+                        <line x1="3" x2="3.01" y1="18" y2="18" />
+                    </svg>
+                </button>
+                <!-- Modo presentación -->
+                <button class="btn icon" onclick="startPresentation()" title="Modo Presentación">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="18" height="18" x="3" y="3" rx="2" />
+                        <path d="m9 8 6 4-6 4Z" />
+                    </svg>
+                </button>
+                <!-- Botón de estadísticas -->
+                <button class="btn icon" onclick="openStats()" title="Estadísticas">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 3v18h18" />
+                        <path d="m19 9-5 5-4-4-3 3" />
+                    </svg>
+                </button>
+                <!-- Botón de audio -->
+                <button class="btn icon" onclick="toggleAudioPlayer()" title="Escuchar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                    </svg>
+                </button>
+                <!-- Tema automático -->
+                <button class="btn icon" id="autoThemeBtn" onclick="toggleAutoTheme()" title="Tema automático">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                    </svg>
+                </button>
+                <div class="theme-picker" id="themePicker">
+                    <div class="theme-dot active" data-theme="light" title="Claro"></div>
+                    <div class="theme-dot" data-theme="cream" title="Crema"></div>
+                    <div class="theme-dot" data-theme="mint" title="Menta"></div>
+                    <div class="theme-dot" data-theme="ocean" title="Océano"></div>
+                    <div class="theme-dot" data-theme="lavender" title="Lavanda"></div>
+                    <div class="theme-dot" data-theme="sepia" title="Sepia"></div>
+                    <div class="theme-dot" data-theme="dark" title="Oscuro"></div>
+                    <div class="theme-dot" data-theme="midnight" title="Medianoche"></div>
+                </div>
+                <button class="btn icon" onclick="changeFont(-1)" title="Reducir fuente">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M8 11h6" />
+                    </svg>
+                </button>
+                <button class="btn icon" onclick="changeFont(1)" title="Aumentar fuente">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M8 11h6" />
+                        <path d="M11 8v6" />
+                    </svg>
+                </button>
+                <button class="btn icon bookmark-btn" id="bookmarkBtn" onclick="toggleBookmark()"
+                    title="Marcar capítulo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <section id="reader">
+            <div id="loading">
+                <div class="spinner"></div><span>Cargando...</span>
+            </div>
+            <article id="content"></article>
+        </section>
+    </main>
+
+    <!-- BARRA INFERIOR MÓVIL -->
+    <div class="bottom-bar">
+        <div class="bottom-bar-inner">
+            <button class="btn icon" onclick="openSearch()" title="Buscar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                </svg>
             </button>
-            <!-- Botón de estadísticas -->
-            <button class="btn icon" onclick="openStats()" title="Estadísticas">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-            </button>
-            <!-- Botón de audio -->
             <button class="btn icon" onclick="toggleAudioPlayer()" title="Escuchar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                </svg>
             </button>
-            <!-- Tema automático -->
-            <button class="btn icon" id="autoThemeBtn" onclick="toggleAutoTheme()" title="Tema automático">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            <button class="btn icon" onclick="openStats()" title="Estadísticas">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M3 3v18h18" />
+                    <path d="m19 9-5 5-4-4-3 3" />
+                </svg>
             </button>
-            <div class="theme-picker" id="themePicker">
-                <div class="theme-dot active" data-theme="light" title="Claro"></div>
-                <div class="theme-dot" data-theme="cream" title="Crema"></div>
-                <div class="theme-dot" data-theme="mint" title="Menta"></div>
-                <div class="theme-dot" data-theme="ocean" title="Océano"></div>
-                <div class="theme-dot" data-theme="lavender" title="Lavanda"></div>
-                <div class="theme-dot" data-theme="sepia" title="Sepia"></div>
-                <div class="theme-dot" data-theme="dark" title="Oscuro"></div>
-                <div class="theme-dot" data-theme="midnight" title="Medianoche"></div>
-            </div>
-            <button class="btn icon" onclick="changeFont(-1)" title="Reducir fuente">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M8 11h6"/></svg>
-            </button>
-            <button class="btn icon" onclick="changeFont(1)" title="Aumentar fuente">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M8 11h6"/><path d="M11 8v6"/></svg>
-            </button>
-            <button class="btn icon bookmark-btn" id="bookmarkBtn" onclick="toggleBookmark()" title="Marcar capítulo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+            <button class="btn icon bookmark-btn" onclick="toggleBookmark()" title="Marcar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
+                </svg>
             </button>
         </div>
-    </header>
-    
-    <section id="reader">
-        <div id="loading"><div class="spinner"></div><span>Cargando...</span></div>
-        <article id="content"></article>
-    </section>
-</main>
-
-<!-- BARRA INFERIOR MÓVIL -->
-<div class="bottom-bar">
-    <div class="bottom-bar-inner">
-        <button class="btn icon" onclick="openSearch()" title="Buscar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        </button>
-        <button class="btn icon" onclick="toggleAudioPlayer()" title="Escuchar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-        </button>
-        <button class="btn icon" onclick="openStats()" title="Estadísticas">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-        </button>
-        <button class="btn icon bookmark-btn" onclick="toggleBookmark()" title="Marcar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
-        </button>
     </div>
-</div>
 
-<!-- POPUP DE NOTAS -->
-<div id="overlay" onclick="closeNote()"></div>
-<div id="note-popup">
-    <div class="note-header">
-        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Nota del Autor</span>
-        <button class="note-close" onclick="closeNote()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <!-- POPUP DE NOTAS -->
+    <div id="overlay" onclick="closeNote()"></div>
+    <div id="note-popup">
+        <div class="note-header">
+            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                </svg> Nota del Autor</span>
+            <button class="note-close" onclick="closeNote()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg></button>
+        </div>
+        <div class="note-body" id="noteBody"></div>
     </div>
-    <div class="note-body" id="noteBody"></div>
-</div>
 
-<!-- PORTADA PRINCIPAL -->
-<div class="cover-screen main-cover-screen" id="mainCoverScreen">
-    <div class="main-cover-wrapper">
-        <div class="book-flip-container" id="bookFlipContainer">
-            <div class="book-face">
-                <div class="cover-image-container">
-                    <img src="imagenes/cover_opt.jpg" alt="Portada" class="cover-image-full" loading="eager" decoding="async" fetchpriority="high">
+    <!-- PORTADA PRINCIPAL -->
+    <div class="cover-screen main-cover-screen" id="mainCoverScreen">
+        <div class="main-cover-wrapper">
+            <div class="book-flip-container" id="bookFlipContainer">
+                <div class="book-face">
+                    <div class="cover-image-container">
+                        <img src="imagenes/cover_opt.jpg" alt="Portada" class="cover-image-full" loading="eager"
+                            decoding="async" fetchpriority="high">
+                    </div>
+                </div>
+                <div class="book-face book-back">
+                    <div class="cover-image-container">
+                        <img src="imagenes/contratapa.jpg" alt="Contratapa" class="cover-image-full" loading="lazy"
+                            decoding="async">
+                    </div>
                 </div>
             </div>
-            <div class="book-face book-back">
-                <div class="cover-image-container">
-                    <img src="imagenes/contratapa.jpg" alt="Contratapa" class="cover-image-full" loading="lazy" decoding="async">
+            <div class="main-cover-buttons">
+                <button class="flip-btn" id="flipBtn" onclick="flipBook()" title="Voltear / Ver Contratapa">🔄</button>
+                <button class="enter-book-btn" onclick="enterBook()" title="Entrar al Libro">📖</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PANTALLA DE PORTADA DE CAPÍTULO -->
+    <div class="cover-screen" id="coverScreen">
+        <div class="cover-image-container">
+            <img id="coverImageFull" src="imagenes/cover_opt.jpg" alt="Portada" class="cover-image-full" loading="lazy"
+                decoding="async">
+        </div>
+        <h1 class="cover-chapter-title" id="coverChapterTitle">Capítulo 01</h1>
+        <p class="cover-book-title">El Silencio de los Dioses</p>
+        <button class="start-reading-btn" onclick="startReading()">✨ Comenzar a Leer</button>
+    </div>
+
+    <!-- REPRODUCTOR DE AUDIO -->
+    <div class="audio-player" id="audioPlayer">
+        <div class="audio-info">
+            <img id="audioCover" src="imagenes/cover_opt.jpg" alt="Portada" class="audio-cover" loading="eager"
+                decoding="async" fetchpriority="high">
+            <div class="audio-details">
+                <div class="audio-title" id="audioChapterTitle">Capítulo 01</div>
+                <div class="audio-subtitle">Narración por voz sintética</div>
+            </div>
+        </div>
+        <div class="audio-controls">
+            <button class="audio-btn secondary" onclick="skipBackward()" title="Retroceder párrafos">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 2v6h6" />
+                    <path d="M21 12A9 9 0 0 0 6 5.3L3 8" />
+                </svg>
+            </button>
+            <button class="audio-btn" onclick="togglePlayPause()" title="Reproducir/Pausar">
+                <span id="playIcon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg></span>
+            </button>
+            <button class="audio-btn secondary" onclick="skipForward()" title="Avanzar párrafos">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 2v6h-6" />
+                    <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                </svg>
+            </button>
+        </div>
+        <div class="audio-progress-container">
+            <div class="audio-times">
+                <span id="audioCurrentTime">0:00</span>
+                <span id="audioDuration">0:00</span>
+            </div>
+            <div class="audio-progress" id="audioProgress" onclick="setAudioProgress(event)">
+                <div class="audio-progress-bar" id="audioProgressBar"></div>
+            </div>
+        </div>
+        <div class="audio-volume">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+            </svg>
+            <input type="range" class="volume-slider" min="0" max="100" value="100" oninput="setVolume(event)">
+        </div>
+        <div class="audio-speed">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <input type="range" class="speed-slider" min="0.5" max="2.0" step="0.1" value="1.0"
+                oninput="setSpeechRate(event)">
+            <span id="speedValue" class="speed-value">1.0x</span>
+        </div>
+        <button class="audio-close" onclick="closeAudioPlayer()" title="Cerrar reproductor">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- MODAL DE BÚSQUEDA -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-container">
+            <div class="search-header">
+                <input type="text" id="searchInput" placeholder="Buscar en el libro..." oninput="handleSearchInput()"
+                    onkeydown="if(event.key==='Escape')closeSearch()">
+                <button class="search-close" onclick="closeSearch()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="search-results" id="searchResults"></div>
+            <div class="search-stats" id="searchStats"></div>
+        </div>
+    </div>
+
+    <!-- MODAL DE ESTADÍSTICAS -->
+    <div class="stats-modal" id="statsModal">
+        <div class="stats-container">
+            <div class="stats-header">
+                <h3>📊 Estadísticas de Lectura</h3>
+                <button class="stats-close" onclick="closeStats()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="stats-body">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="statCompleted">0</div>
+                        <div class="stat-label">Capítulos completados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statInProgress">0</div>
+                        <div class="stat-label">En progreso</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statBookmarks">0</div>
+                        <div class="stat-label">Marcadores</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statTime">0 min</div>
+                        <div class="stat-label">Tiempo de lectura</div>
+                    </div>
+                </div>
+                <div class="stats-progress">
+                    <strong id="statsProgressText">0% completado (0/30 capítulos)</strong>
+                    <div class="stats-progress-bar">
+                        <div class="stats-progress-fill" id="statsProgressFill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button class="btn" onclick="exportProgress()">📥 Exportar progreso</button>
+                    <label class="btn" style="cursor: pointer;">
+                        📤 Importar progreso
+                        <input type="file" accept=".json" style="display: none;"
+                            onchange="importProgress(this.files[0])">
+                    </label>
+                    <button class="btn" onclick="resetStats()" style="color: #ef4444;">🗑️ Reiniciar</button>
                 </div>
             </div>
         </div>
-        <div class="main-cover-buttons">
-            <button class="flip-btn" id="flipBtn" onclick="flipBook()" title="Voltear / Ver Contratapa">🔄</button>
-            <button class="enter-book-btn" onclick="enterBook()" title="Entrar al Libro">📖</button>
-        </div>
     </div>
-</div>
 
-<!-- PANTALLA DE PORTADA DE CAPÍTULO -->
-<div class="cover-screen" id="coverScreen">
-    <div class="cover-image-container">
-        <img id="coverImageFull" src="imagenes/cover_opt.jpg" alt="Portada" class="cover-image-full" loading="lazy" decoding="async">
-    </div>
-    <h1 class="cover-chapter-title" id="coverChapterTitle">Capítulo 01</h1>
-    <p class="cover-book-title">El Silencio de los Dioses</p>
-    <button class="start-reading-btn" onclick="startReading()">✨ Comenzar a Leer</button>
-</div>
-
-<!-- REPRODUCTOR DE AUDIO -->
-<div class="audio-player" id="audioPlayer">
-    <div class="audio-info">
-        <img id="audioCover" src="imagenes/cover_opt.jpg" alt="Portada" class="audio-cover" loading="eager" decoding="async" fetchpriority="high">
-        <div class="audio-details">
-            <div class="audio-title" id="audioChapterTitle">Capítulo 01</div>
-            <div class="audio-subtitle">Narración por voz sintética</div>
-        </div>
-    </div>
-    <div class="audio-controls">
-        <button class="audio-btn secondary" onclick="skipBackward()" title="Retroceder párrafos">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v6h6"/><path d="M21 12A9 9 0 0 0 6 5.3L3 8"/></svg>
-        </button>
-        <button class="audio-btn" onclick="togglePlayPause()" title="Reproducir/Pausar">
-            <span id="playIcon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
-        </button>
-        <button class="audio-btn secondary" onclick="skipForward()" title="Avanzar párrafos">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/></svg>
-        </button>
-    </div>
-    <div class="audio-progress-container">
-        <div class="audio-times">
-            <span id="audioCurrentTime">0:00</span>
-            <span id="audioDuration">0:00</span>
-        </div>
-        <div class="audio-progress" id="audioProgress" onclick="setAudioProgress(event)">
-            <div class="audio-progress-bar" id="audioProgressBar"></div>
-        </div>
-    </div>
-    <div class="audio-volume">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-        <input type="range" class="volume-slider" min="0" max="100" value="100" oninput="setVolume(event)">
-    </div>
-    <div class="audio-speed">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <input type="range" class="speed-slider" min="0.5" max="2.0" step="0.1" value="1.0" oninput="setSpeechRate(event)">
-        <span id="speedValue" class="speed-value">1.0x</span>
-    </div>
-    <button class="audio-close" onclick="closeAudioPlayer()" title="Cerrar reproductor">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    <!-- MODO EDICIÓN -->
+    <button class="edit-mode-btn" onclick="showEditModal()" title="Modo Edición">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+        </svg>
     </button>
-</div>
 
-<!-- MODAL DE BÚSQUEDA -->
-<div class="search-modal" id="searchModal">
-    <div class="search-container">
-        <div class="search-header">
-            <input type="text" id="searchInput" placeholder="Buscar en el libro..." oninput="handleSearchInput()" onkeydown="if(event.key==='Escape')closeSearch()">
-            <button class="search-close" onclick="closeSearch()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-            </button>
-        </div>
-        <div class="search-results" id="searchResults"></div>
-        <div class="search-stats" id="searchStats"></div>
+    <!-- MENÚ CONTEXTUAL DE RESALTADO -->
+    <div class="highlight-menu" id="highlightMenu">
+        <button class="hl-yellow" onclick="applyHighlight('yellow')" title="Resaltar amarillo">🟡</button>
+        <button class="hl-green" onclick="applyHighlight('green')" title="Resaltar verde">🟢</button>
+        <button class="hl-pink" onclick="applyHighlight('pink')" title="Resaltar rosa">🔴</button>
+        <button class="hl-blue" onclick="applyHighlight('blue')" title="Resaltar azul">🔵</button>
+        <button class="hl-review" onclick="applyHighlight('review')" title="Marcar para revisar">⚠️</button>
+        <button class="hl-underline" onclick="applyHighlight('underline')" title="Subrayar">U̲</button>
+        <button class="hl-strike" onclick="applyHighlight('strikethrough')" title="Tachar">A̶B̶</button>
+        <button class="hl-clear" onclick="clearHighlight()" title="Quitar resaltado">✕</button>
     </div>
-</div>
 
-<!-- MODAL DE ESTADÍSTICAS -->
-<div class="stats-modal" id="statsModal">
-    <div class="stats-container">
-        <div class="stats-header">
-            <h3>📊 Estadísticas de Lectura</h3>
-            <button class="stats-close" onclick="closeStats()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-            </button>
-        </div>
-        <div class="stats-body">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-value" id="statCompleted">0</div>
-                    <div class="stat-label">Capítulos completados</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="statInProgress">0</div>
-                    <div class="stat-label">En progreso</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="statBookmarks">0</div>
-                    <div class="stat-label">Marcadores</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value" id="statTime">0 min</div>
-                    <div class="stat-label">Tiempo de lectura</div>
-                </div>
-            </div>
-            <div class="stats-progress">
-                <strong id="statsProgressText">0% completado (0/30 capítulos)</strong>
-                <div class="stats-progress-bar">
-                    <div class="stats-progress-fill" id="statsProgressFill" style="width: 0%"></div>
-                </div>
-            </div>
-            <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-                <button class="btn" onclick="exportProgress()">📥 Exportar progreso</button>
-                <label class="btn" style="cursor: pointer;">
-                    📤 Importar progreso
-                    <input type="file" accept=".json" style="display: none;" onchange="importProgress(this.files[0])">
-                </label>
-                <button class="btn" onclick="resetStats()" style="color: #ef4444;">🗑️ Reiniciar</button>
+    <div class="edit-modal" id="editModal">
+        <div class="edit-modal-content">
+            <h3>🔐 Modo Edición</h3>
+            <p style="margin-bottom:15px; color: var(--text-soft);">Ingresa la contraseña para editar el libro:</p>
+            <input type="password" id="editPassword" placeholder="Contraseña">
+            <div class="edit-modal-buttons">
+                <button class="btn-cancel" onclick="closeEditModal()">Cancelar</button>
+                <button class="btn-confirm" onclick="activateEditMode()">Activar</button>
             </div>
         </div>
     </div>
-</div>
 
-<!-- MODO EDICIÓN -->
-<button class="edit-mode-btn" onclick="showEditModal()" title="Modo Edición">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-    </svg>
-</button>
+    <div class="edit-controls" id="editControls">
+        <button class="btn-save" onclick="saveEdits()">💾 Guardar</button>
+        <button class="btn-note" onclick="insertFootnote()" title="Insertar nota al pie (Ctrl+Shift+N)">📝 Insertar
+            Nota</button>
+        <button class="btn-renumber" onclick="renumberFootnotes()" title="Renumerar todas las notas">🔢 Renumerar
+            Notas</button>
+        <button class="btn-delete-note" onclick="toggleDeleteNoteMode()" title="Activar modo eliminar notas">🗑️
+            Eliminar Nota</button>
+        <button class="btn-export" onclick="exportEdits()">📤 Exportar JSON</button>
+        <button class="btn-exit" onclick="exitEditMode()">❌ Salir</button>
+        <span id="changeCounter"></span>
+    </div>
 
-<!-- MENÚ CONTEXTUAL DE RESALTADO -->
-<div class="highlight-menu" id="highlightMenu">
-    <button class="hl-yellow" onclick="applyHighlight('yellow')" title="Resaltar amarillo">🟡</button>
-    <button class="hl-green" onclick="applyHighlight('green')" title="Resaltar verde">🟢</button>
-    <button class="hl-pink" onclick="applyHighlight('pink')" title="Resaltar rosa">🔴</button>
-    <button class="hl-blue" onclick="applyHighlight('blue')" title="Resaltar azul">🔵</button>
-    <button class="hl-review" onclick="applyHighlight('review')" title="Marcar para revisar">⚠️</button>
-    <button class="hl-underline" onclick="applyHighlight('underline')" title="Subrayar">U̲</button>
-    <button class="hl-strike" onclick="applyHighlight('strikethrough')" title="Tachar">A̶B̶</button>
-    <button class="hl-clear" onclick="clearHighlight()" title="Quitar resaltado">✕</button>
-</div>
-
-<div class="edit-modal" id="editModal">
-    <div class="edit-modal-content">
-        <h3>🔐 Modo Edición</h3>
-        <p style="margin-bottom:15px; color: var(--text-soft);">Ingresa la contraseña para editar el libro:</p>
-        <input type="password" id="editPassword" placeholder="Contraseña">
-        <div class="edit-modal-buttons">
-            <button class="btn-cancel" onclick="closeEditModal()">Cancelar</button>
-            <button class="btn-confirm" onclick="activateEditMode()">Activar</button>
+    <div class="edit-modal" id="noteModal">
+        <div class="edit-modal-content">
+            <h3>📝 Agregar Nota al Pie</h3>
+            <p style="margin-bottom:10px; color: var(--text-soft);">Número de nota: <strong id="noteNumber"></strong>
+            </p>
+            <textarea id="noteDefinition" placeholder="Escribe aquí la definición o explicación de esta nota..."
+                rows="5"
+                style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--card-bg); color: var(--text); font-family: inherit; resize: vertical;"></textarea>
+            <div class="edit-modal-buttons">
+                <button class="btn-cancel" onclick="closeNoteModal()">Cancelar</button>
+                <button class="btn-confirm" onclick="confirmFootnote()">Insertar</button>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="edit-controls" id="editControls">
-    <button class="btn-save" onclick="saveEdits()">💾 Guardar</button>
-    <button class="btn-note" onclick="insertFootnote()" title="Insertar nota al pie (Ctrl+Shift+N)">📝 Insertar Nota</button>
-    <button class="btn-renumber" onclick="renumberFootnotes()" title="Renumerar todas las notas">🔢 Renumerar Notas</button>
-    <button class="btn-delete-note" onclick="toggleDeleteNoteMode()" title="Activar modo eliminar notas">🗑️ Eliminar Nota</button>
-    <button class="btn-export" onclick="exportEdits()">📤 Exportar JSON</button>
-    <button class="btn-exit" onclick="exitEditMode()">❌ Salir</button>
-    <span id="changeCounter"></span>
-</div>
+    <!-- Modales personalizados -->
+    <div class="notification-overlay" id="notificationOverlay"></div>
+    <div class="custom-notification" id="customNotification">
+        <div class="notification-icon" id="notificationIcon"></div>
+        <div class="notification-message" id="notificationMessage"></div>
+        <button class="notification-btn" onclick="hideNotification()">Aceptar</button>
+    </div>
 
-<div class="edit-modal" id="noteModal">
-    <div class="edit-modal-content">
-        <h3>📝 Agregar Nota al Pie</h3>
-        <p style="margin-bottom:10px; color: var(--text-soft);">Número de nota: <strong id="noteNumber"></strong></p>
-        <textarea id="noteDefinition" placeholder="Escribe aquí la definición o explicación de esta nota..." rows="5" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--card-bg); color: var(--text); font-family: inherit; resize: vertical;"></textarea>
-        <div class="edit-modal-buttons">
-            <button class="btn-cancel" onclick="closeNoteModal()">Cancelar</button>
-            <button class="btn-confirm" onclick="confirmFootnote()">Insertar</button>
+    <div class="notification-overlay" id="confirmOverlay"></div>
+    <div class="custom-notification" id="customConfirm">
+        <div class="notification-icon">⚠️</div>
+        <div class="notification-message" id="confirmMessage"></div>
+        <div style="display: flex; gap: 10px; justify-content: center;">
+            <button class="notification-btn" style="background: var(--bg-secondary); color: var(--text);"
+                onclick="hideConfirm(false)">Cancelar</button>
+            <button class="notification-btn" onclick="hideConfirm(true)">Confirmar</button>
         </div>
     </div>
-</div>
 
-<!-- Modales personalizados -->
-<div class="notification-overlay" id="notificationOverlay"></div>
-<div class="custom-notification" id="customNotification">
-    <div class="notification-icon" id="notificationIcon"></div>
-    <div class="notification-message" id="notificationMessage"></div>
-    <button class="notification-btn" onclick="hideNotification()">Aceptar</button>
-</div>
+    <!-- Scripts externos (módulos) -->
+    <script src="js/app.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/auto-theme.js"></script>
+    <script src="js/toc.js"></script>
+    <script src="js/presentation.js"></script>
+    <script src="js/dictionary.js"></script>
 
-<div class="notification-overlay" id="confirmOverlay"></div>
-<div class="custom-notification" id="customConfirm">
-    <div class="notification-icon">⚠️</div>
-    <div class="notification-message" id="confirmMessage"></div>
-    <div style="display: flex; gap: 10px; justify-content: center;">
-        <button class="notification-btn" style="background: var(--bg-secondary); color: var(--text);" onclick="hideConfirm(false)">Cancelar</button>
-        <button class="notification-btn" onclick="hideConfirm(true)">Confirmar</button>
+    <!-- MODAL TABLA DE CONTENIDOS -->
+    <div class="toc-modal" id="tocModal">
+        <div class="toc-container">
+            <div class="toc-header">
+                <div>
+                    <h3>📑 Tabla de Contenidos</h3>
+                    <span class="toc-chapter-title" id="tocChapterTitle"></span>
+                </div>
+                <button class="toc-close" onclick="closeTOC()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="toc-body" id="tocList"></div>
+        </div>
     </div>
-</div>
 
-<!-- Scripts externos (módulos) -->
-<script src="js/app.js"></script>
-<script src="js/editor.js"></script>
-<script src="js/audio.js"></script>
-<script src="js/search.js"></script>
-<script src="js/stats.js"></script>
-<script src="js/auto-theme.js"></script>
+    <!-- MODAL MODO PRESENTACIÓN -->
+    <div class="presentation-modal" id="presentationModal">
+        <div class="presentation-header">
+            <div class="presentation-controls">
+                <button class="presentation-btn" id="slidePrev" onclick="prevSlide()" title="Anterior (←)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="m15 18-6-6 6-6" />
+                    </svg>
+                </button>
+                <span class="slide-counter" id="slideCounter">1 / 1</span>
+                <button class="presentation-btn" id="slideNext" onclick="nextSlide()" title="Siguiente (→)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+            <div class="slide-progress-container">
+                <div class="slide-progress" id="slideProgress"></div>
+            </div>
+            <div class="presentation-controls">
+                <button class="presentation-btn" onclick="toggleFullscreen()" title="Pantalla completa">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+                        <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+                        <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+                        <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+                    </svg>
+                </button>
+                <button class="presentation-btn" onclick="endPresentation()" title="Cerrar (Esc)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="presentation-body">
+            <div class="slide-content" id="slideContent"></div>
+        </div>
+    </div>
+
+    <!-- POPUP DICCIONARIO -->
+    <div class="dict-popup" id="dictionaryPopup"></div>
 
 </body>
+
 </html>
