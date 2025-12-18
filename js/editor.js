@@ -85,6 +85,10 @@ function closeEditModal() {
     document.getElementById('editModal').style.display = 'none';
 }
 
+// Exportar inmediatamente para evitar "undefined"
+window.showEditModal = showEditModal;
+window.closeEditModal = closeEditModal;
+
 function activateEditMode() {
     const password = document.getElementById('editPassword').value;
     if (password === EDIT_PASSWORD) {
