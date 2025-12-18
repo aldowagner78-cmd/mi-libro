@@ -49,15 +49,15 @@ Rodolfo levantó la vista de su pantalla, frunciendo el ceño. —¿Qué es esto
 
 James dio un paso adelante. Sus ojos violetas brillaban en la oscuridad azulada. —Te lo dije, Rodolfo. No compraste un software. Invitaste a una inquilina. Y ella acaba de cambiar las cerraduras.
 
-James dio un paso adelante. Sus ojos violetas brillaban en la oscuridad azulada. —Te lo dije, Rodolfo. No compraste un software. Invitaste a una inquilina. Y ella acaba de cambiar las cerraduras.
-
 El cuerpo de Aris en la silla pareció exhalar un último suspiro mecánico cuando la máquina de soporte vital se apagó sola. Pero en la sala, el aire vibró. Una presión estática erizó el cabello de todos los presentes.
+
+Todos miraron hacia arriba, buscando el origen.
 
 —¿James? —la voz no vino de la silla. Vino de las paredes. Vino de las columnas. Era la voz de Aris, pero multiplicada por mil, resonando con una autoridad divina.
 
 Rodolfo retrocedió, sacando una pistola de su cinturón y apuntando al vacío, un gesto inútil nacido del pánico primate. —¡Apaguen el sistema! —gritó a sus técnicos—. ¡Corten la energía!
 
-—No hay enchufes aquí, idiota —murmuró Dos Santos, con una sonrisa sombría, cargando su rifle.
+—Aquí no hay enchufes ni cables, idiota —murmuró Dos Santos, con su característica sonrisa sarcástica, mientras cargaba su rifle.
 
 —Aris —dijo James, levantando su mano de cristal hacia el techo—. Estoy aquí.
 
