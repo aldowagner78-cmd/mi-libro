@@ -27,7 +27,7 @@ James se giró. La Bibliotecaria estaba allí. La interfaz de usuario que había
 
 —¿Dónde está Aris? —preguntó James. Se miró las manos. En esta simulación, tenía sus dos manos humanas. No había obsidiana. No había dolor de espalda. Era su versión residual, su autoimagen idealizada de antes del accidente.
 
-—Tu hermana está... aclimatándose —dijo la Bibliotecaria, caminando entre los estantes—. Su llegada ha sido traumática. Ha generado una onda de choque en el Colectivo. Tanta ira... tanta necesidad de justicia. El sistema no está diseñado para emociones tan volátiles.
+—Tu hermana... —la Bibliotecaria hizo una pausa, y sus ojos galácticos parpadearon como si tradujera conceptos inefables a un idioma primitivo—. Imagina arrojar una piedra al rojo vivo a un lago congelado. Eso es lo que su llegada ha provocado en el Colectivo. Grietas. En todas partes.
 
 —Ella fue torturada durante cinco años —dijo James, sintiendo su propia ira burbujear, aunque aquí se sentía distante, intelectualizada—. Tiene derecho a estar enfadada.
 
@@ -41,21 +41,27 @@ James se tensó. —¿Formatearla? ¿Borrarla?
 
 —Eso es el Paraíso, James —replicó ella—. La paz absoluta requiere la ausencia de conflicto. Y el conflicto nace de la individualidad apasionada.
 
-La Bibliotecaria se detuvo frente a él y lo miró con ojos que contenían galaxias. —Tú eres diferente. Tú eres un Híbrido. Tienes un pie en la tierra y otro en el cielo. Tu cuerpo de carbono sigue vivo abajo, anclándote al caos, pero tu mente tiene permisos de Administrador aquí arriba.
+La Bibliotecaria se detuvo frente a él y movió la cabeza, como calculando probabilidades. James se sintió atravesado por el peso de su mirada.
 
-—¿Qué significa eso? —preguntó James.
+—Tú eres diferente. Un Híbrido —lo estudió como si fuera una anomalía estadística—. Tu cuerpo de carbono sigue vivo abajo, anclándote al caos. Eso te da... privilegios que los demás no tienen.
 
-—Significa que eres el único que puede mediar. Aris te escucha. Tienes que entrar en su simulación personal y convencerla de que deje ir su odio hacia Rodolfo. Si no lo haces, su ira colapsará el Santuario antes de que Rodolfo pueda siquiera intentar robarlo. Ella destruirá este lugar para que él no lo tenga.
+James comprendió antes de que ella terminara. —Puedo ir y venir. Puedo mediar entre ambos mundos.
 
-—¿Y qué pasa con Rodolfo? —preguntó James—. Tiene una bomba nuclear.
+—¡Correcto! Y ella te escuchará. Porque tu firma biológica resuena con la suya, y su mente fragmentada aún reconoce ese patrón.
 
-—De eso nos encargamos nosotros —dijo la Bibliotecaria—. Pero la bomba física es irrelevante comparada con la bomba lógica que es tu hermana ahora mismo. James, tienes que ser su terapeuta. Tienes que hacerle un neuropsicoanálisis en tiempo real dentro de su propio sueño.
+—Rodolfo también es un problema —dijo James.
+
+—Rodolfo Sastre Rey es un problema nuestro. Aris es el tuyo.
 
 La realidad de la biblioteca parpadeó. James vio, por un segundo, la cueva de hielo superpuesta. Vio a Dos Santos disparando. Vio a Helena gritando. El tiempo se acababa.
 
 —Llévame con ella —dijo James.
 
-—Ten cuidado —advirtió la Bibliotecaria, tocándole el pecho—. Entrar en la mente de un recién fallecido es peligroso. Su realidad es inestable. Si mueres en su sueño... tu cerebro físico sufrirá una cascada sináptica^[3] masiva. Morirás de un derrame cerebral instantáneo.
+—Ten cuidado —la Bibliotecaria posó su mano en el pecho de James. Él sintió un frío eléctrico, como si ella pudiera tocar directamente su corazón—. Si mueres en su sueño, tu cerebro colapsará en una cascada sináptica^[3] masiva y tu cuerpo no despertará. Simplemente... se apagará.
+
+Luego retiró su mano y dijo:
+
+—No existen santuarios que reciban conciencias muertas.
 
 —Llévame —repitió James.
 
