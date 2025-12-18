@@ -19,7 +19,7 @@ let redoStack = [];
 let isUndoRedo = false;
 
 // Contraseña de edición (cambiar según necesidad)
-const EDIT_PASSWORD = 'admin2024';
+const EDIT_PASSWORD = '26716975';
 
 // ========== MODALES PERSONALIZADOS ==========
 function showNotification(icon, message) {
