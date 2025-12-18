@@ -199,7 +199,9 @@ Aris se puso de pie, flotando a unos centímetros del suelo. Ya no llevaba la ba
 
 —Ahora empieza la guerra —dijo Aris, mirando hacia el cielo dorado—. Voy a enseñarle a Rodolfo Sastre Rey lo que sucede cuando intentas domesticar una singularidad.
 
-James se desvaneció, pero lo último que vio fue la mirada de Aris. Había soltado el miedo, sí. Pero la ira... la ira no había desaparecido. Se había condensado. Se había refinado en un láser frío y afilado. Y James temió, por un segundo, haber creado algo mucho más peligroso que una víctima: un dios vengativo con acceso a internet.
+James se desvaneció. La última imagen que vio fue la mirada de Aris. Había soltado el miedo, sí. Pero la ira... la ira no había desaparecido. Se había condensado. Se había refinado en un láser frío y afilado. Y James temió, por un segundo, haber creado algo mucho más peligroso que una víctima: un dios vengativo con acceso a internet.
+
+Y luego, la oscuridad. Y el frío. Y la voz lejana de Helena llamándolo de vuelta.
 
 **NOTAS DEL CAPÍTULO 13**
 

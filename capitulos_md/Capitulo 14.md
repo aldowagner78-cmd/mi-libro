@@ -57,7 +57,7 @@ Helena exhaló un suspiro de alivio tembloroso que formó una nube blanca frente
 
 —Sin embargo —continuó Rodolfo, caminando hacia Dos Santos—, eso nos deja en un punto muerto inaceptable. James está dormido. La consola está bloqueada. Y yo tengo un horario estricto que cumplir antes de que mis competidores o los gobiernos mundiales detecten nuestra posición. Necesito un incentivo. Necesito una palanca emocional para que James despierte y coopere voluntariamente. O para que ustedes me den una solución alternativa.
 
-Rodolfo hizo un gesto sutil, casi imperceptible, con la mano. El mercenario más cercano a Dos Santos, sin mediar palabra, giró su rifle y golpeó al brasileño en la boca del estómago con la culata de material compuesto. El sonido fue sordo y brutal. *Thump*.
+Rodolfo hizo un gesto sutil, casi imperceptible, con la mano. El mercenario más cercano a Dos Santos, sin mediar palabra, giró su rifle y golpeó al brasileño en la boca del estómago con la culata. El sonido fue sordo y brutal. *Thump*.
 
 Dos Santos se dobló sobre sí mismo, tosiendo violentamente, buscando aire desesperadamente. Pero no gritó. Era un soldado veterano. Conocía el dolor, lo respetaba, pero no le daba el gusto de vocalizarlo.
 
@@ -75,7 +75,7 @@ Rodolfo se dio la vuelta y se alejó caminando hacia el Monolito, dejando al gru
 
 Helena se arrastró por el hielo, raspándose las rodillas, hasta llegar al cuerpo de James. Su piel estaba helada al tacto, cerosa. —James —susurró, poniendo sus manos atadas sobre el pecho de él, sintiendo el latido errático de su corazón—. Por favor. Tienes que volver. No sé dónde estás, ni qué maravillas estás viendo, pero tienes que volver ahora. El diablo está aquí, James. Y se le ha acabado la paciencia.
 
-Pero James no respondió. Su mente estaba a años luz de distancia, atrapada en una decisión imposible, mientras el reloj analógico de Rodolfo comenzaba la cuenta atrás hacia el apocalipsis térmico.
+Pero James no respondió. Su mente estaba a años luz de distancia, atrapada en una decisión imposible, mientras el reloj de Rodolfo comenzaba la cuenta atrás hacia el fin del mundo.
 
 **NOTAS DEL CAPÍTULO 14**
 
