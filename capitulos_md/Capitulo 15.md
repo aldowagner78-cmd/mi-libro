@@ -19,7 +19,7 @@ No era la flotación del agua, donde sientes la presión del líquido contra la 
 
 Y lo más importante, lo más impactante y adictivo de todo, era lo que *no* estaba allí: el dolor.
 
-Durante veinte años, desde aquel accidente en la excavación de Siria, su hernia discal L4-L5 había sido su compañera constante, su esposa amarga. Un ruido de fondo en su sistema nervioso, un chirrido agudo y eléctrico que nunca se apagaba del todo. Le recordaba su fragilidad con cada paso, con cada vez que se ataba los cordones de los zapatos, con cada cambio de clima. Había definido su vida, limitado sus movimientos, moldeado su carácter alrededor de la gestión del sufrimiento crónico. James Gordon era un hombre que vivía con miedo a estornudar.
+Durante veinte años, desde aquel accidente en la excavación de Siria, su hernia discal L4-L5 había sido su compañera constante, su esposa amarga. Un chirrido eléctrico en su sistema nervioso que nunca se apagaba del todo. Le recordaba su fragilidad con cada paso, con cada vez que se ataba los cordones de los zapatos, con cada cambio de clima. Había definido su vida, limitado sus movimientos, moldeado su carácter alrededor de la gestión del sufrimiento crónico. James Gordon era un hombre que vivía con miedo a estornudar.
 
 Ahora, silencio.
 
@@ -63,7 +63,7 @@ Vio a Helena arrodillada en el hielo, llorando sobre su cuerpo inerte. Vio a Kai
 
 James sintió un escalofrío en su cuerpo de luz. Su instinto académico, entrenado durante décadas para buscar la trampa en cualquier contrato de subvención o acuerdo gubernamental, se despertó de golpe. El paraíso no podía ser gratis. —¿Cuál es la condición? —preguntó.
 
-La Bibliotecaria lo miró con una compasión algorítmica, una piedad sin emociones, como un médico que explica un procedimiento necesario pero doloroso. —El sistema no puede tolerar la disonancia indefinidamente. El caos, la pasión, el "Yo" individual, el ego... son ineficiencias termodinámicas. Son fricción en el procesador. Aris ha dejado de odiar activamente, sí, pero sigue siendo humana. Sigue teniendo apegos. Sigue teniendo historia. Sigue siendo Aris Gordon.
+La Bibliotecaria lo miró con una compasión algorítmica, como un médico que explica un procedimiento necesario pero doloroso. —El sistema no puede tolerar la disonancia indefinidamente. El caos, la pasión, el "Yo" individual, el ego... son ineficiencias termodinámicas. Son fricción en el procesador. Aris ha dejado de odiar activamente, sí, pero sigue siendo humana. Sigue teniendo apegos. Sigue teniendo historia. Sigue siendo Aris Gordon.
 
 La figura de luz se acercó a él, envolviéndolo en un calor maternal pero sofocante. —Para que ella se integre completamente, y para que tú puedas quedarte, ambos deben someterse al "Lavado". Debemos purgar la narrativa biográfica. Conservaremos su intelecto, su creatividad, su capacidad de procesamiento y resolución de problemas... pero eliminaremos al "sujeto". Aris Gordon dejará de existir como identidad separada. Solo quedará la Arquitecta. Y James Gordon dejará de existir. Solo quedará el Administrador. Sin memoria. Sin dolor. Sin pasado.
 
@@ -79,7 +79,7 @@ James miró la ventana. Vio a Helena rezando. Recordó el sabor amargo del café
 
 James miró la luz blanca. Era la tentación final. Dejar de ser él para ser feliz. Rendirse. Pero entonces miró su mano de luz. Y recordó la mano de Helena sobre su pecho en el mundo real. Recordó la lealtad inquebrantable de Dos Santos. Recordó la inocencia de Kai.
 
-—La paz sin libertad no es paz —dijo James—. Es muerte. Es la paz de las piedras. Y yo todavía no estoy listo para ser una piedra.
+—La paz sin libertad no es paz —dijo James—. Es muerte. Es la paz de las piedras. Y yo aún no estoy preparado para ser una roca.
 
 Miró a la Bibliotecaria a los ojos, desafiando a Dios en su propia casa. —Me llevo a mi hermana. Y nos vamos. No aceptamos sus términos.
 
@@ -101,9 +101,5 @@ Un grito ronco, animal, desgarrador. El grito de un hombre que ha sido arrancado
 
 Estaba de vuelta en la Catedral de Hielo. Helena lo miraba con ojos llenos de lágrimas y terror. Rodolfo estaba junto a la bomba, con el dedo en el detonador y una sonrisa de triunfo en los labios. James intentó levantarse, pero su cuerpo pesaba toneladas. Su mano de obsidiana ardía, roja y furiosa, pulsando con la energía del rechazo.
 
-—Bienvenido al infierno, Doctor —dijo Rodolfo, su voz suave cortando el aire helado—. Llegas justo a tiempo para el final del mundo.
 
-**NOTAS DEL CAPÍTULO 15**
-
-**(1) Estasis:** Estado de inactividad metabólica donde las funciones biológicas se ralentizan casi hasta detenerse, preservando el organismo sin envejecimiento significativo. Común en ciencia ficción (hibernación espacial), pero algunos animales (tardigrados, osos) lo logran naturalmente.
 
