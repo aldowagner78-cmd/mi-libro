@@ -2,11 +2,11 @@
 # Uso: .\aplicar_ediciones.ps1 -ArchivoJSON "ediciones_libro_2024-12-17.json"
 
 param(
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string]$ArchivoJSON,
     
-    [switch]$CrearBackup = $true,
-    [switch]$Preview = $false
+    [switch]$NoBackup,
+    [switch]$Preview
 )
 
 # Colores para output
@@ -30,7 +30,8 @@ try {
     $ediciones = Get-Content $ArchivoJSON -Raw | ConvertFrom-Json
     $totalEdiciones = ($ediciones.PSObject.Properties | Measure-Object).Count
     Write-Host "Cargadas $totalEdiciones ediciones desde el JSON`n" -ForegroundColor $colorExito
-} catch {
+}
+catch {
     Write-Host "ERROR: No se pudo leer el archivo JSON: $_" -ForegroundColor $colorError
     exit 1
 }
@@ -39,8 +40,8 @@ try {
 $dirCapitulos = "capitulos_md"
 $dirBackup = "backup_ediciones_$(Get-Date -Format 'yyyyMMdd_HHmmss')"
 
-# Crear backup si se solicita
-if ($CrearBackup -and -not $Preview) {
+# Crear backup por defecto (usar -NoBackup para omitir)
+if (-not $NoBackup -and -not $Preview) {
     Write-Host "Creando backup en: $dirBackup" -ForegroundColor $colorInfo
     New-Item -ItemType Directory -Path $dirBackup -Force | Out-Null
     Copy-Item "$dirCapitulos\*.md" $dirBackup -Force
@@ -86,15 +87,16 @@ foreach ($prop in $ediciones.PSObject.Properties) {
         
         if ($nuevoContenido -eq "") {
             Write-Host "  ELIMINACION de parrafo $numParrafo" -ForegroundColor $colorAdvertencia
-        } else {
+        }
+        else {
             Write-Host "  Nuevo texto: $($textoMd.Substring(0, [Math]::Min(50, $textoMd.Length)))..." -ForegroundColor Gray
         }
         
         if (-not $Preview) {
-            # Aqui iria la logica para encontrar y reemplazar el parrafo especifico
-            # Por ahora, registramos el cambio para revision manual
+            # Registrar cambio en log para revisión manual
             $logFile = "cambios_pendientes.log"
             Add-Content $logFile "[$clave] Archivo: $archivoMd"
+            Add-Content $logFile "Contenido original: $(($contenido -split "`n")[$numParrafo])"
             Add-Content $logFile "Nuevo contenido: $textoMd"
             Add-Content $logFile "---"
         }
@@ -102,14 +104,16 @@ foreach ($prop in $ediciones.PSObject.Properties) {
         $cambiosAplicados++
         Write-Host "  OK" -ForegroundColor $colorExito
         
-    } elseif ($clave -match "^sec_(.+)_p(\d+)$") {
+    }
+    elseif ($clave -match "^sec_(.+)_p(\d+)$") {
         # Seccion especial (introduccion, sobre-autor, etc.)
         $seccion = $Matches[1]
         $numParrafo = [int]$Matches[2]
         Write-Host "Procesando seccion especial: $seccion (parrafo $numParrafo)" -ForegroundColor $colorInfo
         $cambiosAplicados++
         
-    } else {
+    }
+    else {
         Write-Host "ADVERTENCIA: Formato de clave no reconocido: $clave" -ForegroundColor $colorAdvertencia
         $errores++
     }
@@ -127,12 +131,13 @@ Write-Host "Errores/Advertencias: $errores" -ForegroundColor $(if ($errores -gt 
 if ($Preview) {
     Write-Host "`nModo PREVIEW: No se aplicaron cambios reales" -ForegroundColor $colorAdvertencia
     Write-Host "Ejecute sin -Preview para aplicar los cambios" -ForegroundColor $colorInfo
-} else {
+}
+else {
     Write-Host "`nLos cambios han sido registrados en: cambios_pendientes.log" -ForegroundColor $colorInfo
     Write-Host "Revise el log y aplique manualmente los cambios criticos" -ForegroundColor $colorInfo
 }
 
-if ($CrearBackup -and -not $Preview) {
+if (-not $NoBackup -and -not $Preview) {
     Write-Host "`nBackup disponible en: $dirBackup" -ForegroundColor $colorInfo
 }
 
