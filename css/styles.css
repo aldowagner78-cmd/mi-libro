@@ -493,7 +493,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: var(--cover-bg-image, url('imagenes/cover_opt.jpg'));
+    background-image: var(--cover-bg-image, url('../imagenes/cover_opt.jpg'));
     background-size: cover;
     background-position: center;
     filter: blur(40px) brightness(0.6);
