@@ -10,7 +10,7 @@ let parrafosEliminados = new Set();
 let currentSelection = null;
 let deleteNoteMode = false;
 let pendingNoteSelection = null;
-let currentNotesData = null;
+// currentNotesData está definida en app.js
 
 // Sistema de deshacer/rehacer
 const MAX_HISTORY = 30;
