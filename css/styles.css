@@ -3002,3 +3002,8 @@ body {
         transform: scale(1);
     }
 }
+
+/* FIX MOBILE OVERFLOW */
+html, body { overflow-x: hidden; width: 100%; }
+#customInput { box-sizing: border-box; }
+@media (max-width: 480px) { #customInput { padding: 15px; width: 95%; } }
