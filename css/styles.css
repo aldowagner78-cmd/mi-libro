@@ -3002,8 +3002,158 @@ body {
         transform: scale(1);
     }
 }
+/* =========================================
+   ESTILOS MODAL DE TOKEN (Premium)
+   ========================================= */
+
+#inputOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    z-index: 20000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#inputOverlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+#customInput {
+    background: var(--bg-card, #2d2d2d);
+    /* Fallback */
+    border: 1px solid var(--border, #444);
+    border-radius: 16px;
+    padding: 30px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95) translateY(10px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    /* IMPORTANTE */
+}
+
+#customInput.show {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.confirm-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    animation: bounceIn 0.5s;
+}
+
+.confirm-message {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text, #fff);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--border, #555);
+    background: var(--bg-secondary, #333);
+    color: var(--text, #fff);
+    font-size: 15px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    transition: all 0.2s;
+    font-family: inherit;
+    box-sizing: border-box;
+    /* IMPORTANTE */
+}
+
+.modal-input:focus {
+    outline: none;
+    border-color: var(--accent-color, #6366f1);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+    background: var(--bg, #222);
+}
+
+.confirm-actions {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.confirm-btn {
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s, filter 0.2s;
+    font-size: 14px;
+    flex: 1;
+}
+
+.confirm-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.confirm-btn:active {
+    transform: translateY(0);
+}
+
+.confirm-btn.confirm {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.confirm-btn.cancel {
+    background: var(--bg-secondary, #444);
+    color: var(--text, #fff);
+    border: 1px solid var(--border, #555);
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
 
 /* FIX MOBILE OVERFLOW */
-html, body { overflow-x: hidden; width: 100%; }
-#customInput { box-sizing: border-box; }
-@media (max-width: 480px) { #customInput { padding: 15px; width: 95%; } }
+html,
+body {
+    overflow-x: hidden !important;
+    width: 100%;
+    position: relative;
+}
+
+@media (max-width: 480px) {
+    #customInput {
+        padding: 20px;
+        width: 95%;
+    }
+}
