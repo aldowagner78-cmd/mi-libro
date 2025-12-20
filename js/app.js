@@ -214,18 +214,22 @@ function loadChapterNotes(jsonFile) {
     const content = document.getElementById('content');
 
     fetch(jsonFile)
-        .then(r => r.ok ? r.json() : null)
-        .then(notes => {
-            currentNotesData = notes;
+        .then(r => r.ok ? r.json() : {})
+        .then(originalNotes => {
+            // Cargar notas editadas del localStorage
+            const editedNotesKey = `editedNotes_cap${currentChapter}`;
+            const editedNotes = JSON.parse(localStorage.getItem(editedNotesKey) || '{}');
 
-            // Configurar notas del JSON (añade data-note y estilos)
-            if (notes) {
-                setupNotesWithJSON(notes);
-                console.log(`Notas cargadas: ${Object.keys(notes).length} definiciones`);
+            // Combinar: las editadas tienen prioridad sobre las originales
+            currentNotesData = { ...originalNotes, ...editedNotes };
+
+            // Configurar notas (añade data-note y estilos a cada sup)
+            if (Object.keys(currentNotesData).length > 0) {
+                setupNotesWithJSON(currentNotesData);
+                console.log(`Notas: ${Object.keys(originalNotes).length} originales + ${Object.keys(editedNotes).length} editadas`);
             }
 
             // La delegación de eventos ya está inicializada por setupNotesWithJSON
-            // NO añadir eventos individuales aquí (causa conflictos)
 
             if (typeof editMode !== 'undefined' && editMode) {
                 makeContentEditable();
@@ -234,6 +238,15 @@ function loadChapterNotes(jsonFile) {
         })
         .catch((err) => {
             console.error('Error cargando notas:', err);
+
+            // Intentar cargar solo notas editadas si falla el JSON original
+            const editedNotesKey = `editedNotes_cap${currentChapter}`;
+            const editedNotes = JSON.parse(localStorage.getItem(editedNotesKey) || '{}');
+            if (Object.keys(editedNotes).length > 0) {
+                currentNotesData = editedNotes;
+                setupNotesWithJSON(editedNotes);
+            }
+
             if (typeof editMode !== 'undefined' && editMode) {
                 makeContentEditable();
                 loadSavedEdits();

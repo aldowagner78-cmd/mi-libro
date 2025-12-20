@@ -804,17 +804,17 @@ function confirmFootnote() {
 
     const noteNumber = document.getElementById('noteNumber').textContent;
 
+    // Crear <sup> LIMPIO (solo número, sin estilos ni data-note)
+    // Los estilos se aplicarán via setupNotesWithJSON cuando cargue la nota
     const sup = document.createElement('sup');
+    sup.textContent = `(${noteNumber})`;
+
+    // Aplicar estilos inmediatamente para preview visual
     sup.style.cursor = 'pointer';
     sup.style.color = 'var(--accent)';
-    sup.style.textDecoration = 'none';
     sup.style.borderBottom = '1px dotted var(--accent)';
     sup.title = `Ver nota ${noteNumber}`;
-    sup.textContent = `(${noteNumber})`;
-    sup.setAttribute('data-note', definition);
-
-    // NO añadir evento aquí - la delegación de eventos en app.js lo maneja
-    // Esto garantiza que las notas funcionen incluso después de editar/publicar
+    sup.setAttribute('data-note', definition); // Para que funcione con delegación
 
     try {
         pendingNoteSelection.range.deleteContents();
@@ -823,8 +823,11 @@ function confirmFootnote() {
         pendingNoteSelection.range.collapse(false);
         pendingNoteSelection.range.insertNode(sup);
 
+        // Guardar nota en localStorage para el JSON
+        saveEditedNote(noteNumber, definition);
+
         closeNoteModal();
-        showNotification('✅', `Nota ${noteNumber} insertada correctamente`);
+        showNotification('✅', `Nota ${noteNumber} insertada. Recuerda publicar para guardarla.`);
 
         const paragraph = sup.closest('p');
         if (paragraph) markAsEdited(paragraph);
@@ -834,6 +837,33 @@ function confirmFootnote() {
         closeNoteModal();
         showNotification('❌', 'Error al insertar la nota. Intenta de nuevo.');
     }
+}
+
+// Guardar nota editada en localStorage
+function saveEditedNote(noteNumber, definition) {
+    const storageKey = `editedNotes_cap${currentChapter}`;
+    let editedNotes = JSON.parse(localStorage.getItem(storageKey) || '{}');
+    editedNotes[noteNumber] = definition;
+    localStorage.setItem(storageKey, JSON.stringify(editedNotes));
+    console.log(`Nota ${noteNumber} guardada en localStorage`);
+}
+
+// Obtener notas combinadas (originales + editadas)
+function getCombinedNotesData() {
+    const storageKey = `editedNotes_cap${currentChapter}`;
+    const editedNotes = JSON.parse(localStorage.getItem(storageKey) || '{}');
+
+    // Combinar con notas originales (currentNotesData viene de app.js)
+    const combined = { ...(currentNotesData || {}), ...editedNotes };
+    return combined;
+}
+
+// Eliminar nota del localStorage
+function deleteEditedNote(noteNumber) {
+    const storageKey = `editedNotes_cap${currentChapter}`;
+    let editedNotes = JSON.parse(localStorage.getItem(storageKey) || '{}');
+    delete editedNotes[noteNumber];
+    localStorage.setItem(storageKey, JSON.stringify(editedNotes));
 }
 
 function renumberFootnotes() {
@@ -848,14 +878,31 @@ function renumberFootnotes() {
             return;
         }
 
+        // Crear nuevo mapa de notas renumeradas
+        const newNotesMap = {};
+
         allSups.forEach((sup, index) => {
             const newNumber = index + 1;
+            const oldDefinition = sup.getAttribute('data-note');
+
+            // Actualizar número visual
             sup.textContent = `(${newNumber})`;
             sup.title = `Ver nota ${newNumber}`;
+
+            // Si tiene definición, guardarla con el nuevo número
+            if (oldDefinition) {
+                newNotesMap[newNumber] = oldDefinition;
+                sup.setAttribute('data-note', oldDefinition); // Mantener para delegación
+            }
 
             const paragraph = sup.closest('p');
             if (paragraph) markAsEdited(paragraph);
         });
+
+        // Guardar el nuevo mapa de notas en localStorage (reemplaza completamente)
+        const storageKey = `editedNotes_cap${currentChapter}`;
+        localStorage.setItem(storageKey, JSON.stringify(newNotesMap));
+        console.log('Notas renumeradas:', newNotesMap);
 
         saveEdits();
         showNotification('✅', `${allSups.length} notas renumeradas correctamente`);
