@@ -171,7 +171,9 @@ function loadSpecialSection(key) {
 
 // ========== CARGA DE CAPÍTULOS ==========
 async function loadChapter(n) {
+    console.log(`[DEBUG] loadChapter llamado con n=${n}`);
     currentChapter = n;
+    console.log(`[DEBUG] currentChapter actualizado a ${currentChapter}`);
     localStorage.setItem('chapter', n);
     highlightChapter(n);
     showCoverScreen(n);
@@ -281,6 +283,7 @@ async function startReading() {
     if (editBtn) editBtn.style.display = 'flex';
 
     const n = currentChapter;
+    console.log(`[DEBUG] startReading: currentChapter=${n}`);
     const content = document.getElementById('content');
     const loading = document.getElementById('loading');
 
