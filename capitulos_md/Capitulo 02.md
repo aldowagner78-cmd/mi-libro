@@ -1,4 +1,4 @@
-﻿*"Quien controla los medios, controla la mente."*  
+*"Quien controla los medios, controla la mente."*  
 — Jim Morrison (1969)
 
 ***
