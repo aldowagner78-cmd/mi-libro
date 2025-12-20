@@ -1,4 +1,4 @@
-﻿*"Si quieres encontrar los secretos del universo, piensa en términos de energía, frecuencia y vibración."*  
+*"Si quieres encontrar los secretos del universo, piensa en términos de energía, frecuencia y vibración."*  
 — Nikola Tesla
 
 ***
