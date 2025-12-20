@@ -96,7 +96,9 @@ window.addEventListener('beforeunload', (e) => {
 });
 
 // ========== MODALES PERSONALIZADOS ==========
-function showNotification(icon, message) {
+let notificationTimeout = null;
+
+function showNotification(icon, message, duration = 3000) {
     const overlay = document.getElementById('notificationOverlay');
     const notification = document.getElementById('customNotification');
     const iconEl = document.getElementById('notificationIcon');
@@ -104,11 +106,19 @@ function showNotification(icon, message) {
 
     if (!notification) return;
 
+    // Limpiar timeout anterior si existe
+    if (notificationTimeout) clearTimeout(notificationTimeout);
+
     iconEl.textContent = icon;
-    messageEl.textContent = message;
+    messageEl.innerHTML = message.replace(/\n/g, '<br>');
 
     overlay.classList.add('show');
     notification.classList.add('show');
+
+    // Auto-cierre
+    notificationTimeout = setTimeout(() => {
+        hideNotification();
+    }, duration);
 }
 
 function hideNotification() {
