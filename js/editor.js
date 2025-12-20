@@ -417,22 +417,26 @@ function saveEdits() {
         const originalStyle = p.getAttribute('data-original-style') || '';
         const currentStyle = p.getAttribute('style') || '';
 
+        // Filtrar estilos que no queremos guardar (ej: borderLeft que es visual del editor)
+        const stylesToSave = currentStyle
+            .split(';')
+            .filter(s => s.trim() && !s.includes('border-left') && !s.includes('position'))
+            .join(';');
+
         // Detectar cambios en contenido O en estilo
         const contentChanged = currentContent !== originalContent;
-        const styleChanged = currentStyle !== originalStyle && currentStyle !== '';
+        const styleChanged = stylesToSave !== '' && stylesToSave !== originalStyle;
 
         if (parrafosEliminados.has(index)) {
-            edits[key] = "";
+            edits[key] = { content: "", style: "", deleted: true };
             changesCount++;
         }
         else if (contentChanged || styleChanged) {
-            // Guardar contenido con estilo inline incluido
-            let savedContent = currentContent;
-            if (currentStyle) {
-                // Envolver el contenido con un span que preserve el estilo
-                savedContent = `<span style="${currentStyle}">${currentContent}</span>`;
-            }
-            edits[key] = savedContent;
+            // Guardar contenido Y estilo como objeto
+            edits[key] = {
+                content: currentContent,
+                style: stylesToSave || ''
+            };
             changesCount++;
             if (!p.style.borderLeft.includes('10b981')) {
                 p.style.borderLeft = '3px solid #10b981';
@@ -521,8 +525,34 @@ function loadSavedEdits() {
     paragraphs.forEach((p) => {
         const index = p.getAttribute('data-index');
         const key = `${prefix}_p${index}`;
-        if (edits[key]) {
-            p.innerHTML = edits[key];
+        const editData = edits[key];
+
+        if (editData) {
+            // Manejar tanto formato antiguo (string) como nuevo (objeto)
+            if (typeof editData === 'string') {
+                // Formato antiguo
+                p.innerHTML = editData;
+            } else if (typeof editData === 'object') {
+                // Formato nuevo con contenido y estilo
+                if (editData.deleted) {
+                    p.style.display = 'none';
+                    p.innerHTML = '<em>[Párrafo eliminado]</em>';
+                } else {
+                    if (editData.content !== undefined) {
+                        p.innerHTML = editData.content;
+                    }
+                    if (editData.style) {
+                        // Aplicar estilos guardados
+                        const styles = editData.style.split(';').filter(s => s.trim());
+                        styles.forEach(style => {
+                            const [prop, val] = style.split(':').map(s => s.trim());
+                            if (prop && val) {
+                                p.style.setProperty(prop, val);
+                            }
+                        });
+                    }
+                }
+            }
             markAsEdited(p);
             reactivateNotesInElement(p, currentNotesData);
         }
@@ -783,11 +813,8 @@ function confirmFootnote() {
     sup.textContent = `(${noteNumber})`;
     sup.setAttribute('data-note', definition);
 
-    sup.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        showNote(sup.getAttribute('data-note'));
-    });
+    // NO añadir evento aquí - la delegación de eventos en app.js lo maneja
+    // Esto garantiza que las notas funcionen incluso después de editar/publicar
 
     try {
         pendingNoteSelection.range.deleteContents();
@@ -1455,7 +1482,7 @@ async function updateFileOnGitHub(filePath, changes, fileType) {
 }
 
 function applyEditsToContent(content, changes, fileType) {
-    // Para HTML: buscar párrafos por índice y reemplazar
+    // Para HTML: buscar párrafos por índice y aplicar contenido + estilos
     // Para MD: convertir HTML a MD y aplicar
 
     if (fileType === 'html') {
@@ -1464,14 +1491,31 @@ function applyEditsToContent(content, changes, fileType) {
         const doc = parser.parseFromString(`<div>${content}</div>`, 'text/html');
         const paragraphs = doc.querySelectorAll('p');
 
-        for (const [pIndex, newContent] of Object.entries(changes)) {
+        for (const [pIndex, editData] of Object.entries(changes)) {
             const idx = parseInt(pIndex);
             if (paragraphs[idx]) {
-                if (newContent === '') {
-                    // Párrafo eliminado
-                    paragraphs[idx].remove();
-                } else {
-                    paragraphs[idx].innerHTML = newContent;
+                // Manejar tanto formato antiguo (string) como nuevo (objeto)
+                if (typeof editData === 'string') {
+                    // Formato antiguo (retrocompatibilidad)
+                    if (editData === '') {
+                        paragraphs[idx].remove();
+                    } else {
+                        paragraphs[idx].innerHTML = editData;
+                    }
+                } else if (typeof editData === 'object') {
+                    // Formato nuevo con contenido y estilo separados
+                    if (editData.deleted) {
+                        paragraphs[idx].remove();
+                    } else {
+                        // Aplicar contenido
+                        if (editData.content !== undefined) {
+                            paragraphs[idx].innerHTML = editData.content;
+                        }
+                        // Aplicar estilos al párrafo
+                        if (editData.style) {
+                            paragraphs[idx].setAttribute('style', editData.style);
+                        }
+                    }
                 }
             }
         }
@@ -1479,11 +1523,13 @@ function applyEditsToContent(content, changes, fileType) {
         return doc.body.firstChild.innerHTML;
     } else {
         // Para MD, convertimos el HTML editado a texto plano con formato MD básico
-        // Esta es una conversión simplificada
         let mdContent = content;
 
-        for (const [pIndex, newContent] of Object.entries(changes)) {
-            if (newContent !== '') {
+        for (const [pIndex, editData] of Object.entries(changes)) {
+            // Extraer contenido (soportar ambos formatos)
+            const newContent = typeof editData === 'string' ? editData : (editData.content || '');
+
+            if (newContent && newContent !== '') {
                 // Convertir HTML básico a MD
                 let mdParagraph = newContent
                     .replace(/<strong>|<b>/gi, '**')
@@ -1499,7 +1545,6 @@ function applyEditsToContent(content, changes, fileType) {
                     .replace(/&quot;/g, '"')
                     .replace(/&amp;/g, '&');
 
-                // Aquí idealmente buscaríamos el párrafo correspondiente en el MD
                 // Por ahora, dejamos el contenido MD sin modificar (los cambios principales van al HTML)
             }
         }

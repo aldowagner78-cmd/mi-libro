@@ -325,7 +325,34 @@ function highlightChapter(n) {
     }
 }
 
-// ========== NOTAS AL PIE ==========
+// ========== NOTAS AL PIE (SISTEMA CON DELEGACIÓN DE EVENTOS) ==========
+
+// Inicializar delegación de eventos para notas (solo una vez por página)
+let noteDelegationInitialized = false;
+
+function initializeNoteDelegation() {
+    if (noteDelegationInitialized) return;
+
+    const content = document.getElementById('content');
+    if (!content) return;
+
+    // Un solo listener en el contenedor que captura todos los clics en notas
+    content.addEventListener('click', (e) => {
+        const sup = e.target.closest('sup[data-note]');
+        if (sup) {
+            e.preventDefault();
+            e.stopPropagation();
+            const noteContent = sup.getAttribute('data-note');
+            if (noteContent) {
+                showNote(noteContent);
+            }
+        }
+    });
+
+    noteDelegationInitialized = true;
+    console.log('Sistema de notas inicializado con delegación de eventos');
+}
+
 function setupNotesWithJSON(notesData) {
     const content = document.getElementById('content');
     if (!content) return;
@@ -343,35 +370,38 @@ function setupNotesWithJSON(notesData) {
                 let safeDefinition = notesData[noteNum].replace(/'/g, "&#39;");
                 sup.setAttribute('data-note', safeDefinition);
 
+                // Solo aplicar estilos visuales, NO eventos (la delegación los maneja)
                 sup.style.cursor = 'pointer';
                 sup.style.color = 'var(--accent)';
                 sup.style.textDecoration = 'none';
                 sup.style.borderBottom = '1px dotted var(--accent)';
                 sup.title = `Ver nota ${noteNum}`;
-
-                const newSup = sup.cloneNode(true);
-                sup.parentNode.replaceChild(newSup, sup);
-
-                newSup.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const def = newSup.getAttribute('data-note');
-                    showNote(def);
-                });
             }
         }
     });
+
+    // Asegurar que la delegación está inicializada
+    initializeNoteDelegation();
 }
 
 function showNote(html) {
-    document.getElementById('noteBody').innerHTML = html;
-    document.getElementById('overlay').classList.add('show');
-    document.getElementById('note-popup').classList.add('show');
+    const noteBody = document.getElementById('noteBody');
+    const overlay = document.getElementById('overlay');
+    const notePopup = document.getElementById('note-popup');
+
+    if (noteBody && overlay && notePopup) {
+        noteBody.innerHTML = html;
+        overlay.classList.add('show');
+        notePopup.classList.add('show');
+    }
 }
 
 function closeNote() {
-    document.getElementById('overlay').classList.remove('show');
-    document.getElementById('note-popup').classList.remove('show');
+    const overlay = document.getElementById('overlay');
+    const notePopup = document.getElementById('note-popup');
+
+    if (overlay) overlay.classList.remove('show');
+    if (notePopup) notePopup.classList.remove('show');
 }
 
 // ========== BOOKMARKS & PROGRESS ==========
