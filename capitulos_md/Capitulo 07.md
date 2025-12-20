@@ -1,4 +1,4 @@
-﻿*"Para mí, el frío es simplemente una cuestión de mente sobre materia. Si no te importa, no importa."*  
+*"Para mí, el frío es simplemente una cuestión de mente sobre materia. Si no te importa, no importa."*  
 — Sir Ranulph Fiennes
 
 ***
