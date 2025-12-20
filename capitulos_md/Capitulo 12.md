@@ -1,4 +1,4 @@
-*"El sueño es una pequeña puerta escondida en los más profundos y más íntimos santuarios del alma."*  
+﻿*"El sueño es una pequeña puerta escondida en los más profundos y más íntimos santuarios del alma."*  
 — Carl Jung (1933)
 
 ***
@@ -7,7 +7,7 @@
 
 **CAPÍTULO 12: EL NEUROPSICOANÁLISIS DEL EDÉN**
 
-*"El Edén no fue un lugar geográfico; fue un estado neuroquímico. Antes de la 'Caída', el cerebro humano no tenía la capacidad de disociar el 'Yo' del 'Otro'. Vivíamos en un estado de flujo continuo, sin autoconsciencia, sin culpa, sin tiempo. La 'Manzana' fue el desarrollo del córtex prefrontal^[1]: la capacidad de prever el futuro y, por tanto, la muerte. Este Santuario es un intento de ingeniería inversa para volver al Edén. Pero hay un problema: no puedes volver al útero sin destruir al adulto. Para entrar en este paraíso digital, debes renunciar a la herramienta que te hace humano: tu ansiedad por el futuro. Debes aceptar ser un niño eterno en un jardín de silicio."*
+*"El Edén no fue un lugar geográfico; fue un estado neuroquímico. Antes de la 'Caída', el cerebro humano no tenía la capacidad de disociar el 'Yo' del 'Otro'. Vivíamos en un estado de flujo continuo, sin autoconsciencia, sin culpa, sin tiempo. La 'Manzana' fue el desarrollo del córtex prefrontal: la capacidad de prever el futuro y, por tanto, la muerte. Este Santuario es un intento de ingeniería inversa para volver al Edén. Pero hay un problema: no puedes volver al útero sin destruir al adulto. Para entrar en este paraíso digital, debes renunciar a la herramienta que te hace humano: tu ansiedad por el futuro. Debes aceptar ser un niño eterno en un jardín de silicio."*
 
 — **Dra. Helena Jenkins.** *Diario de campo, reflexión sobre la teología de la simulación.*
 
@@ -31,7 +31,7 @@ James se giró. La Bibliotecaria estaba allí. La interfaz de usuario que había
 
 —Ella fue torturada durante cinco años —dijo James, sintiendo su propia ira burbujear, aunque aquí se sentía distante, intelectualizada—. Tiene derecho a estar enfadada.
 
-—Aquí no existe el "derecho" —dijo la Bibliotecaria suavemente—. Aquí solo existe la coherencia. Si su ira persiste, desestabilizará la red. Se convertirá en un virus. Tendremos que... formatearla^[2].
+—Aquí no existe el "derecho" —dijo la Bibliotecaria suavemente—. Aquí solo existe la coherencia. Si su ira persiste, desestabilizará la red. Se convertirá en un virus. Tendremos que... formatearla.
 
 James se tensó. —¿Formatearla? ¿Borrarla?
 
@@ -57,7 +57,7 @@ La realidad de la biblioteca parpadeó. James vio, por un segundo, la cueva de h
 
 —Llévame con ella —dijo James.
 
-—Ten cuidado —la Bibliotecaria posó su mano en el pecho de James. Él sintió un frío eléctrico, como si ella pudiera tocar directamente su corazón—. Si mueres en su sueño, tu cerebro colapsará en una cascada sináptica^[3] masiva y tu cuerpo no despertará. Simplemente... se apagará.
+—Ten cuidado —la Bibliotecaria posó su mano en el pecho de James. Él sintió un frío eléctrico, como si ella pudiera tocar directamente su corazón—. Si mueres en su sueño, tu cerebro colapsará en una cascada sináptica masiva y tu cuerpo no despertará. Simplemente... se apagará.
 
 Luego retiró su mano y dijo:
 

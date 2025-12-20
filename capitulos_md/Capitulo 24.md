@@ -1,4 +1,4 @@
-*"La fuerza no proviene de la capacidad física. Proviene de una voluntad indomable."*  
+﻿*"La fuerza no proviene de la capacidad física. Proviene de una voluntad indomable."*  
 — Mahatma Gandhi
 
 ***
@@ -96,4 +96,3 @@ Aris se refería a Rodolfo. James miró al hombre caído. —El juicio —dijo J
 Rodolfo intentó arrastrarse lejos. —¡No! —gritó—. ¡Mátame! ¡Prefiero que me mates! ¡No dejes que esas cosas me toquen!
 
 Pero las columnas empezaron a brillar. Sombras de luz salieron de los cuerpos suspendidos. Los Antiguos se estaban acercando. No para atacar. Para observar. Para juzgar a la especie que había venido a robar su eternidad.
-

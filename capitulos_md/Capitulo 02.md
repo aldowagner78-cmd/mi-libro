@@ -1,4 +1,4 @@
-*"Quien controla los medios, controla la mente."*  
+﻿*"Quien controla los medios, controla la mente."*  
 — Jim Morrison (1969)
 
 ***
@@ -41,7 +41,7 @@ El silencio en la oficina de Rodolfo Sastre Rey costaba cincuenta mil dólares e
 
 A trescientos metros por debajo, las calles de Zúrich eran un hervidero de tranvías eléctricos, turistas bajo la lluvia y banqueros estresados. Pero en el piso cuarenta y dos de la Torre Omni, el mundo exterior no existía. Las ventanas de cristal polarizado de triple capa filtraban no solo la luz ultravioleta, sino también la realidad sucia e ineficiente de la vida común.
 
-Rodolfo estaba de pie frente al ventanal, observando el lago de Zúrich como si estuviera considerando comprarlo y drenarlo. A sus cuarenta y ocho años, Rodolfo no parecía un magnate tecnológico estereotipado. No llevaba sudaderas con capucha ni zapatillas de deporte. Vestía un traje de tres piezas cortado a medida en Savile Row^[1], de un azul tan oscuro que parecía negro bajo la luz artificial. Su cabello, peinado hacia atrás con una precisión geométrica, comenzaba a mostrar hilos de plata que él se negaba a teñir. La plata denotaba experiencia; el tinte denotaba inseguridad.
+Rodolfo estaba de pie frente al ventanal, observando el lago de Zúrich como si estuviera considerando comprarlo y drenarlo. A sus cuarenta y ocho años, Rodolfo no parecía un magnate tecnológico estereotipado. No llevaba sudaderas con capucha ni zapatillas de deporte. Vestía un traje de tres piezas cortado a medida en Savile Row, de un azul tan oscuro que parecía negro bajo la luz artificial. Su cabello, peinado hacia atrás con una precisión geométrica, comenzaba a mostrar hilos de plata que él se negaba a teñir. La plata denotaba experiencia; el tinte denotaba inseguridad.
 
 Se giró hacia la inmensa mesa de caoba negra que dominaba la habitación. Sobre la superficie pulida, no había papeles, ni bolígrafos, ni fotos familiares. Solo había una interfaz holográfica flotando a dos centímetros de la madera.
 
@@ -51,11 +51,11 @@ AURA, la Inteligencia Artificial Central de Omni-Core, respondió instantáneame
 
 —*Enlace satelital establecido con la Unidad Beta en el Sector Amazonas. La telemetría indica contacto visual con el objetivo. El Doctor Gordon y su equipo han abandonado la Zona Cero y se dirigen hacia el cauce del río. La "limpieza" del campamento base ha sido completada. Bajas confirmadas: Chen y Maine.*
 
-Rodolfo caminó hacia la mesa y deslizó un dedo por el aire, sin evidenciar emoción alguna por la muerte de los científicos. El holograma cambió, mostrando una vista cenital de la selva amazónica. Era una imagen compuesta, generada por la constelación de nanosatélites^[2] *Argus* que Omni-Core había lanzado ilegalmente dos años atrás bajo la cobertura de una misión de "monitoreo climático".
+Rodolfo caminó hacia la mesa y deslizó un dedo por el aire, sin evidenciar emoción alguna por la muerte de los científicos. El holograma cambió, mostrando una vista cenital de la selva amazónica. Era una imagen compuesta, generada por la constelación de nanosatélites *Argus* que Omni-Core había lanzado ilegalmente dos años atrás bajo la cobertura de una misión de "monitoreo climático".
 
 La imagen no era una simple fotografía. Era un mapa de calor vivo. La selva aparecía en tonos azules y negros. Los animales eran manchas naranjas. Y los humanos... los humanos eran puntos rojos brillantes, marcados con etiquetas de identificación biométrica que flotaban sobre sus cabezas virtuales.
 
-**[ID: GORDON, JAMES. RITMO CARDÍACO: 140 BPM. CORTISOL^[3]: CRÍTICO.]** **[ID: PETRA, HELENA. RITMO CARDÍACO: 120 BPM. ESTRÉS TÉRMICO: MODERADO.]**
+**[ID: GORDON, JAMES. RITMO CARDÍACO: 140 BPM. CORTISOL: CRÍTICO.]** **[ID: PETRA, HELENA. RITMO CARDÍACO: 120 BPM. ESTRÉS TÉRMICO: MODERADO.]**
 
 —Están corriendo —observó Rodolfo, con una mezcla de diversión y desprecio—. Como ratas en un laberinto.
 
@@ -67,7 +67,7 @@ Rodolfo frunció el ceño. —Denegado. Quiero a Gordon vivo. Su cerebro es el �
 
 Rodolfo apagó el holograma con un gesto brusco de la mano. La habitación volvió a sumirse en la penumbra elegante. Caminó hacia el mueble bar y se sirvió un vaso de agua mineral. No bebía alcohol. El alcohol enturbiaba el juicio, y Rodolfo necesitaba cada neurona disparando a la máxima capacidad.
 
-Se sentó en su silla de cuero, girándose para mirar de nuevo a la ciudad gris. La gente pensaba que Omni-Core era una empresa de *Big Data*^[4]. Pensaban que vendían algoritmos de predicción bursátil o sistemas de logística para grandes conglomerados globales. Y era cierto, vendían todo eso. Pero esos eran los productos de escaparate. El verdadero negocio de Omni-Core era la Eternidad.
+Se sentó en su silla de cuero, girándose para mirar de nuevo a la ciudad gris. La gente pensaba que Omni-Core era una empresa de *Big Data*. Pensaban que vendían algoritmos de predicción bursátil o sistemas de logística para grandes conglomerados globales. Y era cierto, vendían todo eso. Pero esos eran los productos de escaparate. El verdadero negocio de Omni-Core era la Eternidad.
 
 El nombre de "Gordon" en la pantalla trajo consigo la memoria de una vida compartida que se sentía como una amputación fantasma.
 
@@ -75,7 +75,7 @@ James y Aris Gordon no eran simplemente hermanos; eran un sistema binario. Gemel
 
 Juntos, eran imparables. Y eso fue lo que atrajo a Rodolfo diez años atrás.
 
-Rodolfo los había reclutado recién salidos del doctorado para el "Proyecto Aion", la iniciativa secreta de Omni-Core para mapear el conectoma^[5] humano. Les dio presupuesto ilimitado, laboratorios de ensueño en Zúrich y la promesa de curar el Alzheimer y la demencia. Pero la visión de los gemelos divergía de la del magnate. Para James y Aris, la mente era un santuario inviolable; para Rodolfo, era *software* propietario.
+Rodolfo los había reclutado recién salidos del doctorado para el "Proyecto Aion", la iniciativa secreta de Omni-Core para mapear el conectoma humano. Les dio presupuesto ilimitado, laboratorios de ensueño en Zúrich y la promesa de curar el Alzheimer y la demencia. Pero la visión de los gemelos divergía de la del magnate. Para James y Aris, la mente era un santuario inviolable; para Rodolfo, era *software* propietario.
 
 El punto de quiebre llegó la noche del "Incidente de Basilea", en 2021. Aris descubrió que los algoritmos de mapeo que ella había diseñado para curar cerebros dañados estaban siendo utilizados por Omni-Core para algo mucho más oscuro: la "Minería Cognitiva". Rodolfo no quería curar mentes; quería copiarlas, editarlas y vender versiones "optimizadas" de sus empleados y soldados, eliminando la empatía y el miedo como si fueran *bugs* del sistema.
 
@@ -155,9 +155,9 @@ El mundo creía que la brillante neurocientífica, y hermana gemela de James Gor
 
 Pero Aris estaba viva. O algo parecido.
 
-Estaba sentada en una silla de ruedas motorizada, en el centro de una sala blanca y estéril, rodeada de servidores que zumbaban con un calor furioso. Su cuerpo estaba atrofiado, marchito por una enfermedad degenerativa que la ciencia oficial no podía curar. Esclerosis Lateral Amiotrófica^[6] acelerada. No podía mover los brazos. No podía hablar. Solo podía mover los ojos.
+Estaba sentada en una silla de ruedas motorizada, en el centro de una sala blanca y estéril, rodeada de servidores que zumbaban con un calor furioso. Su cuerpo estaba atrofiado, marchito por una enfermedad degenerativa que la ciencia oficial no podía curar. Esclerosis Lateral Amiotrófica acelerada. No podía mover los brazos. No podía hablar. Solo podía mover los ojos.
 
-Pero no necesitaba hablar. Un cable de fibra óptica salía de un puerto implantado directamente en la base de su cráneo, conectándola a la *mainframe*^[7] del laboratorio.
+Pero no necesitaba hablar. Un cable de fibra óptica salía de un puerto implantado directamente en la base de su cráneo, conectándola a la *mainframe* del laboratorio.
 
 Aris "hablaba" a través de las pantallas que rodeaban la sala. Su mente, liberada de la jaula de su cuerpo paralizado, volaba a la velocidad de la luz a través de la red de Omni-Core. Ella era la arquitecta de AURA. Ella había escrito el código que ahora cazaba a su propio hermano.
 
@@ -169,7 +169,7 @@ El monitor de actividad cerebral de Aris se disparó. *«Esa mano...»*, pensó,
 
 Aris sintió una punzada de envidia científica y desesperación. Ella llevaba seis años intentando fusionar carne y máquina sin matar al sujeto. Y ese "terrorista" lo había logrado en un segundo.
 
-Entonces, vio algo más. En la pantalla térmica, cuando James tocó el árbol, la red de raíces del bosque se iluminó. No era calor. Era datos. James estaba usando la micorriza^[8] de la selva, la red de hongos y raíces que conecta los árboles, como un cable de fibra óptica. Estaba "hackeando" la naturaleza.
+Entonces, vio algo más. En la pantalla térmica, cuando James tocó el árbol, la red de raíces del bosque se iluminó. No era calor. Era datos. James estaba usando la micorriza de la selva, la red de hongos y raíces que conecta los árboles, como un cable de fibra óptica. Estaba "hackeando" la naturaleza.
 
 *«Increíble»*, tecleó Aris mentalmente. *«Está usando la biosfera como una antena. Ha amplificado su percepción sensorial. Puede vernos.»*
 
@@ -181,7 +181,7 @@ El nombre flotó en su mente, no como un dato, sino como una emoción. La progra
 
 Aris luchó contra la programación. Sus ojos se llenaron de lágrimas que no podía secarse. Si capturaban a ese hombre... si Rodolfo le ponía las manos encima... lo diseccionarían vivo para entender cómo funcionaba su mano.
 
-Aris tomó una decisión. Una pequeña rebelión invisible. Accedió al canal de comunicaciones encriptado del equipo de Silas. No podía detenerlos. Rodolfo tenía "kill switch"^[9] en su propio soporte vital; si ella se rebelaba abiertamente, él la apagaría. Pero podía hacer algo sutil.
+Aris tomó una decisión. Una pequeña rebelión invisible. Accedió al canal de comunicaciones encriptado del equipo de Silas. No podía detenerlos. Rodolfo tenía "kill switch" en su propio soporte vital; si ella se rebelaba abiertamente, él la apagaría. Pero podía hacer algo sutil.
 
 Localizó el algoritmo de puntería de los drones *Hunter*. Esos pequeños asesinos voladores que iban a hostigar a los fugitivos. Entró en el código. Cambió un decimal. Ajustó la sensibilidad de los sensores térmicos. Ahora, los drones confundirían el calor de un animal grande, digamos un tapir o un jaguar, con el de un humano con mayor facilidad. Les daría falsos positivos. Les daría ruido.
 

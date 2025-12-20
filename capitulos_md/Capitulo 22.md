@@ -1,4 +1,4 @@
-*"Solo hay dos posibilidades: o estamos solos en el Universo o no lo estamos. Ambas son igualmente aterradoras."*  
+﻿*"Solo hay dos posibilidades: o estamos solos en el Universo o no lo estamos. Ambas son igualmente aterradoras."*  
 — Arthur C. Clarke
 
 ***
@@ -98,4 +98,3 @@ El suelo bajo sus pies tembló. No era un avión. Era una perforadora. El equipo
 —Mercenarios corporativos —dijo Dos Santos, reconociendo el patrón de vibración—. Están usando cargas de cavitación para romper el hielo desde la cara sur.
 
 La tregua con el cielo había funcionado, pero la guerra en la tierra acababa de empezar.
-

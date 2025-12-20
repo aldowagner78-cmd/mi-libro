@@ -1,4 +1,4 @@
-*"La ira es un ácido que puede hacer más daño al recipiente en el que se almacena que a cualquier cosa sobre la que se vierta."*  
+﻿*"La ira es un ácido que puede hacer más daño al recipiente en el que se almacena que a cualquier cosa sobre la que se vierta."*  
 — Séneca
 
 ***
@@ -9,7 +9,7 @@
 
 *"Para la física, el tiempo es una serie de puntos discretos en una línea, instantes congelados que llamamos 'ahora'. T1, T2, T3. Pero para la consciencia, el tiempo no es divisible. Es un flujo continuo, una melodía donde cada nota contiene el eco de la anterior y la anticipación de la siguiente. Henri Bergson llamó a esto 'durée'  (duración). Cuando una mente se libera de la materia, la duración se expande. Un segundo de tiempo reloj puede contener siglos de tiempo subjetivo. Para Aris, atrapada en la red, los cinco minutos que han pasado desde su muerte no son cinco minutos. Son una eternidad de reflexión. Y en esa eternidad, ella ha tenido tiempo de sobra para analizar cada variable, cada injusticia y cada átomo de la estructura que la rodea. No se está volviendo loca; se está volviendo eficiente. Y una mente infinita con un rencor finito es el arma más peligrosa del universo."*
 
-— **Dr. James Gordon.** *Reflexiones grabadas en el implante coclear^[2], Sector Andino, 2026.*
+— **Dr. James Gordon.** *Reflexiones grabadas en el implante coclear, Sector Andino, 2026.*
 
 **Mundo Físico. Catedral de Hielo.** **16 de Octubre, 2026. 07:35 AM.**
 
@@ -116,4 +116,3 @@ Rodolfo lo miró con sospecha. —¿De qué hablas?
 **(1) Durée:** Concepto del filósofo Henri Bergson que describe el tiempo tal como lo experimenta la consciencia: fluido, continuo e indivisible, opuesto al tiempo 'espacializado' y medible de los relojes. La durée es el flujo vivido de la experiencia subjetiva.
 
 **(2) Implante Coclear:** Dispositivo médico que se inserta quirúrgicamente en el oído interno para restaurar la audición en personas con sordera profunda. Convierte sonidos en señales eléctricas que estimulan directamente el nervio auditivo. Más de 700,000 personas usan implantes cocleares.
-

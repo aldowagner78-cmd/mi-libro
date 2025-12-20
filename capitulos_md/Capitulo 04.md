@@ -1,4 +1,4 @@
-*"Somos criaturas solitarias, y sin embargo, estamos conectados a todo lo que vive."*  
+﻿*"Somos criaturas solitarias, y sin embargo, estamos conectados a todo lo que vive."*  
 — Rachel Carson (1962)
 
 ***
@@ -15,7 +15,7 @@
 
 La noche en el río no era negra; era una ausencia de color tan profunda que parecía sólida.
 
-El "Caribdis" avanzaba contra la corriente, su motor de aviación reducido a un ronroneo bajo para ahorrar combustible y reducir la **firma acústica**^[1]. El haz del reflector de proa cortaba la oscuridad, iluminando troncos flotantes que parecían caimanes y caimanes que parecían troncos. A ambos lados, la selva era una pared de sombras que respiraba, llena de ojos que reflejaban la luz con un brillo depredador.
+El "Caribdis" avanzaba contra la corriente, su motor de aviación reducido a un ronroneo bajo para ahorrar combustible y reducir la **firma acústica**. El haz del reflector de proa cortaba la oscuridad, iluminando troncos flotantes que parecían caimanes y caimanes que parecían troncos. A ambos lados, la selva era una pared de sombras que respiraba, llena de ojos que reflejaban la luz con un brillo depredador.
 
 James Gordon estaba sentado en la popa, temblando. No era por el frío, aunque la temperatura había bajado. Era una fiebre interna, seca y eléctrica. Su mano derecha descansaba sobre su rodilla, pesada como un yunque. A la luz de la luna, la obsidiana negra parecía beberse la oscuridad. Las venas violetas pulsaban con un ritmo que no coincidía con su corazón. *Tum-tum-tum*. Rápido. Urgente. Como si estuviera procesando datos mientras él intentaba simplemente respirar.
 
@@ -83,9 +83,9 @@ Extendió su percepción. Fue doloroso, como abrir los ojos bajo el agua salada.
 
 Helena lo miró, entendiendo a dónde iba. —James... no estarás pensando en entrar en la "Zona Muerta".
 
-La "Zona Muerta" era una región de la selva alta, cerca de la frontera con Perú, que los locales evitaban. Decían que allí las brújulas no funcionaban y que la gente se olvidaba de su nombre. Geológicamente, era un laberinto de cañones de **karst**^[2] y cuevas inexploradas.
+La "Zona Muerta" era una región de la selva alta, cerca de la frontera con Perú, que los locales evitaban. Decían que allí las brújulas no funcionaban y que la gente se olvidaba de su nombre. Geológicamente, era un laberinto de cañones de **karst** y cuevas inexploradas.
 
-—Es el único lugar donde sus satélites son ciegos —dijo James—. La **anomalía magnética**^[3] es tan fuerte que bloqueará sus sensores. Y bloqueará mi señal también. Seremos invisibles.
+—Es el único lugar donde sus satélites son ciegos —dijo James—. La **anomalía magnética** es tan fuerte que bloqueará sus sensores. Y bloqueará mi señal también. Seremos invisibles.
 
 —Seremos invisibles porque estaremos perdidos —replicó Helena—. Nadie ha mapeado esa zona. Es un suicidio logístico.
 

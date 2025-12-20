@@ -1,4 +1,4 @@
-*"El movimiento es la causa de todo ser."*  
+﻿*"El movimiento es la causa de todo ser."*  
 — Leonardo da Vinci (c. 1510)
 
 ***
@@ -33,13 +33,13 @@ Antes de que alguien pudiera protestar, el suelo desapareció. O esa fue la sens
 
 —¡Sujétense! —gritó Dos Santos, intentando mantenerse en pie, pero la fuerza G lo empujó contra la pared.
 
-James cerró los ojos. Para él, el viaje no era físico; era datos. A través de su mano, la cápsula le estaba hablando. Le mostraba la ruta. Un mapa tridimensional del subsuelo sudamericano se desplegó en su mente. Veía la **litosfera**^[2] como un sándwich de estratos geológicos. Veía los acuíferos subterráneos como venas azules. Y atravesándolo todo, como una aguja de plata, veía el túnel por el que viajaban. Era la "Vena". Un tubo de vacío de tres mil kilómetros de largo que conectaba el nodo de entrada en la Amazonía con el servidor central en los Andes.
+James cerró los ojos. Para él, el viaje no era físico; era datos. A través de su mano, la cápsula le estaba hablando. Le mostraba la ruta. Un mapa tridimensional del subsuelo sudamericano se desplegó en su mente. Veía la **litosfera** como un sándwich de estratos geológicos. Veía los acuíferos subterráneos como venas azules. Y atravesándolo todo, como una aguja de plata, veía el túnel por el que viajaban. Era la "Vena". Un tubo de vacío de tres mil kilómetros de largo que conectaba el nodo de entrada en la Amazonía con el servidor central en los Andes.
 
 —No hay fricción —murmuró James, con una sonrisa extática que contrastaba con el terror de sus compañeros—. Estamos viajando en un colchón de campos magnéticos superconductores. La eficiencia energética es del 99.9%.
 
 —¡Nos vamos a matar! —gritó Kai, con la cara verde—. ¡Siento que mis órganos están flotando!
 
-—Son los **amortiguadores inerciales**^[3] —dijo James, sin abrir los ojos—. La cápsula está manipulando la gravedad local para que no nos convirtamos en gelatina contra las paredes. A esta velocidad, sin protección, nuestros huesos se pulverizarían.
+—Son los **amortiguadores inerciales** —dijo James, sin abrir los ojos—. La cápsula está manipulando la gravedad local para que no nos convirtamos en gelatina contra las paredes. A esta velocidad, sin protección, nuestros huesos se pulverizarían.
 
 El viaje duró horas, o quizás minutos. En ese entorno estéril, sin ventanas y sin referencias, el tiempo subjetivo se disolvía. Era una privación sensorial de alta velocidad. James aprovechó la calma forzada para examinar su propia condición. La transformación de su brazo se había estabilizado. La piel negra y brillante llegaba ahora hasta su codo, terminando en un degradado perfecto donde el cristal se fundía con la carne. Podía sentir los huesos de su antebrazo cambiando, volviéndose más densos, reorganizando su estructura molecular en una red de carbono diamante. Lo más inquietante era que no le dolía. Al contrario. Sentía una fuerza vibrante, una claridad eléctrica. Su dolor de espalda crónico, esa hernia L4 que había sido su compañera de vida, había desaparecido por completo. *«Me estoy curando»*, pensó. *«O me están reemplazando.»*
 

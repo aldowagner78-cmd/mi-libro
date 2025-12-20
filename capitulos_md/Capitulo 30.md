@@ -1,4 +1,4 @@
-*"El hombre es una cuerda tendida entre la bestia y el superhombre: una cuerda sobre un abismo."*  
+﻿*"El hombre es una cuerda tendida entre la bestia y el superhombre: una cuerda sobre un abismo."*  
 — Friedrich Nietzsche (1883)
 
 ***
@@ -7,7 +7,7 @@
 
 **CAPÍTULO 30: EL JARDÍN DE LA FRICCIÓN**
 
-*"¿Dónde están todos? Esa fue la pregunta de Enrico Fermi^[1] sobre los alienígenas. Si el universo es tan viejo y vasto, ¿por qué no hemos visto a nadie?*
+*"¿Dónde están todos? Esa fue la pregunta de Enrico Fermi sobre los alienígenas. Si el universo es tan viejo y vasto, ¿por qué no hemos visto a nadie?*
 
 La respuesta no es que no existan. La respuesta es que estábamos buscando señales de radio, cuando deberíamos haber estado buscando silencio.
 
@@ -29,12 +29,12 @@ El amanecer en los Andes seguía siendo el espectáculo más impresionante de la
 
 James Gordon estaba de pie en la terraza del observatorio, bebiendo café. Café real, amargo, caliente. Su mano de obsidiana descansaba sobre la barandilla de metal frío. Ya no la ocultaba. Se había convertido en un símbolo.
 
-Abajo, en el valle, se veía el campamento. No era un campamento militar, ni un refugio de fugitivos. Era una ciudad naciente. Tiendas de campaña de alta tecnología, domos geodésicos cultivados con nanomateria^[2] vegetal, paneles solares transparentes.
+Abajo, en el valle, se veía el campamento. No era un campamento militar, ni un refugio de fugitivos. Era una ciudad naciente. Tiendas de campaña de alta tecnología, domos geodésicos cultivados con nanomateria vegetal, paneles solares transparentes.
 
 Venían de todas partes. Científicos renegados, filósofos, hackers, monjes tibetanos, enfermos terminales que buscaban una muerte digna, jóvenes que buscaban un propósito. "Los Peregrinos del Umbral", los llamaba la prensa.
 
 Helena salió a la terraza, abrochándose una chaqueta de lana.
-—El Consejo de Seguridad de la ONU ha votado —dijo—. Han reconocido el estatus de "Entidad Soberana No-Territorial"^[3] para el Santuario y la Red Micorrizal. No pueden atacarnos legalmente.
+—El Consejo de Seguridad de la ONU ha votado —dijo—. Han reconocido el estatus de "Entidad Soberana No-Territorial" para el Santuario y la Red Micorrizal. No pueden atacarnos legalmente.
 
 —Legalmente —se burló James—. Eso no detendrá a los fanáticos.
 
@@ -70,7 +70,7 @@ Tomó la mano de Helena con su mano de obsidiana. La fusión de calor humano y f
 Dejó la taza de café en la barandilla. Sacó su cuaderno de campo, el de papel y lápiz, el único lugar donde sus pensamientos eran solo suyos, no compartidos con la nube.
 Escribió una última línea bajo la fecha del día.
 
-Día 1 de la Era Post-Humana^[4]. Pronóstico: Tormentas eléctricas y posibilidad de milagros. Seguimos caminando.
+Día 1 de la Era Post-Humana. Pronóstico: Tormentas eléctricas y posibilidad de milagros. Seguimos caminando.
 
 Cerró el cuaderno.
 Abajo, en el valle, una campana sonó, llamando a la primera clase del día. James Gordon, el Híbrido, el Administrador, el hombre con dolor de espalda, se ajustó la chaqueta y bajó a enseñar a la humanidad cómo dejar de ser niños y empezar a ser dioses responsables.

@@ -1,4 +1,4 @@
-*"El dolor es el único origen de la conciencia."*  
+﻿*"El dolor es el único origen de la conciencia."*  
 — Fiódor Dostoyevski (1864)
 
 ***
@@ -100,6 +100,3 @@ Gritó.
 Un grito ronco, animal, desgarrador. El grito de un hombre que ha sido arrancado del cielo a la fuerza y tirado de vuelta al barro.
 
 Estaba de vuelta en la Catedral de Hielo. Helena lo miraba con ojos llenos de lágrimas y terror. Rodolfo estaba junto a la bomba, con el dedo en el detonador y una sonrisa de triunfo en los labios. James intentó levantarse, pero su cuerpo pesaba toneladas. Su mano de obsidiana ardía, roja y furiosa, pulsando con la energía del rechazo.
-
-
-

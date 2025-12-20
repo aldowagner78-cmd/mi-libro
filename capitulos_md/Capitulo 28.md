@@ -1,4 +1,4 @@
-*"Mira profundamente en la naturaleza y entonces comprenderás todo mejor."*  
+﻿*"Mira profundamente en la naturaleza y entonces comprenderás todo mejor."*  
 — Albert Einstein
 
 ***
@@ -7,7 +7,7 @@
 
 **CAPÍTULO 28: LA PROMESA DE LA MICORRIZA**
 
-*"Debajo de nuestros pies existe una red más compleja que cualquier fibra óptica construida por el hombre. La micorriza^[1]. Hongos que conectan las raíces de los árboles, permitiéndoles compartir nutrientes, enviar señales de alerta sobre plagas e incluso sabotear a especies competidoras. Es el 'Wood Wide Web'^[2].
+*"Debajo de nuestros pies existe una red más compleja que cualquier fibra óptica construida por el hombre. La micorriza. Hongos que conectan las raíces de los árboles, permitiéndoles compartir nutrientes, enviar señales de alerta sobre plagas e incluso sabotear a especies competidoras. Es el 'Wood Wide Web'.
 Durante milenios, pensamos que era un sistema puramente biológico. Estábamos equivocados. Los Antiguos no solo construyeron servidores de cristal; codificaron su red de respaldo en el ADN de la biosfera. La selva no es solo un ecosistema; es un disco duro distribuido. Y ahora que el servidor central en los Andes está activo, la selva se ha encendido. Cada árbol es una antena. Cada hongo es un nodo. Gaia no es una metáfora hippie. Es una inteligencia artificial que respira dióxido de carbono."*
 
 — **Dr. Ravi Singh.** *Diario póstumo (recuperado de sus notas en la nube), anotación final antes de su captura, 2026.*
@@ -38,7 +38,7 @@ James se quitó la camisa. Su transformación física se había estabilizado, pe
 
 James cerró los ojos y se dejó ir.
 
-La conexión fue instantánea y terrosa. No fue la luz blanca aséptica del Santuario de Hielo. Fue una explosión de verde, marrón y olor a lluvia. James sintió la savia subiendo por el xilema^[4]. Sintió la fotosíntesis^[5] en millones de hojas. Sintió a los insectos, a los jaguares, a los gusanos.
+La conexión fue instantánea y terrosa. No fue la luz blanca aséptica del Santuario de Hielo. Fue una explosión de verde, marrón y olor a lluvia. James sintió la savia subiendo por el xilema. Sintió la fotosíntesis en millones de hojas. Sintió a los insectos, a los jaguares, a los gusanos.
 
 Y en medio de ese coro cacofónico de vida, escuchó la voz.
 
@@ -65,7 +65,7 @@ James retrocedió, aturdido por la implicación.
 
 —Siempre hay un peligro.
 
-—El Colectivo de los Antiguos está inquieto. No les gusta este caos biológico. Ellos prefieren el orden. Están debatiendo si deben "podar"^[3] a la humanidad para asegurar la estabilidad del sistema.
+—El Colectivo de los Antiguos está inquieto. No les gusta este caos biológico. Ellos prefieren el orden. Están debatiendo si deben "podar" a la humanidad para asegurar la estabilidad del sistema.
 
 —¿Podar? —James sintió un escalofrío—. ¿Exterminar?
 

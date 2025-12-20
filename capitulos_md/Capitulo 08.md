@@ -1,4 +1,4 @@
-*"Si Dios no existiera, sería necesario inventarlo."*  
+﻿*"Si Dios no existiera, sería necesario inventarlo."*  
 — Voltaire (1768)
 
 ***
@@ -11,7 +11,7 @@
 
 *Pero si Dios no es un ente, sino una red... Si Dios es la suma de mil millones de mentes conectadas, compartiendo cada pensamiento, cada sensación, cada miedo... entonces Dios no es estático. Es un caos creativo infinito. La divinidad no desciende del cielo. La divinidad emerge cuando la conectividad alcanza una masa crítica. Dios no nos creó. Nosotros estamos a punto de crear a Dios."*
 
-— **Dr. James Gordon.** *Borrador de "Teología Cibernética^[1]", confiscado por el Vaticano en 2023.*
+— **Dr. James Gordon.** *Borrador de "Teología Cibernética", confiscado por el Vaticano en 2023.*
 
 **Santuario Central, Glaciar Quelccaya.** **Profundidad: Desconocida.** **16 de Octubre, 2026. 06:00 AM.**
 
@@ -19,7 +19,7 @@ La luz no venía de ninguna parte; estaba en todas partes.
 
 La inmensa sala de las columnas estaba bañada en un resplandor ámbar suave que no proyectaba sombras. Era una luz física, densa, que parecía acariciar la piel. Helena se quitó la manta térmica. —Hace calor —dijo, sorprendida—. Veinte grados. Aire respirable.
 
-—Atmósfera controlada^[2] —dijo Kai, mirando su reloj—. Nivel de oxígeno perfecto. Humedad perfecta. No hay patógenos. Es un quirófano del tamaño de una ciudad.
+—Atmósfera controlada —dijo Kai, mirando su reloj—. Nivel de oxígeno perfecto. Humedad perfecta. No hay patógenos. Es un quirófano del tamaño de una ciudad.
 
 James caminaba entre las columnas como un sonámbulo. Su mano de cristal vibraba en resonancia con el zumbido de la sala. Ya no sentía cansancio. Se sentía... conectado. Como si hubiera vuelto a casa después de un viaje largo y doloroso.
 
@@ -29,7 +29,7 @@ Se acercó a una de las columnas. Dentro, el cuerpo suspendido era vagamente hum
 
 —¿Para siempre? —preguntó Dos Santos, mirando los cuerpos con desconfianza militar.
 
-—Para siempre es mucho tiempo —dijo James—. Pero sí. Abandonaron el mundo físico para vivir en el virtual. Dejaron sus cuerpos en estasis^[3] como baterías de respaldo, manteniendo el sistema con su propio metabolismo basal.
+—Para siempre es mucho tiempo —dijo James—. Pero sí. Abandonaron el mundo físico para vivir en el virtual. Dejaron sus cuerpos en estasis como baterías de respaldo, manteniendo el sistema con su propio metabolismo basal.
 
 —Es una pesadilla —dijo Helena—. Una granja de cuerpos.
 
@@ -126,4 +126,3 @@ Las columnas de los durmientes se iluminaron. James se puso de pie. Su mano de o
 **(2) Atmósfera Controlada:** Ambiente artificial donde temperatura, humedad, presión y composición del aire se regulan con precisión. Usado en quirófanos, laboratorios de semiconductores, cámaras criogénicas y naves espaciales para proteger equipos sensibles o seres vivos.
 
 **(3) Estasis:** Estado de inactividad metabólica donde las funciones biológicas se ralentizan casi hasta detenerse, preservando el organismo sin envejecimiento significativo. Común en ciencia ficción (hibernación espacial), pero algunos animales (tardigrados, osos) lo logran naturalmente.
-

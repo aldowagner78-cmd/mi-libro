@@ -1,4 +1,4 @@
-*"El infierno no es un lugar al que vas. Es algo que llevas contigo."*  
+﻿*"El infierno no es un lugar al que vas. Es algo que llevas contigo."*  
 — Neil Gaiman (1989)
 
 ***
@@ -30,7 +30,7 @@ No era la luz pasiva de antes. Era una luz inquisitiva. Sombras alargadas se pro
 
 James Gordon estaba sentado en la base de la consola, exhausto, con Helena revisando las quemaduras de sus manos. Al oír los gritos, levantó la cabeza. Sus ojos violetas estaban apagados, cansados, pero fijos en su enemigo.
 
-—Tus derechos terminaron cuando intentaste borrar una civilización entera para salvar tu ego, Rodolfo —dijo James con voz ronca—. Esto no es una guerra humana. Esto es un sistema inmunológico^[1] reaccionando ante un virus. Y tú eres el virus.
+—Tus derechos terminaron cuando intentaste borrar una civilización entera para salvar tu ego, Rodolfo —dijo James con voz ronca—. Esto no es una guerra humana. Esto es un sistema inmunológico reaccionando ante un virus. Y tú eres el virus.
 
 —¡Podemos hacer un trato! —suplicó Rodolfo, sacando su última carta, la única que conocía—. ¡Dinero! ¡Cuentas en las Islas Caimán! ¡Códigos de acceso a reservas de oro físico! ¡Les daré todo! ¡Solo sáquenme de aquí antes de que esas cosas me toquen!
 
@@ -73,12 +73,12 @@ Su cuerpo cayó al suelo, inerte, como si le hubieran cortado las cuerdas a una 
 —No —dijo James—. Su mente ha sido subida. Pero no al Santuario real. No a la red de los Antiguos.
 
 James señaló la consola, donde una pequeña luz roja parpadeaba aislada en un rincón del panel.
-—Aris ha creado una partición. Una sandbox^[2]. Una jaula virtual desconectada de todo. Rodolfo está ahí dentro ahora mismo.
+—Aris ha creado una partición. Una sandbox. Una jaula virtual desconectada de todo. Rodolfo está ahí dentro ahora mismo.
 
 —¿Y qué hay ahí dentro? —preguntó Helena.
 
 James se estremeció. Podía verlo.
-—Nada. Absolutamente nada. Es un espacio blanco infinito. Sin objetos. Sin personas. Sin dolor, pero también sin placer. Y sin tiempo. Él quería una eternidad estática, perfecta, inmutable. Eso es lo que tiene. Está solo consigo mismo, para siempre. Sin posibilidad de morir, sin posibilidad de cambiar. Es el solipsismo^[3] perfecto.
+—Nada. Absolutamente nada. Es un espacio blanco infinito. Sin objetos. Sin personas. Sin dolor, pero también sin placer. Y sin tiempo. Él quería una eternidad estática, perfecta, inmutable. Eso es lo que tiene. Está solo consigo mismo, para siempre. Sin posibilidad de morir, sin posibilidad de cambiar. Es el solipsismo perfecto.
 
 Helena hizo la señal de la cruz. —Es el infierno.
 

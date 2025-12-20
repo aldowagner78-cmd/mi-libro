@@ -1,4 +1,4 @@
-*"La fe es la certeza de lo que se espera, la convicción de lo que no se ve."*  
+﻿*"La fe es la certeza de lo que se espera, la convicción de lo que no se ve."*  
 — Epístola a los Hebreos 11:1
 
 ***
@@ -57,7 +57,7 @@ Rodolfo la miró con desprecio, pero por un segundo, Helena vio algo más en sus
 
 —¿Qué quieres decir? —preguntó Dos Santos, tensándose.
 
-—¿Creen que AURA era mi única línea de defensa? —Rodolfo sonrió, mostrando dientes manchados de rojo—. Cuando mi ritmo cardíaco se aceleró durante el ataque de James... cuando la IA detectó la intrusión masiva de Aris... se activó el Protocolo Sansón^[1].
+—¿Creen que AURA era mi única línea de defensa? —Rodolfo sonrió, mostrando dientes manchados de rojo—. Cuando mi ritmo cardíaco se aceleró durante el ataque de James... cuando la IA detectó la intrusión masiva de Aris... se activó el Protocolo Sansón.
 
 James levantó la cabeza bruscamente. —Sansón. Derribar el templo sobre los filisteos.
 
@@ -67,7 +67,7 @@ Rodolfo miró su reloj de muñeca, que, al ser mecánico, seguía funcionando pe
 
 James palideció. —Has pintado una diana sobre nosotros.
 
-—He convertido este lugar en el enemigo público número uno —confirmó Rodolfo—. En este momento, satélites militares^[2] están reorientándose. Drones de ataque están despegando. Cazas supersónicos están rompiendo la barrera del sonido sobre el Pacífico.
+—He convertido este lugar en el enemigo público número uno —confirmó Rodolfo—. En este momento, satélites militares están reorientándose. Drones de ataque están despegando. Cazas supersónicos están rompiendo la barrera del sonido sobre el Pacífico.
 
 Rodolfo se encogió de hombros. —Si yo no puedo tenerlo, nadie lo tendrá. Esa es la verdadera fe, doctora Jenkins. La fe en la destrucción mutua asegurada.
 
@@ -83,7 +83,7 @@ James miró el Monolito. La luz blanca pulsaba más rápido, como si Aris tambi�
 
 Helena miró a Rodolfo. —Átalo —le dijo a Dos Santos—. Y si se mueve, rompéle las piernas. No me importa lo que diga tu código ético. Este hombre ya no es un prisionero de guerra. Es un virus biológico.
 
-Dos Santos asintió y empujó a Rodolfo contra el suelo. Mientras James corría hacia la consola para intentar contactar con su hermana, Helena se quedó mirando la entrada de la cueva. Rezó. No por un milagro, sino por tiempo. Porque sabía que la fe movía montañas, pero los misiles *Bunker Buster*^[3] las atravesaban.
+Dos Santos asintió y empujó a Rodolfo contra el suelo. Mientras James corría hacia la consola para intentar contactar con su hermana, Helena se quedó mirando la entrada de la cueva. Rezó. No por un milagro, sino por tiempo. Porque sabía que la fe movía montañas, pero los misiles *Bunker Buster* las atravesaban.
 
 ---
 

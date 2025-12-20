@@ -1,4 +1,4 @@
-*"El dolor es inevitable. El sufrimiento es opcional."*  
+﻿*"El dolor es inevitable. El sufrimiento es opcional."*  
 — Haruki Murakami
 
 ***
@@ -9,7 +9,7 @@
 
 *"Durante siglos, definimos la salud como la ausencia de enfermedad. Un cuerpo sano era un cuerpo silencioso. Pero en la era de la hibridación, esa definición es insuficiente.*
 
-Mi mano no es humana. Mi columna vertebral es un desastre biológico. Vivo en un estado de dolor crónico^[1] interrumpido por ráfagas de omnipotencia cuántica. ¿Soy un monstruo? ¿Soy un enfermo?
+Mi mano no es humana. Mi columna vertebral es un desastre biológico. Vivo en un estado de dolor crónico interrumpido por ráfagas de omnipotencia cuántica. ¿Soy un monstruo? ¿Soy un enfermo?
 
 No. Soy un prototipo.
 
@@ -63,7 +63,7 @@ Kai y Dos Santos entraron corriendo, empapados.
 
 —¿Soluciones a qué? —preguntó Dos Santos.
 
-—A todo —dijo Kai, con los ojos brillantes—. Fusión fría. Limpieza de microplásticos. Curas para priones^[2]. Están pagando el alquiler, James. Nos están dando las herramientas para arreglar el planeta.
+—A todo —dijo Kai, con los ojos brillantes—. Fusión fría. Limpieza de microplásticos. Curas para priones. Están pagando el alquiler, James. Nos están dando las herramientas para arreglar el planeta.
 
 James miró la pantalla. Era el comienzo de la Edad de Oro. O el comienzo de la dependencia total.
 —Es un regalo —dijo James—. Pero tenemos que tener cuidado. Si nos dan todo hecho, nos volveremos mascotas. Tenemos que entender cómo funciona, no solo usarlo.
@@ -72,7 +72,7 @@ James miró la pantalla. Era el comienzo de la Edad de Oro. O el comienzo de la 
 
 James asintió. Habían encontrado su misión. No eran solo supervivientes. Eran los fundadores de una nueva orden. Los monjes guerreros de la era digital.
 
-—El Transhumanismo Ético^[3] —dijo James—. La libertad morfológica^[4]. El derecho a elegir si quieres ser carne, máquina o luz. Y el derecho a cambiar de opinión.
+—El Transhumanismo Ético —dijo James—. La libertad morfológica. El derecho a elegir si quieres ser carne, máquina o luz. Y el derecho a cambiar de opinión.
 
 Dos Santos cargó su rifle, mirando hacia la selva oscura.
 —Suena bien, Doc. Pero primero tenemos que sobrevivir a los que quieren quemar la escuela antes de que abra.

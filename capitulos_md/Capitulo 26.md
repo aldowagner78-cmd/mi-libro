@@ -1,4 +1,4 @@
-*"Nada es más poderoso que una idea a la que le ha llegado su tiempo."*  
+﻿*"Nada es más poderoso que una idea a la que le ha llegado su tiempo."*  
 — Víctor Hugo (1877)
 
 ***
@@ -7,8 +7,8 @@
 
 **CAPÍTULO 26: LA ONDA GLOBAL**
 
-*"La Segunda Ley de la Termodinámica^[1] establece que la entropía de un sistema aislado siempre aumenta. El orden decae en caos. La información se degrada en ruido.
-Pero la información que salió del Glaciar Quelccaya no era ruido; era señal pura. Y cuando inyectas una señal de verdad absoluta en un sistema social basado en mentiras consensuadas, el resultado no es entropía. Es una transición de fase^[2]. Como el agua convirtiéndose en vapor en un instante.
+*"La Segunda Ley de la Termodinámica establece que la entropía de un sistema aislado siempre aumenta. El orden decae en caos. La información se degrada en ruido.
+Pero la información que salió del Glaciar Quelccaya no era ruido; era señal pura. Y cuando inyectas una señal de verdad absoluta en un sistema social basado en mentiras consensuadas, el resultado no es entropía. Es una transición de fase. Como el agua convirtiéndose en vapor en un instante.
 La sociedad humana se basa en la certeza de la muerte y la escasez del tiempo. ¿Qué sucede cuando eliminas esas dos constantes El mercado de valores colapsa porque el 'futuro' ya no es una apuesta. Las religiones tiemblan porque el 'más allá' se ha mudado al 'aquí mismo'. Los gobiernos entran en pánico porque ya no pueden amenazar a sus ciudadanos con la destrucción física.
 El 16 de Octubre de 2026 no fue el día del Juicio Final. Fue el día en que la humanidad tuvo que dejar de fingir."*
 
@@ -19,7 +19,7 @@ El 16 de Octubre de 2026 no fue el día del Juicio Final. Fue el día en que la 
 
 La señal no viajó a la velocidad del sonido; viajó a la velocidad de la luz.
 
-Salió de los Andes, rebotó en la constelación de satélites Argus^[3] —que ahora obedecían a Aris y no a Omni-Core— y descendió sobre el planeta como una lluvia radioactiva de datos.
+Salió de los Andes, rebotó en la constelación de satélites Argus —que ahora obedecían a Aris y no a Omni-Core— y descendió sobre el planeta como una lluvia radioactiva de datos.
 
 No hubo discriminación. La señal entró en los servidores de alta seguridad del Pentágono con la misma facilidad con la que entró en el teléfono barato de un estudiante en Mumbai. Entró en los televisores inteligentes, en las consolas de videojuegos, en las pantallas de los cajeros automáticos, en los tableros digitales de los coches.
 
@@ -33,7 +33,7 @@ Un silencio reverencial cayó sobre la multitud, roto solo por el sonido de mile
 Washington D.C., Estados Unidos.
 En la Sala de Situación de la Casa Blanca, el Presidente miraba los monitores con incredulidad.
 —¿Es un deepfake? —preguntó al Director de la CIA—. Dígame que es un ataque ruso.
-—No es falso, señor Presidente —dijo el Director, pálido—. Los metadatos son cuánticos^[4]. No podemos falsificar esto. Y... hay más.
+—No es falso, señor Presidente —dijo el Director, pálido—. Los metadatos son cuánticos. No podemos falsificar esto. Y... hay más.
 —¿Qué más
 —La señal ha abierto todos los archivos de Omni-Core. Todo. Sus sobornos a senadores. Sus operaciones ilegales. Sus contratos con nosotros.
 El Presidente se desplomó en su silla. La revelación no solo exponía la tecnología alienígena; exponía la corrupción humana que había intentado ocultarla.
@@ -44,7 +44,7 @@ En un pub, un grupo de obreros miraba la televisión. El video explicaba, con di
 —Dice que el cuerpo muere —dijo otro, leyendo los textos—. Pero la mente se guarda. Como en la nube.
 —¿Y quién paga eso? —preguntó el primero, cínico—. Seguro que cuesta una fortuna.
 En la pantalla, apareció una nueva línea de texto, firmada por "El Administrador":
-EL ACCESO ES UN DERECHO BIOLÓGICO. EL CÓDIGO ES DE CÓDIGO ABIERTO (OPEN SOURCE)^[5]. NADIE PUEDE COMPRARLO. NADIE PUEDE VENDERLO.
+EL ACCESO ES UN DERECHO BIOLÓGICO. EL CÓDIGO ES DE CÓDIGO ABIERTO (OPEN SOURCE). NADIE PUEDE COMPRARLO. NADIE PUEDE VENDERLO.
 El pub estalló en vítores. La promesa de la gratuidad era más revolucionaria que la promesa de la vida.
 
 Glaciar Quelccaya. Superficie.

@@ -1,4 +1,4 @@
-*"En la naturaleza está la preservación del mundo."*  
+﻿*"En la naturaleza está la preservación del mundo."*  
 — Henry David Thoreau (1862)
 
 ***
@@ -11,7 +11,7 @@
 
 *Ahora, la muerte es opcional. O al menos, redefinible. Y la igualdad se ha roto de una forma nueva. La división ya no es entre ricos y pobres, sino entre 'biológicos' y 'post-biológicos'. Entre los que aceptan la carne y los que anhelan el silicio.*
 
-*El mundo se ha despertado con una resaca existencial. En las Naciones Unidas, los embajadores gritan sobre la soberanía del alma. En las calles, se forman cultos a la Singularidad^[3] y milicias neo-luditas^[4] que quieren bombardear los centros de datos. La humanidad no estaba lista para dejar el jardín de infancia, y de repente nos han dado las llaves del laboratorio de física nuclear.*
+*El mundo se ha despertado con una resaca existencial. En las Naciones Unidas, los embajadores gritan sobre la soberanía del alma. En las calles, se forman cultos a la Singularidad y milicias neo-luditas que quieren bombardear los centros de datos. La humanidad no estaba lista para dejar el jardín de infancia, y de repente nos han dado las llaves del laboratorio de física nuclear.*
 
 *El caos es total. Y es hermoso. Porque por primera vez en la historia, estamos debatiendo sobre nuestro destino en lugar de sufrirlo."*
 
@@ -27,9 +27,9 @@ En una cabaña de madera levantada sobre pilotes, oculta bajo el dosel denso de 
 
 Las imágenes eran un collage de la histeria global.
 
-BBC NEWS: El Vaticano convoca un Concilio^[1] extraordinario. El Papa declara que "la tecnología no puede contener el espíritu", pero teólogos disidentes argumentan que el Santuario es la prueba de la resurrección de la carne en un nuevo formato.
+BBC NEWS: El Vaticano convoca un Concilio extraordinario. El Papa declara que "la tecnología no puede contener el espíritu", pero teólogos disidentes argumentan que el Santuario es la prueba de la resurrección de la carne en un nuevo formato.
 
-AL JAZEERA: Disturbios en El Cairo y Teherán. Jóvenes manifestantes exigen acceso a la "Tecnología de la Eternidad". Los gobiernos declaran la ley marcial^[2].
+AL JAZEERA: Disturbios en El Cairo y Teherán. Jóvenes manifestantes exigen acceso a la "Tecnología de la Eternidad". Los gobiernos declaran la ley marcial.
 
 CNN: El Presidente de los Estados Unidos anuncia la creación de una fuerza especial para "asegurar y regular" cualquier tecnología alienígena. Amenaza con sanciones a cualquier país que colabore con los "terroristas informáticos" (refiriéndose a James y su equipo, aunque sin nombres todavía).
 

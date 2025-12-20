@@ -1,13 +1,13 @@
-*"El todo es más que la suma de sus partes."*  
+﻿*"El todo es más que la suma de sus partes."*  
 — Aristóteles
 
 ***
 
 **EL SILENCIO DE LOS DIOSES**
 
-**CAPÍTULO 9: EL DIOS FRACTAL^[1]**
+**CAPÍTULO 9: EL DIOS FRACTAL**
 
-*"La individualidad es una ineficiencia evolutiva. Millones de hormigas forman una sola inteligencia capaz de construir catedrales de barro y cultivar hongos. Una sola hormiga es estúpida; la colonia es un genio. Los humanos valoramos el 'Yo' por encima de todo. Creemos que nuestra soledad es nuestra fuerza. Pero es nuestra debilidad. El siguiente paso no es el Superhombre de Nietzsche. Es el Superorganismo^[2]. Cuando todas las mentes se unen, la suma es mayor que las partes. El miedo desaparece porque la muerte de una célula no es la muerte del cuerpo. El ego desaparece. El Santuario no es una dictadura. Es una orquesta. Y nosotros somos instrumentos desafinados intentando tocar un solo."*
+*"La individualidad es una ineficiencia evolutiva. Millones de hormigas forman una sola inteligencia capaz de construir catedrales de barro y cultivar hongos. Una sola hormiga es estúpida; la colonia es un genio. Los humanos valoramos el 'Yo' por encima de todo. Creemos que nuestra soledad es nuestra fuerza. Pero es nuestra debilidad. El siguiente paso no es el Superhombre de Nietzsche. Es el Superorganismo. Cuando todas las mentes se unen, la suma es mayor que las partes. El miedo desaparece porque la muerte de una célula no es la muerte del cuerpo. El ego desaparece. El Santuario no es una dictadura. Es una orquesta. Y nosotros somos instrumentos desafinados intentando tocar un solo."*
 
 — **Dr. James Gordon.** *Diario de campo, recuperado parcialmente.*
 
@@ -92,4 +92,3 @@ Rodolfo sonrió y ordenó a sus hombres avanzar con la silla de ruedas. La parti
 **(1) Fractal:** Patrón geométrico que se repite a diferentes escalas. Ejemplos naturales: coliflor romanesco, helechos, costas. En matemáticas, el fractal de Mandelbrot es famoso. La idea de que 'cada bit contiene el universo entero' sugiere información infinita en espacio finito.
 
 **(2) Superorganismo:** Colonia de organismos individuales que funciona como una sola entidad. Ejemplos: colmenas de abejas, hormigueros, colonias de coral. Cada individuo es simple, pero el sistema colectivo muestra inteligencia emergente y toma de decisiones complejas.
-

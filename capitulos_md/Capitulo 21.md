@@ -1,4 +1,4 @@
-*"Nada humano me es ajeno."*  
+﻿*"Nada humano me es ajeno."*  
 — Terencio
 
 ***
@@ -93,4 +93,3 @@ En el túnel de acceso, a quinientos metros de ellos, la roca comenzó a crecer.
 Dos Santos se posicionó detrás de una columna, apuntando hacia la entrada sellada. —Me gustan esas probabilidades —mintió el brasileño—. Al menos moriremos en la portada de todos los periódicos.
 
 James miró a Rodolfo, que seguía atado en el suelo. El magnate estaba mirando el Monolito con una expresión extraña. Ya no era arrogancia. Era envidia. —Lo has conseguido, Gordon —murmuró Rodolfo—. Has hecho que el mundo mire. Ahora reza para que no parpadeen cuando caiga el martillo.
-

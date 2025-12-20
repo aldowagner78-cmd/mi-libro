@@ -1,4 +1,4 @@
-*"Nada en la vida es para ser temido, es solo para ser comprendido. Ahora es el momento de entender más, para que podamos temer menos."*  
+﻿*"Nada en la vida es para ser temido, es solo para ser comprendido. Ahora es el momento de entender más, para que podamos temer menos."*  
 — Marie Curie
 
 ***
@@ -100,4 +100,3 @@ Helena puso sus manos sobre él, llorando. —¡Idiota! ¡Magnífico idiota!
 Pero la batalla no había terminado. Los mercenarios, viendo la explosión de luz en el Monolito, detuvieron el fuego momentáneamente, confundidos. Y entonces, el Monolito respondió. La energía que James había convocado no desapareció. Se quedó en el aire, estática, furiosa. Aris había sido despertada por completo. Y ahora que su hermano estaba herido, ya no le importaba la diplomacia ni los daños colaterales.
 
 La Singularidad del Miedo había terminado. La Singularidad de la Ira acababa de comenzar.
-

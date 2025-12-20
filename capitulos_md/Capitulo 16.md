@@ -1,4 +1,4 @@
-*"El dolor físico no tiene voz, pero cuando encuentra una voz, comienza a contar una historia."*  
+﻿*"El dolor físico no tiene voz, pero cuando encuentra una voz, comienza a contar una historia."*  
 — Elaine Scarry (1985)
 
 ***
@@ -31,11 +31,11 @@ James abrió los ojos. Sus pupilas estaban dilatadas al máximo, dos agujeros ne
 
 La tentación del Santuario seguía ahí, un canto de sirena en su lóbulo temporal. *«Vuelve»*, le decía la memoria reciente. *«Allí no duele. Allí eres luz.»*
 
-—No vas a volver a ningún lado —dijo Helena con una dureza nacida del pánico. Se giró hacia Rodolfo Sastre Rey, que observaba la escena con una ceja levantada y el detonador en la mano—. ¡Necesito que me suelten las manos! ¡Está entrando en shock neurogénico^[1]! ¡Si muere ahora, su cerebro se freirá y perderá la llave para siempre!
+—No vas a volver a ningún lado —dijo Helena con una dureza nacida del pánico. Se giró hacia Rodolfo Sastre Rey, que observaba la escena con una ceja levantada y el detonador en la mano—. ¡Necesito que me suelten las manos! ¡Está entrando en shock neurogénico! ¡Si muere ahora, su cerebro se freirá y perderá la llave para siempre!
 
 Rodolfo evaluó la situación en un microsegundo. La utilidad de James vivo superaba el riesgo de soltar a la doctora. Hizo un gesto seco con la cabeza.
 
-El mercenario más cercano sacó un cuchillo y cortó las bridas de plástico de las muñecas de Helena. Ella no perdió tiempo frotándose la piel magullada. Se lanzó sobre su mochila médica, que los guardias habían tirado a un lado, y sacó una jeringa de epinefrina^[2] y un blister de analgésicos opioides de grado militar.
+El mercenario más cercano sacó un cuchillo y cortó las bridas de plástico de las muñecas de Helena. Ella no perdió tiempo frotándose la piel magullada. Se lanzó sobre su mochila médica, que los guardias habían tirado a un lado, y sacó una jeringa de epinefrina y un blister de analgésicos opioides de grado militar.
 
 —Sujétalo —le ordenó a Dos Santos, que se había arrastrado cerca.
 
@@ -75,7 +75,7 @@ Kai negó con la cabeza, temblando. —¡Tráiganlo! —ordenó Rodolfo.
 
 Un mercenario arrastró a Kai y lo tiró a los pies de James. —Tú dijiste que la llave era biológica —dijo Rodolfo, apuntando con el detonador a la cabeza de Kai como si fuera una pistola—. Dijiste que James necesitaba estar vivo. Bien, está vivo. Está despierto. Pero se niega a cooperar. Así que vamos a probar una hipótesis alternativa.
 
-Rodolfo miró a James. —La neurociencia dice que el dolor empático se procesa en la misma región del cerebro que el dolor físico. La corteza cingulada anterior^[3]. Si torturo a este niño frente a ti, James, tu cerebro registrará el mismo nivel de estrés que si te estuviera cortando a ti. Y tal vez, solo tal vez, ese estrés rompa tu bloqueo mental. O tal vez Aris, desde el cielo, sienta lástima por él y abra la puerta.
+Rodolfo miró a James. —La neurociencia dice que el dolor empático se procesa en la misma región del cerebro que el dolor físico. La corteza cingulada anterior. Si torturo a este niño frente a ti, James, tu cerebro registrará el mismo nivel de estrés que si te estuviera cortando a ti. Y tal vez, solo tal vez, ese estrés rompa tu bloqueo mental. O tal vez Aris, desde el cielo, sienta lástima por él y abra la puerta.
 
 —No lo hagas, Rodolfo —advirtió James, intentando levantarse, pero sus piernas fallaron. Su mano de obsidiana soltó chispas rojas—. Si lo tocas, te juro que...
 
@@ -126,4 +126,3 @@ James asintió levemente. Pero su mente no estaba en el dolor físico. Estaba es
 —Para la respuesta de la Arquitecta.
 
 Arriba, en la oscuridad de la bóveda, una de las estalactitas de hielo se desprendió y cayó, estrellándose contra el suelo con el sonido de un disparo. Fue el primer aviso. La montaña estaba empezando a moverse.
-
