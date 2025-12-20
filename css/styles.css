@@ -724,6 +724,20 @@ body {
     -ms-user-select: text;
 }
 
+/* Espacio para que la barra de edición no tape el contenido */
+.edit-mode-active #main {
+    padding-top: 140px;
+}
+
+.edit-mode-active .toolbar {
+    top: 130px;
+}
+
+/* Ocultar menú flotante de resaltado en modo edición (ya está en la barra) */
+.edit-mode-active #highlightMenu {
+    display: none !important;
+}
+
 @media print {
 
     body:not(.edit-mode-active) #content,
@@ -1834,7 +1848,9 @@ body {
     font-size: 14px !important;
 }
 
-.btn-format b, .btn-format i, .btn-format u {
+.btn-format b,
+.btn-format i,
+.btn-format u {
     font-size: 14px;
 }
 
@@ -1881,10 +1897,21 @@ body {
 }
 
 /* Colores de resaltado en botones */
-.btn-format.hl-yellow { background: #fef08a; }
-.btn-format.hl-green { background: #bbf7d0; }
-.btn-format.hl-pink { background: #fecdd3; }
-.btn-format.hl-blue { background: #bfdbfe; }
+.btn-format.hl-yellow {
+    background: #fef08a;
+}
+
+.btn-format.hl-green {
+    background: #bbf7d0;
+}
+
+.btn-format.hl-pink {
+    background: #fecdd3;
+}
+
+.btn-format.hl-blue {
+    background: #bfdbfe;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -1893,21 +1920,21 @@ body {
         padding: 8px 10px;
         gap: 6px;
     }
-    
+
     .edit-controls-row {
         gap: 4px;
     }
-    
+
     .edit-controls button {
         padding: 6px 8px;
         font-size: 11px;
     }
-    
+
     .btn-format {
         width: 28px;
         height: 28px;
     }
-    
+
     .edit-separator {
         height: 20px;
         margin: 0 2px;

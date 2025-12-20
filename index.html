@@ -455,12 +455,12 @@
             <button class="btn-redo" id="redoBtn" onclick="redo()" title="Rehacer (Ctrl+Y)" disabled>↪️</button>
             <div class="edit-separator"></div>
             <button class="btn-save" onclick="saveEdits()" title="Guardar localmente (Ctrl+S)">💾 Guardar</button>
-            <button class="btn-publish" onclick="publishToGitHub()" title="Publicar cambios a GitHub">🚀 Publicar</button>
-            <button class="btn-export" onclick="exportEdits()" title="Exportar JSON">📤 JSON</button>
+            <button class="btn-publish" onclick="publishToGitHub()" title="Publicar cambios a GitHub">🚀
+                Publicar</button>
             <button class="btn-exit" onclick="exitEditMode()" title="Salir del modo edición">❌ Salir</button>
             <span id="changeCounter"></span>
         </div>
-        
+
         <!-- Fila 2: Formato de texto -->
         <div class="edit-controls-row format-row">
             <button class="btn-format" onclick="formatText('bold')" title="Negrita (Ctrl+B)"><b>N</b></button>
@@ -480,20 +480,22 @@
             <button class="btn-format" onclick="alignText('right')" title="Alinear derecha">➡</button>
             <button class="btn-format" onclick="alignText('justify')" title="Justificar">☰</button>
             <div class="edit-separator"></div>
-            <button class="btn-format hl-yellow" onclick="applyHighlight('yellow')" title="Resaltar amarillo">🟡</button>
+            <button class="btn-format hl-yellow" onclick="applyHighlight('yellow')"
+                title="Resaltar amarillo">🟡</button>
             <button class="btn-format hl-green" onclick="applyHighlight('green')" title="Resaltar verde">🟢</button>
             <button class="btn-format hl-pink" onclick="applyHighlight('pink')" title="Resaltar rosa">🔴</button>
             <button class="btn-format hl-blue" onclick="applyHighlight('blue')" title="Resaltar azul">🔵</button>
             <button class="btn-format" onclick="clearAllFormatting()" title="Quitar formato">🧹</button>
         </div>
-        
+
         <!-- Fila 3: Notas y búsqueda -->
         <div class="edit-controls-row">
             <button class="btn-note" onclick="insertFootnote()" title="Insertar nota (Ctrl+Shift+N)">📝 Nota</button>
             <button class="btn-renumber" onclick="renumberFootnotes()" title="Renumerar notas">🔢</button>
             <button class="btn-delete-note" onclick="toggleDeleteNoteMode()" title="Eliminar nota">🗑️ Nota</button>
             <div class="edit-separator"></div>
-            <button class="btn-search-replace" onclick="openSearchReplace()" title="Buscar/Reemplazar (Ctrl+H)">🔍 Buscar</button>
+            <button class="btn-search-replace" onclick="openSearchReplace()" title="Buscar/Reemplazar (Ctrl+H)">🔍
+                Buscar</button>
         </div>
     </div>
 
