@@ -646,6 +646,19 @@
     <!-- POPUP DICCIONARIO -->
     <div class="dict-popup" id="dictionaryPopup"></div>
 
+    <!-- MODAL DE INPUT PERSONALIZADO (Para Token) -->
+    <div class="confirm-overlay" id="inputOverlay">
+        <div class="confirm-modal" id="customInput">
+            <div class="confirm-icon">🔑</div>
+            <div class="confirm-message" id="inputMessage"></div>
+            <input type="text" id="inputField" class="modal-input" placeholder="Ingresa tu token aquí..." autocomplete="off">
+            <div class="confirm-actions">
+                <button class="confirm-btn cancel" onclick="hideInput(null)">Cancelar</button>
+                <button class="confirm-btn confirm" onclick="submitInput()">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

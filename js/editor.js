@@ -1346,12 +1346,70 @@ function resetGitHubToken() {
     showNotification('ℹ️', 'Token eliminado. Se pedirá uno nuevo al publicar.');
 }
 
+// ========== MODAL DE INPUT (Token) ==========
+let inputResolve = null;
+
+function showInput(message, placeholder = 'Ingresa valor...') {
+    return new Promise((resolve) => {
+        inputResolve = resolve;
+        const overlay = document.getElementById('inputOverlay');
+        const modal = document.getElementById('customInput');
+        const msgEl = document.getElementById('inputMessage');
+        const inputEl = document.getElementById('inputField');
+
+        if (!modal) {
+            resolve(prompt(message));
+            return;
+        }
+
+        msgEl.innerHTML = message.replace(/\n/g, '<br>');
+        inputEl.placeholder = placeholder;
+        inputEl.value = '';
+
+        overlay.classList.add('show');
+        modal.classList.add('show');
+        setTimeout(() => inputEl.focus(), 100);
+
+        inputEl.onkeyup = (e) => {
+            if (e.key === 'Enter') submitInput();
+            if (e.key === 'Escape') hideInput(null);
+        };
+    });
+}
+
+function hideInput(value) {
+    const overlay = document.getElementById('inputOverlay');
+    const modal = document.getElementById('customInput');
+
+    if (overlay) overlay.classList.remove('show');
+    if (modal) modal.classList.remove('show');
+
+    if (inputResolve) {
+        inputResolve(value);
+        inputResolve = null;
+    }
+}
+
+function submitInput() {
+    const inputEl = document.getElementById('inputField');
+    const value = inputEl.value;
+    hideInput(value);
+}
+
+// Exportar para uso global desde HTML
+window.hideInput = hideInput;
+window.submitInput = submitInput;
+
 async function publishToGitHub() {
     let token = getGitHubToken();
 
     if (!token) {
-        // Pedir token por primera vez
-        const inputToken = prompt('Ingresa tu GitHub Token para publicar:\n(Solo se pide una vez, se guarda en tu navegador)\n\nPuedes obtenerlo en: github.com/settings/tokens');
+        // Pedir token con modal personalizado
+        const inputToken = await showInput(
+            'Ingresa tu GitHub Token para publicar:\n(Solo se pide una vez, se guarda en tu navegador)\n\nPuedes obtenerlo en: github.com/settings/tokens',
+            'Pegar token aquí (ghp_...)'
+        );
+
         if (!inputToken || inputToken.trim() === '') {
             showNotification('⚠️', 'Publicación cancelada - Token requerido');
             return;
@@ -1450,15 +1508,17 @@ async function publishToGitHub() {
         console.error('Error en publicación:', error);
 
         // Detectar error de autenticación (GitHub devuelve "Bad credentials" o 401)
-        if (error.message.includes('Bad credentials') || error.message.includes('401') || error.message.toLowerCase().includes('token')) {
+        if (error.message.includes('Bad credentials') || error.message.includes('401') || error.message.toLowerCase().includes('token') || error.message.includes('HttpError: 401')) {
             localStorage.removeItem('github_token');
             GITHUB_CONFIG.token = null;
 
-            if (confirm('⚠️ Error de autenticación: El token es inválido o expiró.\n\n¿Quieres ingresar uno nuevo e intentar de nuevo?')) {
-                // Reintentar recursivamente (pedirá el token porque ya lo borramos)
-                setTimeout(() => publishToGitHub(), 500);
-                return;
-            }
+            showConfirm('⚠️ Error de autenticación: El token es inválido o expiró.\n\n¿Quieres ingresar uno nuevo e intentar de nuevo?', (confirmed) => {
+                if (confirmed) {
+                    // Reintentar recursivamente
+                    setTimeout(() => publishToGitHub(), 500);
+                }
+            });
+            return;
         }
 
         showNotification('❌', 'Error al publicar: ' + error.message);
