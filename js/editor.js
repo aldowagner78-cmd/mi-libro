@@ -1792,6 +1792,42 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+/* =========================================
+   INDICADORES DE CAPÍTULO EDITADO (FIX)
+   ========================================= */
+function updateEditedChaptersIndicators() {
+    const editedChapters = JSON.parse(localStorage.getItem('editedChapters') || '{}');
+    const chapterList = document.getElementById('chapterList');
+    if (!chapterList) return;
+
+    // Limpiar indicadores previos (por clase o emoji antiguo)
+    chapterList.querySelectorAll('.edit-indicator').forEach(el => el.remove());
+    // También limpiar posibles emojis de texto sobrantes si hubiera limpieza manual necesaria,
+    // pero al usar appendChild en el span, el remove anterior debería bastar si tienen la clase.
+
+    // Iterar capítulos editados
+    Object.keys(editedChapters).forEach(chapterKey => {
+        // chapterKey formato: "cap1", "cap12"
+        const chapterNum = chapterKey.replace('cap', '');
+        const li = document.getElementById('ch-' + parseInt(chapterNum));
+
+        if (li) {
+            const spanText = li.querySelector('span');
+            if (spanText) {
+                // Verificar si ya tiene indicador
+                if (!spanText.querySelector('.edit-indicator')) {
+                    const indicator = document.createElement('span');
+                    indicator.className = 'edit-indicator';
+                    indicator.title = 'Tiene cambios locales no publicados';
+                    // SVG Inline seguro
+                    indicator.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:6px; vertical-align:middle; opacity:0.8;"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>`;
+                    spanText.appendChild(indicator);
+                }
+            }
+        }
+    });
+}
+
 // Exportar funciones globales
 window.showNotification = showNotification;
 window.hideNotification = hideNotification;
