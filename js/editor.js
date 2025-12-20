@@ -1329,8 +1329,8 @@ const GITHUB_CONFIG = {
 };
 
 function getGitHubToken() {
-    // Prioridad 1: Token ya cargado
-    if (GITHUB_CONFIG.token) {
+    // Prioridad 1: Token ya cargado en memoria
+    if (GITHUB_CONFIG.token && GITHUB_CONFIG.token.length > 10) {
         return GITHUB_CONFIG.token;
     }
 
@@ -1342,7 +1342,7 @@ function getGitHubToken() {
 
     // Prioridad 3: Token desde localStorage
     const storedToken = localStorage.getItem('github_token');
-    if (storedToken) {
+    if (storedToken && storedToken.length > 10 && storedToken !== 'null' && storedToken !== 'undefined') {
         GITHUB_CONFIG.token = storedToken;
         return GITHUB_CONFIG.token;
     }
@@ -1353,6 +1353,13 @@ function getGitHubToken() {
 function setGitHubToken(token) {
     GITHUB_CONFIG.token = token;
     localStorage.setItem('github_token', token);
+}
+
+// Permitir resetear token manualmente desde consola o botón futuro
+function resetGitHubToken() {
+    localStorage.removeItem('github_token');
+    GITHUB_CONFIG.token = null;
+    showNotification('ℹ️', 'Token eliminado. Se pedirá uno nuevo al publicar.');
 }
 
 async function publishToGitHub() {
@@ -1373,8 +1380,19 @@ async function publishToGitHub() {
     saveEdits();
 
     const edits = JSON.parse(localStorage.getItem('bookEdits') || '{}');
-    if (Object.keys(edits).length === 0) {
-        showNotification('ℹ️', 'No hay cambios para publicar');
+    const hasEdits = Object.keys(edits).length > 0;
+
+    // Verificar también si hay notas editadas
+    let hasNotes = false;
+    for (let i = 1; i <= 30; i++) {
+        if (localStorage.getItem(`editedNotes_cap${i}`)) {
+            hasNotes = true;
+            break;
+        }
+    }
+
+    if (!hasEdits && !hasNotes) {
+        showNotification('ℹ️', 'No hay cambios nuevos para publicar');
         return;
     }
 
@@ -1402,7 +1420,7 @@ async function publishToGitHub() {
                 successCount++;
             } catch (error) {
                 console.error(`Error actualizando capítulo ${chapterKey}:`, error);
-                errorMessages.push(`Cap ${chapterKey}: ${error.message}`);
+                throw error; // Re-lanzar para manejar autenticación en el catch principal
             }
         }
 
@@ -1420,6 +1438,7 @@ async function publishToGitHub() {
                     localStorage.removeItem(notesKey); // Limpiar después de publicar
                 } catch (error) {
                     console.error(`Error publicando notas cap ${i}:`, error);
+                    throw error; // Re-lanzar para manejar autenticación
                 }
             }
         }
@@ -1439,13 +1458,26 @@ async function publishToGitHub() {
             if (notesPublished > 0) msg.push(`${notesPublished} JSON de notas`);
             showNotification('✅', `¡Publicado! ${msg.join(' + ')} actualizado(s) en GitHub.`);
         } else {
-            const errorDetail = errorMessages.length > 0 ? errorMessages[0] : 'Verifica tu token';
-            showNotification('❌', `Error: ${errorDetail}`);
+            // Si llegamos aquí sin éxito y sin catch, algo raro pasó
+            showNotification('ℹ️', 'No se realizaron actualizaciones.');
         }
 
     } catch (error) {
         console.error('Error en publicación:', error);
-        showNotification('❌', 'Error: ' + error.message);
+
+        // Detectar error de autenticación (GitHub devuelve "Bad credentials" o 401)
+        if (error.message.includes('Bad credentials') || error.message.includes('401') || error.message.toLowerCase().includes('token')) {
+            localStorage.removeItem('github_token');
+            GITHUB_CONFIG.token = null;
+
+            if (confirm('⚠️ Error de autenticación: El token es inválido o expiró.\n\n¿Quieres ingresar uno nuevo e intentar de nuevo?')) {
+                // Reintentar recursivamente (pedirá el token porque ya lo borramos)
+                setTimeout(() => publishToGitHub(), 500);
+                return;
+            }
+        }
+
+        showNotification('❌', 'Error al publicar: ' + error.message);
     }
 }
 
