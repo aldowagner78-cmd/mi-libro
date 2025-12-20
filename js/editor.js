@@ -120,6 +120,8 @@ function makeContentEditable() {
         p.setAttribute('contenteditable', 'true');
         setTimeout(() => {
             p.setAttribute('data-original', p.innerHTML);
+            // También guardar estilo original para detectar cambios de alineación, etc.
+            p.setAttribute('data-original-style', p.getAttribute('style') || '');
         }, 0);
 
         // Listener para guardar estado antes de cambio
@@ -329,13 +331,25 @@ function saveEdits() {
         const key = `${prefix}_p${index}`;
         const originalContent = p.getAttribute('data-original') || '';
         const currentContent = p.innerHTML;
+        const originalStyle = p.getAttribute('data-original-style') || '';
+        const currentStyle = p.getAttribute('style') || '';
+
+        // Detectar cambios en contenido O en estilo
+        const contentChanged = currentContent !== originalContent;
+        const styleChanged = currentStyle !== originalStyle && currentStyle !== '';
 
         if (parrafosEliminados.has(index)) {
             edits[key] = "";
             changesCount++;
         }
-        else if (currentContent !== originalContent) {
-            edits[key] = currentContent;
+        else if (contentChanged || styleChanged) {
+            // Guardar contenido con estilo inline incluido
+            let savedContent = currentContent;
+            if (currentStyle) {
+                // Envolver el contenido con un span que preserve el estilo
+                savedContent = `<span style="${currentStyle}">${currentContent}</span>`;
+            }
+            edits[key] = savedContent;
             changesCount++;
             if (!p.style.borderLeft.includes('10b981')) {
                 p.style.borderLeft = '3px solid #10b981';
@@ -1069,16 +1083,16 @@ function escapeRegexForSearch(string) {
 // ========== FORMATO DE TEXTO ==========
 function formatText(command) {
     if (!editMode) return;
-    
+
     saveStateForUndo();
     document.execCommand(command, false, null);
-    
+
     // Marcar párrafo como editado
     const selection = window.getSelection();
     if (selection.rangeCount > 0) {
         const range = selection.getRangeAt(0);
-        const paragraph = range.commonAncestorContainer.closest ? 
-            range.commonAncestorContainer.closest('p') : 
+        const paragraph = range.commonAncestorContainer.closest ?
+            range.commonAncestorContainer.closest('p') :
             range.commonAncestorContainer.parentElement?.closest('p');
         if (paragraph) markAsEdited(paragraph);
     }
@@ -1086,43 +1100,43 @@ function formatText(command) {
 
 function changeFontSize(size) {
     if (!editMode || !size) return;
-    
+
     const selection = window.getSelection();
     if (!selection.rangeCount || selection.isCollapsed) {
         showNotification('⚠️', 'Selecciona el texto al que quieres cambiar el tamaño');
         document.getElementById('fontSizeSelect').value = '';
         return;
     }
-    
+
     saveStateForUndo();
-    
+
     const range = selection.getRangeAt(0);
     const span = document.createElement('span');
     span.style.fontSize = size;
     span.appendChild(range.extractContents());
     range.insertNode(span);
-    
+
     // Marcar párrafo como editado
     const paragraph = span.closest('p');
     if (paragraph) markAsEdited(paragraph);
-    
+
     document.getElementById('fontSizeSelect').value = '';
     selection.removeAllRanges();
 }
 
 function alignText(alignment) {
     if (!editMode) return;
-    
+
     const selection = window.getSelection();
     if (!selection.rangeCount) return;
-    
+
     saveStateForUndo();
-    
+
     const range = selection.getRangeAt(0);
-    const paragraph = range.commonAncestorContainer.closest ? 
-        range.commonAncestorContainer.closest('p') : 
+    const paragraph = range.commonAncestorContainer.closest ?
+        range.commonAncestorContainer.closest('p') :
         range.commonAncestorContainer.parentElement?.closest('p');
-    
+
     if (paragraph) {
         paragraph.style.textAlign = alignment;
         markAsEdited(paragraph);
@@ -1131,16 +1145,16 @@ function alignText(alignment) {
 
 function clearAllFormatting() {
     if (!editMode) return;
-    
+
     const selection = window.getSelection();
     if (!selection.rangeCount || selection.isCollapsed) {
         showNotification('⚠️', 'Selecciona el texto al que quieres quitar el formato');
         return;
     }
-    
+
     saveStateForUndo();
     document.execCommand('removeFormat', false, null);
-    
+
     // También quitar resaltados
     clearHighlight();
 }
@@ -1166,52 +1180,56 @@ function setGitHubToken(token) {
 }
 
 async function publishToGitHub() {
-    const token = getGitHubToken();
-    
+    let token = getGitHubToken();
+
     if (!token) {
         // Pedir token por primera vez
-        const inputToken = prompt('Ingresa tu GitHub Token para publicar:\n(Solo se pide una vez, se guarda localmente)');
-        if (!inputToken) {
-            showNotification('⚠️', 'Publicación cancelada');
+        const inputToken = prompt('Ingresa tu GitHub Token para publicar:\n(Solo se pide una vez, se guarda en tu navegador)\n\nPuedes obtenerlo en: github.com/settings/tokens');
+        if (!inputToken || inputToken.trim() === '') {
+            showNotification('⚠️', 'Publicación cancelada - Token requerido');
             return;
         }
-        setGitHubToken(inputToken);
+        setGitHubToken(inputToken.trim());
+        token = inputToken.trim();
     }
-    
+
     // Primero guardar cambios localmente
     saveEdits();
-    
+
     const edits = JSON.parse(localStorage.getItem('bookEdits') || '{}');
     if (Object.keys(edits).length === 0) {
         showNotification('ℹ️', 'No hay cambios para publicar');
         return;
     }
-    
+
     showNotification('⏳', 'Publicando cambios a GitHub...');
-    
+
     try {
         // Obtener los cambios organizados por capítulo
         const changesByChapter = organizeEditsByChapter(edits);
         let successCount = 0;
-        let errorCount = 0;
-        
+        let errorMessages = [];
+
         for (const [chapterKey, changes] of Object.entries(changesByChapter)) {
             try {
+                // Formatear número de capítulo con cero (01, 02, ... 09, 10, 11...)
+                const chapterNum = chapterKey.padStart(2, '0');
+
                 // Actualizar archivo HTML
-                const htmlPath = `capitulos_html/Capitulo ${chapterKey}.html`;
+                const htmlPath = `capitulos_html/Capitulo ${chapterNum}.html`;
                 await updateFileOnGitHub(htmlPath, changes, 'html');
-                
+
                 // Actualizar archivo MD
-                const mdPath = `capitulos_md/Capitulo ${chapterKey}.md`;
+                const mdPath = `capitulos_md/Capitulo ${chapterNum}.md`;
                 await updateFileOnGitHub(mdPath, changes, 'md');
-                
+
                 successCount++;
             } catch (error) {
                 console.error(`Error actualizando capítulo ${chapterKey}:`, error);
-                errorCount++;
+                errorMessages.push(`Cap ${chapterKey}: ${error.message}`);
             }
         }
-        
+
         if (successCount > 0) {
             // Limpiar ediciones locales después de publicar
             localStorage.removeItem('bookEdits');
@@ -1220,42 +1238,43 @@ async function publishToGitHub() {
             }
             cambiosPendientes = {};
             updateChangeCounter();
-            
+
             showNotification('✅', `¡Publicado! ${successCount} capítulo(s) actualizado(s) en GitHub.`);
         } else {
-            showNotification('❌', 'Error al publicar. Verifica tu token de GitHub.');
+            const errorDetail = errorMessages.length > 0 ? errorMessages[0] : 'Verifica tu token';
+            showNotification('❌', `Error: ${errorDetail}`);
         }
-        
+
     } catch (error) {
         console.error('Error en publicación:', error);
-        showNotification('❌', 'Error al publicar: ' + error.message);
+        showNotification('❌', 'Error: ' + error.message);
     }
 }
 
 function organizeEditsByChapter(edits) {
     const byChapter = {};
-    
+
     for (const [key, value] of Object.entries(edits)) {
         // Extraer número de capítulo del key (ej: "cap12_p5" -> "12")
         const match = key.match(/cap(\d+)_p(\d+)/);
         if (match) {
             const chapterNum = match[1];
             const paragraphNum = match[2];
-            
+
             if (!byChapter[chapterNum]) {
                 byChapter[chapterNum] = {};
             }
             byChapter[chapterNum][paragraphNum] = value;
         }
     }
-    
+
     return byChapter;
 }
 
 async function updateFileOnGitHub(filePath, changes, fileType) {
     const token = getGitHubToken();
     const { owner, repo, branch } = GITHUB_CONFIG;
-    
+
     // 1. Obtener el archivo actual
     const getUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}?ref=${branch}`;
     const getResponse = await fetch(getUrl, {
@@ -1264,17 +1283,17 @@ async function updateFileOnGitHub(filePath, changes, fileType) {
             'Accept': 'application/vnd.github.v3+json'
         }
     });
-    
+
     if (!getResponse.ok) {
         throw new Error(`No se pudo obtener ${filePath}`);
     }
-    
+
     const fileData = await getResponse.json();
     let content = atob(fileData.content);
-    
+
     // 2. Aplicar los cambios al contenido
     content = applyEditsToContent(content, changes, fileType);
-    
+
     // 3. Subir el archivo actualizado
     const updateUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
     const updateResponse = await fetch(updateUrl, {
@@ -1291,25 +1310,25 @@ async function updateFileOnGitHub(filePath, changes, fileType) {
             branch: branch
         })
     });
-    
+
     if (!updateResponse.ok) {
         const errorData = await updateResponse.json();
         throw new Error(errorData.message || 'Error al actualizar archivo');
     }
-    
+
     return true;
 }
 
 function applyEditsToContent(content, changes, fileType) {
     // Para HTML: buscar párrafos por índice y reemplazar
     // Para MD: convertir HTML a MD y aplicar
-    
+
     if (fileType === 'html') {
         // Parsear el HTML y aplicar cambios
         const parser = new DOMParser();
         const doc = parser.parseFromString(`<div>${content}</div>`, 'text/html');
         const paragraphs = doc.querySelectorAll('p');
-        
+
         for (const [pIndex, newContent] of Object.entries(changes)) {
             const idx = parseInt(pIndex);
             if (paragraphs[idx]) {
@@ -1321,13 +1340,13 @@ function applyEditsToContent(content, changes, fileType) {
                 }
             }
         }
-        
+
         return doc.body.firstChild.innerHTML;
     } else {
         // Para MD, convertimos el HTML editado a texto plano con formato MD básico
         // Esta es una conversión simplificada
         let mdContent = content;
-        
+
         for (const [pIndex, newContent] of Object.entries(changes)) {
             if (newContent !== '') {
                 // Convertir HTML básico a MD
@@ -1344,12 +1363,12 @@ function applyEditsToContent(content, changes, fileType) {
                     .replace(/&ndash;/g, '–')
                     .replace(/&quot;/g, '"')
                     .replace(/&amp;/g, '&');
-                
+
                 // Aquí idealmente buscaríamos el párrafo correspondiente en el MD
                 // Por ahora, dejamos el contenido MD sin modificar (los cambios principales van al HTML)
             }
         }
-        
+
         return mdContent;
     }
 }
@@ -1357,7 +1376,7 @@ function applyEditsToContent(content, changes, fileType) {
 // Atajos de teclado para formato
 document.addEventListener('keydown', (e) => {
     if (!editMode) return;
-    
+
     if (e.ctrlKey && e.key === 'b') {
         e.preventDefault();
         formatText('bold');
