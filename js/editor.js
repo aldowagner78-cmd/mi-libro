@@ -1066,6 +1066,312 @@ function escapeRegexForSearch(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+// ========== FORMATO DE TEXTO ==========
+function formatText(command) {
+    if (!editMode) return;
+    
+    saveStateForUndo();
+    document.execCommand(command, false, null);
+    
+    // Marcar párrafo como editado
+    const selection = window.getSelection();
+    if (selection.rangeCount > 0) {
+        const range = selection.getRangeAt(0);
+        const paragraph = range.commonAncestorContainer.closest ? 
+            range.commonAncestorContainer.closest('p') : 
+            range.commonAncestorContainer.parentElement?.closest('p');
+        if (paragraph) markAsEdited(paragraph);
+    }
+}
+
+function changeFontSize(size) {
+    if (!editMode || !size) return;
+    
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+        showNotification('⚠️', 'Selecciona el texto al que quieres cambiar el tamaño');
+        document.getElementById('fontSizeSelect').value = '';
+        return;
+    }
+    
+    saveStateForUndo();
+    
+    const range = selection.getRangeAt(0);
+    const span = document.createElement('span');
+    span.style.fontSize = size;
+    span.appendChild(range.extractContents());
+    range.insertNode(span);
+    
+    // Marcar párrafo como editado
+    const paragraph = span.closest('p');
+    if (paragraph) markAsEdited(paragraph);
+    
+    document.getElementById('fontSizeSelect').value = '';
+    selection.removeAllRanges();
+}
+
+function alignText(alignment) {
+    if (!editMode) return;
+    
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+    
+    saveStateForUndo();
+    
+    const range = selection.getRangeAt(0);
+    const paragraph = range.commonAncestorContainer.closest ? 
+        range.commonAncestorContainer.closest('p') : 
+        range.commonAncestorContainer.parentElement?.closest('p');
+    
+    if (paragraph) {
+        paragraph.style.textAlign = alignment;
+        markAsEdited(paragraph);
+    }
+}
+
+function clearAllFormatting() {
+    if (!editMode) return;
+    
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed) {
+        showNotification('⚠️', 'Selecciona el texto al que quieres quitar el formato');
+        return;
+    }
+    
+    saveStateForUndo();
+    document.execCommand('removeFormat', false, null);
+    
+    // También quitar resaltados
+    clearHighlight();
+}
+
+// ========== PUBLICACIÓN A GITHUB ==========
+const GITHUB_CONFIG = {
+    owner: 'aldowagner78-cmd',
+    repo: 'mi-libro',
+    branch: 'main',
+    token: null // Se carga desde localStorage
+};
+
+function getGitHubToken() {
+    if (!GITHUB_CONFIG.token) {
+        GITHUB_CONFIG.token = localStorage.getItem('github_token');
+    }
+    return GITHUB_CONFIG.token;
+}
+
+function setGitHubToken(token) {
+    GITHUB_CONFIG.token = token;
+    localStorage.setItem('github_token', token);
+}
+
+async function publishToGitHub() {
+    const token = getGitHubToken();
+    
+    if (!token) {
+        // Pedir token por primera vez
+        const inputToken = prompt('Ingresa tu GitHub Token para publicar:\n(Solo se pide una vez, se guarda localmente)');
+        if (!inputToken) {
+            showNotification('⚠️', 'Publicación cancelada');
+            return;
+        }
+        setGitHubToken(inputToken);
+    }
+    
+    // Primero guardar cambios localmente
+    saveEdits();
+    
+    const edits = JSON.parse(localStorage.getItem('bookEdits') || '{}');
+    if (Object.keys(edits).length === 0) {
+        showNotification('ℹ️', 'No hay cambios para publicar');
+        return;
+    }
+    
+    showNotification('⏳', 'Publicando cambios a GitHub...');
+    
+    try {
+        // Obtener los cambios organizados por capítulo
+        const changesByChapter = organizeEditsByChapter(edits);
+        let successCount = 0;
+        let errorCount = 0;
+        
+        for (const [chapterKey, changes] of Object.entries(changesByChapter)) {
+            try {
+                // Actualizar archivo HTML
+                const htmlPath = `capitulos_html/Capitulo ${chapterKey}.html`;
+                await updateFileOnGitHub(htmlPath, changes, 'html');
+                
+                // Actualizar archivo MD
+                const mdPath = `capitulos_md/Capitulo ${chapterKey}.md`;
+                await updateFileOnGitHub(mdPath, changes, 'md');
+                
+                successCount++;
+            } catch (error) {
+                console.error(`Error actualizando capítulo ${chapterKey}:`, error);
+                errorCount++;
+            }
+        }
+        
+        if (successCount > 0) {
+            // Limpiar ediciones locales después de publicar
+            localStorage.removeItem('bookEdits');
+            for (let i = 1; i <= 30; i++) {
+                localStorage.removeItem(`bookEdits_cap${i}`);
+            }
+            cambiosPendientes = {};
+            updateChangeCounter();
+            
+            showNotification('✅', `¡Publicado! ${successCount} capítulo(s) actualizado(s) en GitHub.`);
+        } else {
+            showNotification('❌', 'Error al publicar. Verifica tu token de GitHub.');
+        }
+        
+    } catch (error) {
+        console.error('Error en publicación:', error);
+        showNotification('❌', 'Error al publicar: ' + error.message);
+    }
+}
+
+function organizeEditsByChapter(edits) {
+    const byChapter = {};
+    
+    for (const [key, value] of Object.entries(edits)) {
+        // Extraer número de capítulo del key (ej: "cap12_p5" -> "12")
+        const match = key.match(/cap(\d+)_p(\d+)/);
+        if (match) {
+            const chapterNum = match[1];
+            const paragraphNum = match[2];
+            
+            if (!byChapter[chapterNum]) {
+                byChapter[chapterNum] = {};
+            }
+            byChapter[chapterNum][paragraphNum] = value;
+        }
+    }
+    
+    return byChapter;
+}
+
+async function updateFileOnGitHub(filePath, changes, fileType) {
+    const token = getGitHubToken();
+    const { owner, repo, branch } = GITHUB_CONFIG;
+    
+    // 1. Obtener el archivo actual
+    const getUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}?ref=${branch}`;
+    const getResponse = await fetch(getUrl, {
+        headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json'
+        }
+    });
+    
+    if (!getResponse.ok) {
+        throw new Error(`No se pudo obtener ${filePath}`);
+    }
+    
+    const fileData = await getResponse.json();
+    let content = atob(fileData.content);
+    
+    // 2. Aplicar los cambios al contenido
+    content = applyEditsToContent(content, changes, fileType);
+    
+    // 3. Subir el archivo actualizado
+    const updateUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
+    const updateResponse = await fetch(updateUrl, {
+        method: 'PUT',
+        headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            message: `edit: Actualización desde editor web - ${new Date().toLocaleString('es-ES')}`,
+            content: btoa(unescape(encodeURIComponent(content))),
+            sha: fileData.sha,
+            branch: branch
+        })
+    });
+    
+    if (!updateResponse.ok) {
+        const errorData = await updateResponse.json();
+        throw new Error(errorData.message || 'Error al actualizar archivo');
+    }
+    
+    return true;
+}
+
+function applyEditsToContent(content, changes, fileType) {
+    // Para HTML: buscar párrafos por índice y reemplazar
+    // Para MD: convertir HTML a MD y aplicar
+    
+    if (fileType === 'html') {
+        // Parsear el HTML y aplicar cambios
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(`<div>${content}</div>`, 'text/html');
+        const paragraphs = doc.querySelectorAll('p');
+        
+        for (const [pIndex, newContent] of Object.entries(changes)) {
+            const idx = parseInt(pIndex);
+            if (paragraphs[idx]) {
+                if (newContent === '') {
+                    // Párrafo eliminado
+                    paragraphs[idx].remove();
+                } else {
+                    paragraphs[idx].innerHTML = newContent;
+                }
+            }
+        }
+        
+        return doc.body.firstChild.innerHTML;
+    } else {
+        // Para MD, convertimos el HTML editado a texto plano con formato MD básico
+        // Esta es una conversión simplificada
+        let mdContent = content;
+        
+        for (const [pIndex, newContent] of Object.entries(changes)) {
+            if (newContent !== '') {
+                // Convertir HTML básico a MD
+                let mdParagraph = newContent
+                    .replace(/<strong>|<b>/gi, '**')
+                    .replace(/<\/strong>|<\/b>/gi, '**')
+                    .replace(/<em>|<i>/gi, '*')
+                    .replace(/<\/em>|<\/i>/gi, '*')
+                    .replace(/<u>/gi, '')
+                    .replace(/<\/u>/gi, '')
+                    .replace(/<[^>]+>/g, '') // Quitar otras etiquetas HTML
+                    .replace(/&nbsp;/g, ' ')
+                    .replace(/&mdash;/g, '—')
+                    .replace(/&ndash;/g, '–')
+                    .replace(/&quot;/g, '"')
+                    .replace(/&amp;/g, '&');
+                
+                // Aquí idealmente buscaríamos el párrafo correspondiente en el MD
+                // Por ahora, dejamos el contenido MD sin modificar (los cambios principales van al HTML)
+            }
+        }
+        
+        return mdContent;
+    }
+}
+
+// Atajos de teclado para formato
+document.addEventListener('keydown', (e) => {
+    if (!editMode) return;
+    
+    if (e.ctrlKey && e.key === 'b') {
+        e.preventDefault();
+        formatText('bold');
+    }
+    if (e.ctrlKey && e.key === 'i') {
+        e.preventDefault();
+        formatText('italic');
+    }
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        formatText('underline');
+    }
+});
+
 // Exportar funciones globales
 window.showNotification = showNotification;
 window.hideNotification = hideNotification;
@@ -1099,3 +1405,9 @@ window.prevMatch = prevMatch;
 window.replaceCurrentMatch = replaceCurrentMatch;
 window.replaceAllMatches = replaceAllMatches;
 window.updateEditedChaptersIndicators = updateEditedChaptersIndicators;
+// Nuevas funciones
+window.formatText = formatText;
+window.changeFontSize = changeFontSize;
+window.alignText = alignText;
+window.clearAllFormatting = clearAllFormatting;
+window.publishToGitHub = publishToGitHub;

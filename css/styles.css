@@ -1766,14 +1766,18 @@ body {
 .edit-controls {
     display: none;
     position: fixed;
-    top: 80px;
-    right: 20px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--bg-card);
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    gap: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    z-index: 1001;
+    gap: 8px;
+    max-width: 95vw;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
 }
 
 .edit-controls.active {
@@ -1781,17 +1785,78 @@ body {
     flex-direction: column;
 }
 
-.edit-controls button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s;
+.edit-controls-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.edit-separator {
+    width: 1px;
+    height: 24px;
+    background: var(--border);
+    margin: 0 4px;
+}
+
+.edit-controls button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    font-size: 13px;
+    background: var(--bg-secondary);
+    color: var(--text);
+}
+
+.edit-controls button:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.edit-controls button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Botones de formato */
+.btn-format {
+    width: 32px;
+    height: 32px;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px !important;
+}
+
+.btn-format b, .btn-format i, .btn-format u {
+    font-size: 14px;
+}
+
+/* Select de tamaño */
+#fontSizeSelect {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    color: var(--text);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Botones de acción principal */
 .edit-controls .btn-save {
     background: #10b981;
+    color: white;
+}
+
+.edit-controls .btn-publish {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
     color: white;
 }
 
@@ -1815,9 +1880,38 @@ body {
     color: white;
 }
 
-.edit-controls button:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
+/* Colores de resaltado en botones */
+.btn-format.hl-yellow { background: #fef08a; }
+.btn-format.hl-green { background: #bbf7d0; }
+.btn-format.hl-pink { background: #fecdd3; }
+.btn-format.hl-blue { background: #bfdbfe; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .edit-controls {
+        top: 50px;
+        padding: 8px 10px;
+        gap: 6px;
+    }
+    
+    .edit-controls-row {
+        gap: 4px;
+    }
+    
+    .edit-controls button {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+    
+    .btn-format {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .edit-separator {
+        height: 20px;
+        margin: 0 2px;
+    }
 }
 
 /* Botón de eliminar párrafo */
