@@ -585,38 +585,22 @@ function exitEditMode() {
     const totalChanges = Object.keys(cambiosPendientes).length;
 
     if (totalChanges > 0) {
-        showConfirm(`Tienes ${totalChanges} cambio(s) sin exportar. ¿Deseas exportar antes de salir?`, (confirmed) => {
+        showConfirm(`Tienes ${totalChanges} cambio(s) sin guardar. ¿Deseas guardarlos antes de salir?`, (confirmed) => {
             if (confirmed) {
-                const blob = new Blob([JSON.stringify(cambiosPendientes, null, 2)], { type: 'application/json' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = `ediciones_libro_${new Date().toISOString().split('T')[0]}.json`;
-                a.click();
-                URL.revokeObjectURL(url);
-
-                showNotification('✅', `${totalChanges} cambio(s) exportados correctamente.`);
-                finalizarSalidaModoEdicion();
+                saveEdits();
+                showNotification('✅', 'Cambios guardados localmente.');
             } else {
-                showConfirm('¿Descartar todos los cambios sin exportar?', (discardConfirmed) => {
-                    if (discardConfirmed) {
-                        localStorage.removeItem('bookEdits');
-                        cambiosPendientes = {};
-                        parrafosEliminados = new Set();
-                        finalizarSalidaModoEdicion();
-                        showNotification('🗑️', 'Cambios descartados');
-                    }
-                });
+                cambiosPendientes = {};
+                updateChangeCounter();
+                clearUnsavedChanges();
             }
+            finalizarSalidaModoEdicion();
         });
     } else {
-        showConfirm('¿Salir del modo edición?', (confirmed) => {
-            if (confirmed) {
-                finalizarSalidaModoEdicion();
-            }
-        });
+        finalizarSalidaModoEdicion();
     }
 }
+
 
 function finalizarSalidaModoEdicion() {
     editMode = false;
