@@ -7,7 +7,7 @@
 const FOLDER = 'capitulos_html';
 const PREFIX = 'Capitulo ';
 const HTML_EXT = '.html';
-const JSON_EXT = '.json';
+const JSON_EXT = '_notas.json';
 const TOTAL_CHAPTERS = 30;
 
 // Variables de estado
