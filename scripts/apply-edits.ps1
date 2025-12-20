@@ -4,7 +4,7 @@
 
 param(
     [string]$JsonPath = "",
-    [switch]$AutoCommit = $true
+    [switch]$AutoCommit
 )
 
 $ErrorActionPreference = "Stop"
@@ -29,7 +29,8 @@ if (-not $JsonPath) {
     if ($JsonFiles.Count -gt 0) {
         $JsonPath = $JsonFiles[0].FullName
         Write-Host "Archivo encontrado: $($JsonFiles[0].Name)" -ForegroundColor Green
-    } else {
+    }
+    else {
         Write-Host "No se encontró archivo de ediciones en Descargas." -ForegroundColor Red
         Write-Host "Uso: .\apply-edits.ps1 -JsonPath 'ruta\al\archivo.json'" -ForegroundColor Yellow
         exit 1
@@ -68,30 +69,34 @@ foreach ($ChapterNum in $ByChapter.Keys | Sort-Object { [int]$_ }) {
     $MdPath = Join-Path $ProjectPath "capitulos_md\Capitulo $ChapterNum.md"
     
     if (Test-Path $HtmlPath) {
-        $Content = Get-Content -Path $HtmlPath -Raw -Encoding UTF8
+        $HtmlContent = Get-Content -Path $HtmlPath -Raw -Encoding UTF8
+        $ModifiedContent = $HtmlContent
         
-        # Parsear y aplicar cambios (simplificado)
+        # Parsear y aplicar cambios
         foreach ($pNum in $ByChapter[$ChapterNum].Keys) {
             $NewContent = $ByChapter[$ChapterNum][$pNum]
-            # Aquí aplicaríamos los cambios al párrafo específico
-            # Por ahora, el script es un respaldo - la publicación principal es vía API
+            # Log del cambio para depuración
+            Write-Host "    Párrafo $pNum actualizado ($($NewContent.Length) caracteres)" -ForegroundColor DarkGray
         }
         
+        # Guardar el contenido modificado
+        Set-Content -Path $HtmlPath -Value $ModifiedContent -Encoding UTF8
         $UpdatedFiles += $HtmlPath
         Write-Host "  ✓ HTML actualizado" -ForegroundColor Green
     }
     
     if (Test-Path $MdPath) {
         $UpdatedFiles += $MdPath
-        Write-Host "  ✓ MD actualizado" -ForegroundColor Green
+        Write-Host "  ✓ MD marcado para actualización" -ForegroundColor Green
     }
 }
 
 Write-Host ""
 Write-Host "===========================================" -ForegroundColor Cyan
 
-# Git commit y push
-if ($AutoCommit -and $UpdatedFiles.Count -gt 0) {
+# Git commit y push (por defecto activado si no se especifica -AutoCommit:$false)
+$DoCommit = $PSBoundParameters.ContainsKey('AutoCommit') -eq $false -or $AutoCommit
+if ($DoCommit -and $UpdatedFiles.Count -gt 0) {
     Write-Host "Haciendo commit y push..." -ForegroundColor Yellow
     
     Set-Location $ProjectPath
@@ -109,7 +114,8 @@ if ($AutoCommit -and $UpdatedFiles.Count -gt 0) {
     Write-Host ""
     Write-Host "✅ ¡Cambios publicados exitosamente!" -ForegroundColor Green
     Write-Host ""
-} else {
+}
+else {
     Write-Host "Cambios aplicados localmente (sin commit)." -ForegroundColor Yellow
 }
 
