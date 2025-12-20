@@ -1406,7 +1406,25 @@ async function publishToGitHub() {
             }
         }
 
-        if (successCount > 0) {
+        // Publicar notas editadas al JSON
+        let notesPublished = 0;
+        for (let i = 1; i <= 30; i++) {
+            const notesKey = `editedNotes_cap${i}`;
+            const editedNotes = localStorage.getItem(notesKey);
+            if (editedNotes && editedNotes !== '{}') {
+                try {
+                    const chapterNum = i.toString().padStart(2, '0');
+                    const jsonPath = `capitulos_html/Capitulo ${chapterNum}_notas.json`;
+                    await updateNotesJSONOnGitHub(jsonPath, JSON.parse(editedNotes));
+                    notesPublished++;
+                    localStorage.removeItem(notesKey); // Limpiar después de publicar
+                } catch (error) {
+                    console.error(`Error publicando notas cap ${i}:`, error);
+                }
+            }
+        }
+
+        if (successCount > 0 || notesPublished > 0) {
             // Limpiar ediciones locales después de publicar
             localStorage.removeItem('bookEdits');
             for (let i = 1; i <= 30; i++) {
@@ -1414,8 +1432,12 @@ async function publishToGitHub() {
             }
             cambiosPendientes = {};
             updateChangeCounter();
+            clearUnsavedChanges();
 
-            showNotification('✅', `¡Publicado! ${successCount} capítulo(s) actualizado(s) en GitHub.`);
+            const msg = [];
+            if (successCount > 0) msg.push(`${successCount} capítulo(s)`);
+            if (notesPublished > 0) msg.push(`${notesPublished} JSON de notas`);
+            showNotification('✅', `¡Publicado! ${msg.join(' + ')} actualizado(s) en GitHub.`);
         } else {
             const errorDetail = errorMessages.length > 0 ? errorMessages[0] : 'Verifica tu token';
             showNotification('❌', `Error: ${errorDetail}`);
@@ -1525,6 +1547,72 @@ async function updateFileOnGitHub(filePath, changes, fileType) {
         throw new Error(errorData.message || 'Error al actualizar archivo');
     }
 
+    return true;
+}
+
+// Función para actualizar el JSON de notas en GitHub
+async function updateNotesJSONOnGitHub(jsonPath, editedNotes) {
+    const token = getGitHubToken();
+    const { owner, repo, branch } = GITHUB_CONFIG;
+
+    // 1. Obtener el archivo JSON actual
+    const getUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${jsonPath}?ref=${branch}`;
+    const getResponse = await fetch(getUrl, {
+        headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json'
+        }
+    });
+
+    let currentNotes = {};
+    let sha = null;
+
+    if (getResponse.ok) {
+        const fileData = await getResponse.json();
+        sha = fileData.sha;
+        // Decodificar contenido actual
+        const currentContent = decodeBase64UTF8(fileData.content);
+        try {
+            currentNotes = JSON.parse(currentContent);
+        } catch (e) {
+            console.warn('No se pudo parsear JSON actual, se creará nuevo');
+        }
+    }
+
+    // 2. Combinar notas: las editadas tienen prioridad
+    const mergedNotes = { ...currentNotes, ...editedNotes };
+
+    // 3. Formatear JSON bonito
+    const newContent = JSON.stringify(mergedNotes, null, 2);
+
+    // 4. Subir al repositorio
+    const updateUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${jsonPath}`;
+    const body = {
+        message: `notes: Actualización de notas desde editor web - ${new Date().toLocaleString('es-ES')}`,
+        content: encodeBase64UTF8(newContent),
+        branch: branch
+    };
+
+    if (sha) {
+        body.sha = sha; // Incluir SHA solo si el archivo existe
+    }
+
+    const updateResponse = await fetch(updateUrl, {
+        method: 'PUT',
+        headers: {
+            'Authorization': `token ${token}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+    });
+
+    if (!updateResponse.ok) {
+        const errorData = await updateResponse.json();
+        throw new Error(errorData.message || 'Error al actualizar JSON de notas');
+    }
+
+    console.log(`JSON de notas actualizado: ${jsonPath}`);
     return true;
 }
 
