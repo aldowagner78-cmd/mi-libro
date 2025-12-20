@@ -1,4 +1,4 @@
-﻿*"La emoción más antigua y más intensa de la humanidad es el miedo, y el más antiguo y más intenso de los miedos es el miedo a lo desconocido."*  
+*"La emoción más antigua y más intensa de la humanidad es el miedo, y el más antiguo y más intenso de los miedos es el miedo a lo desconocido."*  
 — H.P. Lovecraft (1927)
 
 ***
