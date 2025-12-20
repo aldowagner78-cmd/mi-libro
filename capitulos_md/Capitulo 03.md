@@ -1,4 +1,4 @@
-﻿*"No es la especie más fuerte la que sobrevive, ni la más inteligente, sino la que mejor responde al cambio."*  
+*"No es la especie más fuerte la que sobrevive, ni la más inteligente, sino la que mejor responde al cambio."*  
 — Charles Darwin (1859)
 
 ***
