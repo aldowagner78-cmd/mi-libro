@@ -1,4 +1,4 @@
-﻿*"El dolor es el único origen de la conciencia."*  
+*"El dolor es el único origen de la conciencia."*  
 — Fiódor Dostoyevski (1864)
 
 ***
