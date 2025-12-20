@@ -217,31 +217,23 @@ function loadChapterNotes(jsonFile) {
         .then(r => r.ok ? r.json() : null)
         .then(notes => {
             currentNotesData = notes;
-            if (notes) setupNotesWithJSON(notes);
 
-            const allDataNotes = content.querySelectorAll('sup[data-note]');
-            allDataNotes.forEach(sup => {
-                const definition = sup.getAttribute('data-note');
-                if (definition) {
-                    sup.style.cursor = 'pointer';
-                    sup.style.color = 'var(--accent)';
-                    sup.style.textDecoration = 'none';
-                    sup.style.borderBottom = '1px dotted var(--accent)';
+            // Configurar notas del JSON (añade data-note y estilos)
+            if (notes) {
+                setupNotesWithJSON(notes);
+                console.log(`Notas cargadas: ${Object.keys(notes).length} definiciones`);
+            }
 
-                    sup.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        showNote(definition);
-                    });
-                }
-            });
+            // La delegación de eventos ya está inicializada por setupNotesWithJSON
+            // NO añadir eventos individuales aquí (causa conflictos)
 
             if (typeof editMode !== 'undefined' && editMode) {
                 makeContentEditable();
                 loadSavedEdits();
             }
         })
-        .catch(() => {
+        .catch((err) => {
+            console.error('Error cargando notas:', err);
             if (typeof editMode !== 'undefined' && editMode) {
                 makeContentEditable();
                 loadSavedEdits();
@@ -358,6 +350,7 @@ function setupNotesWithJSON(notesData) {
     if (!content) return;
 
     const allSups = content.querySelectorAll('sup');
+    let notesConfigured = 0;
 
     allSups.forEach((sup) => {
         const text = sup.textContent.trim();
@@ -376,9 +369,12 @@ function setupNotesWithJSON(notesData) {
                 sup.style.textDecoration = 'none';
                 sup.style.borderBottom = '1px dotted var(--accent)';
                 sup.title = `Ver nota ${noteNum}`;
+                notesConfigured++;
             }
         }
     });
+
+    console.log(`setupNotesWithJSON: ${allSups.length} sups encontrados, ${notesConfigured} configurados con data-note`);
 
     // Asegurar que la delegación está inicializada
     initializeNoteDelegation();
