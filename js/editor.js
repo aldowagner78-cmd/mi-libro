@@ -1373,6 +1373,37 @@ function organizeEditsByChapter(edits) {
     return byChapter;
 }
 
+// ========== FUNCIONES DE CODIFICACIÓN UTF-8 ==========
+// Necesarias para manejar correctamente caracteres especiales (ñ, á, é, etc.)
+
+function decodeBase64UTF8(base64) {
+    // Limpiar saltos de línea del base64
+    const cleanBase64 = base64.replace(/\s/g, '');
+    // Decodificar base64 a bytes
+    const binaryString = atob(cleanBase64);
+    // Convertir bytes a array
+    const bytes = new Uint8Array(binaryString.length);
+    for (let i = 0; i < binaryString.length; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
+    }
+    // Decodificar UTF-8
+    const decoder = new TextDecoder('utf-8');
+    return decoder.decode(bytes);
+}
+
+function encodeBase64UTF8(text) {
+    // Codificar texto a UTF-8
+    const encoder = new TextEncoder();
+    const bytes = encoder.encode(text);
+    // Convertir bytes a string binario
+    let binaryString = '';
+    for (let i = 0; i < bytes.length; i++) {
+        binaryString += String.fromCharCode(bytes[i]);
+    }
+    // Codificar a base64
+    return btoa(binaryString);
+}
+
 async function updateFileOnGitHub(filePath, changes, fileType) {
     const token = getGitHubToken();
     const { owner, repo, branch } = GITHUB_CONFIG;
@@ -1391,7 +1422,9 @@ async function updateFileOnGitHub(filePath, changes, fileType) {
     }
 
     const fileData = await getResponse.json();
-    let content = atob(fileData.content);
+
+    // Decodificar Base64 a UTF-8 correctamente
+    let content = decodeBase64UTF8(fileData.content);
 
     // 2. Aplicar los cambios al contenido
     content = applyEditsToContent(content, changes, fileType);
@@ -1407,7 +1440,7 @@ async function updateFileOnGitHub(filePath, changes, fileType) {
         },
         body: JSON.stringify({
             message: `edit: Actualización desde editor web - ${new Date().toLocaleString('es-ES')}`,
-            content: btoa(unescape(encodeURIComponent(content))),
+            content: encodeBase64UTF8(content),
             sha: fileData.sha,
             branch: branch
         })
