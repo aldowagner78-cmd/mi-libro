@@ -46,3 +46,6 @@ Thumbs.db
 *.tmp
 *.bak
 *.log
+
+# Configuración local (contiene tokens sensibles)
+js/config.local.js

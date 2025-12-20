@@ -18,8 +18,82 @@ let undoStack = [];
 let redoStack = [];
 let isUndoRedo = false;
 
+// Sistema de backup automático
+let autoBackupInterval = null;
+const AUTO_BACKUP_INTERVAL_MS = 60000; // Backup cada 1 minuto
+let hasUnsavedChanges = false;
+
 // Contraseña de edición (cambiar según necesidad)
 const EDIT_PASSWORD = '26716975';
+
+// ========== BACKUP AUTOMÁTICO Y CONFIRMACIÓN AL SALIR ==========
+
+// Guardar backup automático cada minuto cuando hay cambios
+function startAutoBackup() {
+    if (autoBackupInterval) return; // Ya está corriendo
+
+    autoBackupInterval = setInterval(() => {
+        if (editMode && hasUnsavedChanges) {
+            const content = document.getElementById('content');
+            if (content) {
+                const backup = {
+                    chapter: currentChapter,
+                    content: content.innerHTML,
+                    timestamp: new Date().toISOString()
+                };
+                localStorage.setItem('autoBackup_' + currentChapter, JSON.stringify(backup));
+                console.log('Backup automático guardado - Cap', currentChapter);
+            }
+        }
+    }, AUTO_BACKUP_INTERVAL_MS);
+}
+
+function stopAutoBackup() {
+    if (autoBackupInterval) {
+        clearInterval(autoBackupInterval);
+        autoBackupInterval = null;
+    }
+}
+
+// Restaurar backup si existe
+function checkForBackup() {
+    const backup = localStorage.getItem('autoBackup_' + currentChapter);
+    if (backup) {
+        const data = JSON.parse(backup);
+        const backupTime = new Date(data.timestamp).toLocaleString('es-ES');
+        showConfirm(`Se encontró un backup del ${backupTime}. ¿Deseas restaurarlo?`, (confirmed) => {
+            if (confirmed) {
+                const content = document.getElementById('content');
+                if (content) {
+                    content.innerHTML = data.content;
+                    showNotification('✅', 'Backup restaurado');
+                    makeContentEditable();
+                }
+            }
+            // Limpiar backup después de preguntar
+            localStorage.removeItem('autoBackup_' + currentChapter);
+        });
+    }
+}
+
+// Marcar que hay cambios sin guardar
+function markUnsavedChanges() {
+    hasUnsavedChanges = true;
+}
+
+// Limpiar marca de cambios sin guardar
+function clearUnsavedChanges() {
+    hasUnsavedChanges = false;
+}
+
+// Confirmación antes de cerrar ventana si hay cambios pendientes
+window.addEventListener('beforeunload', (e) => {
+    if (editMode && hasUnsavedChanges) {
+        e.preventDefault();
+        e.returnValue = '¿Seguro que deseas salir? Hay cambios sin guardar.';
+        return e.returnValue;
+    }
+});
 
 // ========== MODALES PERSONALIZADOS ==========
 function showNotification(icon, message) {
@@ -95,6 +169,7 @@ function activateEditMode() {
         editMode = true;
         cambiosPendientes = {};
         parrafosEliminados = new Set();
+        hasUnsavedChanges = false;
         document.body.classList.add('edit-mode-active');
         document.getElementById('editControls').classList.add('active');
 
@@ -105,6 +180,13 @@ function activateEditMode() {
         closeEditModal();
         loadSavedEdits();
         updateChangeCounter();
+
+        // Iniciar backup automático
+        startAutoBackup();
+
+        // Verificar si hay backup pendiente
+        setTimeout(() => checkForBackup(), 500);
+
         showNotification('✅', 'Modo edición activado. Haz clic en cualquier párrafo para editarlo.');
     } else {
         showNotification('❌', 'Contraseña incorrecta');
@@ -154,6 +236,7 @@ function makeContentEditable() {
 
 function markAsEdited(element) {
     element.style.borderLeft = '3px solid #10b981';
+    markUnsavedChanges(); // Para activar confirmación al cerrar ventana
 }
 
 // ========== SISTEMA DE DESHACER/REHACER ==========
@@ -370,6 +453,10 @@ function saveEdits() {
 
         // Marcar capítulo como editado en sidebar
         markChapterAsEdited(currentChapter);
+
+        // Limpiar backup y marca de cambios sin guardar
+        clearUnsavedChanges();
+        localStorage.removeItem('autoBackup_' + currentChapter);
 
         updateChangeCounter();
         showNotification('💾', `${changesCount} cambio(s) guardado(s) en capítulo ${currentChapter}`);
@@ -1164,14 +1251,29 @@ const GITHUB_CONFIG = {
     owner: 'aldowagner78-cmd',
     repo: 'mi-libro',
     branch: 'main',
-    token: null // Se carga desde localStorage
+    token: null // Se carga desde config.local.js o localStorage
 };
 
 function getGitHubToken() {
-    if (!GITHUB_CONFIG.token) {
-        GITHUB_CONFIG.token = localStorage.getItem('github_token');
+    // Prioridad 1: Token ya cargado
+    if (GITHUB_CONFIG.token) {
+        return GITHUB_CONFIG.token;
     }
-    return GITHUB_CONFIG.token;
+
+    // Prioridad 2: Token desde config.local.js (archivo local)
+    if (typeof LOCAL_CONFIG !== 'undefined' && LOCAL_CONFIG.github_token) {
+        GITHUB_CONFIG.token = LOCAL_CONFIG.github_token;
+        return GITHUB_CONFIG.token;
+    }
+
+    // Prioridad 3: Token desde localStorage
+    const storedToken = localStorage.getItem('github_token');
+    if (storedToken) {
+        GITHUB_CONFIG.token = storedToken;
+        return GITHUB_CONFIG.token;
+    }
+
+    return null;
 }
 
 function setGitHubToken(token) {
